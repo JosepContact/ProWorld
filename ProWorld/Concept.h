@@ -1,6 +1,8 @@
 #pragma once
 #include <stdio.h>
 #include <iostream>
+#include <sstream>
+
 
 class Concept
 {
@@ -19,5 +21,6 @@ class Concept
 	
 	public:
 		void SetName(std::string name, std::string plural);
-
+		std::string GetString();
+		const char* GetChar();
 };

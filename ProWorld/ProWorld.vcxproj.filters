@@ -23,12 +23,18 @@
     <ClCompile Include="Location.cpp">
       <Filter>Cpp</Filter>
     </ClCompile>
+    <ClCompile Include="World.cpp">
+      <Filter>Cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Concept.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Location.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
