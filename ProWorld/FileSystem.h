@@ -32,8 +32,13 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-private:
+	// Starts The FileSystem Module
+	void Start();
 
+	unsigned int Load(const char* path, char** bufer);
+
+private:
+	std::string CreateFolder(const char* path, const char* folder_name);
 };
 
 #endif // __FILESYSTEM_H__

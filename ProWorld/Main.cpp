@@ -5,16 +5,57 @@
 
 using namespace std;
 
+#define EXIT_SUCCESS 1
+#define EXIT_FAILURE 0
 
-void main()
+enum MainState {
+	CREATE_STATE,
+	START_STATE,
+	UPDATE_STATE,
+	CLEAN_UP_STATE,
+	EXIT_STATE,
+};
+
+World* world = nullptr;
+
+int main(int argc, char ** argv)
 {
-	World* world = new World();
-	Location* loc = new Location();
-	loc->SetName("city", "cities");
+	int ret = EXIT_FAILURE;
 
-	if (loc!= nullptr) cout << loc->GetChar();
+	MainState state = CREATE_STATE;
 
-	getchar();
+	while (state != EXIT_STATE)
+	{
+		switch (state)
+		{
 
-	delete loc, world;
+		case CREATE_STATE:
+		// ( ---------- World Creation -------------)
+			world = new World();
+			state = START_STATE;
+
+			break;
+		
+		case START_STATE:
+		// ( --------- World Starts -------------- )
+
+			state = UPDATE_STATE;
+		
+		
+		case UPDATE_STATE:
+		// ( --------- World Updates -------------- )
+
+			state = CLEAN_UP_STATE;
+
+		case CLEAN_UP_STATE:
+			// ( --------- World Finishes -------------- )
+
+			state = EXIT_STATE;
+			ret = EXIT_SUCCESS;
+
+		}
+	}
+	
+	delete world;
+	return ret;
 }
