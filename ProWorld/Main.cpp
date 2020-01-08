@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 void main()
 {
 	World* world = new World();

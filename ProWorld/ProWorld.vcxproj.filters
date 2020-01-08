@@ -12,6 +12,12 @@
     <Filter Include="Cpp">
       <UniqueIdentifier>{097f778e-aa90-4cdc-9956-dd2ffc86dde4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{d596fdc2-cfcc-4c56-acb3-688b3dda4ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools\pugixml-1.10">
+      <UniqueIdentifier>{43b77716-5df1-4971-b6eb-a48aa90cdea2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -26,6 +32,12 @@
     <ClCompile Include="World.cpp">
       <Filter>Cpp</Filter>
     </ClCompile>
+    <ClCompile Include="pugixml-1.10\src\pugixml.cpp">
+      <Filter>Tools\pugixml-1.10</Filter>
+    </ClCompile>
+    <ClCompile Include="FileSystem.cpp">
+      <Filter>Cpp</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Concept.h">
@@ -36,6 +48,15 @@
     </ClInclude>
     <ClInclude Include="World.h">
       <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="FileSystem.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
+      <Filter>Tools\pugixml-1.10</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml-1.10\src\pugixml.hpp">
+      <Filter>Tools\pugixml-1.10</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
