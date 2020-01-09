@@ -4,32 +4,34 @@
 #include <string>
 #include <fstream>
 
-#include "FileSystem.h"
+#include "ModuleFileSystem.h"
 #include "PhysFS/include/physfs.h"
 
 #pragma comment( lib, "PhysFS/libx86/physfs.lib" )
 
 using namespace std;
 
-FileSystem::FileSystem()
+ModuleFileSystem::ModuleFileSystem(bool start_enabled) : Module(start_enabled)
+{
+	name = "FileSystem";
+}
+
+ModuleFileSystem::~ModuleFileSystem()
 {
 }
 
-FileSystem::~FileSystem()
-{
-}
-
-bool FileSystem::CleanUp()
+bool ModuleFileSystem::CleanUp()
 {
 	return true;
 }
 
-void FileSystem::Start()
+bool ModuleFileSystem::Start()
 {
 	//CreateFolder("", "Concepts");
+	return true;
 }
 
-unsigned int FileSystem::Load(const char * path, char ** buffer)
+unsigned int ModuleFileSystem::Load(const char * path, char ** buffer)
 {
 	unsigned int ret = 0;
 
@@ -75,7 +77,7 @@ unsigned int FileSystem::Load(const char * path, char ** buffer)
 	return ret;
 }
 
-string FileSystem::CreateFolder(const char * path, const char * folder_name)
+string ModuleFileSystem::CreateFolder(const char * path, const char * folder_name)
 {
 	string ret;
 

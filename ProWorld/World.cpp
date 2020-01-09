@@ -1,20 +1,38 @@
 #include "World.h"
-#include "FileSystem.h"
-
 
 
 World::World()
 {
-	FileSystem* file = new FileSystem;
-	file->Start();
+	// ----- Create Modules ----
+	ModuleFileSystem* filesystem = new ModuleFileSystem;
 
-	delete file;
+	// ----- Add Modules to World ---
+	listmodules.push_back(filesystem);
+
 }
 
 
 World::~World()
 {
+	for (std::list<Module*>::reverse_iterator rit = listmodules.rbegin(); rit != listmodules.rend(); ++rit)
+	{
+		if ((*rit) != nullptr)
+			RELEASE(*rit);
+	}
+
+	listmodules.clear();
 }
+
+bool World::Start()
+{
+	return false;
+}
+
+bool World::CleanUp()
+{
+	return false;
+}
+
 
 void World::SaveWorld()
 {

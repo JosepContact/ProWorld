@@ -120,13 +120,15 @@
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp" />
-    <ClCompile Include="FileSystem.cpp" />
+    <ClCompile Include="ModuleFileSystem.cpp" />
     <ClCompile Include="World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Concept.h" />
-    <ClInclude Include="FileSystem.h" />
+    <ClInclude Include="ModuleFileSystem.h" />
+    <ClInclude Include="Globals.h" />
     <ClInclude Include="Location.h" />
+    <ClInclude Include="Module.h" />
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp" />
     <ClInclude Include="pugixml-1.10\src\pugixml.hpp" />
     <ClInclude Include="World.h" />

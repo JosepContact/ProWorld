@@ -18,6 +18,9 @@
     <Filter Include="Tools\pugixml-1.10">
       <UniqueIdentifier>{43b77716-5df1-4971-b6eb-a48aa90cdea2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules">
+      <UniqueIdentifier>{88d1fe36-ca20-4418-b468-5fb38737f1df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -35,7 +38,7 @@
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp">
       <Filter>Tools\pugixml-1.10</Filter>
     </ClCompile>
-    <ClCompile Include="FileSystem.cpp">
+    <ClCompile Include="ModuleFileSystem.cpp">
       <Filter>Cpp</Filter>
     </ClCompile>
   </ItemGroup>
@@ -49,14 +52,20 @@
     <ClInclude Include="World.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="FileSystem.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
       <Filter>Tools\pugixml-1.10</Filter>
     </ClInclude>
     <ClInclude Include="pugixml-1.10\src\pugixml.hpp">
       <Filter>Tools\pugixml-1.10</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Globals.h">
+      <Filter>Otros</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleFileSystem.h">
+      <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
