@@ -4,12 +4,22 @@
 
 #include "Concept.h"
 
-
 class Location : public Concept {
 
 public:
 	Location();
 	~Location();
+
+public:
+	enum ClimateType {
+		Continental, 
+		Cold,
+		Tropical,
+		Arid,
+		None
+	};
+
+	ClimateType climate;
 };
 
 #endif
