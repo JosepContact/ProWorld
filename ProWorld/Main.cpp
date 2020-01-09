@@ -2,6 +2,7 @@
 #include <iostream>
 #include "Location.h"
 #include "World.h"
+#include "Globals.h"
 
 using namespace std;
 
@@ -38,18 +39,29 @@ int main(int argc, char ** argv)
 		
 		case START_STATE:
 		// ( --------- World Starts -------------- )
-
-			state = UPDATE_STATE;
-		
-		
+			if (world->Start() == false)
+			{
+				state == EXIT_STATE;
+			}
+			else
+			{
+				state = UPDATE_STATE;
+			}
 		case UPDATE_STATE:
 		// ( --------- World Updates -------------- )
-
+			//int update_return = world->Update();
 			state = CLEAN_UP_STATE;
 
 		case CLEAN_UP_STATE:
 			// ( --------- World Finishes -------------- )
-
+			if (world->CleanUp() == false)
+			{
+				state == EXIT_STATE;
+			}
+			else
+			{
+				state = UPDATE_STATE;
+			}
 			state = EXIT_STATE;
 			ret = EXIT_SUCCESS;
 

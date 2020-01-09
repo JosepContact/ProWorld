@@ -1,5 +1,6 @@
 #include "World.h"
 
+using namespace std;
 
 World::World()
 {
@@ -14,7 +15,7 @@ World::World()
 
 World::~World()
 {
-	for (std::list<Module*>::reverse_iterator rit = listmodules.rbegin(); rit != listmodules.rend(); ++rit)
+	for (list<Module*>::reverse_iterator rit = listmodules.rbegin(); rit != listmodules.rend(); ++rit)
 	{
 		if ((*rit) != nullptr)
 			RELEASE(*rit);
@@ -25,12 +26,24 @@ World::~World()
 
 bool World::Start()
 {
-	return false;
+	bool ret = true;
+	for (list<Module*>::iterator it = listmodules.begin(); it != listmodules.end(); ++it) {
+		if ((*it) != nullptr && ret == true) {
+			ret = (*it)->Start();
+		}
+	}
+	return ret;
 }
 
 bool World::CleanUp()
 {
-	return false;
+	bool ret = true;
+	for (list<Module*>::iterator it = listmodules.begin(); it != listmodules.end(); ++it) {
+		if ((*it) != nullptr && ret == true) {
+			ret = (*it)->CleanUp();
+		}
+	}
+	return ret;
 }
 
 

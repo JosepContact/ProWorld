@@ -22,9 +22,11 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-	unsigned int Load(const char* path, char** bufer);
+	unsigned int Load(const char* path, char** bufer) const;
 
 	std::string CreateFolder(const char* path, const char* folder_name);
+
+	pugi::xml_node LoadXML(const char* filename, const char* child, pugi::xml_document & file) const;
 
 private:
 	

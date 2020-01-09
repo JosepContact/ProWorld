@@ -31,7 +31,7 @@ bool ModuleFileSystem::Start()
 	return true;
 }
 
-unsigned int ModuleFileSystem::Load(const char * path, char ** buffer)
+unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 {
 	unsigned int ret = 0;
 
@@ -96,6 +96,28 @@ string ModuleFileSystem::CreateFolder(const char * path, const char * folder_nam
 	}
 
 	ret = fldrPath + '\\';
+
+	return ret;
+}
+
+pugi::xml_node ModuleFileSystem::LoadXML(const char * filename, const char* child, pugi::xml_document & file) const
+{
+	pugi::xml_node ret;
+
+	char* buf = NULL;
+	unsigned int size = Load(filename, &buf);
+	pugi::xml_parse_result result = file.load_buffer(buf, size);
+	RELEASE(buf);
+
+	/*if (result == NULL)
+		LOG("Could not load map xml file config.xml. pugi error: %s", result.description());
+	else
+		ret = gameDatafile.child("GameData");*/
+
+	if (result != NULL)
+	{
+		ret = file.child(child);
+	}
 
 	return ret;
 }
