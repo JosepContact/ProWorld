@@ -32,24 +32,23 @@
     <ClCompile Include="Location.cpp">
       <Filter>Cpp</Filter>
     </ClCompile>
-    <ClCompile Include="World.cpp">
-      <Filter>Cpp</Filter>
-    </ClCompile>
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp">
       <Filter>Tools\pugixml-1.10</Filter>
     </ClCompile>
     <ClCompile Include="ModuleFileSystem.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>Cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleWorld.cpp" />
+    <ClCompile Include="ModuleConceptManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Concept.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="Location.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="World.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -65,6 +64,15 @@
       <Filter>Otros</Filter>
     </ClInclude>
     <ClInclude Include="ModuleFileSystem.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleWorld.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleConceptManager.h">
       <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>

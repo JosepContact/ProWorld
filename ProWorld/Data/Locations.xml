@@ -1,6 +1,80 @@
 <Locations>
 	<Location>
 		<Info>
+		<Name value = "City"/>
+		<Plural value = "Cities"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Town"/>
+		<Plural value = "Towns"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Small village"/>
+		<Plural value = "Small villages"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Port"/>
+		<Plural value = "Ports"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Mountain"/>
+		<Plural value = "Mountains"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Valley"/>
+		<Plural value = "Valleys"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Cave"/>
+		<Plural value = "Caves"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Forest"/>
+		<Plural value = "Forests"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Swamp"/>
+		<Plural value = "Swamps"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Ocean"/>
+		<Plural value = "Oceans"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "River"/>
+		<Plural value = "Rivers"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Lake"/>
+		<Plural value = "Lakes"/>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Bay"/>
+		<Plural value = "Bays"/>
 		</Info>
 	</Location>
 </Locations>

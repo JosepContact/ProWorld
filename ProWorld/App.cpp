@@ -1,19 +1,25 @@
-#include "World.h"
+#include "App.h"
+
+#include <windows.h>
 
 using namespace std;
 
-World::World()
+App::App()
 {
 	// ----- Create Modules ----
-	ModuleFileSystem* filesystem = new ModuleFileSystem;
+	filesystem = new ModuleFileSystem;
+	conceptmanager = new ModuleConceptManager;
+	world = new ModuleWorld;
 
 	// ----- Add Modules to World ---
 	listmodules.push_back(filesystem);
+	listmodules.push_back(conceptmanager);
+	listmodules.push_back(world);
 
 }
 
 
-World::~World()
+App::~App()
 {
 	for (list<Module*>::reverse_iterator rit = listmodules.rbegin(); rit != listmodules.rend(); ++rit)
 	{
@@ -24,7 +30,7 @@ World::~World()
 	listmodules.clear();
 }
 
-bool World::Start()
+bool App::Start()
 {
 	bool ret = true;
 	for (list<Module*>::iterator it = listmodules.begin(); it != listmodules.end(); ++it) {
@@ -35,7 +41,7 @@ bool World::Start()
 	return ret;
 }
 
-bool World::CleanUp()
+bool App::CleanUp()
 {
 	bool ret = true;
 	for (list<Module*>::iterator it = listmodules.begin(); it != listmodules.end(); ++it) {
@@ -47,10 +53,22 @@ bool World::CleanUp()
 }
 
 
-void World::SaveWorld()
+void App::SaveWorld()
 {
 }
 
-void World::LoadWorld()
+void App::LoadWorld()
 {
+}
+
+void App::mylog(const char file[], int line, const char * format, ...)
+{
+	static char tmp_string[4096];
+	static va_list  ap;
+
+	// Construct the string from variable arguments
+	va_start(ap, format);
+	vsprintf_s(tmp_string, 4096, format, ap);
+	va_end(ap);
+	OutputDebugString(tmp_string);
 }

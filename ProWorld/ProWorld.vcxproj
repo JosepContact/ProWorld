@@ -119,19 +119,23 @@
     <ClCompile Include="Concept.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ModuleConceptManager.cpp" />
+    <ClCompile Include="ModuleWorld.cpp" />
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp" />
     <ClCompile Include="ModuleFileSystem.cpp" />
-    <ClCompile Include="World.cpp" />
+    <ClCompile Include="App.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Concept.h" />
+    <ClInclude Include="ModuleConceptManager.h" />
     <ClInclude Include="ModuleFileSystem.h" />
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Module.h" />
+    <ClInclude Include="ModuleWorld.h" />
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp" />
     <ClInclude Include="pugixml-1.10\src\pugixml.hpp" />
-    <ClInclude Include="World.h" />
+    <ClInclude Include="App.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

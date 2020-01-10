@@ -24,5 +24,7 @@ enum update_status
 #define ORGANIZATION_NAME "Managicality"
 #define APP_NAME "ProWorld 0.1"
 
+#define DATA_LOCATION_XML_PATH "Data/Locations.xml"
+
 #endif //GLOBALS_H
 

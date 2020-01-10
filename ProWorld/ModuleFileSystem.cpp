@@ -4,6 +4,7 @@
 #include <string>
 #include <fstream>
 
+#include "App.h"
 #include "ModuleFileSystem.h"
 #include "PhysFS/include/physfs.h"
 
@@ -54,7 +55,7 @@ unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 			unsigned int read = (unsigned int)fread(*buffer, sizeof(char), size, load_file);
 			if (read != size)
 			{
-				//LOG("ERROR while reading file:\n\t%s", path);
+				LOG("ERROR while reading file:\n\t%s \n", path);
 				if (*buffer != nullptr)
 					delete[] *buffer;
 			}
@@ -63,15 +64,15 @@ unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 				ret = read;
 			}
 		}
-		/*if (fclose(load_file) != 0)
+		if (fclose(load_file) != 0)
 		{
-			LOG("ERROR ehile opening file:\n\t%s\n\t%s", path, strerror(errno));
-		}*/
+			LOG("ERROR while opening file:\n\t%s\n\t%s \n", path, strerror(errno));
+		}
 	}
-	/*else
+	else
 	{
-		LOG("ERROR while opening file:\n\t%s\n\t%s", path, strerror(errno));
-	}*/
+		LOG("ERROR while opening file:\n\t%s\n\t%s \n", path, strerror(errno));
+	}
 
 
 	return ret;
@@ -90,8 +91,7 @@ string ModuleFileSystem::CreateFolder(const char * path, const char * folder_nam
 
 	if (CreateDirectory(fldrPath.c_str(), NULL) == 0)
 	{
-		// FOR LATER
-		// LOG("ERROR Creating Directory %s[%s]", folder_name, strerror(errno));
+		LOG("ERROR Creating Directory %s[%s] \n", folder_name, strerror(errno));
 		return ret;
 	}
 
@@ -109,15 +109,19 @@ pugi::xml_node ModuleFileSystem::LoadXML(const char * filename, const char* chil
 	pugi::xml_parse_result result = file.load_buffer(buf, size);
 	RELEASE(buf);
 
-	/*if (result == NULL)
-		LOG("Could not load map xml file config.xml. pugi error: %s", result.description());
+	if (result == NULL)
+	{
+		LOG("Could not load map xml file. pugi error: %s \n", result.description());
+	}
 	else
-		ret = gameDatafile.child("GameData");*/
-
-	if (result != NULL)
 	{
 		ret = file.child(child);
 	}
+
+	/*if (result != NULL)
+	{
+		ret = file.child(child);
+	}*/
 
 	return ret;
 }

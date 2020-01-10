@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include "Location.h"
-#include "World.h"
+#include "App.h"
 #include "Globals.h"
 
 using namespace std;
@@ -17,7 +17,7 @@ enum MainState {
 	EXIT_STATE,
 };
 
-World* world = nullptr;
+App* app = nullptr;
 
 int main(int argc, char ** argv)
 {
@@ -32,14 +32,14 @@ int main(int argc, char ** argv)
 
 		case CREATE_STATE:
 		// ( ---------- World Creation -------------)
-			world = new World();
+			app = new App();
 			state = START_STATE;
 
 			break;
 		
 		case START_STATE:
 		// ( --------- World Starts -------------- )
-			if (world->Start() == false)
+			if (app->Start() == false)
 			{
 				state == EXIT_STATE;
 			}
@@ -54,7 +54,7 @@ int main(int argc, char ** argv)
 
 		case CLEAN_UP_STATE:
 			// ( --------- World Finishes -------------- )
-			if (world->CleanUp() == false)
+			if (app->CleanUp() == false)
 			{
 				state == EXIT_STATE;
 			}
@@ -68,6 +68,6 @@ int main(int argc, char ** argv)
 		}
 	}
 	
-	delete world;
+	delete app;
 	return ret;
 }
