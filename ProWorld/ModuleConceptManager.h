@@ -15,7 +15,7 @@
 
 //------------------
 
-#define LOCATION "Location"
+#define LOCATION "Locations"
 
 class ModuleConceptManager : public Module
 {
@@ -43,7 +43,7 @@ private:
 
 	std::vector<Concept*> location_vector;
 	
-
+	unsigned int curr_id = 0;
 
 };
 

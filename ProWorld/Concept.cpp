@@ -32,3 +32,8 @@ const char * Concept::GetChar()
 {
 	return word.c_str();
 }
+
+void Concept::SetID(unsigned int argid)
+{
+	id = argid;
+}

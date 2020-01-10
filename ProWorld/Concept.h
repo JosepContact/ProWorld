@@ -22,9 +22,11 @@ public:
 		std::string word;
 		std::string plural;
 		ConceptType type;
+		unsigned int id;
 	
 	public:
 		void SetName(std::string name, std::string plural);
 		std::string GetString();
 		const char* GetChar();
+		void SetID(unsigned int argid);
 };

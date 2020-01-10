@@ -22,14 +22,16 @@ bool ModuleConceptManager::Start()
 
 	locations = app->filesystem->LoadXML(DATA_LOCATION_XML_PATH, LOCATION, location_file);
 
-	if (locations.empty() != false)
+	if (locations.empty() == false)
 	{
 		LOG("Locations.xml loaded correctly!\n");
 
 		for (pugi::xml_node location = locations.child("Location"); location; location = location.next_sibling("Location"))
 		{
+			location = location.child("Info");
 			CreateConcept(location.child("Name").attribute("value").as_string(), location.child("Plural").attribute("value").as_string(), 
 				Concept::ConceptType::Location);
+			location = location.parent();
 		}
 	}
 
@@ -48,6 +50,9 @@ void ModuleConceptManager::CreateConcept(std::string word, std::string plural, C
 {
 	Concept* concept = new Concept(word, plural, type);
 	concept_list.push_back(concept);
+
+	concept->SetID(curr_id);
+	curr_id++;
 
 	switch (type)
 	{

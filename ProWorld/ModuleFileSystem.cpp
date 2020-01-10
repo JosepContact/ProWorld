@@ -39,7 +39,7 @@ unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 	if (path == nullptr)
 		return ret;
 
-	ofstream;
+	//ofstream;
 	FILE* load_file = fopen(path, "rb");
 
 	if (load_file)
@@ -51,17 +51,17 @@ unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 
 		if (size > 0)
 		{
-			*buffer = new char[size];
+			*buffer = new char[(unsigned int)size];
 			unsigned int read = (unsigned int)fread(*buffer, sizeof(char), size, load_file);
 			if (read != size)
 			{
 				LOG("ERROR while reading file:\n\t%s \n", path);
 				if (*buffer != nullptr)
-					delete[] *buffer;
+					RELEASE(*buffer);
 			}
 			else
 			{
-				ret = read;
+				ret = (unsigned int)read;
 			}
 		}
 		if (fclose(load_file) != 0)
@@ -77,6 +77,38 @@ unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 
 	return ret;
 }
+/*
+unsigned int ModuleFileSystem::Load(const char* file, char** buffer) const
+{
+	unsigned int ret = 0;
+
+	PHYSFS_file* fs_file = PHYSFS_openRead(file);
+
+	if (fs_file != NULL)
+	{
+		PHYSFS_sint64 size = PHYSFS_fileLength(fs_file);
+
+		if (size > 0)
+		{
+			*buffer = new char[(unsigned int)size];
+			PHYSFS_sint64 read = PHYSFS_read(fs_file, *buffer, 1, (PHYSFS_sint32)size);
+			if (read != size)
+			{
+				LOG("File System error while reading from file %s: %s\n", file, PHYSFS_getLastError());
+				RELEASE(buffer);
+			}
+			else
+				ret = (unsigned int)read;
+		}
+
+		if (PHYSFS_close(fs_file) == 0)
+			LOG("File System error while closing file %s: %s\n", file, PHYSFS_getLastError());
+	}
+	else
+		LOG("File System error while opening file %s: %s\n", file, PHYSFS_getLastError());
+
+	return ret;
+}*/
 
 string ModuleFileSystem::CreateFolder(const char * path, const char * folder_name)
 {
@@ -109,14 +141,12 @@ pugi::xml_node ModuleFileSystem::LoadXML(const char * filename, const char* chil
 	pugi::xml_parse_result result = file.load_buffer(buf, size);
 	RELEASE(buf);
 
-	if (result == NULL)
+	if (result == NULL) 
 	{
 		LOG("Could not load map xml file. pugi error: %s \n", result.description());
 	}
 	else
-	{
 		ret = file.child(child);
-	}
 
 	/*if (result != NULL)
 	{
