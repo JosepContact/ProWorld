@@ -6,14 +6,18 @@
 
 class Concept
 {
-	public:
-		Concept();
-		virtual ~Concept();
+public:
 	enum ConceptType {
 		Location,
 		UnkownConcept
 	};
-	
+
+
+		Concept();
+		Concept(std::string argword, std::string argplural, ConceptType argtype);
+
+		virtual ~Concept();
+
 	protected:
 		std::string word;
 		std::string plural;

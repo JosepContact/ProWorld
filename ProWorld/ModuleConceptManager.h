@@ -11,6 +11,7 @@
 //------------------
 
 #include<vector>
+#include<list>
 
 //------------------
 
@@ -33,12 +34,16 @@ public:
 
 private:
 
-	void CreateConcept();
+	void CreateConcept(std::string word, std::string plural, Concept::ConceptType type);
 
 
 private:
 
-	std::vector<Concept*> locations;
+	std::list<Concept*> concept_list;
+
+	std::vector<Concept*> location_vector;
+	
+
 
 };
 

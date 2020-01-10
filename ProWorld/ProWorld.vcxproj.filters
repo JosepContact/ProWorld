@@ -41,8 +41,12 @@
     <ClCompile Include="App.cpp">
       <Filter>Cpp</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleWorld.cpp" />
-    <ClCompile Include="ModuleConceptManager.cpp" />
+    <ClCompile Include="ModuleConceptManager.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleWorld.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Concept.h">
