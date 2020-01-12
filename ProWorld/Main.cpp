@@ -47,11 +47,25 @@ int main(int argc, char ** argv)
 			{
 				state = UPDATE_STATE;
 			}
+			break;
 		case UPDATE_STATE:
-		// ( --------- World Updates -------------- )
-			//int update_return = world->Update();
+		{
+			// ( --------- World Updates -------------- )
+			int update_return = app->Update();
 			state = CLEAN_UP_STATE;
 
+			if (update_return == UPDATE_ERROR)
+			{
+				LOG("Application update exits with error.\n");
+				state == EXIT_STATE;
+			}
+			else if (update_return == UPDATE_STOP)
+			{
+				state == EXIT_STATE;
+			}
+
+			break;
+		}
 		case CLEAN_UP_STATE:
 			// ( --------- World Finishes -------------- )
 			if (app->CleanUp() == false)
@@ -64,7 +78,7 @@ int main(int argc, char ** argv)
 			}
 			state = EXIT_STATE;
 			ret = EXIT_SUCCESS;
-
+			break;
 		}
 	}
 	

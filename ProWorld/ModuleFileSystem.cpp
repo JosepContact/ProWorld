@@ -77,38 +77,6 @@ unsigned int ModuleFileSystem::Load(const char * path, char ** buffer) const
 
 	return ret;
 }
-/*
-unsigned int ModuleFileSystem::Load(const char* file, char** buffer) const
-{
-	unsigned int ret = 0;
-
-	PHYSFS_file* fs_file = PHYSFS_openRead(file);
-
-	if (fs_file != NULL)
-	{
-		PHYSFS_sint64 size = PHYSFS_fileLength(fs_file);
-
-		if (size > 0)
-		{
-			*buffer = new char[(unsigned int)size];
-			PHYSFS_sint64 read = PHYSFS_read(fs_file, *buffer, 1, (PHYSFS_sint32)size);
-			if (read != size)
-			{
-				LOG("File System error while reading from file %s: %s\n", file, PHYSFS_getLastError());
-				RELEASE(buffer);
-			}
-			else
-				ret = (unsigned int)read;
-		}
-
-		if (PHYSFS_close(fs_file) == 0)
-			LOG("File System error while closing file %s: %s\n", file, PHYSFS_getLastError());
-	}
-	else
-		LOG("File System error while opening file %s: %s\n", file, PHYSFS_getLastError());
-
-	return ret;
-}*/
 
 string ModuleFileSystem::CreateFolder(const char * path, const char * folder_name)
 {

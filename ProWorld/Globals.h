@@ -11,6 +11,7 @@ enum update_status
 };
 
 #define NULL 0
+typedef unsigned int uint;
 
 // Deletes a buffer
 #define RELEASE( x ) \

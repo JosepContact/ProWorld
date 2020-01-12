@@ -6,6 +6,7 @@
 #include "ModuleFileSystem.h"
 #include "ModuleConceptManager.h"
 #include "ModuleWorld.h"
+#include "ModuleNameGenerator.h"
 
 // ----------
 
@@ -24,15 +25,20 @@ public:
 	virtual ~App();
 
 	bool Start();
+	update_status Update();
 	bool CleanUp();
 
 	void SaveWorld();
 	void LoadWorld();
+	
+	void QuitApp();
 
 public:
 	ModuleFileSystem* filesystem;
 	ModuleConceptManager* conceptmanager;
 	ModuleWorld* world;
+	ModuleNameGenerator* namegenerator;
+	
 
 private:
 	std::list<Module*> listmodules;

@@ -21,16 +21,13 @@
     <Filter Include="Modules">
       <UniqueIdentifier>{88d1fe36-ca20-4418-b468-5fb38737f1df}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Concepts">
+      <UniqueIdentifier>{cfb844ec-e505-4ca0-ae52-4fa6255944d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Otros</Filter>
-    </ClCompile>
-    <ClCompile Include="Concept.cpp">
-      <Filter>Cpp</Filter>
-    </ClCompile>
-    <ClCompile Include="Location.cpp">
-      <Filter>Cpp</Filter>
     </ClCompile>
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp">
       <Filter>Tools\pugixml-1.10</Filter>
@@ -47,14 +44,15 @@
     <ClCompile Include="ModuleWorld.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
+    <ClCompile Include="Concept.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleNameGenerator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Concept.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
-    <ClInclude Include="Location.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
       <Filter>Tools\pugixml-1.10</Filter>
     </ClInclude>
@@ -77,6 +75,15 @@
       <Filter>Modules</Filter>
     </ClInclude>
     <ClInclude Include="ModuleConceptManager.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Concept.h">
+      <Filter>Concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleNameGenerator.h">
       <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>

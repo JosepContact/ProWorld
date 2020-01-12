@@ -10,11 +10,13 @@ App::App()
 	filesystem = new ModuleFileSystem;
 	conceptmanager = new ModuleConceptManager;
 	world = new ModuleWorld;
+	namegenerator = new ModuleNameGenerator;
 
 	// ----- Add Modules to World ---
 	listmodules.push_back(filesystem);
 	listmodules.push_back(conceptmanager);
 	listmodules.push_back(world);
+	listmodules.push_back(namegenerator);
 
 }
 
@@ -41,6 +43,19 @@ bool App::Start()
 	return ret;
 }
 
+update_status App::Update()
+{
+	update_status ret = UPDATE_CONTINUE;
+
+	for (list<Module*>::iterator it = listmodules.begin(); it != listmodules.end(); ++it) {
+		if ((*it) != nullptr && ret == true) {
+			ret = (*it)->Update();
+		}
+	}
+
+	return ret;
+}
+
 bool App::CleanUp()
 {
 	bool ret = true;
@@ -59,6 +74,11 @@ void App::SaveWorld()
 
 void App::LoadWorld()
 {
+}
+
+void App::QuitApp()
+{
+
 }
 
 void App::mylog(const char file[], int line, const char * format, ...)

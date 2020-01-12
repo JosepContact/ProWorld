@@ -23,8 +23,10 @@ public:
 	// Called before quitting
 	bool CleanUp();
 
-private:
+	virtual update_status Update();
 
+private:
+	void StartWorld();
 };
 
-#endif // __FILESYSTEM_H__
+#endif // __MODULEWORLD_H__

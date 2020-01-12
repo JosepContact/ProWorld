@@ -120,6 +120,7 @@
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ModuleConceptManager.cpp" />
+    <ClCompile Include="ModuleNameGenerator.cpp" />
     <ClCompile Include="ModuleWorld.cpp" />
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp" />
     <ClCompile Include="ModuleFileSystem.cpp" />
@@ -132,6 +133,7 @@
     <ClInclude Include="Globals.h" />
     <ClInclude Include="Location.h" />
     <ClInclude Include="Module.h" />
+    <ClInclude Include="ModuleNameGenerator.h" />
     <ClInclude Include="ModuleWorld.h" />
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp" />
     <ClInclude Include="pugixml-1.10\src\pugixml.hpp" />
