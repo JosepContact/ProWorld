@@ -26,6 +26,7 @@ typedef unsigned int uint;
 #define APP_NAME "ProWorld 0.1"
 
 #define DATA_LOCATION_XML_PATH "Data/Locations.xml"
+#define DATA_ADJECTIVE_XML_PATH "Data/Adjectives.xml"
 
 #endif //GLOBALS_H
 

@@ -9,14 +9,18 @@ class Adjective : public Concept {
 
 public:
 	Adjective();
+	Adjective(std::string argname, ConceptType argtype );
 	~Adjective();
 
 private:
 
 	int assigned_nouns;
-	int to_plural;
+	bool to_plural;
 
 public:
+
+	void SetAssignedNouns(int n);
+	void SetToPlural(bool toplural);
 
 };
 

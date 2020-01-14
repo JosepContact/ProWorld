@@ -7,6 +7,7 @@
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Concept.h"
+#include "Adjective.h"
 
 //------------------
 
@@ -16,6 +17,7 @@
 //------------------
 
 #define LOCATION "Locations"
+#define ADJECTIVE "Adjectives"
 
 class ModuleConceptManager : public Module
 {
@@ -42,6 +44,7 @@ private:
 	std::list<Concept*> concept_list;
 
 	std::vector<Concept*> location_vector;
+	std::vector<Adjective*> adjective_vector;
 	
 	unsigned int curr_id = 0;
 
