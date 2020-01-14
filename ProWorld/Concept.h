@@ -3,16 +3,19 @@
 #include <iostream>
 #include <sstream>
 
+#ifndef __CONCEPT_H__
+#define __CONCEPT_H__
+
+class Location;
 
 class Concept
 {
 public:
 	enum ConceptType {
 		Location,
+		Adjective,
 		UnkownConcept
 	};
-
-
 		Concept();
 		Concept(std::string argword, std::string argplural, ConceptType argtype);
 
@@ -30,3 +33,5 @@ public:
 		const char* GetChar();
 		void SetID(unsigned int argid);
 };
+
+#endif

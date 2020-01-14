@@ -1,6 +1,9 @@
 #include "ModuleWorld.h"
 #include "App.h"
 
+#include <cstdlib>
+#include <ctime>
+
 using namespace std;
 
 ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
@@ -40,6 +43,7 @@ update_status ModuleWorld::Update()
 
 	cout << "\n";
 	cout << "Let's begin!\n";
+	StartWorld();
 
 		return UPDATE_CONTINUE;
 }
@@ -60,4 +64,26 @@ void ModuleWorld::StartWorld()
 	//					2. Human creations. (Cities, towns, ports, statues, churches, castles, etc.)
 
 	// to be continued...
+	
+	world_type = GenerateWorldType();
+
+	string input;
+	do {
+
+	world_name = app->namegenerator->GenerateName();
+	cout << "\n";
+	cout << "World name is: "<< world_name<< "\nDo you would you like to keep it(yes/y/no/n?)";
+
+	cin >> input;
+
+	} while (input != "y" && input != "yes");
+}
+
+ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
+{
+	srand((int)time(0));
+
+	int randtofour = (rand() % 4);
+
+	return WorldType(randtofour);
 }

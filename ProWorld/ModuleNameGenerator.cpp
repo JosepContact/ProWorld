@@ -16,7 +16,7 @@ ModuleNameGenerator::~ModuleNameGenerator()
 bool ModuleNameGenerator::Start()
 {
 	
-	string syllabe = "ia";
+	string syllabe = "da";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "ye";
 	vector_syllabes.push_back(syllabe);
@@ -34,7 +34,7 @@ bool ModuleNameGenerator::Start()
 	vector_syllabes.push_back(syllabe);
 	syllabe = "sos";
 	vector_syllabes.push_back(syllabe);
-	syllabe = "eo";
+	syllabe = "kal";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "drias";
 	vector_syllabes.push_back(syllabe);
@@ -44,15 +44,15 @@ bool ModuleNameGenerator::Start()
 	vector_syllabes.push_back(syllabe);
 	syllabe = "ti";
 	vector_syllabes.push_back(syllabe);
-	syllabe = "cion";
+	syllabe = "kas";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "gar";
 	vector_syllabes.push_back(syllabe);
-	syllabe = "ik";
+	syllabe = "ki";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "le";
 	vector_syllabes.push_back(syllabe);
-	syllabe = "ov";
+	syllabe = "mi";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "me";
 	vector_syllabes.push_back(syllabe);
@@ -74,15 +74,23 @@ bool ModuleNameGenerator::Start()
 	vector_syllabes.push_back(syllabe);
 	syllabe = "kla";
 	vector_syllabes.push_back(syllabe);
-	syllabe = "lea";
+	syllabe = "le";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "xor";
 	vector_syllabes.push_back(syllabe);
-	syllabe = "eye";
+	syllabe = "ye";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "rak";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "si";
+	vector_syllabes.push_back(syllabe);
+	syllabe = "de";
+	vector_syllabes.push_back(syllabe);
+	syllabe = "neme";
+	vector_syllabes.push_back(syllabe);
+	syllabe = "nox";
+	vector_syllabes.push_back(syllabe);
+	syllabe = "cy";
 	vector_syllabes.push_back(syllabe);
 
 	//Ending Syllabes
@@ -92,31 +100,35 @@ bool ModuleNameGenerator::Start()
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "cion";
 	vector_end_syllabes.push_back(syllabe);
-	syllabe = "yon";
-	vector_end_syllabes.push_back(syllabe);
-	syllabe = "ion";
+	syllabe = "on";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "topia";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "rion";
 	vector_end_syllabes.push_back(syllabe);
-	syllabe = "acire";
+	syllabe = "cire";
 	vector_end_syllabes.push_back(syllabe);
-	syllabe = "ius";
+	syllabe = "cius";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "dos";
 	vector_end_syllabes.push_back(syllabe);
-	syllabe = "eus";
+	syllabe = "ceus";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "mir";
 	vector_end_syllabes.push_back(syllabe);
-	syllabe = "uul";
+	syllabe = "guul";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "gari";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "mic";
 	vector_end_syllabes.push_back(syllabe);
-	syllabe = "ixis";
+	syllabe = "xis";
+	vector_end_syllabes.push_back(syllabe);
+	syllabe = "sis";
+	vector_end_syllabes.push_back(syllabe);
+	syllabe = "ris";
+	vector_end_syllabes.push_back(syllabe);
+	syllabe = "siris";
 	vector_end_syllabes.push_back(syllabe);
 
 	GenerateName();

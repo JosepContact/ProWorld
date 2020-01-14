@@ -26,7 +26,6 @@ public:
 
 	//virtual update_status Update();
 
-private:
 	std::string GenerateName();
 
 private:

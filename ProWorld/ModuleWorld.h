@@ -7,10 +7,15 @@
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 
-
 class ModuleWorld : public Module
 {
 public:
+	enum WorldType {
+		European,
+		Xinese,
+		Japanese,
+		African
+	};
 
 	ModuleWorld(bool start_enabled = true);
 
@@ -27,6 +32,11 @@ public:
 
 private:
 	void StartWorld();
+	WorldType GenerateWorldType();
+
+private:
+	std::string world_name;
+	WorldType world_type;
 };
 
 #endif // __MODULEWORLD_H__

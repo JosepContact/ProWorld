@@ -51,6 +51,7 @@
       <Filter>Concepts</Filter>
     </ClCompile>
     <ClCompile Include="ModuleNameGenerator.cpp" />
+    <ClCompile Include="Adjective.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -85,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="ModuleNameGenerator.h">
       <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Adjective.h">
+      <Filter>Concepts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

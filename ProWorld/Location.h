@@ -3,11 +3,15 @@
 #define __LOCATION_H__
 
 #include "Concept.h"
+#include<vector>
+
+class Adjective;
 
 class Location : public Concept {
 
 public:
 	Location();
+	Location(std::string argword, std::string argplural, ConceptType argtype);
 	~Location();
 
 public:
@@ -20,6 +24,18 @@ public:
 	};
 
 	ClimateType climate;
+
+
+private:
+
+	std::vector<int> adjectives;
+
+public:
+	void SetName(std::string argname);
+	std::string GetName() const;
+
+	void AddAdjective(int n);
+	std::vector<int> GetAdjectives() const;
 };
 
 #endif

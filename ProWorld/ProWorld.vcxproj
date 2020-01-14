@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adjective.cpp" />
     <ClCompile Include="Concept.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="App.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Adjective.h" />
     <ClInclude Include="Concept.h" />
     <ClInclude Include="ModuleConceptManager.h" />
     <ClInclude Include="ModuleFileSystem.h" />

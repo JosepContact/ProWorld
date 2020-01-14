@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef __APPLICATION_H__
-#define __APPLICATION_H__
+#ifndef __APP_H__
+#define __APP_H__
 
 #include "ModuleFileSystem.h"
 #include "ModuleConceptManager.h"

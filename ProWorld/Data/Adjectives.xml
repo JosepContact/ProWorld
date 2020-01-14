@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+
+<Adjectives>
+	<Adjective>
+		<Info>
+		<Name value = "Large"/>
+		<Nouns value = "0"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Huge"/>
+		<Nouns value = "0"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Small"/>
+		<Nouns value = "0"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Long"/>
+		<Nouns value = "1"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Many"/>
+		<Nouns value = "2"/>
+		<toPlural value = "1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Dense"/>
+		<Nouns value = "3"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Deep"/>
+		<Nouns value = "4"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Dark"/>
+		<Nouns value = "5"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Colorful"/>
+		<Nouns value = "6"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Tall"/>
+		<Nouns value = "7"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Inactive"/>
+		<Nouns value = "8"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+</Adjectives>

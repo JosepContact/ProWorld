@@ -29,11 +29,23 @@ bool ModuleConceptManager::Start()
 		for (pugi::xml_node location = locations.child("Location"); location; location = location.next_sibling("Location"))
 		{
 			location = location.child("Info");
-			CreateConcept(location.child("Name").attribute("value").as_string(), location.child("Plural").attribute("value").as_string(), 
-				Concept::ConceptType::Location);
+			Location* concept = (Location*)CreateConcept(location.child("Name").attribute("value").as_string(), location.child("Plural").attribute("value").as_string(), 
+				Concept::ConceptType::Location);		
+
+			pugi::xml_node adj_nodes = location.child("Adjectives");
+
+			for (pugi::xml_node loc = adj_nodes.child("Adj"); loc; loc = loc.next_sibling("Adj"))
+			{
+				concept->AddAdjective(loc.attribute("val").as_int());
+			}
+
 			location = location.parent();
 		}
 	}
+
+	//-- Adjectives ----
+	pugi::xml_document	adjective_file;
+	pugi::xml_node		adjectives;
 
 	return true;
 }
@@ -46,19 +58,22 @@ bool ModuleConceptManager::CleanUp()
 	return true;
 }
 
-void ModuleConceptManager::CreateConcept(std::string word, std::string plural, Concept::ConceptType type)
+Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plural, Concept::ConceptType type)
 {
-	Concept* concept = new Concept(word, plural, type);
-	concept_list.push_back(concept);
-
-	concept->SetID(curr_id);
-	curr_id++;
+	
+	Concept* ret = nullptr;
 
 	switch (type)
 	{
 	case Concept::ConceptType::Location:
-		location_vector.push_back(concept);
+	{
+		Location* location = new Location(word, plural, type);
+		concept_list.push_back(location);
+		location->SetID(curr_id);
+		location_vector.push_back(location);
+		ret = location;
 		break;
+	}
 	case Concept::ConceptType::UnkownConcept:
 		LOG("ModuleConceptManager::CreateConcept() Received unknown type!\n");
 		break;
@@ -66,4 +81,9 @@ void ModuleConceptManager::CreateConcept(std::string word, std::string plural, C
 		LOG("ModuleConceptManager::CreateConcept() Received unknown type!\n");
 		break;
 	}
+	
+	curr_id++;
+
+	return ret;
+
 }
