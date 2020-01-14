@@ -14,6 +14,16 @@ Adjective::~Adjective()
 {
 }
 
+int Adjective::GetNounsKey() const
+{
+	return assigned_nouns;
+}
+
+bool Adjective::GetToPlural() const
+{
+	return to_plural;
+}
+
 void Adjective::SetAssignedNouns(int n)
 {
 	assigned_nouns = n;

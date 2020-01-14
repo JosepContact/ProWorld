@@ -1,5 +1,7 @@
 #include "ModuleWorld.h"
 #include "App.h"
+#include "Location.h"
+#include "Adjective.h"
 
 #include <cstdlib>
 #include <ctime>
@@ -77,6 +79,8 @@ void ModuleWorld::StartWorld()
 	cin >> input;
 
 	} while (input != "y" && input != "yes");
+
+	SetWorldOverview();
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
@@ -86,4 +90,28 @@ ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
 	int randtofour = (rand() % 4);
 
 	return WorldType(randtofour);
+}
+
+void ModuleWorld::SetWorldOverview()
+{
+	srand((int)time(0));
+
+	for (int i = 0; i < 3; ++i)
+	{
+		vector<Location*>locations = app->conceptmanager->GetLocationVector();
+
+		int randloc = (rand() % locations.size());
+
+		int randandj = (rand() % locations[randloc]->GetAdjectives().size());
+	
+		vector<Adjective*>adjectives = app->conceptmanager->GetAdjectivesByKey(locations[randloc]->GetAdjectives()[randandj]);
+
+		world_overview[i][0] = locations[randloc];
+		
+		world_overview[i][1] = adjectives[(rand() % adjectives.size())];
+		cout << adjectives[(rand() % adjectives.size())]->GetString() << " ";
+		cout << locations[randloc]->GetString() << " ";
+	}
+	getchar();
+	int a = 2;
 }

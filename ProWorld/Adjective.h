@@ -18,7 +18,8 @@ private:
 	bool to_plural;
 
 public:
-
+	int GetNounsKey() const;
+	bool GetToPlural() const;
 	void SetAssignedNouns(int n);
 	void SetToPlural(bool toplural);
 

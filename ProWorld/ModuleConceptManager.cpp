@@ -119,3 +119,25 @@ Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plura
 	return ret;
 
 }
+
+std::vector<Location*> ModuleConceptManager::GetLocationVector() const
+{
+	return location_vector;
+}
+
+std::vector<Adjective*> ModuleConceptManager::GetAdjectiveVector() const
+{
+	return adjective_vector;
+}
+
+std::vector<Adjective*> ModuleConceptManager::GetAdjectivesByKey(int key)
+{
+	vector<Adjective*> ret;
+
+	for (vector<Adjective*>::iterator it = adjective_vector.begin(); it != adjective_vector.end(); ++it)
+	{
+		if ((*it)->GetNounsKey() == key)
+			ret.push_back((*it));
+	}
+	return ret;
+}

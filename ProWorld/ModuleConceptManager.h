@@ -7,6 +7,7 @@
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Concept.h"
+#include "Location.h"
 #include "Adjective.h"
 
 //------------------
@@ -43,11 +44,16 @@ private:
 
 	std::list<Concept*> concept_list;
 
-	std::vector<Concept*> location_vector;
+	std::vector<Location*> location_vector;
 	std::vector<Adjective*> adjective_vector;
 	
 	unsigned int curr_id = 0;
+public:
 
+	std::vector<Location*> GetLocationVector()const;
+	std::vector<Adjective*> GetAdjectiveVector()const;
+
+	std::vector<Adjective*> GetAdjectivesByKey(int key);
 };
 
 #endif // __MODULECONCEPTMANAGER_H__
