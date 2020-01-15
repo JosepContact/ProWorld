@@ -71,6 +71,7 @@ void ModuleWorld::StartWorld()
 
 	// to be continued...
 	
+	// ----- OVERVIEW --------
 	world_type = GenerateWorldType();
 
 	string input;
@@ -92,15 +93,13 @@ void ModuleWorld::StartWorld()
 
 	getchar();
 
+	// ------ SKY ------
+
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
 {
-	srand((int)time(0));
-
-	int randtofour = (rand() % 4);
-
-	return WorldType(randtofour);
+	return WorldType(GetRandomNumber(0, 4));
 }
 
 void ModuleWorld::SetWorldOverview()
@@ -121,4 +120,43 @@ void ModuleWorld::SetWorldOverview()
 		
 		world_overview[i][1] = adjectives[(rand() % adjectives.size())];
 	}
+}
+
+void ModuleWorld::SetSky()
+{
+
+	// is sky visible?
+
+	if (GetBoolByRandom(LOW_CHANCE))
+	{
+		// days longer than 24 hours
+	}
+	else if (GetBoolByRandom(LOW_CHANCE))
+	{
+		// days shorter than 24 hours
+	}
+
+	if (GetBoolByRandom(MEDIUM_CHANCE))
+	{
+		// more than one moon
+	
+	}
+	else
+	{
+		// the moon
+	}
+
+
+	if (GetBoolByRandom(MEDIUM_LOW_CHANCE))
+	{
+		// more than one sun
+		
+	}
+	else
+	{
+		// the sun
+	}
+
+
+	// constellations
 }

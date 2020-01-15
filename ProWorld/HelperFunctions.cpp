@@ -1,6 +1,9 @@
 #include "HelperFunctions.h"
 #include "Globals.h"
 #include "App.h"
+
+#include <cstdlib>
+#include <ctime>
 #include <algorithm>
 
 using namespace std;
@@ -47,5 +50,21 @@ std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective
 	}
 
 	return ret;
+}
+
+bool GetBoolByRandom(uint chance)
+{
+	srand((int)time(0));
+
+	return ((rand() % 100 + 1) < chance);
+}
+
+int GetRandomNumber(int min, int max)
+{
+	if (max < 1) return 0;
+
+	srand((int)time(0));
+
+	return ((rand() % (max - 1)) + min);
 }
 

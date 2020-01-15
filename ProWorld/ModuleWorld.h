@@ -7,6 +7,7 @@
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Concept.h"
+#include "Sky.h"
 #include <array>
 
 class ModuleWorld : public Module
@@ -36,8 +37,10 @@ private:
 	void StartWorld();
 	WorldType GenerateWorldType();
 	void SetWorldOverview();
+	void SetSky();
 
 private:
+	bool isUnderground = false;
 	std::string world_name;
 	WorldType world_type;
 	std::array<std::array<Concept*, 2>, 3> world_overview;

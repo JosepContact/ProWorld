@@ -1,4 +1,5 @@
 #include "ModuleNameGenerator.h"
+#include "HelperFunctions.h"
 
 #include <cstdlib>
 #include <ctime>
@@ -146,10 +147,13 @@ bool ModuleNameGenerator::CleanUp()
 
 std::string ModuleNameGenerator::GenerateName()
 {
-	srand((int)time(0));
+	//srand((int)time(0));
 
 	// create a random number from 2 to 4
-	int twofour = (rand() % 3) + 2;
+	//int twofour = (rand() % 3) + 2;
+
+	int twofour = GetRandomNumber(2, 4);
+
 	string name;
 
 	for (uint i = 0; i < twofour; ++i)

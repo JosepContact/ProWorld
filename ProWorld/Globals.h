@@ -22,6 +22,15 @@ typedef unsigned int uint;
 	  x = NULL;              \
 	    }                      \
     }
+
+#define VERY_HIGH_CHANCE 95
+#define HIGH_CHANCE 80
+#define MEDIUM_HIGH_CHANCE 60
+#define MEDIUM_CHANCE 50
+#define MEDIUM_LOW_CHANCE 40
+#define LOW_CHANCE 20
+#define VERY_LOW_CHANCE 5
+
 #define ORGANIZATION_NAME "Managicality"
 #define APP_NAME "ProWorld 0.1"
 

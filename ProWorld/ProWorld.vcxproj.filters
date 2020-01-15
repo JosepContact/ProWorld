@@ -24,6 +24,9 @@
     <Filter Include="Concepts">
       <UniqueIdentifier>{cfb844ec-e505-4ca0-ae52-4fa6255944d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\World">
+      <UniqueIdentifier>{ba5ecb90-2ac8-48c1-8d1d-37f9a00996d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -56,7 +59,10 @@
     <ClCompile Include="ModuleNameGenerator.cpp">
       <Filter>Modules</Filter>
     </ClCompile>
-    <ClCompile Include="HelperFunctions.cpp" />
+    <ClCompile Include="HelperFunctions.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="Sky.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -97,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="HelperFunctions.h">
       <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Sky.h">
+      <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
