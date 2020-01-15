@@ -30,6 +30,7 @@ public:
 	public:
 		void SetName(std::string name, std::string plural);
 		std::string GetString();
+		std::string GetPlural();
 		const char* GetChar();
 		void SetID(unsigned int argid);
 };

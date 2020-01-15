@@ -2,11 +2,15 @@
 #include "App.h"
 #include "Location.h"
 #include "Adjective.h"
+#include "HelperFunctions.h"
 
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
+
+#define print cout <<
+#define read cin >>>
 
 ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
 {
@@ -74,13 +78,20 @@ void ModuleWorld::StartWorld()
 
 	world_name = app->namegenerator->GenerateName();
 	cout << "\n";
-	cout << "World name is: "<< world_name<< "\nDo you would you like to keep it(yes/y/no/n?)";
+	cout << "World name is: "<< toUppercase(world_name) << "\nDo you would you like to keep it(yes/y/no/n?)";
 
 	cin >> input;
 
 	} while (input != "y" && input != "yes");
 
 	SetWorldOverview();
+
+	cout << "Your world has "<<AdjectiveandNameOutput(false, true, (Adjective*)world_overview[0][1], (Location*)world_overview[0][0]);
+	cout << ", " << AdjectiveandNameOutput(false, true, (Adjective*)world_overview[1][1], (Location*)world_overview[1][0]);
+	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)world_overview[2][1], (Location*)world_overview[2][0]) << ".";
+
+	getchar();
+
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
@@ -109,9 +120,5 @@ void ModuleWorld::SetWorldOverview()
 		world_overview[i][0] = locations[randloc];
 		
 		world_overview[i][1] = adjectives[(rand() % adjectives.size())];
-		cout << adjectives[(rand() % adjectives.size())]->GetString() << " ";
-		cout << locations[randloc]->GetString() << " ";
 	}
-	getchar();
-	int a = 2;
 }

@@ -50,8 +50,13 @@
     <ClCompile Include="Location.cpp">
       <Filter>Concepts</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleNameGenerator.cpp" />
-    <ClCompile Include="Adjective.cpp" />
+    <ClCompile Include="Adjective.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleNameGenerator.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="HelperFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -89,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="Adjective.h">
       <Filter>Concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="HelperFunctions.h">
+      <Filter>Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

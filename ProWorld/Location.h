@@ -32,7 +32,6 @@ private:
 
 public:
 	void SetName(std::string argname);
-	std::string GetName() const;
 
 	void AddAdjective(int n);
 	std::vector<int> GetAdjectives() const;

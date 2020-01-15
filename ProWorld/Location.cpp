@@ -36,8 +36,3 @@ void Location::SetName(std::string argname)
 {
 	word = argname;
 }
-
-std::string Location::GetName() const
-{
-	return word;
-}

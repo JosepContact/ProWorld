@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="Adjective.cpp" />
     <ClCompile Include="Concept.cpp" />
+    <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="ModuleConceptManager.cpp" />
@@ -130,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="Adjective.h" />
     <ClInclude Include="Concept.h" />
+    <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="ModuleConceptManager.h" />
     <ClInclude Include="ModuleFileSystem.h" />
     <ClInclude Include="Globals.h" />

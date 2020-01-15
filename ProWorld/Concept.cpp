@@ -28,6 +28,11 @@ std::string Concept::GetString()
 	return word;
 }
 
+std::string Concept::GetPlural()
+{
+	return plural;
+}
+
 const char * Concept::GetChar()
 {
 	return word.c_str();
