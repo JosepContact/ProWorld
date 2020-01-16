@@ -163,6 +163,7 @@ void ModuleWorld::SetSky()
 		else daytime_duration = GetRandomNumber(1, 3);
 
 		// CLIMATE = COLD!!!!
+		world_climate = Polar;
 	}
 
 	int nMoons = 1;
@@ -180,6 +181,7 @@ void ModuleWorld::SetSky()
 		nSuns = GetRandomNumber(2, 3);
 
 		//CLIMATE HOT!!!
+		world_climate = (Climates)GetRandomNumber(2,3);
 	}
 
 	sky = new Sky(vis, nSuns, nMoons, 88, daytime_regularity, daytime_duration, type);

@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+
+<Locations>
+	<Location>
+		<Info>
+		<Name value = "City"/>
+		<Plural value = "Cities"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Town"/>
+		<Plural value = "Towns"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Village"/>
+		<Plural value = "Villages"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Port"/>
+		<Plural value = "Ports"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Mountain"/>
+		<Plural value = "Mountains"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="7"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Volcano"/>
+		<Plural value = "Volcanoes"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="7"/>
+			<Adj val="8"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Valley"/>
+		<Plural value = "Valleys"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Cave"/>
+		<Plural value = "Caves"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Forest"/>
+		<Plural value = "Forests"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Jungle"/>
+		<Plural value = "Jungles"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Plain"/>
+		<Plural value = "Plains"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Swamp"/>
+		<Plural value = "Swamps"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Ocean"/>
+		<Plural value = "Oceans"/>
+		<Adjectives>
+			<Adj val="2"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "River"/>
+		<Plural value = "Rivers"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="4"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Lake"/>
+		<Plural value = "Lakes"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="4"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Bay"/>
+		<Plural value = "Bays"/>
+		<Adjectives>
+			<Adj val="2"/>
+			<Adj val="5"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Island"/>
+		<Plural value = "Islands"/>
+		<Adjectives>
+			<Adj val="2"/>
+			<Adj val="6"/>
+		</Adjectives>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Archipielago"/>
+		<Plural value = "Archipelagoes"/>
+		<Adjectives>
+			<Adj val="2"/>
+			<Adj val="6"/>
+		</Adjectives>
+		</Info>
+	</Location>
+</Locations>
