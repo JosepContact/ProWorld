@@ -18,6 +18,7 @@ ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
 
 ModuleWorld::~ModuleWorld()
 {
+	delete sky;
 }
 
 bool ModuleWorld::Start()
@@ -95,6 +96,8 @@ void ModuleWorld::StartWorld()
 
 	// ------ SKY ------
 
+	SetSky();
+
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
@@ -125,38 +128,67 @@ void ModuleWorld::SetWorldOverview()
 void ModuleWorld::SetSky()
 {
 
+	//--- Sky visibility
+	Sky::SkyVisibility vis = Sky::SkyVisibility::Visible;
 	// is sky visible?
+	if (GetBoolByRandom(VERY_LOW_CHANCE))
+	{
+		vis = Sky::SkyVisibility::PartiallyVisible;
+		if (GetBoolByRandom(VERY_LOW_CHANCE))
+			vis = Sky::SkyVisibility::NonVisible;
+	}
 
-	if (GetBoolByRandom(LOW_CHANCE))
+
+	//--- Sky daytime
+	bool daytime_regularity = true;
+
+	Sky::DaytimeType type;
+	switch (GetRandomNumber(1, 2))
+	{
+	case 1:
+		type = Sky::DaytimeType::Days;
+		break;
+	case 2:
+		type = Sky::DaytimeType::Months;
+		break;
+	}
+	int daytime_duration = 1;
+
+	if (GetBoolByRandom(VERY_LOW_CHANCE))
 	{
 		// days longer than 24 hours
-	}
-	else if (GetBoolByRandom(LOW_CHANCE))
-	{
-		// days shorter than 24 hours
+		daytime_regularity = false;
+		if (type == Sky::DaytimeType::Days)
+			daytime_duration = GetRandomNumber(2, 30);
+		else daytime_duration = GetRandomNumber(1, 3);
+
+		// CLIMATE = COLD!!!!
 	}
 
-	if (GetBoolByRandom(MEDIUM_CHANCE))
+	int nMoons = 1;
+	//--- Sky moons
+	if (GetBoolByRandom(MEDIUM_LOW_CHANCE) && vis == Sky::SkyVisibility::Visible)
 	{
 		// more than one moon
-	
-	}
-	else
-	{
-		// the moon
+		nMoons = GetRandomNumber(2, 6);	
 	}
 
-
-	if (GetBoolByRandom(MEDIUM_LOW_CHANCE))
+	int nSuns = 1;
+	if (GetBoolByRandom(LOW_CHANCE) && vis != Sky::SkyVisibility::NonVisible)
 	{
 		// more than one sun
-		
-	}
-	else
-	{
-		// the sun
+		nSuns = GetRandomNumber(2, 3);
+
+		//CLIMATE HOT!!!
 	}
 
+	sky = new Sky(vis, nSuns, nMoons, 88, daytime_regularity, daytime_duration, type);
+
+	/*int nConst = 88;
+	if (vis != Sky::SkyVisibility::NonVisible)
+	{
+		nConst = GetRandomNumber(65, 466);
+	}*/
 
 	// constellations
 }

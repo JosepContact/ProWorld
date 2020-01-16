@@ -44,6 +44,8 @@ private:
 	std::string world_name;
 	WorldType world_type;
 	std::array<std::array<Concept*, 2>, 3> world_overview;
+
+	Sky* sky;
 };
 
 #endif // __MODULEWORLD_H__
