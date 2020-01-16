@@ -6,7 +6,6 @@
 
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
-#include "Concept.h"
 #include "Climate.h"
 #include "Sky.h"
 #include <array>
@@ -42,11 +41,12 @@ private:
 
 private:
 	bool isUnderground = false;
-	std::string world_name;
-	WorldType world_type;
-	std::array<std::array<Concept*, 2>, 3> world_overview;
-
-	Sky* sky;
+	std::string wname;
+	WorldType wtype;
+	std::array<std::array<Concept*, 2>, 3> woverview;
+	
+	Climate* wclimate = nullptr;
+	Sky* wsky = nullptr;
 };
 
 #endif // __MODULEWORLD_H__

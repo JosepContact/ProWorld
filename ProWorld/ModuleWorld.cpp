@@ -18,7 +18,7 @@ ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
 
 ModuleWorld::~ModuleWorld()
 {
-	delete sky;
+	delete wsky;
 }
 
 bool ModuleWorld::Start()
@@ -73,14 +73,14 @@ void ModuleWorld::StartWorld()
 	// to be continued...
 	
 	// ----- OVERVIEW --------
-	world_type = GenerateWorldType();
+	wtype = GenerateWorldType();
 
 	string input;
 	do {
 
-	world_name = app->namegenerator->GenerateName();
+	wname = app->namegenerator->GenerateName();
 	cout << "\n";
-	cout << "World name is: "<< toUppercase(world_name) << "\nDo you would you like to keep it(yes/y/no/n?)";
+	cout << "World name is: "<< toUppercase(wname) << "\nDo you would you like to keep it(yes/y/no/n?)";
 
 	cin >> input;
 
@@ -88,15 +88,20 @@ void ModuleWorld::StartWorld()
 
 	SetWorldOverview();
 
-	cout << "Your world has "<<AdjectiveandNameOutput(false, true, (Adjective*)world_overview[0][1], (Location*)world_overview[0][0]);
-	cout << ", " << AdjectiveandNameOutput(false, true, (Adjective*)world_overview[1][1], (Location*)world_overview[1][0]);
-	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)world_overview[2][1], (Location*)world_overview[2][0]) << ".";
+	cout << "Your world has "<<AdjectiveandNameOutput(false, true, (Adjective*)woverview[0][1], (Location*)woverview[0][0]);
+	cout << ", " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[1][1], (Location*)woverview[1][0]);
+	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[2][1], (Location*)woverview[2][0]) << ".";
 
 	getchar();
 
 	// ------ SKY ------
 
 	SetSky();
+
+	// ----- GEOGRAPHY --------
+
+	if (wclimate != NULL)
+		wclimate = app->conceptmanager->GetClimateVector()[GetRandomNumber(Climate::ClimatesType::Tropical, Climate::ClimatesType::Polar)];
 
 }
 
@@ -119,9 +124,9 @@ void ModuleWorld::SetWorldOverview()
 	
 		vector<Adjective*>adjectives = app->conceptmanager->GetAdjectivesByKey(locations[randloc]->GetAdjectives()[randandj]);
 
-		world_overview[i][0] = locations[randloc];
+		woverview[i][0] = locations[randloc];
 		
-		world_overview[i][1] = adjectives[(rand() % adjectives.size())];
+		woverview[i][1] = adjectives[(rand() % adjectives.size())];
 	}
 }
 
@@ -163,7 +168,7 @@ void ModuleWorld::SetSky()
 		else daytime_duration = GetRandomNumber(1, 3);
 
 		// CLIMATE = COLD!!!!
-		//world_climate = Climate::ClimatesType::Polar;
+		wclimate = app->conceptmanager->GetClimateVector()[Climate::ClimatesType::Polar];
 	}
 
 	int nMoons = 1;
@@ -181,16 +186,12 @@ void ModuleWorld::SetSky()
 		nSuns = GetRandomNumber(2, 3);
 
 		//CLIMATE HOT!!!
-		//world_climate = (Climate::ClimatesType)GetRandomNumber(2,3);
+		wclimate = app->conceptmanager->GetClimateVector()[GetRandomNumber(Climate::ClimatesType::Tropical, Climate::ClimatesType::Arid)];
 	}
 
-	sky = new Sky(vis, nSuns, nMoons, 88, daytime_regularity, daytime_duration, type);
+	wsky = new Sky(vis, nSuns, nMoons, 88, daytime_regularity, daytime_duration, type);
 
-	/*int nConst = 88;
-	if (vis != Sky::SkyVisibility::NonVisible)
-	{
-		nConst = GetRandomNumber(65, 466);
-	}*/
+	//int nConst = 88;
 
 	// constellations
 }
