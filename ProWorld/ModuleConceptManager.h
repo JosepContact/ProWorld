@@ -9,6 +9,7 @@
 #include "Concept.h"
 #include "Location.h"
 #include "Adjective.h"
+#include "Climate.h"
 
 //------------------
 
@@ -19,6 +20,7 @@
 
 #define LOCATION "Locations"
 #define ADJECTIVE "Adjectives"
+#define CLIMATE "Climates"
 
 class ModuleConceptManager : public Module
 {
@@ -46,12 +48,14 @@ private:
 
 	std::vector<Location*> location_vector;
 	std::vector<Adjective*> adjective_vector;
+	std::vector<Climate*> climate_vector;
 	
 	unsigned int curr_id = 0;
 public:
 
 	std::vector<Location*> GetLocationVector()const;
 	std::vector<Adjective*> GetAdjectiveVector()const;
+	std::vector<Climate*> GetClimateVector()const;
 
 	std::vector<Adjective*> GetAdjectivesByKey(int key);
 };

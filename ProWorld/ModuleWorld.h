@@ -7,6 +7,7 @@
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Concept.h"
+#include "Climate.h"
 #include "Sky.h"
 #include <array>
 
@@ -18,14 +19,6 @@ public:
 		Xinese,
 		Japanese,
 		African
-	};
-
-	enum Climates
-	{
-		Tropical, //HOT 0
-		Arid, //HOT 1
-		Continental,  //REGULAR 2
-		Polar  //COLD 3
 	};
 
 	ModuleWorld(bool start_enabled = true);
@@ -54,7 +47,6 @@ private:
 	std::array<std::array<Concept*, 2>, 3> world_overview;
 
 	Sky* sky;
-	Climates world_climate;
 };
 
 #endif // __MODULEWORLD_H__

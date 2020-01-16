@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Adjective.cpp" />
+    <ClCompile Include="Climate.cpp" />
     <ClCompile Include="Concept.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Location.cpp" />
@@ -131,6 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Adjective.h" />
+    <ClInclude Include="Climate.h" />
     <ClInclude Include="Concept.h" />
     <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="ModuleConceptManager.h" />

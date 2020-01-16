@@ -14,6 +14,7 @@ public:
 	enum ConceptType {
 		Location,
 		Adjective,
+		Climate,
 		UnkownConcept
 	};
 		Concept();

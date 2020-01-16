@@ -3,6 +3,7 @@
 #include "Concept.h"
 #include "Location.h"
 #include "Adjective.h"
+#include "Climate.h"
 
 
 using namespace std;
@@ -24,7 +25,7 @@ bool ModuleConceptManager::Start()
 
 	locations = app->filesystem->LoadXML(DATA_LOCATION_XML_PATH, LOCATION, location_file);
 
-	if (locations.empty() == false)
+	if (!locations.empty())
 	{
 		LOG("Locations.xml loaded correctly!\n");
 
@@ -51,7 +52,7 @@ bool ModuleConceptManager::Start()
 
 	adjectives = app->filesystem->LoadXML(DATA_ADJECTIVE_XML_PATH, ADJECTIVE, adjective_file);
 
-	if (adjectives.empty() == false)
+	if (!adjectives.empty())
 	{
 		LOG("Adjectives.xml loaded correctly!\n");
 
@@ -68,7 +69,28 @@ bool ModuleConceptManager::Start()
 		}
 	}
 
+	//-- Climates ----
+	pugi::xml_document	climate_file;
+	pugi::xml_node		climates;
 
+	climates = app->filesystem->LoadXML(DATA_CLIMATES_XML_PATH, CLIMATE, climate_file);
+
+	if (!climates.empty())
+	{
+		LOG("Climates.xml loaded correctly!\n");
+
+		for (pugi::xml_node node_cl = climates.child("Climate"); node_cl; node_cl = node_cl.next_sibling("Climate"))
+		{
+			node_cl = node_cl.child("Info");
+			Climate* climate = (Climate*)CreateConcept(node_cl.child("Name").attribute("value").as_string(), string(""),
+				Concept::ConceptType::Climate);
+
+			climate->SetClimateType((Climate::ClimatesType)node_cl.child("Key").attribute("value").as_int());
+			climate->SetTemperature(node_cl.child("Temperature").attribute("value").as_string());
+
+			node_cl = node_cl.parent();
+		}
+	}
 
 	return true;
 }
@@ -106,6 +128,15 @@ Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plura
 		ret = adjective;
 		break;
 	}
+	case Concept::ConceptType::Climate:
+	{
+		Climate* climate = new Climate(word, type);
+		concept_list.push_back(climate);
+		climate->SetID(curr_id);
+		climate_vector.push_back(climate);
+		ret = climate;
+		break;
+	}
 	case Concept::ConceptType::UnkownConcept:
 		LOG("ModuleConceptManager::CreateConcept() Received unknown type!\n");
 		break;
@@ -128,6 +159,11 @@ std::vector<Location*> ModuleConceptManager::GetLocationVector() const
 std::vector<Adjective*> ModuleConceptManager::GetAdjectiveVector() const
 {
 	return adjective_vector;
+}
+
+std::vector<Climate*> ModuleConceptManager::GetClimateVector() const
+{
+	return climate_vector;
 }
 
 std::vector<Adjective*> ModuleConceptManager::GetAdjectivesByKey(int key)

@@ -36,6 +36,7 @@ typedef unsigned int uint;
 
 #define DATA_LOCATION_XML_PATH "Data/Locations.xml"
 #define DATA_ADJECTIVE_XML_PATH "Data/Adjectives.xml"
+#define DATA_CLIMATES_XML_PATH "Data/Climates.xml"
 
 #endif //GLOBALS_H
 

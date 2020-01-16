@@ -63,6 +63,7 @@
       <Filter>Tools</Filter>
     </ClCompile>
     <ClCompile Include="Sky.cpp" />
+    <ClCompile Include="Climate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -106,6 +107,9 @@
     </ClInclude>
     <ClInclude Include="Sky.h">
       <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Climate.h">
+      <Filter>Concepts</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
