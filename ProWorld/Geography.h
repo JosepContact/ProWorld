@@ -43,16 +43,19 @@ public:
 		LandType gtype;
 		std::vector<Concept*> locations;
 		bool is_coastline;
+		CardinalPoints cardinal;
 	};
+
 public:
 	Geography();
 	Geography(GeographyType type);
 	~Geography();
 
 	void DistributeLand(Climate::ClimatesType cl_type);
+	void SetCoastlines();
 
 private:
-	std::array<std::array < CellLand, 3>, 3> geoarray_land;
+	CellLand geoarray_land[3][3];
 	int geowater_cells;
 	GeographyType geotype = AboveLand;
 };

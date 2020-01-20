@@ -214,6 +214,7 @@ void ModuleWorld::SetGeography()
 	wgeography = new Geography(Geography::GeographyType::AboveLand); // for now we only have this one
 
 	wgeography->DistributeLand(wclimate->GetClimateType());
+	wgeography->SetCoastlines();
 
 
 	//AboveLand: // 2 to 4 cells of land
