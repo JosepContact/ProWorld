@@ -119,6 +119,7 @@
     <ClCompile Include="Adjective.cpp" />
     <ClCompile Include="Climate.cpp" />
     <ClCompile Include="Concept.cpp" />
+    <ClCompile Include="Geography.cpp" />
     <ClCompile Include="HelperFunctions.cpp" />
     <ClCompile Include="Location.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -134,6 +135,7 @@
     <ClInclude Include="Adjective.h" />
     <ClInclude Include="Climate.h" />
     <ClInclude Include="Concept.h" />
+    <ClInclude Include="Geography.h" />
     <ClInclude Include="HelperFunctions.h" />
     <ClInclude Include="ModuleConceptManager.h" />
     <ClInclude Include="ModuleFileSystem.h" />

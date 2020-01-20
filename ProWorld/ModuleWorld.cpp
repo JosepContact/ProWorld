@@ -94,14 +94,22 @@ void ModuleWorld::StartWorld()
 
 	getchar();
 
+	// ------ CLIMATE ------
+
+	SetClimate(); // Since Sky affects climate we create it first;
+	wclimate = app->conceptmanager->GetClimateVector()[GetRandomNumber(Climate::ClimatesType::Tropical, Climate::ClimatesType::Polar)];
+
 	// ------ SKY ------
 
 	SetSky();
 
 	// ----- GEOGRAPHY --------
+		
 
-	if (wclimate != NULL)
-		wclimate = app->conceptmanager->GetClimateVector()[GetRandomNumber(Climate::ClimatesType::Tropical, Climate::ClimatesType::Polar)];
+	SetGeography();
+
+
+	getchar();
 
 }
 
@@ -128,6 +136,11 @@ void ModuleWorld::SetWorldOverview()
 		
 		woverview[i][1] = adjectives[(rand() % adjectives.size())];
 	}
+}
+
+void ModuleWorld::SetClimate()
+{
+	wclimate = new Climate();
 }
 
 void ModuleWorld::SetSky()
@@ -194,4 +207,19 @@ void ModuleWorld::SetSky()
 	//int nConst = 88;
 
 	// constellations
+}
+
+void ModuleWorld::SetGeography()
+{
+	wgeography = new Geography(Geography::GeographyType::AboveLand); // for now we only have this one
+
+	wgeography->DistributeLand(wclimate->GetClimateType());
+
+
+	//AboveLand: // 2 to 4 cells of land
+
+	//Underwater: // 1 to 2 cells of land maybe
+
+	//Underground: // to define...
+
 }

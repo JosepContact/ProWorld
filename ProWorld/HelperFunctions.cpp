@@ -55,7 +55,9 @@ std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective
 bool GetBoolByRandom(uint chance)
 {
 	srand((int)time(0));
-
+	
+	int a = (rand() % 100 + 1);
+	
 	return ((rand() % 100 + 1) < chance);
 }
 
@@ -65,6 +67,9 @@ int GetRandomNumber(int min, int max)
 
 	srand((int)time(0));
 
-	return ((rand() % (max - 1)) + min);
+	if (max != 1)
+		return ((rand() % (max - 1)) + min);
+	else if (max == 1)
+		return ((rand() % (max)));
 }
 

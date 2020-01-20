@@ -7,6 +7,7 @@
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Climate.h"
+#include "Geography.h"
 #include "Sky.h"
 #include <array>
 
@@ -37,16 +38,24 @@ private:
 	void StartWorld();
 	WorldType GenerateWorldType();
 	void SetWorldOverview();
+	void SetClimate();
 	void SetSky();
+	void SetGeography();
 
 private:
-	bool isUnderground = false;
+	// WORLD
 	std::string wname;
 	WorldType wtype;
+
+	// WORLD ATTRIBUTES
 	std::array<std::array<Concept*, 2>, 3> woverview;
-	
 	Climate* wclimate = nullptr;
 	Sky* wsky = nullptr;
+	Geography* wgeography = nullptr;
+
+private:
+	//OTHER TOOLS
+	//bool set_climate = false;
 };
 
 #endif // __MODULEWORLD_H__

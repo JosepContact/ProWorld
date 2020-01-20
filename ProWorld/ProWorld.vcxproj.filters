@@ -62,8 +62,13 @@
     <ClCompile Include="HelperFunctions.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
-    <ClCompile Include="Sky.cpp" />
-    <ClCompile Include="Climate.cpp" />
+    <ClCompile Include="Sky.cpp">
+      <Filter>Modules\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Climate.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="Geography.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -105,11 +110,14 @@
     <ClInclude Include="HelperFunctions.h">
       <Filter>Tools</Filter>
     </ClInclude>
-    <ClInclude Include="Sky.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="Climate.h">
       <Filter>Concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="Sky.h">
+      <Filter>Modules\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Geography.h">
+      <Filter>Modules\World</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,6 +11,12 @@
 			<Adj val="6"/>
 			<Adj val="7"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -21,6 +27,12 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -31,6 +43,12 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -41,6 +59,12 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -52,6 +76,12 @@
 			<Adj val="2"/>
 			<Adj val="7"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -64,6 +94,12 @@
 			<Adj val="7"/>
 			<Adj val="8"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -75,6 +111,12 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -88,6 +130,12 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -103,6 +151,11 @@
 			<Adj val="6"/>
 			<Adj val="7"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -118,6 +171,9 @@
 			<Adj val="6"/>
 			<Adj val="7"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -128,6 +184,12 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -140,6 +202,11 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -152,6 +219,12 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -163,6 +236,12 @@
 			<Adj val="2"/>
 			<Adj val="4"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -174,6 +253,12 @@
 			<Adj val="2"/>
 			<Adj val="4"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -184,6 +269,12 @@
 			<Adj val="2"/>
 			<Adj val="5"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -194,6 +285,12 @@
 			<Adj val="2"/>
 			<Adj val="6"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 	<Location>
@@ -204,6 +301,25 @@
 			<Adj val="2"/>
 			<Adj val="6"/>
 		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Iceberg"/>
+		<Plural value = "Icebergs"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="6"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="3"/>
+		</Climates>
 		</Info>
 	</Location>
 </Locations>
