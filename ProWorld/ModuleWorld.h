@@ -4,6 +4,9 @@
 #ifndef __MODULEWORLD_H__
 #define __MODULEWORLD_H__
 
+#define N_LOCATIONS 25
+#define MAX_LOCATIONS_PER_CELL 7
+
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Climate.h"
@@ -41,6 +44,7 @@ private:
 	void SetClimate();
 	void SetSky();
 	void SetGeography();
+	void CreateMap();
 
 private:
 	// WORLD
@@ -52,6 +56,8 @@ private:
 	Climate* wclimate = nullptr;
 	Sky* wsky = nullptr;
 	Geography* wgeography = nullptr;
+
+	std::vector<Geography::CellLand> geoVector;
 
 private:
 	//OTHER TOOLS

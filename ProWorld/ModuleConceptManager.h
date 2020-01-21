@@ -58,6 +58,7 @@ public:
 	std::vector<Climate*> GetClimateVector()const;
 
 	std::vector<Adjective*> GetAdjectivesByKey(int key);
+	Location* GetLocationByName(std::string);
 };
 
 #endif // __MODULECONCEPTMANAGER_H__

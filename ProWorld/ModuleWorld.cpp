@@ -52,6 +52,63 @@ update_status ModuleWorld::Update()
 	cout << "Let's begin!\n";
 	StartWorld();
 
+
+	bool seemoon = false, seesun = false;
+	switch (wsky->GetVisibility())
+	{
+	case Sky::SkyVisibility::Visible:
+		print "Your world's sky is clear.\n";
+		seemoon = true;
+		seesun = true;
+		break;
+	case Sky::SkyVisibility::PartiallyVisible:
+		print "Your world's sky is partially clear, the moon isn't visibile.\n";
+		seemoon = false;
+		seesun = true;
+		break;
+	case Sky::SkyVisibility::NonVisible:
+		print "Your world's sky is hardly visbile.";
+		seemoon = false;
+		seesun = false;
+		break;
+	}
+
+	if (wsky->IsMultimoon() && wsky->IsMultisun() && seemoon == true && seesun && true)
+	{
+		print "The sky has " << wsky->getNMoons() << " moons and " << wsky->getNSuns() << " suns.";
+	}
+	else if (wsky->IsMultimoon() && seemoon == true)
+	{
+		print "The sky has " << wsky->getNMoons() << " moons.";
+	}
+	else if (wsky->IsMultisun() && seesun == true)
+	{
+		print "The sky has " << wsky->getNSuns() << " suns.";
+	}
+	
+	if (wsky->isDaytimeRegular() == false)
+	{
+		if (wsky->GetDaytimeType() == Sky::DaytimeType::Months)
+		{
+			print "In your world, daytime lasts " << wsky->getdaytimeDuration() << " months.";
+		}
+		else print "In your world, daytime lasts " << wsky->getdaytimeDuration() << " days.";
+	}
+
+	print "\n";
+	print "Your world has climate: " << wclimate->GetWord() << "\n";
+
+	print "\n";
+
+	for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
+	{
+		for (auto it2 = (*it).locations.begin(); it2 != (*it).locations.end(); ++it2) {
+			print "There's a " << (*it2)->GetWord() << ".\n";
+		}
+	}
+
+	getchar();
+
 		return UPDATE_CONTINUE;
 }
 
@@ -88,9 +145,9 @@ void ModuleWorld::StartWorld()
 
 	SetWorldOverview();
 
-	cout << "Your world has "<<AdjectiveandNameOutput(false, true, (Adjective*)woverview[0][1], (Location*)woverview[0][0]);
+	/*cout << "Your world has "<<AdjectiveandNameOutput(false, true, (Adjective*)woverview[0][1], (Location*)woverview[0][0]);
 	cout << ", " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[1][1], (Location*)woverview[1][0]);
-	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[2][1], (Location*)woverview[2][0]) << ".";
+	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[2][1], (Location*)woverview[2][0]) << ".";*/
 
 	getchar();
 
@@ -105,12 +162,11 @@ void ModuleWorld::StartWorld()
 
 	// ----- GEOGRAPHY --------
 		
-
 	SetGeography();
 
+	// ----- CREATE MAP -------
 
-	getchar();
-
+	CreateMap();
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
@@ -223,4 +279,80 @@ void ModuleWorld::SetGeography()
 
 	//Underground: // to define...
 
+}
+
+void ModuleWorld::CreateMap()
+{
+	geoVector = wgeography->GetGeovector();
+
+	int nLocations = N_LOCATIONS;
+
+	// ---- CREATE CITIES ------
+	// 3 - 4 CITIES
+
+	int nCities = GetRandomNumber(3, 4);
+	nLocations -= nCities;
+
+	do
+	{
+		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
+		{
+			if ((*it).gtype != Geography::LandType::Water && GetBoolByRandom(MEDIUM_LOW_CHANCE))
+			{
+				(*it).locations.push_back(app->conceptmanager->GetLocationByName("City"));
+				nCities--;
+			}
+		}
+	} while (nCities > 0);
+
+	// ---- CREATE TOWNS, VILLAGES & PORTS ----
+	// 2 - 4 TOWNS-VILLAGES-PORTS
+	int nTowns = GetRandomNumber(2, 4);
+	nLocations -= nTowns;
+
+	do
+	{
+		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
+		{
+			if ((*it).gtype == Geography::LandType::Water) continue;
+
+			if (GetBoolByRandom(LOW_CHANCE))
+			{
+				switch (GetRandomNumber(1, 3))
+				{
+				case 1:
+				{
+					if((*it).is_coastline)
+						(*it).locations.push_back(app->conceptmanager->GetLocationByName("Port"));
+					break;
+				}
+				case 2:
+					(*it).locations.push_back(app->conceptmanager->GetLocationByName("Town"));
+					break;
+				case 3:
+					(*it).locations.push_back(app->conceptmanager->GetLocationByName("Village"));
+					break;
+				}
+				nTowns--;
+			}
+		}
+	} while (nTowns > 0);
+
+	// ---- CREATE THE REST OF THE WORLD ----
+
+	do
+	{
+		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
+		{
+			Location* random_location = app->conceptmanager->GetLocationVector()[GetRandomNumber(Location::LocationType::Temple, 
+				app->conceptmanager->GetLocationVector().size() - 1 )];
+			
+			if (random_location->CompareClimate(wclimate->GetClimateType()) && random_location->SpawnInSea((*it).gtype) 
+				&& random_location->GetIsCoastal() == (*it).is_coastline)
+			{
+				(*it).locations.push_back(random_location);
+				nLocations--;
+			}		
+		}
+	} while (nLocations > 0);
 }

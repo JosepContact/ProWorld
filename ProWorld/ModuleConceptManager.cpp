@@ -35,11 +35,21 @@ bool ModuleConceptManager::Start()
 			Location* concept = (Location*)CreateConcept(location.child("Name").attribute("value").as_string(), location.child("Plural").attribute("value").as_string(), 
 				Concept::ConceptType::Location);		
 
+			concept->SetIsCoastal(location.child("Coastal").attribute("value").as_bool());
+			concept->SetInSea(location.child("inSea").attribute("value").as_bool());
+
 			pugi::xml_node adj_n_nodes = location.child("Adjectives");
 
 			for (pugi::xml_node loc = adj_n_nodes.child("Adj"); loc; loc = loc.next_sibling("Adj"))
 			{
 				concept->AddAdjective(loc.attribute("val").as_int());
+			}
+
+			pugi::xml_node cli_n_nodes = location.child("Climates");
+
+			for (pugi::xml_node loc = cli_n_nodes.child("Adj"); loc; loc = loc.next_sibling("Adj"))
+			{
+				concept->AddClimate((Climate::ClimatesType)loc.attribute("val").as_int());
 			}
 
 			location = location.parent();
@@ -176,4 +186,19 @@ std::vector<Adjective*> ModuleConceptManager::GetAdjectivesByKey(int key)
 			ret.push_back((*it));
 	}
 	return ret;
+}
+
+Location * ModuleConceptManager::GetLocationByName(string arg)
+{
+	for (vector<Location*>::iterator it = location_vector.begin(); it != location_vector.end(); ++it)
+	{
+		if ((*it)->GetWord() == arg)
+		{
+			return (*it);
+		}
+	}
+
+	LOG("Couldn't find Location in location_vector at ModuleConceptManager: %s\n", arg);
+
+	return nullptr;
 }

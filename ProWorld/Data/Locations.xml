@@ -6,11 +6,13 @@
 		<Name value = "City"/>
 		<Plural value = "Cities"/>
 		<Coastal value = "1"/>
+		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="6"/>
 			<Adj val="7"/>
+			<Adj val="9"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -25,6 +27,7 @@
 		<Name value = "Town"/>
 		<Plural value = "Towns"/>
 		<Coastal value = "1"/>
+		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -42,6 +45,7 @@
 		<Name value = "Village"/>
 		<Plural value = "Villages"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -59,6 +63,7 @@
 		<Name value = "Port"/>
 		<Plural value = "Ports"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -73,9 +78,66 @@
 	</Location>
 	<Location>
 		<Info>
+		<Name value = "Temple"/>
+		<Plural value = "Temples"/>
+		<Coastal value = "1"/>
+		<inSea value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="9"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Sanctuary"/>
+		<Plural value = "Sanctuaries"/>
+		<Coastal value = "1"/>
+		<inSea value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Monument"/>
+		<Plural value = "Monuments"/>
+		<Coastal value = "1"/>
+		<inSea value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
 		<Name value = "Mountain"/>
 		<Plural value = "Mountains"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -94,6 +156,7 @@
 		<Name value = "Volcano"/>
 		<Plural value = "Volcanoes"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -113,6 +176,7 @@
 		<Name value = "Valley"/>
 		<Plural value = "Valleys"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="5"/>
@@ -131,12 +195,14 @@
 		<Name value = "Cave"/>
 		<Plural value = "Caves"/>
 		<Coastal value = "1"/>
+		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="4"/>
 			<Adj val="5"/>
 			<Adj val="6"/>
+			<Adj val="9"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -151,6 +217,7 @@
 		<Name value = "Forest"/>
 		<Plural value = "Forests"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -159,6 +226,7 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 			<Adj val="7"/>
+			<Adj val="9"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -172,6 +240,7 @@
 		<Name value = "Jungle"/>
 		<Plural value = "Jungles"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -191,6 +260,7 @@
 		<Name value = "Plain"/>
 		<Plural value = "Plains"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -208,6 +278,7 @@
 		<Name value = "Swamp"/>
 		<Plural value = "Swamps"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -216,25 +287,6 @@
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
-			<Adj val="2"/>
-			<Adj val="3"/>
-		</Climates>
-		</Info>
-	</Location>
-	<Location>
-		<Info>
-		<Name value = "Ocean"/>
-		<Plural value = "Oceans"/>
-		<Coastal value = "0"/>
-		<Adjectives>
-			<Adj val="2"/>
-			<Adj val="4"/>
-			<Adj val="5"/>
-			<Adj val="6"/>
-		</Adjectives>
-		<Climates>
-			<Adj val="0"/>
-			<Adj val="1"/>
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
@@ -245,6 +297,7 @@
 		<Name value = "River"/>
 		<Plural value = "Rivers"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -263,6 +316,7 @@
 		<Name value = "Lake"/>
 		<Plural value = "Lakes"/>
 		<Coastal value = "0"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
@@ -281,6 +335,7 @@
 		<Name value = "Bay"/>
 		<Plural value = "Bays"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="2"/>
 			<Adj val="5"/>
@@ -297,7 +352,8 @@
 		<Info>
 		<Name value = "Island"/>
 		<Plural value = "Islands"/>
-		<Coastal value = "1"/>
+		<Coastal value = "0"/>
+		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="2"/>
 			<Adj val="6"/>
@@ -314,7 +370,8 @@
 		<Info>
 		<Name value = "Archipielago"/>
 		<Plural value = "Archipelagoes"/>
-		<Coastal value = "1"/>
+		<Coastal value = "0"/>
+		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="2"/>
 			<Adj val="6"/>
@@ -331,7 +388,8 @@
 		<Info>
 		<Name value = "Iceberg"/>
 		<Plural value = "Icebergs"/>
-		<Coastal value = "1"/>
+		<Coastal value = "0"/>
+		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="6"/>
@@ -346,6 +404,7 @@
 		<Name value = "Peninsula"/>
 		<Plural value = "Peninsulas"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 		</Adjectives>
@@ -362,6 +421,7 @@
 		<Name value = "Desert"/>
 		<Plural value = "Deserts"/>
 		<Coastal value = "1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 		</Adjectives>
@@ -375,12 +435,52 @@
 		<Name value = "Oasis"/>
 		<Plural value = "Oases"/>
 		<Coastal value = "0"/>
-		<Coastal value = "6"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
+		</Climates>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Ocean"/>
+		<Plural value = "Oceans"/>
+		<Coastal value = "0"/>
+		<inSea value ="1"/>
+		<Adjectives>
+			<Adj val="2"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Location>
+	<Location>
+		<Info>
+		<Name value = "Reef"/>
+		<Plural value = "Reefs"/>
+		<Coastal value = "0"/>
+		<inSea value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="4"/>
+			<Adj val="6"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
 		</Climates>
 		</Info>
 	</Location>

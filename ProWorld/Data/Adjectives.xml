@@ -78,4 +78,18 @@
 		<toPlural value = "0"/>
 		</Info>
 	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Sacred"/>
+		<Nouns value = "9"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Holy"/>
+		<Nouns value = "9"/>
+		<toPlural value = "0"/>
+		</Info>
+	</Adjective>
 </Adjectives>

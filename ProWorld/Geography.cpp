@@ -107,5 +107,17 @@ void Geography::SetCoastlines()
 			}
 		}
 	}
-	int a = 2;
 }
+
+std::vector<Geography::CellLand> Geography::GetGeovector()
+{
+	vector<CellLand> ret;
+
+	for (uint i = 0; i < 3; ++i)
+		for (uint j = 0; j < 3; ++j)
+			ret.push_back(geoarray_land[i][j]);
+
+	return ret;
+}
+
+

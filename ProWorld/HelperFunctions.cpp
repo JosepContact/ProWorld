@@ -37,12 +37,12 @@ std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective
 	if (adjective != nullptr && name != nullptr)
 	{
 		if (isCapitalized)
-			ret += toUppercase(adjective->GetString());
-		else ret += toLowercase(adjective->GetString());
+			ret += toUppercase(adjective->GetWord());
+		else ret += toLowercase(adjective->GetWord());
 
 		if (adjective->GetToPlural() || allplural)
 			ret += ' ' + toLowercase(name->GetPlural());
-		else ret += ' ' + toLowercase(name->GetString());
+		else ret += ' ' + toLowercase(name->GetWord());
 	}
 	else {
 		LOG("ERROR: Location or Adjective pointer was NULL at AdjectiveandNameOutput func on HelperFunctions.cpp");

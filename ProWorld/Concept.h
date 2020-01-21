@@ -29,8 +29,8 @@ public:
 		unsigned int id;
 	
 	public:
-		void SetName(std::string name, std::string plural);
-		std::string GetString();
+		void SetWord(std::string name, std::string plural);
+		std::string GetWord();
 		std::string GetPlural();
 		const char* GetChar();
 		void SetID(unsigned int argid);

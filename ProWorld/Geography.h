@@ -54,6 +54,8 @@ public:
 	void DistributeLand(Climate::ClimatesType cl_type);
 	void SetCoastlines();
 
+	std::vector<CellLand> GetGeovector();
+
 private:
 	CellLand geoarray_land[3][3];
 	int geowater_cells;

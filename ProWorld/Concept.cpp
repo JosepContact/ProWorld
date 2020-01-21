@@ -17,13 +17,13 @@ Concept::~Concept()
 {
 }
 
-void Concept::SetName(string name, string plural)
+void Concept::SetWord(string name, string plural)
 {
 	this->word = name;
 	this->plural = plural;
 }
 
-std::string Concept::GetString()
+std::string Concept::GetWord()
 {
 	return word;
 }
