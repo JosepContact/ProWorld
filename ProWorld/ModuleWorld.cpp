@@ -293,36 +293,36 @@ void ModuleWorld::CreateMap()
 	int nCities = GetRandomNumber(3, 4);
 	nLocations -= nCities;
 
-	do
+	while (nCities > 0)
 	{
 		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
 		{
-			if ((*it).gtype != Geography::LandType::Water && GetBoolByRandom(MEDIUM_LOW_CHANCE))
+			if ((*it).gtype != Geography::LandType::Water && GetBoolByRandom(MEDIUM_LOW_CHANCE) && nCities > 0)
 			{
 				(*it).locations.push_back(app->conceptmanager->GetLocationByName("City"));
 				nCities--;
 			}
 		}
-	} while (nCities > 0);
+	}
 
 	// ---- CREATE TOWNS, VILLAGES & PORTS ----
 	// 2 - 4 TOWNS-VILLAGES-PORTS
 	int nTowns = GetRandomNumber(2, 4);
 	nLocations -= nTowns;
 
-	do
+	while (nTowns > 0)
 	{
 		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
 		{
 			if ((*it).gtype == Geography::LandType::Water) continue;
 
-			if (GetBoolByRandom(LOW_CHANCE))
+			if (GetBoolByRandom(LOW_CHANCE) && nTowns > 0)
 			{
 				switch (GetRandomNumber(1, 3))
 				{
 				case 1:
 				{
-					if((*it).is_coastline)
+					if ((*it).is_coastline)
 						(*it).locations.push_back(app->conceptmanager->GetLocationByName("Port"));
 					break;
 				}
@@ -336,23 +336,27 @@ void ModuleWorld::CreateMap()
 				nTowns--;
 			}
 		}
-	} while (nTowns > 0);
+	}
+
 
 	// ---- CREATE THE REST OF THE WORLD ----
 
-	do
+	while (nLocations > 0)
 	{
 		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
 		{
-			Location* random_location = app->conceptmanager->GetLocationVector()[GetRandomNumber(Location::LocationType::Temple, 
-				app->conceptmanager->GetLocationVector().size() - 1 )];
-			
-			if (random_location->CompareClimate(wclimate->GetClimateType()) && random_location->SpawnInSea((*it).gtype) 
-				&& random_location->GetIsCoastal() == (*it).is_coastline)
+			int randn = GetRandomNumber((int)Location::LocationType::Temple,
+				((int)app->conceptmanager->GetLocationVector().size()));
+			int si = app->conceptmanager->GetLocationVector().size();
+			Location* random_location = app->conceptmanager->GetLocationVector()[randn];
+
+			if (random_location->CompareClimate(wclimate->GetClimateType()) && random_location->SpawnInSea((*it).gtype)
+				&& random_location->GetIsCoastal() == (*it).is_coastline && nLocations > 0)
 			{
 				(*it).locations.push_back(random_location);
 				nLocations--;
-			}		
+			}
 		}
-	} while (nLocations > 0);
+	}
+	int a = 2;
 }

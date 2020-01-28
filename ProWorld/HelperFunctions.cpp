@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -57,19 +58,15 @@ bool GetBoolByRandom(uint chance)
 	srand((int)time(0));
 	
 	int a = (rand() % 100 + 1);
-	
+
 	return ((rand() % 100 + 1) < chance);
 }
 
 int GetRandomNumber(int min, int max)
 {
-	if (max < 1) return 0;
 
 	srand((int)time(0));
 
-	if (max != 1)
-		return ((rand() % (max - 1)) + min);
-	else if (max == 1)
-		return ((rand() % (max)));
+	return rand() % (max + 1 - min) + min;
 }
 
