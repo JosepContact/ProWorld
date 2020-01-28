@@ -130,6 +130,7 @@
     <ClCompile Include="pugixml-1.10\src\pugixml.cpp" />
     <ClCompile Include="ModuleFileSystem.cpp" />
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="Race.cpp" />
     <ClCompile Include="Sky.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp" />
     <ClInclude Include="pugixml-1.10\src\pugixml.hpp" />
     <ClInclude Include="App.h" />
+    <ClInclude Include="Race.h" />
     <ClInclude Include="Sky.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

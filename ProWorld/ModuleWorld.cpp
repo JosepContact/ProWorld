@@ -132,6 +132,15 @@ update_status ModuleWorld::Update()
 			print "\nSOUTHEAST: \n";
 			break;
 		}
+		switch ((*it).gtype)
+		{
+		case Geography::LandType::Water:
+			print "- It's mostly water.\n";
+			break;
+		case Geography::LandType::Land:
+			print "- It's mostly land.\n";
+			break;
+		}
 		for (auto it2 = (*it).locations.begin(); it2 != (*it).locations.end(); ++it2)
 			print "There's a " << (*it2)->GetWord() << ".\n";
 		

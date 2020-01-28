@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+
+<Races>
+	<Race>
+		<Info>
+		<Name value = "Human"/>
+		<Plural value = "Humans"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Elf"/>
+		<Plural value = "Elves"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Dark Elf"/>
+		<Plural value = "Dark Elves"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Half-Elf"/>
+		<Plural value = "Half-Elves"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Dwarf"/>
+		<Plural value = "Dwarves"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Orc"/>
+		<Plural value = "Orcs"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Gnome"/>
+		<Plural value = "Gnomes"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Halfling"/>
+		<Plural value = "Halflings"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Centaur"/>
+		<Plural value = "Centaurs"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Lizardfolk"/>
+		<Plural value = "Lizardfolk"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Goblin"/>
+		<Plural value = "Goblins"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Goblin"/>
+		<Plural value = "Goblins"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="1"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Fairy"/>
+		<Plural value = "Fairies"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Vampire"/>
+		<Plural value = "Vampires"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Merfolk"/>
+		<Plural value = "Merfolk"/>
+		<Coastal value = "1"/>
+		<inSea value ="1"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Dryad"/>
+		<Plural value = "Dryads"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="2"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Satyr"/>
+		<Plural value = "Satyrs"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Treefolk"/>
+		<Plural value = "Treefolk"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="3"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="1"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Minotaur"/>
+		<Plural value = "Minotaurs"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Naga"/>
+		<Plural value = "Nagas"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Loxodon"/>
+		<Plural value = "Loxodon"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="3"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Insectoid"/>
+		<Plural value = "Insectoids"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Horror"/>
+		<Plural value = "Horrors"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="2"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+</Races>

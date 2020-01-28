@@ -21,6 +21,7 @@
 #define LOCATION "Locations"
 #define ADJECTIVE "Adjectives"
 #define CLIMATE "Climates"
+#define RACE "Races"
 
 class ModuleConceptManager : public Module
 {
