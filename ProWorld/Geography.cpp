@@ -51,7 +51,8 @@ void Geography::DistributeLand(Climate::ClimatesType cl_type)
 {
 	int wtcel = geowater_cells;
 		
-	do {
+	while (wtcel > 0)
+	{
 			for (uint i = 0; i < 3; ++i)
 			{
 				for (uint j = 0; j < 3; ++j)
@@ -63,7 +64,7 @@ void Geography::DistributeLand(Climate::ClimatesType cl_type)
 					}
 				}
 			}
-		} while (wtcel > 0);
+		}
 	}
 
 void Geography::SetCoastlines()

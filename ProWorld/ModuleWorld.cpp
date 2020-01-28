@@ -102,9 +102,39 @@ update_status ModuleWorld::Update()
 
 	for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
 	{
-		for (auto it2 = (*it).locations.begin(); it2 != (*it).locations.end(); ++it2) {
-			print "There's a " << (*it2)->GetWord() << ".\n";
+		switch ((*it).cardinal)
+		{
+		case Geography::CardinalPoints::NORTHWEST:
+			print "\nNORTHWEST: \n";
+			break;
+		case Geography::CardinalPoints::NORTH:
+			print "\nNORTH: \n";
+			break;
+		case Geography::CardinalPoints::NORTHEAST:
+			print "\nNORTHEAST: \n";
+			break;
+		case Geography::CardinalPoints::WEST:
+			print "\nWEST: \n";
+			break;
+		case Geography::CardinalPoints::CENTER:
+			print "\nCENTER: \n";
+			break;
+		case Geography::CardinalPoints::EAST:
+			print "\nEAST: \n";
+			break;
+		case Geography::CardinalPoints::SOUTHWEST:
+			print "\nSOUTHWEST: \n";
+			break;
+		case Geography::CardinalPoints::SOUTH:
+			print "\nSOUTH: \n";
+			break;
+		case Geography::CardinalPoints::SOUTHEAST:
+			print "\nSOUTHEAST: \n";
+			break;
 		}
+		for (auto it2 = (*it).locations.begin(); it2 != (*it).locations.end(); ++it2)
+			print "There's a " << (*it2)->GetWord() << ".\n";
+		
 	}
 
 	getchar();
@@ -345,10 +375,11 @@ void ModuleWorld::CreateMap()
 	{
 		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
 		{
-			int randn = GetRandomNumber((int)Location::LocationType::Temple,
-				((int)app->conceptmanager->GetLocationVector().size()));
-			int si = app->conceptmanager->GetLocationVector().size();
-			Location* random_location = app->conceptmanager->GetLocationVector()[randn];
+			
+			int random_number_loc = GetRandomNumber((int)Location::LocationType::Temple,
+				((int)app->conceptmanager->GetLocationVector().size()) - 1);
+
+			Location* random_location = app->conceptmanager->GetLocationVector()[random_number_loc];
 
 			if (random_location->CompareClimate(wclimate->GetClimateType()) && random_location->SpawnInSea((*it).gtype)
 				&& random_location->GetIsCoastal() == (*it).is_coastline && nLocations > 0)

@@ -8,6 +8,7 @@ using namespace std;
 
 ModuleNameGenerator::ModuleNameGenerator(bool start_enabled) : Module(start_enabled)
 {
+	srand((int)time(0));
 }
 
 ModuleNameGenerator::~ModuleNameGenerator()

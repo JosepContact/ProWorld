@@ -4,6 +4,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <conio.h>
 #include <algorithm>
 #include <stdlib.h>
 
@@ -55,7 +56,6 @@ std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective
 
 bool GetBoolByRandom(uint chance)
 {
-	srand((int)time(0));
 	
 	int a = (rand() % 100 + 1);
 
@@ -64,9 +64,10 @@ bool GetBoolByRandom(uint chance)
 
 int GetRandomNumber(int min, int max)
 {
+	int ret = 0;
 
-	srand((int)time(0));
+	ret = rand() % (max + 1 - min) + min;
+	return ret;
 
-	return rand() % (max + 1 - min) + min;
 }
 
