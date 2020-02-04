@@ -4,6 +4,7 @@
 #include "Location.h"
 #include "Adjective.h"
 #include "Climate.h"
+#include "Race.h"
 
 
 using namespace std;
@@ -99,6 +100,37 @@ bool ModuleConceptManager::Start()
 			climate->SetTemperature(node_cl.child("Temperature").attribute("value").as_string());
 
 			node_cl = node_cl.parent();
+
+		}
+	}
+
+	//-- Races ----
+	pugi::xml_document	race_file;
+	pugi::xml_node		races;
+	races = app->filesystem->LoadXML(DATA_RACES_XML_PATH, RACE, climate_file);
+
+	if (!races.empty())
+	{
+		LOG("Races.xml loaded correctly\n");
+
+		for (pugi::xml_node node_ra = races.child("Race"); node_ra; node_ra = node_ra.next_sibling("Race"))
+		{
+			node_ra = node_ra.child("Info");
+			Race* race = (Race*)CreateConcept(node_ra.child("Name").attribute("value").as_string(), node_ra.child("Plural").attribute("value").as_string(),
+				Concept::ConceptType::Race);
+
+			race->SetIsCoastal(node_ra.child("Coastal").attribute("value").as_bool());
+			race->SetInSea(node_ra.child("inSea").attribute("value").as_bool());
+			race->SetSize((Race::SizeType)node_ra.child("Size").attribute("value").as_int());
+
+			pugi::xml_node cli_n_nodes = node_ra.child("Climates");
+
+			for (pugi::xml_node rac = cli_n_nodes.child("Adj"); rac; rac = rac.next_sibling("Adj"))
+			{
+				race->AddClimate((Climate::ClimatesType)rac.attribute("val").as_int());
+			}
+
+			node_ra = node_ra.parent();
 		}
 	}
 
@@ -147,6 +179,15 @@ Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plura
 		ret = climate;
 		break;
 	}
+	case Concept::ConceptType::Race:
+	{
+		Race* race = new Race(word, plural, type);
+		concept_list.push_back(race);
+		race->SetID(curr_id);
+		race_vector.push_back(race);
+		ret = race;
+		break;
+	}
 	case Concept::ConceptType::UnkownConcept:
 		LOG("ModuleConceptManager::CreateConcept() Received unknown type!\n");
 		break;
@@ -176,6 +217,11 @@ std::vector<Climate*> ModuleConceptManager::GetClimateVector() const
 	return climate_vector;
 }
 
+std::vector<Race*> ModuleConceptManager::GetRaceVector() const
+{
+	return race_vector;
+}
+
 std::vector<Adjective*> ModuleConceptManager::GetAdjectivesByKey(int key)
 {
 	vector<Adjective*> ret;
@@ -201,4 +247,16 @@ Location * ModuleConceptManager::GetLocationByName(string arg)
 	LOG("Couldn't find Location in location_vector at ModuleConceptManager: %s\n", arg);
 
 	return nullptr;
+}
+
+vector<Race*> ModuleConceptManager::GetRacesVectorByClimate()
+{
+	vector<Race*> ret;
+
+	for (vector<Race*>::iterator it = race_vector.begin(); it != race_vector.end(); it++)
+	{
+		if ((*it)->CompareClimate(app->world->GetClimate()->GetClimateType()))
+			ret.push_back((*it));
+	}
+	return ret;
 }

@@ -69,7 +69,12 @@
       <Filter>Concepts</Filter>
     </ClCompile>
     <ClCompile Include="Geography.cpp" />
-    <ClCompile Include="Race.cpp" />
+    <ClCompile Include="City.cpp">
+      <Filter>Modules\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Race.cpp">
+      <Filter>Concepts</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -122,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="Race.h">
       <Filter>Concepts</Filter>
+    </ClInclude>
+    <ClInclude Include="City.h">
+      <Filter>Modules\World</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

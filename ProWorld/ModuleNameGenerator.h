@@ -27,6 +27,7 @@ public:
 	//virtual update_status Update();
 
 	std::string GenerateName();
+	std::string GenerateClassicName();
 
 private:
 	std::vector<std::string> vector_syllabes;

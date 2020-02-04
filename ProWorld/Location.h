@@ -4,6 +4,7 @@
 
 #include "Concept.h"
 #include "Geography.h"
+#include "City.h"
 
 #include<vector>
 
@@ -18,11 +19,32 @@ public:
 
 public:
 	enum LocationType {
-		City,
-		Town,
-		Village,
-		Port,
-		Temple
+		tCity,
+		tTown,
+		tVillage,
+		tPort,
+		tTemple,
+		tSanctuary,
+		tManument,
+		tMountain,
+		tVolcano,
+		tValley,
+		tCave,
+		tForest,
+		tJungle,
+		tPlain,
+		tSwamp,
+		tRiver,
+		tLake,
+		tBay,
+		TIsland,
+		tArchipielago,
+		tIceberg,
+		tPeninsula,
+		tDesert,
+		tOasis,
+		tOcean,
+		tReef
 	};
 
 	std::vector<Climate::ClimatesType> climates;
@@ -35,6 +57,7 @@ private:
 	bool isCoastal;
 	bool inSea;
 	Geography::CardinalPoints situation;
+	City* city = nullptr;
 
 public:
 
@@ -58,6 +81,8 @@ public:
 
 	bool CompareClimate(Climate::ClimatesType climate);
 	bool SpawnInSea(Geography::LandType);
+
+	
 };
 
 #endif

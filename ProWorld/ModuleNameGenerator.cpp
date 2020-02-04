@@ -1,8 +1,11 @@
 #include "ModuleNameGenerator.h"
 #include "HelperFunctions.h"
 
-#include <cstdlib>
+#include <stdlib.h>
+#include <stdio.h>
 #include <ctime>
+#include <string.h>
+#include <ctype.h>
 
 using namespace std;
 
@@ -14,6 +17,78 @@ ModuleNameGenerator::ModuleNameGenerator(bool start_enabled) : Module(start_enab
 ModuleNameGenerator::~ModuleNameGenerator()
 {
 }
+
+char NamePrefix[][7] =
+{
+	"River",
+	"Mage",
+	"Gloom",
+	"Fear",
+	"Ebon",
+	"Sleet",
+	"Grey",
+	"Spirit",
+	"Lime",
+	"Ghost",
+	"Fair",
+	"Last",
+	"Clay",
+	"Shroud",
+	"Crow",
+	"Little",
+	"Rose",
+	"Rogue",
+	"Amber",
+	"Winter",
+	"Spring",
+	"Dry",
+	"Basin",
+	"Brine",
+	"Night",
+	"Shadow",
+	"Sun",
+	"Shade",
+	"Wind",
+	"Dark",
+	"High",
+	"Edge",
+	"Gold"
+};
+
+char NameSuffix[][7] =
+{
+	"reach",
+	"well",
+	"storm",
+	"haven",
+	"hallow",
+	"bay",
+	"shell",
+	"gulf",
+	"wall",
+	"bourne",
+	"pass",
+	"wallow",
+	"wick",
+	"horn",
+	"brook",
+	"burn",
+	"forest",
+	"point",
+	"bell",
+	"drift",
+	"view",
+	"spear",
+	"grave",
+	"chill",
+	"dale",
+	"shear",
+	"hill",
+	"meadow",
+	"yard",
+	"light",
+	"grasp"
+};
 
 bool ModuleNameGenerator::Start()
 {
@@ -133,8 +208,6 @@ bool ModuleNameGenerator::Start()
 	syllabe = "siris";
 	vector_end_syllabes.push_back(syllabe);
 
-	GenerateName();
-
 	return true;
 }
 
@@ -172,4 +245,13 @@ std::string ModuleNameGenerator::GenerateName()
 	}
 
 	return name;
+}
+
+std::string ModuleNameGenerator::GenerateClassicName()
+{
+
+	string ret(NamePrefix[GetRandomNumber(0, 33)]);
+	string ret2(NameSuffix[GetRandomNumber(0, 31)]);
+
+	return (ret + ret2);
 }

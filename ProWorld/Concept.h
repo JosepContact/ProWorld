@@ -15,6 +15,7 @@ public:
 		Location,
 		Adjective,
 		Climate,
+		Race,
 		UnkownConcept
 	};
 		Concept();

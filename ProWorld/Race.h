@@ -11,16 +11,27 @@ class Race  : public Concept
 {
 public:
 
+	enum SizeType
+	{
+		VerySmall,
+		Small,
+		Normal,
+		Large,
+		VeryLarge
+	};
+
 	Race();
 	Race(std::string argword, std::string argplural, ConceptType argtype);
 	~Race();
 
-	std::vector<Climate::ClimatesType> climates;
+	
 
 private:
+	std::vector<Climate::ClimatesType> climates;
+
 	bool isCoastal;
 	bool inSea;
-	int size;
+	SizeType size;
 	std::string str_size;
 
 public:
@@ -31,10 +42,15 @@ public:
 	bool GetInSea() const;
 	void SetInSea(bool);
 
-	void SetSize(int);
-	void SetSize(std::string);
+	void SetSize(SizeType);
+	SizeType GetSizeType() const;
 
 	std::string GetStrSize() const;
+
+	std::vector<Climate::ClimatesType> GetClimates();
+	void AddClimate(Climate::ClimatesType climate);
+
+	bool CompareClimate(Climate::ClimatesType climate);
 };
 
 #endif // !RACE_H

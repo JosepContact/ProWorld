@@ -6,6 +6,7 @@
 
 #include <cstdlib>
 #include <ctime>
+#include <algorithm>
 
 using namespace std;
 
@@ -18,7 +19,9 @@ ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
 
 ModuleWorld::~ModuleWorld()
 {
-	delete wsky;
+	RELEASE (wsky);
+	for (vector<City*>::iterator it = cities.begin(); it != cities.end(); it++)
+		RELEASE(*it);
 }
 
 bool ModuleWorld::Start()
@@ -49,7 +52,7 @@ update_status ModuleWorld::Update()
 	} while (input != "n" && input != "no" && input != "yes" && input != "y");
 
 	cout << "\n";
-	cout << "Let's begin!\n";
+	cout << "Let's begin!\n\n";
 	StartWorld();
 
 
@@ -142,7 +145,13 @@ update_status ModuleWorld::Update()
 			break;
 		}
 		for (auto it2 = (*it).locations.begin(); it2 != (*it).locations.end(); ++it2)
+		{
 			print "There's a " << (*it2)->GetWord() << ".\n";
+
+			if ((*it2)->GetWord() == "City") {
+				print "It's a city named " << 
+			}
+		}
 		
 	}
 
@@ -339,6 +348,7 @@ void ModuleWorld::CreateMap()
 			if ((*it).gtype != Geography::LandType::Water && GetBoolByRandom(MEDIUM_LOW_CHANCE) && nCities > 0)
 			{
 				(*it).locations.push_back(app->conceptmanager->GetLocationByName("City"));
+				AddCity(City::LCity, (*it).is_coastline, false, (*it).cardinal);
 				nCities--;
 			}
 		}
@@ -361,15 +371,19 @@ void ModuleWorld::CreateMap()
 				{
 				case 1:
 				{
-					if ((*it).is_coastline)
+					if ((*it).is_coastline) {						
 						(*it).locations.push_back(app->conceptmanager->GetLocationByName("Port"));
+						AddCity(City::MTowm, (*it).is_coastline, false, (*it).cardinal);
+					}
 					break;
 				}
 				case 2:
 					(*it).locations.push_back(app->conceptmanager->GetLocationByName("Town"));
+					AddCity(City::MTowm, (*it).is_coastline, false, (*it).cardinal);
 					break;
 				case 3:
 					(*it).locations.push_back(app->conceptmanager->GetLocationByName("Village"));
+					AddCity(City::SVillage, (*it).is_coastline, false, (*it).cardinal);
 					break;
 				}
 				nTowns--;
@@ -385,7 +399,7 @@ void ModuleWorld::CreateMap()
 		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
 		{
 			
-			int random_number_loc = GetRandomNumber((int)Location::LocationType::Temple,
+			int random_number_loc = GetRandomNumber((int)Location::LocationType::tTemple,
 				((int)app->conceptmanager->GetLocationVector().size()) - 1);
 
 			Location* random_location = app->conceptmanager->GetLocationVector()[random_number_loc];
@@ -398,5 +412,52 @@ void ModuleWorld::CreateMap()
 			}
 		}
 	}
-	int a = 2;
+}
+
+City* ModuleWorld::AddCity(City::Scale s, bool coastal, bool insea, Geography::CardinalPoints cpoint, Location* loc)
+{
+	City* city = new City();
+	cities.push_back(city);
+
+	city->SetScale(s);
+	city->SetIsCoastal(coastal);
+	city->SetInSea(insea);
+
+	city->cardinal = cpoint;
+
+	if (!city->AssignLocationPtr(loc))
+		LOG("Location was NULL while being assigned to City at ModuleWorld::AddCity()");
+
+	//--- Set Races -----
+
+	int n_races = 1;
+
+	if (s == City::LCity) n_races = GetRandomNumber(1, MAX_RACE_L);
+	else if (s == City::LCity) n_races = GetRandomNumber(1, MAX_RACE_M);
+
+	vector<Race*> prep_races;
+	vector<Race*> total_races = app->conceptmanager->GetRacesVectorByClimate();
+
+	while (prep_races.size() < n_races)
+	{
+		Race* race = total_races[GetRandomNumber(0, total_races.size() - 1)];
+
+		if (std::find(prep_races.begin(), prep_races.end(), race) != prep_races.end())
+			continue;
+
+		if (race->GetInSea() == city->GetInSea())
+		{
+			if (race->GetIsCoastal() || race->GetIsCoastal() == city->GetIsCoastal())
+			{
+				prep_races.push_back(race);
+				city->AddRace(race);
+			}
+		}
+	}
+	return city;
+}
+
+Climate * ModuleWorld::GetClimate() const
+{
+	return wclimate;
 }

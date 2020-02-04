@@ -9,6 +9,7 @@
 #include "Concept.h"
 #include "Location.h"
 #include "Adjective.h"
+#include "Race.h"
 #include "Climate.h"
 
 //------------------
@@ -50,6 +51,7 @@ private:
 	std::vector<Location*> location_vector;
 	std::vector<Adjective*> adjective_vector;
 	std::vector<Climate*> climate_vector;
+	std::vector<Race*> race_vector;
 	
 	unsigned int curr_id = 0;
 public:
@@ -57,9 +59,12 @@ public:
 	std::vector<Location*> GetLocationVector()const;
 	std::vector<Adjective*> GetAdjectiveVector()const;
 	std::vector<Climate*> GetClimateVector()const;
+	std::vector<Race*> GetRaceVector()const;
 
 	std::vector<Adjective*> GetAdjectivesByKey(int key);
 	Location* GetLocationByName(std::string);
+
+	std::vector<Race*> GetRacesVectorByClimate();
 };
 
 #endif // __MODULECONCEPTMANAGER_H__
