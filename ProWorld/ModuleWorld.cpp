@@ -372,15 +372,13 @@ void ModuleWorld::CreateMap()
 
 	while (nCities > 0)
 	{
-		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
-		{
-			if ((*it).gtype != Geography::LandType::Water && GetBoolByRandom(MEDIUM_LOW_CHANCE) && nCities > 0)
+		int randcell = GetRandomNumber(0, geoVector.size() - 1);
+			if (geoVector[randcell].gtype != Geography::LandType::Water && nCities > 0)
 			{
 				Location* tLoc = app->conceptmanager->GetLocationByName("City");
-				(*it).CreateSociety(tLoc);
+				geoVector[randcell].CreateSociety(tLoc);
 				nCities--;
 			}
-		}
 	}
 
 	// ---- CREATE TOWNS, VILLAGES & PORTS ----
@@ -390,9 +388,8 @@ void ModuleWorld::CreateMap()
 
 	while (nTowns > 0)
 	{
-		for (vector<Geography::CellLand>::iterator it = geoVector.begin(); it != geoVector.end(); ++it)
-		{
-			if ((*it).gtype == Geography::LandType::Water) continue;
+		int randcell = GetRandomNumber(0, geoVector.size() - 1);
+			if (geoVector[randcell].gtype == Geography::LandType::Water) continue;
 
 			if (GetBoolByRandom(LOW_CHANCE) && nTowns > 0)
 			{
@@ -400,28 +397,27 @@ void ModuleWorld::CreateMap()
 				{
 				case 1:
 				{
-					if ((*it).is_coastline) {						
+					if (geoVector[randcell].is_coastline) {
 						Location* tLoc = app->conceptmanager->GetLocationByName("Port");
-						(*it).CreateSociety(tLoc);
+						geoVector[randcell].CreateSociety(tLoc);
 					}
 					break;
 				}
 				case 2:
 				{
 					Location* tLoc = app->conceptmanager->GetLocationByName("Town");
-					(*it).CreateSociety(tLoc);
+					geoVector[randcell].CreateSociety(tLoc);
 					break;
 				}
 				case 3:
 				{
 					Location* tLoc = app->conceptmanager->GetLocationByName("Village");
-					(*it).CreateSociety(tLoc);
+					geoVector[randcell].CreateSociety(tLoc);
 					break;
 				}
 				}
 				nTowns--;
 			}
-		}
 	}
 
 
