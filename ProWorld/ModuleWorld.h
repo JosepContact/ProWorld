@@ -12,7 +12,7 @@
 #include "Climate.h"
 #include "Geography.h"
 #include "Sky.h"
-#include "City.h"
+#include "Society.h"
 #include <array>
 
 class ModuleWorld : public Module
@@ -46,7 +46,7 @@ private:
 	void SetSky();
 	void SetGeography();
 	void CreateMap();
-	City* AddCity(City::Scale, bool coastal, bool insea, Geography::CardinalPoints, Location*); 
+	//Society* AddCity(Society::Scale, bool coastal, bool insea, Geography::CardinalPoints, Location*); 
 private:
 	// WORLD
 	std::string wname;
@@ -60,7 +60,7 @@ private:
 
 	std::vector<Geography::CellLand> geoVector;
 
-	std::vector<City*> cities;
+	std::vector<Society*> cities;
 private:
 	//OTHER TOOLS
 	//bool set_climate = false;

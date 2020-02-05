@@ -68,12 +68,14 @@
     <ClCompile Include="Climate.cpp">
       <Filter>Concepts</Filter>
     </ClCompile>
-    <ClCompile Include="Geography.cpp" />
-    <ClCompile Include="City.cpp">
-      <Filter>Modules\World</Filter>
-    </ClCompile>
     <ClCompile Include="Race.cpp">
       <Filter>Concepts</Filter>
+    </ClCompile>
+    <ClCompile Include="Society.cpp">
+      <Filter>Modules\World</Filter>
+    </ClCompile>
+    <ClCompile Include="Geography.cpp">
+      <Filter>Modules\World</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,7 +130,7 @@
     <ClInclude Include="Race.h">
       <Filter>Concepts</Filter>
     </ClInclude>
-    <ClInclude Include="City.h">
+    <ClInclude Include="Society.h">
       <Filter>Modules\World</Filter>
     </ClInclude>
   </ItemGroup>

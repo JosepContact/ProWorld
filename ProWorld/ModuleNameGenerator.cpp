@@ -250,8 +250,8 @@ std::string ModuleNameGenerator::GenerateName()
 std::string ModuleNameGenerator::GenerateClassicName()
 {
 
-	string ret(NamePrefix[GetRandomNumber(0, 33)]);
-	string ret2(NameSuffix[GetRandomNumber(0, 31)]);
+	string ret(NamePrefix[GetRandomNumber(0, 32)]);
+	string ret2(NameSuffix[GetRandomNumber(0, 30)]);
 
 	return (ret + ret2);
 }

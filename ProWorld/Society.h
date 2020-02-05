@@ -1,7 +1,10 @@
 #pragma once
 
-#ifndef CITY_H
-#define CITY_H
+#ifndef SOCIETY_H
+#define SOCIETY_H
+
+#include "Race.h"
+#include "Location.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -9,34 +12,28 @@
 #include <string>
 #include <vector>
 
-
-#include "Race.h"
-
 #define MAX_RACE_L 4
 #define MAX_RACE_M 2
 
 
-class City
+class Society
 {
 public:
 	enum Scale {
 		SVillage,
-		MTowm,
+		MTown,
 		LCity
 	};
 
-	City();
-	~City();
-
-
-	Geography::CardinalPoints cardinal;
+	Society();
+	~Society();
 
 private:
 	std::string name;
 
 	std::vector<Race*> races;
-	bool inSea;
-	bool isCoastal;
+	//bool inSea;
+	//bool isCoastal;
 	Scale scale;
 
 	Location* location;
@@ -50,11 +47,11 @@ public:
 	void SetScale(Scale);
 	Scale GetScale() const;
 
-	void SetIsCoastal(bool);
-	bool GetIsCoastal() const;
+	//void SetIsCoastal(bool);
+	//bool GetIsCoastal() const;
 
-	void SetInSea(bool);
-	bool GetInSea() const;
+	//void SetInSea(bool);
+	//bool GetInSea() const;
 
 	void AddRace(Race*);
 
@@ -64,4 +61,4 @@ public:
 };
 
 
-#endif // !CITY_H
+#endif // !SOCIETY_H

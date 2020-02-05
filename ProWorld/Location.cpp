@@ -1,6 +1,6 @@
 #include "Location.h"
 #include "Concept.h"
-
+#include "Geography.h"
 #include <string>
 
 using namespace std;
@@ -10,11 +10,12 @@ Location::Location() : Concept()
 	type = Concept::Location;
 }
 
-Location::Location(std::string argword, std::string argplural, ConceptType argtype) : Concept(word, plural, type)
+Location::Location(std::string argword, std::string argplural, ConceptType argtype, LocationType arglocation) : Concept(word, plural, type)
 {
 	word = argword;
 	plural = argplural;
 	type = argtype;
+	locationType = arglocation;
 }
 
 Location::~Location()
@@ -52,7 +53,7 @@ bool Location::GetInSea() const
 	return inSea;
 }
 
-void Location::SetSituation(Geography::CardinalPoints sit)
+/*void Location::SetSituation(Geography::CardinalPoints sit)
 {
 	situation = sit;
 }
@@ -60,17 +61,7 @@ void Location::SetSituation(Geography::CardinalPoints sit)
 Geography::CardinalPoints Location::GetSituation() const
 {
 	return situation;
-}
-
-void Location::SetName(std::string argname)
-{
-	word = argname;
-}
-
-std::string Location::GetName() const
-{
-	return name;
-}
+}*/
 
 vector<Climate::ClimatesType> Location::GetClimates()
 {
@@ -90,9 +81,9 @@ bool Location::CompareClimate(Climate::ClimatesType climate)
 	return false;
 }
 
-bool Location::SpawnInSea(Geography::LandType spawnable)
+bool Location::SpawnInSea(int a)
 {
-	switch (spawnable)
+	switch (a)
 	{
 		case Geography::LandType::Land:
 			return (inSea == false);
@@ -104,4 +95,14 @@ bool Location::SpawnInSea(Geography::LandType spawnable)
 			break;
 	}
 	return false;
+}
+
+void Location::SetLocationType(LocationType loctype)
+{
+	locationType = loctype;
+}
+
+Location::LocationType Location::GetLocationType() const
+{
+	return locationType;
 }

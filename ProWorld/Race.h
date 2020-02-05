@@ -3,9 +3,8 @@
 #ifndef RACE_H
 #define RACE_H
 
-#include "Concept.h"
 #include <vector>
-#include "Geography.h"
+#include "Climate.h"
 
 class Race  : public Concept
 {

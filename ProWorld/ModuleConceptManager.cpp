@@ -34,7 +34,7 @@ bool ModuleConceptManager::Start()
 		{
 			location = location.child("Info");
 			Location* concept = (Location*)CreateConcept(location.child("Name").attribute("value").as_string(), location.child("Plural").attribute("value").as_string(), 
-				Concept::ConceptType::Location);		
+				Concept::ConceptType::Location, location.child("id").attribute("value").as_int());		
 
 			concept->SetIsCoastal(location.child("Coastal").attribute("value").as_bool());
 			concept->SetInSea(location.child("inSea").attribute("value").as_bool());
@@ -71,7 +71,7 @@ bool ModuleConceptManager::Start()
 		{
 			adject = adject.child("Info");
 			Adjective* adjective = (Adjective*)CreateConcept(adject.child("Name").attribute("value").as_string(), string(""),
-				Concept::ConceptType::Adjective);
+				Concept::ConceptType::Adjective, adject.child("id").attribute("value").as_int());
 
 			adjective->SetAssignedNouns(adject.child("Nouns").attribute("value").as_int());
 			adjective->SetToPlural(adject.child("toPlural").attribute("value").as_bool());
@@ -94,7 +94,7 @@ bool ModuleConceptManager::Start()
 		{
 			node_cl = node_cl.child("Info");
 			Climate* climate = (Climate*)CreateConcept(node_cl.child("Name").attribute("value").as_string(), string(""),
-				Concept::ConceptType::Climate);
+				Concept::ConceptType::Climate, node_cl.child("id").attribute("value").as_int());
 
 			climate->SetClimateType((Climate::ClimatesType)node_cl.child("Key").attribute("value").as_int());
 			climate->SetTemperature(node_cl.child("Temperature").attribute("value").as_string());
@@ -117,7 +117,7 @@ bool ModuleConceptManager::Start()
 		{
 			node_ra = node_ra.child("Info");
 			Race* race = (Race*)CreateConcept(node_ra.child("Name").attribute("value").as_string(), node_ra.child("Plural").attribute("value").as_string(),
-				Concept::ConceptType::Race);
+				Concept::ConceptType::Race, node_ra.child("id").attribute("value").as_int());
 
 			race->SetIsCoastal(node_ra.child("Coastal").attribute("value").as_bool());
 			race->SetInSea(node_ra.child("inSea").attribute("value").as_bool());
@@ -145,7 +145,7 @@ bool ModuleConceptManager::CleanUp()
 	return true;
 }
 
-Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plural, Concept::ConceptType type)
+Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plural, Concept::ConceptType type, int id)
 {
 	
 	Concept* ret = nullptr;
@@ -154,7 +154,7 @@ Concept* ModuleConceptManager::CreateConcept(std::string word, std::string plura
 	{
 	case Concept::ConceptType::Location:
 	{
-		Location* location = new Location(word, plural, type);
+		Location* location = new Location(word, plural, type, Location::LocationType(id));
 		concept_list.push_back(location);
 		location->SetID(curr_id);
 		location_vector.push_back(location);

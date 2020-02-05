@@ -1,5 +1,6 @@
 #include "Geography.h"
 #include "HelperFunctions.h"
+#include "App.h"
 
 using namespace std;
 
@@ -121,4 +122,79 @@ std::vector<Geography::CellLand> Geography::GetGeovector()
 	return ret;
 }
 
+Geography::CellLand::~CellLand()
+{
+	for (vector<Society*>::reverse_iterator rit = societies.rbegin(); rit != societies.rend(); ++rit)
+		RELEASE(*rit);
+}
 
+void Geography::CellLand::CreateSociety(Location * tLoc)
+{
+	Society* society = new Society();
+
+	society->SetName(app->namegenerator->GenerateClassicName());
+
+	if (!society->AssignLocationPtr(tLoc))
+	{
+		LOG("Assigned NULL Location at Geography::CellLand::CreateSociety(Location* tLoc)");
+		return;
+	}
+
+	switch (society->GetLocationPtr()->GetLocationType())
+	{
+	case Location::tCity:
+		society->SetScale(Society::LCity);
+		break;
+	case Location::tTown:
+		society->SetScale(Society::MTown);
+		break;
+	case Location::tPort:
+		society->SetScale(Society::MTown);
+		break;
+	case Location::tVillage:
+		society->SetScale(Society::SVillage);
+		break;
+	default:
+		break;
+	}
+
+	SetRaces(society);
+
+	societies.push_back(society);
+}
+
+void Geography::CellLand::SetRaces(Society * s)
+{
+	//--- Set Races -----
+
+	int n_races = 1;
+
+	if (s->GetScale() == Society::LCity) n_races = GetRandomNumber(1, MAX_RACE_L);
+	else if (s->GetScale() == Society::LCity) n_races = GetRandomNumber(1, MAX_RACE_M);
+
+	vector<Race*> prep_races;
+	vector<Race*> total_races = app->conceptmanager->GetRacesVectorByClimate();
+
+	while (prep_races.size() < n_races)
+	{
+		Race* race = total_races[GetRandomNumber(0, total_races.size() - 1)];
+
+		if (std::find(prep_races.begin(), prep_races.end(), race) != prep_races.end())
+			continue;
+
+		if (race->GetInSea() == CheckWater())
+		{
+			if (race->GetIsCoastal() || race->GetIsCoastal() == is_coastline)
+			{
+				prep_races.push_back(race);
+				s->AddRace(race);
+			}
+		}
+	}
+	int a = 2;
+}
+
+bool Geography::CellLand::CheckWater() const
+{
+	return (gtype == Water);
+}

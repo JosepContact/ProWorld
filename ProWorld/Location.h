@@ -3,20 +3,10 @@
 #define __LOCATION_H__
 
 #include "Concept.h"
-#include "Geography.h"
-#include "City.h"
-
+#include "Climate.h"
 #include<vector>
 
-class Adjective;
-
 class Location : public Concept {
-
-public:
-	Location();
-	Location(std::string argword, std::string argplural, ConceptType argtype);
-	~Location();
-
 public:
 	enum LocationType {
 		tCity,
@@ -47,17 +37,22 @@ public:
 		tReef
 	};
 
+public:
+	Location();
+	Location(std::string argword, std::string argplural, ConceptType argtype, LocationType arglocation);
+	~Location();
+
+public:
+
 	std::vector<Climate::ClimatesType> climates;
 
 
 private:
-
-	std::string name;
 	std::vector<int> adjectives;
 	bool isCoastal;
 	bool inSea;
-	Geography::CardinalPoints situation;
-	City* city = nullptr;
+	//Geography::CardinalPoints situation;
+	LocationType locationType;
 
 public:
 
@@ -70,19 +65,17 @@ public:
 	void SetInSea(bool set);
 	bool GetInSea() const;
 
-	void SetSituation(Geography::CardinalPoints sit);
-	Geography::CardinalPoints GetSituation() const;
-
-	void SetName(std::string);
-	std::string GetName() const;
+	//void SetSituation(Geography::CardinalPoints sit);
+	//Geography::CardinalPoints GetSituation() const;
 
 	std::vector<Climate::ClimatesType> GetClimates();
 	void AddClimate(Climate::ClimatesType climate);
 
 	bool CompareClimate(Climate::ClimatesType climate);
-	bool SpawnInSea(Geography::LandType);
+	bool SpawnInSea(int);
 
-	
+	void SetLocationType(LocationType loctype);
+	LocationType GetLocationType() const;
 };
 
 #endif

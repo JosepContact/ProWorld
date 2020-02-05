@@ -3,8 +3,9 @@
 <Locations>
 	<Location>
 		<Info>
+		<id value = "0"/>
 		<Name value = "City"/>
-		<Plural value = "Cities"/>
+		<Plural value = "Cities"/>	
 		<Coastal value = "1"/>
 		<inSea value ="1"/>
 		<Adjectives>
@@ -24,6 +25,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "1"/>
 		<Name value = "Town"/>
 		<Plural value = "Towns"/>
 		<Coastal value = "1"/>
@@ -42,6 +44,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "2"/>
 		<Name value = "Village"/>
 		<Plural value = "Villages"/>
 		<Coastal value = "1"/>
@@ -60,6 +63,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "3"/>
 		<Name value = "Port"/>
 		<Plural value = "Ports"/>
 		<Coastal value = "1"/>
@@ -78,6 +82,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "4"/>
 		<Name value = "Temple"/>
 		<Plural value = "Temples"/>
 		<Coastal value = "1"/>
@@ -97,6 +102,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "5"/>
 		<Name value = "Sanctuary"/>
 		<Plural value = "Sanctuaries"/>
 		<Coastal value = "1"/>
@@ -115,6 +121,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "6"/>
 		<Name value = "Monument"/>
 		<Plural value = "Monuments"/>
 		<Coastal value = "1"/>
@@ -134,6 +141,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "7"/>
 		<Name value = "Mountain"/>
 		<Plural value = "Mountains"/>
 		<Coastal value = "0"/>
@@ -153,6 +161,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "8"/>
 		<Name value = "Volcano"/>
 		<Plural value = "Volcanoes"/>
 		<Coastal value = "0"/>
@@ -173,6 +182,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "9"/>
 		<Name value = "Valley"/>
 		<Plural value = "Valleys"/>
 		<Coastal value = "0"/>
@@ -192,6 +202,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "10"/>
 		<Name value = "Cave"/>
 		<Plural value = "Caves"/>
 		<Coastal value = "1"/>
@@ -214,6 +225,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "11"/>
 		<Name value = "Forest"/>
 		<Plural value = "Forests"/>
 		<Coastal value = "0"/>
@@ -237,6 +249,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "12"/>
 		<Name value = "Jungle"/>
 		<Plural value = "Jungles"/>
 		<Coastal value = "1"/>
@@ -257,6 +270,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "13"/>
 		<Name value = "Plain"/>
 		<Plural value = "Plains"/>
 		<Coastal value = "0"/>
@@ -275,6 +289,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "14"/>
 		<Name value = "Swamp"/>
 		<Plural value = "Swamps"/>
 		<Coastal value = "0"/>
@@ -294,6 +309,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "15"/>
 		<Name value = "River"/>
 		<Plural value = "Rivers"/>
 		<Coastal value = "1"/>
@@ -313,6 +329,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "16"/>
 		<Name value = "Lake"/>
 		<Plural value = "Lakes"/>
 		<Coastal value = "0"/>
@@ -332,6 +349,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "17"/>
 		<Name value = "Bay"/>
 		<Plural value = "Bays"/>
 		<Coastal value = "1"/>
@@ -350,6 +368,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "18"/>
 		<Name value = "Island"/>
 		<Plural value = "Islands"/>
 		<Coastal value = "0"/>
@@ -368,6 +387,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "19"/>
 		<Name value = "Archipielago"/>
 		<Plural value = "Archipelagoes"/>
 		<Coastal value = "0"/>
@@ -386,6 +406,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "20"/>
 		<Name value = "Iceberg"/>
 		<Plural value = "Icebergs"/>
 		<Coastal value = "0"/>
@@ -401,6 +422,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "21"/>
 		<Name value = "Peninsula"/>
 		<Plural value = "Peninsulas"/>
 		<Coastal value = "1"/>
@@ -418,6 +440,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "22"/>
 		<Name value = "Desert"/>
 		<Plural value = "Deserts"/>
 		<Coastal value = "1"/>
@@ -432,6 +455,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "23"/>
 		<Name value = "Oasis"/>
 		<Plural value = "Oases"/>
 		<Coastal value = "0"/>
@@ -446,6 +470,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "24"/>
 		<Name value = "Ocean"/>
 		<Plural value = "Oceans"/>
 		<Coastal value = "0"/>
@@ -466,6 +491,7 @@
 	</Location>
 	<Location>
 		<Info>
+		<id value = "25"/>
 		<Name value = "Reef"/>
 		<Plural value = "Reefs"/>
 		<Coastal value = "0"/>

@@ -41,7 +41,7 @@ public:
 
 private:
 
-	Concept* CreateConcept(std::string word, std::string plural, Concept::ConceptType type);
+	Concept* CreateConcept(std::string word, std::string plural, Concept::ConceptType type, int id);
 
 
 private:

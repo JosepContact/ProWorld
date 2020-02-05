@@ -20,8 +20,8 @@ ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
 ModuleWorld::~ModuleWorld()
 {
 	RELEASE (wsky);
-	for (vector<City*>::iterator it = cities.begin(); it != cities.end(); it++)
-		RELEASE(*it);
+	for (vector<Society*>::reverse_iterator rit = cities.rbegin(); rit != cities.rend(); ++rit)
+		RELEASE(*rit);
 }
 
 bool ModuleWorld::Start()
@@ -60,7 +60,7 @@ update_status ModuleWorld::Update()
 	switch (wsky->GetVisibility())
 	{
 	case Sky::SkyVisibility::Visible:
-		print "Your world's sky is clear.\n";
+		print "\nYour world's sky is clear.\n";
 		seemoon = true;
 		seesun = true;
 		break;
@@ -149,10 +149,39 @@ update_status ModuleWorld::Update()
 			print "There's a " << (*it2)->GetWord() << ".\n";
 
 			if ((*it2)->GetWord() == "City") {
-				print "It's a city named " << 
+				//print "It's a city named " << 
 			}
 		}
-		
+		for (auto it3 = (*it).societies.begin(); it3 != (*it).societies.end(); ++it3)
+		{
+			switch ((*it3)->GetLocationPtr()->GetLocationType())
+			{
+			case Location::tCity:
+				
+				print "There's a city named " << (*it3)->GetName() << ".\nThe following races live in it:\n";
+				for (int i = 0; i < (*it3)->GetRaces().size(); i++)
+					print "- " << (*it3)->GetRaces()[i]->GetWord() << ".\n";
+				break;
+			case Location::tTown:
+
+				print "There's a town named " << (*it3)->GetName() << ".\nThe following races live in it:\n";
+				for (int i = 0; i < (*it3)->GetRaces().size(); i++)
+					print "- " << (*it3)->GetRaces()[i]->GetWord() << ".\n";
+				break;
+			case Location::tPort:
+
+				print "There's a port named " << (*it3)->GetName() << ".\nThe following races live in it:\n";
+				for (int i = 0; i < (*it3)->GetRaces().size(); i++)
+					print "- " << (*it3)->GetRaces()[i]->GetWord() << ".\n";
+				break;
+			case Location::tVillage:
+
+				print "There's a village named " << (*it3)->GetName() << ".\nThe following races live in it:\n";
+				for (int i = 0; i < (*it3)->GetRaces().size(); i++)
+					print "- " << (*it3)->GetRaces()[i]->GetWord() << ".\n";
+				break;
+			}
+		}
 	}
 
 	getchar();
@@ -347,8 +376,8 @@ void ModuleWorld::CreateMap()
 		{
 			if ((*it).gtype != Geography::LandType::Water && GetBoolByRandom(MEDIUM_LOW_CHANCE) && nCities > 0)
 			{
-				(*it).locations.push_back(app->conceptmanager->GetLocationByName("City"));
-				AddCity(City::LCity, (*it).is_coastline, false, (*it).cardinal);
+				Location* tLoc = app->conceptmanager->GetLocationByName("City");
+				(*it).CreateSociety(tLoc);
 				nCities--;
 			}
 		}
@@ -372,19 +401,23 @@ void ModuleWorld::CreateMap()
 				case 1:
 				{
 					if ((*it).is_coastline) {						
-						(*it).locations.push_back(app->conceptmanager->GetLocationByName("Port"));
-						AddCity(City::MTowm, (*it).is_coastline, false, (*it).cardinal);
+						Location* tLoc = app->conceptmanager->GetLocationByName("Port");
+						(*it).CreateSociety(tLoc);
 					}
 					break;
 				}
 				case 2:
-					(*it).locations.push_back(app->conceptmanager->GetLocationByName("Town"));
-					AddCity(City::MTowm, (*it).is_coastline, false, (*it).cardinal);
+				{
+					Location* tLoc = app->conceptmanager->GetLocationByName("Town");
+					(*it).CreateSociety(tLoc);
 					break;
+				}
 				case 3:
-					(*it).locations.push_back(app->conceptmanager->GetLocationByName("Village"));
-					AddCity(City::SVillage, (*it).is_coastline, false, (*it).cardinal);
+				{
+					Location* tLoc = app->conceptmanager->GetLocationByName("Village");
+					(*it).CreateSociety(tLoc);
 					break;
+				}
 				}
 				nTowns--;
 			}
@@ -413,10 +446,10 @@ void ModuleWorld::CreateMap()
 		}
 	}
 }
-
-City* ModuleWorld::AddCity(City::Scale s, bool coastal, bool insea, Geography::CardinalPoints cpoint, Location* loc)
+/*
+Society* ModuleWorld::AddCity(Society::Scale s, bool coastal, bool insea, Geography::CardinalPoints cpoint, Location* loc)
 {
-	City* city = new City();
+	Society* city = new Society();
 	cities.push_back(city);
 
 	city->SetScale(s);
@@ -432,8 +465,8 @@ City* ModuleWorld::AddCity(City::Scale s, bool coastal, bool insea, Geography::C
 
 	int n_races = 1;
 
-	if (s == City::LCity) n_races = GetRandomNumber(1, MAX_RACE_L);
-	else if (s == City::LCity) n_races = GetRandomNumber(1, MAX_RACE_M);
+	if (s == Society::LCity) n_races = GetRandomNumber(1, MAX_RACE_L);
+	else if (s == Society::LCity) n_races = GetRandomNumber(1, MAX_RACE_M);
 
 	vector<Race*> prep_races;
 	vector<Race*> total_races = app->conceptmanager->GetRacesVectorByClimate();
@@ -455,7 +488,7 @@ City* ModuleWorld::AddCity(City::Scale s, bool coastal, bool insea, Geography::C
 		}
 	}
 	return city;
-}
+}*/
 
 Climate * ModuleWorld::GetClimate() const
 {

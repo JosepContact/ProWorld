@@ -3,11 +3,13 @@
 #ifndef __GEOGRAPHY_H__
 #define __GEOGRAPHY_H__
 
+#include "Climate.h"
 #include "Concept.h"
+#include "Society.h"
 
 #include <array>
 #include <vector>
-#include "Climate.h"
+
 
 class Geography
 {
@@ -40,10 +42,19 @@ public:
 
 	struct CellLand
 	{
+		CellLand() {}
+		~CellLand();
+
 		LandType gtype;
 		std::vector<Concept*> locations;
+		std::vector<Society*> societies;
 		bool is_coastline;
 		CardinalPoints cardinal;
+
+		void CreateSociety(Location* tLoc);
+	private:
+		void SetRaces(Society*);
+		bool CheckWater() const;
 	};
 
 public:
