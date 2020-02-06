@@ -77,6 +77,7 @@
     <ClCompile Include="Geography.cpp">
       <Filter>Modules\World</Filter>
     </ClCompile>
+    <ClCompile Include="ModuleNarration.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -132,6 +133,9 @@
     </ClInclude>
     <ClInclude Include="Society.h">
       <Filter>Modules\World</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleNarration.h">
+      <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

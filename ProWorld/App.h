@@ -7,6 +7,7 @@
 #include "ModuleConceptManager.h"
 #include "ModuleWorld.h"
 #include "ModuleNameGenerator.h"
+#include "ModuleNarration.h"
 
 // ----------
 
@@ -38,7 +39,7 @@ public:
 	ModuleConceptManager* conceptmanager;
 	ModuleWorld* world;
 	ModuleNameGenerator* namegenerator;
-	
+	ModuleNarration* narration;
 
 private:
 	std::list<Module*> listmodules;

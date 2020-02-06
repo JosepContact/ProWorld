@@ -11,13 +11,14 @@ App::App()
 	conceptmanager = new ModuleConceptManager;
 	world = new ModuleWorld;
 	namegenerator = new ModuleNameGenerator;
+	narration = new ModuleNarration;
 
 	// ----- Add Modules to World ---
 	listmodules.push_back(filesystem);
 	listmodules.push_back(conceptmanager);
 	listmodules.push_back(world);
 	listmodules.push_back(namegenerator);
-
+	listmodules.push_back(narration);
 }
 
 

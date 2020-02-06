@@ -30,7 +30,7 @@ public:
 	// Destructor
 	virtual ~ModuleWorld();
 
-	// Starts The FileSystem Module
+
 	bool Start();
 
 	// Called before quitting
@@ -38,16 +38,18 @@ public:
 
 	virtual update_status Update();
 
-private:
+public:
 	void StartWorld();
+	
+private:
 	WorldType GenerateWorldType();
 	void SetWorldOverview();
 	void SetClimate();
 	void SetSky();
 	void SetGeography();
 	void CreateMap();
-	//Society* AddCity(Society::Scale, bool coastal, bool insea, Geography::CardinalPoints, Location*); 
-private:
+
+public:
 	// WORLD
 	std::string wname;
 	WorldType wtype;
@@ -60,10 +62,8 @@ private:
 
 	std::vector<Geography::CellLand> geoVector;
 
-	std::vector<Society*> cities;
-private:
-	//OTHER TOOLS
-	//bool set_climate = false;
+	std::vector<Society*> wsocieties;
+
 public:
 	Climate* GetClimate() const;
 };
