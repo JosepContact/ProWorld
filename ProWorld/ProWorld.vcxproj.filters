@@ -27,6 +27,18 @@
     <Filter Include="Modules\World">
       <UniqueIdentifier>{ba5ecb90-2ac8-48c1-8d1d-37f9a00996d1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ImGUI">
+      <UniqueIdentifier>{49e456d9-7680-4e90-9c8a-48e992179551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGUI\GL3W">
+      <UniqueIdentifier>{110a2413-486f-4320-858e-8fb27cb07492}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGUI\sources">
+      <UniqueIdentifier>{89c4a5f5-d307-488c-8341-543311b870a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGUI\GLFW3">
+      <UniqueIdentifier>{03cdad6a-a005-41a6-8dca-c3ff22f8e697}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -77,7 +89,33 @@
     <ClCompile Include="Geography.cpp">
       <Filter>Modules\World</Filter>
     </ClCompile>
-    <ClCompile Include="ModuleNarration.cpp" />
+    <ClCompile Include="ModuleNarration.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>ImGUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\GL\gl3w.c">
+      <Filter>ImGUI\GL3W</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_glfw.cpp">
+      <Filter>ImGUI\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_opengl3.cpp">
+      <Filter>ImGUI\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\main.cpp">
+      <Filter>ImGUI\sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -137,5 +175,49 @@
     <ClInclude Include="ModuleNarration.h">
       <Filter>Modules</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>ImGUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\GL\gl3w.h">
+      <Filter>ImGUI\GL3W</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\GL\glcorearb.h">
+      <Filter>ImGUI\GL3W</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_glfw.h">
+      <Filter>ImGUI\sources</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_opengl3.h">
+      <Filter>ImGUI\sources</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\include\GLFW\glfw3.h">
+      <Filter>ImGUI\GLFW3</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\include\GLFW\glfw3native.h">
+      <Filter>ImGUI\GLFW3</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ProWorld.rc">
+      <Filter>Otros</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
