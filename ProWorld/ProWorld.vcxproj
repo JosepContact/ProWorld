@@ -157,6 +157,7 @@
     <ClCompile Include="ImGui\imgui_impl_opengl3.cpp" />
     <ClCompile Include="ImGui\imgui_widgets.cpp" />
     <ClCompile Include="ImGui\main.cpp" />
+    <ClCompile Include="ModuleGraphics.cpp" />
     <ClCompile Include="ModuleNarration.cpp" />
     <ClCompile Include="Society.cpp" />
     <ClCompile Include="Climate.cpp" />
@@ -188,6 +189,7 @@
     <ClInclude Include="ImGui\imstb_truetype.h" />
     <ClInclude Include="ImGui\include\GLFW\glfw3.h" />
     <ClInclude Include="ImGui\include\GLFW\glfw3native.h" />
+    <ClInclude Include="ModuleGraphics.h" />
     <ClInclude Include="ModuleNarration.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Society.h" />

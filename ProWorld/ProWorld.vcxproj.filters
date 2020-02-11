@@ -116,6 +116,9 @@
     <ClCompile Include="ImGui\main.cpp">
       <Filter>ImGUI\sources</Filter>
     </ClCompile>
+    <ClCompile Include="ModuleGraphics.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -213,6 +216,9 @@
     </ClInclude>
     <ClInclude Include="ImGui\include\GLFW\glfw3native.h">
       <Filter>ImGUI\GLFW3</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleGraphics.h">
+      <Filter>Modules</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

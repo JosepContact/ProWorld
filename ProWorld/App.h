@@ -8,6 +8,7 @@
 #include "ModuleWorld.h"
 #include "ModuleNameGenerator.h"
 #include "ModuleNarration.h"
+#include "ModuleGraphics.h"
 
 // ----------
 
@@ -40,7 +41,7 @@ public:
 	ModuleWorld* world;
 	ModuleNameGenerator* namegenerator;
 	ModuleNarration* narration;
-
+	ModuleGraphics* graphics;
 private:
 	std::list<Module*> listmodules;
 

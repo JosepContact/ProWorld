@@ -12,6 +12,7 @@ App::App()
 	world = new ModuleWorld;
 	namegenerator = new ModuleNameGenerator;
 	narration = new ModuleNarration;
+	graphics = new ModuleGraphics;
 
 	// ----- Add Modules to World ---
 	listmodules.push_back(filesystem);
@@ -19,6 +20,7 @@ App::App()
 	listmodules.push_back(world);
 	listmodules.push_back(namegenerator);
 	listmodules.push_back(narration);
+	listmodules.push_back(graphics);
 }
 
 

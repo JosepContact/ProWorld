@@ -28,6 +28,7 @@ bool ModuleNarration::CleanUp()
 update_status ModuleNarration::Update()
 {
 	// ----- START -----
+	/*
 	string input;
 
 	do {
@@ -177,6 +178,6 @@ update_status ModuleNarration::Update()
 		}
 	}
 
-	getchar();
+	getchar();*/
 	return UPDATE_CONTINUE;
 }
