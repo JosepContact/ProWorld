@@ -26,6 +26,7 @@ ModuleWorld::~ModuleWorld()
 
 bool ModuleWorld::Start()
 {
+	StartWorld();
 	return true;
 }
 
@@ -59,7 +60,9 @@ void ModuleWorld::StartWorld()
 	// ----- OVERVIEW --------
 	wtype = GenerateWorldType();
 
-	string input;
+	wname = app->namegenerator->GenerateName();
+
+	/*string input;
 	do {
 
 	wname = app->namegenerator->GenerateName();
@@ -68,7 +71,7 @@ void ModuleWorld::StartWorld()
 
 	cin >> input;
 
-	} while (input != "y" && input != "yes");
+	} while (input != "y" && input != "yes");*/
 
 	SetWorldOverview();
 
@@ -76,7 +79,7 @@ void ModuleWorld::StartWorld()
 	cout << ", " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[1][1], (Location*)woverview[1][0]);
 	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[2][1], (Location*)woverview[2][0]) << ".";*/
 
-	getchar();
+	//getchar();
 
 	// ------ CLIMATE ------
 

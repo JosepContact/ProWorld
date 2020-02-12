@@ -9,16 +9,16 @@ App::App()
 	// ----- Create Modules ----
 	filesystem = new ModuleFileSystem;
 	conceptmanager = new ModuleConceptManager;
-	world = new ModuleWorld;
 	namegenerator = new ModuleNameGenerator;
+	world = new ModuleWorld;
 	narration = new ModuleNarration;
 	graphics = new ModuleGraphics;
 
 	// ----- Add Modules to World ---
 	listmodules.push_back(filesystem);
 	listmodules.push_back(conceptmanager);
-	listmodules.push_back(world);
 	listmodules.push_back(namegenerator);
+	listmodules.push_back(world);
 	listmodules.push_back(narration);
 	listmodules.push_back(graphics);
 }

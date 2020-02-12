@@ -38,8 +38,9 @@ public:
 public:
 	ModuleFileSystem* filesystem;
 	ModuleConceptManager* conceptmanager;
-	ModuleWorld* world;
 	ModuleNameGenerator* namegenerator;
+	ModuleWorld* world;
+
 	ModuleNarration* narration;
 	ModuleGraphics* graphics;
 private:

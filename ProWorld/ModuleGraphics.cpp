@@ -13,6 +13,8 @@
 
 #include <GLFW/glfw3.h>
 
+using namespace std;
+
 #if defined(_MSC_VER) && (_MSC_VER >= 1900) && !defined(IMGUI_DISABLE_WIN32_FUNCTIONS)
 #pragma comment(lib, "legacy_stdio_definitions")
 #endif
@@ -48,7 +50,7 @@ glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 #endif
 
 	// Create window with graphics context
-window = glfwCreateWindow(1280, 720, "Dear ImGui GLFW+OpenGL3 example", NULL, NULL);
+window = glfwCreateWindow(1400, 900, "Dear ImGui GLFW+OpenGL3 example", NULL, NULL);
 if (window == NULL)
 {
 	LOG("window was Null!");
@@ -101,6 +103,13 @@ bool ModuleGraphics::Start()
 
 bool ModuleGraphics::CleanUp()
 {
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
+
+	//glfwDestroyWindow(window);
+	//glfwTerminate();
+
 	return true;
 }
 
@@ -118,6 +127,18 @@ update_status ModuleGraphics::Update()
 		// 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
 		if (show_demo_window)
 			ImGui::ShowDemoWindow(&show_demo_window);
+
+		//Let's create our small intro world.
+		{
+			ImGui::Text(app->narration->WorldName().c_str()); // Print World Name
+			ImGui::Separator();
+			ImGui::Text(app->narration->WorldSky().c_str());
+			ImGui::Text(app->narration->WorldClimate().c_str());
+			ImGui::Separator();
+			ImGui::Text("GEOGRAPHY");
+			ImGui::Text(app->narration->WorldGeography().c_str());
+		}
+
 
 		// 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
 		{

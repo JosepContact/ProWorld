@@ -5,6 +5,8 @@
 
 #include "Module.h"
 
+using namespace std;
+
 class ModuleNarration : public Module
 {
 public:
@@ -17,8 +19,19 @@ public:
 
 	// Called before quitting
 	bool CleanUp();
+	//
 
+	string WorldName();
+	string WorldSky();
+	string WorldClimate();
+	string WorldGeography();
+
+	//
 	virtual update_status Update();
+private:
+	string nWorld;
+	string nClimate;
+	
 };
 
 #endif // !MODULENARRATION_H
