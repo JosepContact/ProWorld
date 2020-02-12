@@ -40,9 +40,10 @@ public:
 	ModuleConceptManager* conceptmanager;
 	ModuleNameGenerator* namegenerator;
 	ModuleWorld* world;
-
 	ModuleNarration* narration;
 	ModuleGraphics* graphics;
+
+	bool quit;
 private:
 	std::list<Module*> listmodules;
 

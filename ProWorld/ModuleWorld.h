@@ -56,7 +56,7 @@ public:
 
 	// WORLD ATTRIBUTES
 	std::array<std::array<Concept*, 2>, 3> woverview;
-	Climate* wclimate = nullptr;
+	
 	Sky* wsky = nullptr;
 	Geography* wgeography = nullptr;
 
@@ -66,6 +66,9 @@ public:
 
 public:
 	Climate* GetClimate() const;
+
+private:
+	Climate* wclimate = nullptr; // this pointer points at climate, it's not created and must not be destroyed
 };
 
 #endif // __MODULEWORLD_H__

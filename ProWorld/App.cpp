@@ -48,12 +48,18 @@ bool App::Start()
 
 update_status App::Update()
 {
+	if (quit) return UPDATE_STOP;
 	update_status ret = UPDATE_CONTINUE;
 
-	for (list<Module*>::iterator it = listmodules.begin(); it != listmodules.end(); ++it) {
-		if ((*it) != nullptr && ret == true) {
+	list<Module*>::iterator it = listmodules.begin();
+
+	while (it != listmodules.end() && ret == UPDATE_CONTINUE) 
+	{
+		if ((*it) != nullptr) 
+		{
 			ret = (*it)->Update();
 		}
+		++it;
 	}
 
 	return ret;

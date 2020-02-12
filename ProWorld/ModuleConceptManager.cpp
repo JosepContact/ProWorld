@@ -15,6 +15,11 @@ ModuleConceptManager::ModuleConceptManager(bool start_enabled) : Module(start_en
 
 ModuleConceptManager::~ModuleConceptManager()
 {
+	concept_list.clear();
+	location_vector.clear();
+	adjective_vector.clear();
+	climate_vector.clear();
+	race_vector.clear();
 }
 
 bool ModuleConceptManager::Start()

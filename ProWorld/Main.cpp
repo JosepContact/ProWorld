@@ -52,7 +52,6 @@ int main(int argc, char ** argv)
 		{
 			// ( --------- World Updates -------------- )
 			int update_return = app->Update();
-			state = CLEAN_UP_STATE;
 
 			if (update_return == UPDATE_ERROR)
 			{
@@ -61,7 +60,7 @@ int main(int argc, char ** argv)
 			}
 			else if (update_return == UPDATE_STOP)
 			{
-				state == EXIT_STATE;
+				state = CLEAN_UP_STATE;
 			}
 
 			break;

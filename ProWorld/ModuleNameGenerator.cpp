@@ -16,6 +16,8 @@ ModuleNameGenerator::ModuleNameGenerator(bool start_enabled) : Module(start_enab
 
 ModuleNameGenerator::~ModuleNameGenerator()
 {
+	vector_syllabes.clear();
+	vector_end_syllabes.clear();
 }
 
 char NamePrefix[][7] =

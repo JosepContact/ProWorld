@@ -78,7 +78,7 @@ bool err = false; // If you use IMGUI_IMPL_OPENGL_LOADER_CUSTOM, your loader is 
 
 ModuleGraphics::~ModuleGraphics()
 {
-	RELEASE(window);
+	//RELEASE(window);
 }
 
 bool ModuleGraphics::Start()
@@ -107,16 +107,15 @@ bool ModuleGraphics::CleanUp()
 	ImGui_ImplGlfw_Shutdown();
 	ImGui::DestroyContext();
 
-	//glfwDestroyWindow(window);
-	//glfwTerminate();
+	glfwDestroyWindow(window);
+	glfwTerminate();
 
 	return true;
 }
 
 update_status ModuleGraphics::Update()
 {
-	while (!glfwWindowShouldClose(window))
-	{
+
 		glfwPollEvents();
 
 		// Start the Dear ImGui frame
@@ -183,7 +182,10 @@ update_status ModuleGraphics::Update()
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
 		glfwSwapBuffers(window);
-	}
 
-	return UPDATE_CONTINUE;
+
+		if (glfwWindowShouldClose(window))
+			app->quit = true;
+
+		return UPDATE_CONTINUE;
 }

@@ -20,8 +20,13 @@ ModuleWorld::ModuleWorld(bool start_enabled) : Module(start_enabled)
 ModuleWorld::~ModuleWorld()
 {
 	RELEASE (wsky);
+	//RELEASE(wclimate);
+	RELEASE(wgeography);
 	for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
 		RELEASE(*rit);
+
+	geoVector.clear();
+	wsocieties.clear();
 }
 
 bool ModuleWorld::Start()
@@ -61,17 +66,6 @@ void ModuleWorld::StartWorld()
 	wtype = GenerateWorldType();
 
 	wname = app->namegenerator->GenerateName();
-
-	/*string input;
-	do {
-
-	wname = app->namegenerator->GenerateName();
-	cout << "\n";
-	cout << "World name is: "<< toUppercase(wname) << "\nDo you would you like to keep it(yes/y/no/n?)";
-
-	cin >> input;
-
-	} while (input != "y" && input != "yes");*/
 
 	SetWorldOverview();
 
@@ -126,7 +120,7 @@ void ModuleWorld::SetWorldOverview()
 
 void ModuleWorld::SetClimate()
 {
-	wclimate = new Climate();
+	//wclimate = new Climate();
 }
 
 void ModuleWorld::SetSky()

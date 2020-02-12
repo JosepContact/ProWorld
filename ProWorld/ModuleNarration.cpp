@@ -91,7 +91,7 @@ string ModuleNarration::WorldSky()
 
 string ModuleNarration::WorldClimate()
 {
-	Climate* nclimate = app->world->wclimate;
+	Climate* nclimate = app->world->GetClimate();
 
 	string climate = nWorld + " has climate: ";
 	
