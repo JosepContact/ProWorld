@@ -113,11 +113,11 @@
     <ClCompile Include="ImGui\imgui_impl_opengl3.cpp">
       <Filter>ImGUI\sources</Filter>
     </ClCompile>
-    <ClCompile Include="ImGui\main.cpp">
-      <Filter>ImGUI\sources</Filter>
-    </ClCompile>
     <ClCompile Include="ModuleGraphics.cpp">
       <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\2main.cpp">
+      <Filter>ImGUI\sources</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
