@@ -123,7 +123,6 @@ update_status ModuleGraphics::Update()
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-
 		//if (show_demo_window)
 		//	ImGui::ShowDemoWindow(&show_demo_window);
 
@@ -133,17 +132,16 @@ update_status ModuleGraphics::Update()
 			{
 				if (ImGui::BeginMenu("File"))
 				{
-					if(ImGui::MenuItem("New")) {
-						ImGui::EndMenu();
+					if(ImGui::MenuItem("New")) 
+					{
+						create_world = true;
+						show_world = false;
 					}
 					if (ImGui::MenuItem("Load")) {
-						ImGui::EndMenu();
 					}
 					if (ImGui::MenuItem("Save")) {
-						ImGui::EndMenu();
 					}
 					if (ImGui::MenuItem("Quit")) {
-						ImGui::EndMenu();
 					}
 					ImGui::EndMenu();
 				}
@@ -152,7 +150,7 @@ update_status ModuleGraphics::Update()
 		}
 
 		// Start App Window
-		if (new_world == false){
+		if (show_world == false){
 			ImGui::SetNextWindowPos(ImVec2(500, 150));
 			ImGui::SetNextWindowSize(ImVec2(520, 220));
 
@@ -165,13 +163,13 @@ update_status ModuleGraphics::Update()
 		ImGui::Separator();
 		if (ImGui::Button("Create me a world!"))
 		{
-			new_world = true;
+			show_world = true;
 		}
 		ImGui::End();
 		}
 		//Let's create our small intro world.
 
-		else if(new_world == true) {
+		else if(show_world == true) {
 			ImGui::Text(app->narration->WorldName().c_str()); // Print World Name
 			ImGui::Separator();
 			ImGui::Text(app->narration->WorldSky().c_str());
@@ -180,40 +178,6 @@ update_status ModuleGraphics::Update()
 			ImGui::Text("GEOGRAPHY");
 			ImGui::Text(app->narration->WorldGeography().c_str());
 		}
-
-
-		// 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-		/*{
-			static float f = 0.0f;
-			static int counter = 0;
-
-			ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-
-			ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-			ImGui::Checkbox("Demo Window", &show_demo_window);      // Edit bools storing our window open/close state
-			ImGui::Checkbox("Another Window", &show_another_window);
-
-			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-			ImGui::ColorEdit3("clear color", (float*)&clear_color); // Edit 3 floats representing a color
-
-			if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-				counter++;
-			ImGui::SameLine();
-			ImGui::Text("counter = %d", counter);
-
-			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
-			ImGui::End();
-		}*/
-
-		// 3. Show another simple window.
-		/*if (show_another_window)
-		{
-			ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
-			ImGui::Text("Hello from another window!");
-			if (ImGui::Button("Close Me"))
-				show_another_window = false;
-			ImGui::End();
-		}*/
 
 		// Rendering
 		ImGui::Render();

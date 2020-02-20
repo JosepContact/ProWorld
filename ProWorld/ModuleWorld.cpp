@@ -42,6 +42,13 @@ bool ModuleWorld::CleanUp()
 
 update_status ModuleWorld::Update()
 {
+	if (app->graphics->create_world == true)
+	{
+		StartWorld();
+		app->graphics->create_world = false;
+	}
+
+
 		return UPDATE_CONTINUE;
 }
 
