@@ -123,12 +123,55 @@ update_status ModuleGraphics::Update()
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-		// 1. Show the big demo window (Most of the sample code is in ImGui::ShowDemoWindow()! You can browse its code to learn more about Dear ImGui!).
-		if (show_demo_window)
-			ImGui::ShowDemoWindow(&show_demo_window);
 
-		//Let's create our small intro world.
+		//if (show_demo_window)
+		//	ImGui::ShowDemoWindow(&show_demo_window);
+
+		//show settings in the top left corner
 		{
+			if(ImGui::BeginMainMenuBar())
+			{
+				if (ImGui::BeginMenu("File"))
+				{
+					if(ImGui::MenuItem("New")) {
+						ImGui::EndMenu();
+					}
+					if (ImGui::MenuItem("Load")) {
+						ImGui::EndMenu();
+					}
+					if (ImGui::MenuItem("Save")) {
+						ImGui::EndMenu();
+					}
+					if (ImGui::MenuItem("Quit")) {
+						ImGui::EndMenu();
+					}
+					ImGui::EndMenu();
+				}
+				ImGui::EndMainMenuBar();
+			}
+		}
+
+		// Start App Window
+		if (new_world == false){
+			ImGui::SetNextWindowPos(ImVec2(500, 150));
+			ImGui::SetNextWindowSize(ImVec2(520, 220));
+
+		ImGui::Begin("ProWorld 0.1");
+
+		ImGui::Text("Welcome to ProWorld version 0.1.");
+		ImGui::Text("This application was created to simulate proceduarlly generated worlds\n in a narrated fashion.");
+		ImGui::Text("Fantasy worlds created with this program are converted into - so called\n - world bibles."); 
+		ImGui::Text("These, hold information about pretty much every important aspect that the\n creator thinks important for a story - from the main characters ideals,\n to each race living in most cities involving the action.");
+		ImGui::Separator();
+		if (ImGui::Button("Create me a world!"))
+		{
+			new_world = true;
+		}
+		ImGui::End();
+		}
+		//Let's create our small intro world.
+
+		else if(new_world == true) {
 			ImGui::Text(app->narration->WorldName().c_str()); // Print World Name
 			ImGui::Separator();
 			ImGui::Text(app->narration->WorldSky().c_str());
@@ -140,7 +183,7 @@ update_status ModuleGraphics::Update()
 
 
 		// 2. Show a simple window that we create ourselves. We use a Begin/End pair to created a named window.
-		{
+		/*{
 			static float f = 0.0f;
 			static int counter = 0;
 
@@ -160,17 +203,17 @@ update_status ModuleGraphics::Update()
 
 			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 			ImGui::End();
-		}
+		}*/
 
 		// 3. Show another simple window.
-		if (show_another_window)
+		/*if (show_another_window)
 		{
 			ImGui::Begin("Another Window", &show_another_window);   // Pass a pointer to our bool variable (the window will have a closing button that will clear the bool when clicked)
 			ImGui::Text("Hello from another window!");
 			if (ImGui::Button("Close Me"))
 				show_another_window = false;
 			ImGui::End();
-		}
+		}*/
 
 		// Rendering
 		ImGui::Render();
