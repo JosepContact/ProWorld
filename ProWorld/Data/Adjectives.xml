@@ -20,6 +20,14 @@
 	</Adjective>
 	<Adjective>
 		<Info>
+		<Name value = "Great"/>
+		<Nouns value = "0"/>
+		<toPlural value = "0"/>
+		<prio val ="2"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
 		<Name value = "Small"/>
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>

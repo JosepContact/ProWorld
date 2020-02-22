@@ -31,6 +31,9 @@ public:
 private:
 	string nWorld;
 	string nClimate;
+
+	bool StartsWithVowel(string word);
+	string GetAorAn(string word);
 	
 };
 

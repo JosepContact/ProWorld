@@ -304,6 +304,7 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="3"/>
+			<Adj val="10"/>
 		</Climates>
 		</Info>
 	</Location>
@@ -363,6 +364,7 @@
 			<Adj val="1"/>
 			<Adj val="2"/>
 			<Adj val="3"/>
+			<Adj val="10"/>
 		</Climates>
 		</Info>
 	</Location>
@@ -407,12 +409,13 @@
 	<Location>
 		<Info>
 		<id value = "20"/>
-		<Name value = "Iceberg"/>
-		<Plural value = "Icebergs"/>
+		<Name value = "Fiord"/>
+		<Plural value = "Fiords"/>
 		<Coastal value = "0"/>
 		<inSea value ="1"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="5"/>
 			<Adj val="6"/>
 		</Adjectives>
 		<Climates>
