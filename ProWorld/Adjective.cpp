@@ -33,3 +33,13 @@ void Adjective::SetToPlural(bool toplural)
 {
 	to_plural = toplural;
 }
+
+void Adjective::SetPriority(int a)
+{
+	priority = a;
+}
+
+int Adjective::GetPriority() const
+{
+	return priority;
+}

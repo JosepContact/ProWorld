@@ -65,6 +65,10 @@ public:
 	Location* GetLocationByName(std::string);
 
 	std::vector<Race*> GetRacesVectorByClimate();
+	std::vector<Adjective*> GetAdjectivesByPriority(std::vector<Adjective*>);
+
+private:
+	std::vector<Adjective*> GetAdjectivesToIterateByPriority(std::vector<Adjective*>, int key);
 };
 
 #endif // __MODULECONCEPTMANAGER_H__

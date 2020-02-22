@@ -126,6 +126,8 @@ Geography::CellLand::~CellLand()
 {
 	for (vector<Society*>::reverse_iterator rit = societies.rbegin(); rit != societies.rend(); ++rit)
 		RELEASE(*rit);
+	for (vector<Place*>::reverse_iterator rit = places.rbegin(); rit != places.rend(); ++rit)
+		RELEASE(*rit);
 }
 
 void Geography::CellLand::CreateSociety(Location * tLoc)
@@ -163,6 +165,14 @@ void Geography::CellLand::CreateSociety(Location * tLoc)
 	societies.push_back(society);
 }
 
+Geography::Place* Geography::CellLand::CreatePlace()
+{
+	Place* place = new Place();
+
+	places.push_back(place);
+	return place;
+}
+
 void Geography::CellLand::SetRaces(Society * s)
 {
 	//--- Set Races -----
@@ -197,4 +207,22 @@ void Geography::CellLand::SetRaces(Society * s)
 bool Geography::CellLand::CheckWater() const
 {
 	return (gtype == Water);
+}
+
+void Geography::Place::SetRandomGeoName()
+{
+	vector<Adjective*> all_adjects;
+
+	for (int i = 0; i < location->GetAdjectives().size(); i++)
+	{
+		vector<Adjective*>temp = app->conceptmanager->GetAdjectivesByKey(location->GetAdjectives()[i]);
+
+		if (temp.empty()) continue;
+
+		for (int j = 0; j < temp.size(); j++)
+			all_adjects.push_back(temp[j]);
+	}
+	
+	name = app->namegenerator->GeneratePlaceName(this, all_adjects);
+
 }

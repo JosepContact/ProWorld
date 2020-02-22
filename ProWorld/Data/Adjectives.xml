@@ -6,6 +6,8 @@
 		<Name value = "Large"/>
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
+		<!-- priorities go from 0 to 7 -->
+		<prio val ="2"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -13,6 +15,7 @@
 		<Name value = "Huge"/>
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
+		<prio val ="2"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -20,6 +23,7 @@
 		<Name value = "Small"/>
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
+		<prio val ="2"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -27,6 +31,7 @@
 		<Name value = "Long"/>
 		<Nouns value = "1"/>
 		<toPlural value = "0"/>
+		<prio val ="2"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -34,6 +39,7 @@
 		<Name value = "Many"/>
 		<Nouns value = "2"/>
 		<toPlural value = "1"/>
+		<prio val ="0"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -41,6 +47,7 @@
 		<Name value = "Dense"/>
 		<Nouns value = "3"/>
 		<toPlural value = "0"/>
+		<prio val ="6"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -48,6 +55,7 @@
 		<Name value = "Deep"/>
 		<Nouns value = "4"/>
 		<toPlural value = "0"/>
+		<prio val ="6"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -55,6 +63,7 @@
 		<Name value = "Dark"/>
 		<Nouns value = "5"/>
 		<toPlural value = "0"/>
+		<prio val ="5"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -62,6 +71,7 @@
 		<Name value = "Colorful"/>
 		<Nouns value = "6"/>
 		<toPlural value = "0"/>
+		<prio val ="5"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -69,6 +79,7 @@
 		<Name value = "Tall"/>
 		<Nouns value = "7"/>
 		<toPlural value = "0"/>
+		<prio val ="2"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -76,6 +87,7 @@
 		<Name value = "Inactive"/>
 		<Nouns value = "8"/>
 		<toPlural value = "0"/>
+		<prio val ="7"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -83,6 +95,7 @@
 		<Name value = "Sacred"/>
 		<Nouns value = "9"/>
 		<toPlural value = "0"/>
+		<prio val ="6"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -90,6 +103,31 @@
 		<Name value = "Holy"/>
 		<Nouns value = "9"/>
 		<toPlural value = "0"/>
+		<prio val ="6"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Beautiful"/>
+		<Nouns value = "10"/>
+		<toPlural value = "0"/>
+		<prio val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Ugly"/>
+		<Nouns value = "10"/>
+		<toPlural value = "0"/>
+		<prio val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Marvelous"/>
+		<Nouns value = "10"/>
+		<toPlural value = "0"/>
+		<prio val ="1"/>
 		</Info>
 	</Adjective>
 </Adjectives>

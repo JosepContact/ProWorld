@@ -148,11 +148,18 @@ string ModuleNarration::WorldGeography()
 			Geography += "- It's mostly land.\n";
 			break;
 		}
-		for (auto it2 = (*it).locations.begin(); it2 != (*it).locations.end(); ++it2)
+		for (auto it2 = (*it).places.begin(); it2 != (*it).places.end(); ++it2)
 		{
-			Geography += "There's a " + (*it2)->GetWord() + ".\n";
+			if ((*it2)->has_name == true)
+			{
+				Geography += "There's a place called " + (*it2)->name + ".\n";
+			}
+			else
+			{
+				Geography += "There's a " + (*it2)->name + ".\n";
+			}
 
-			if ((*it2)->GetWord() == "City") {
+			if ((*it2)->location->GetWord() == "City") {
 				//print "It's a city named " << 
 			}
 		}

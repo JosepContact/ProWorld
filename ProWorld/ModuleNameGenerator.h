@@ -5,6 +5,8 @@
 
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
+#include "Adjective.h"
+#include "Geography.h"
 
 #include <string>
 #include <vector>
@@ -29,6 +31,7 @@ public:
 	std::string GenerateName();
 	std::string GenerateClassicName();
 
+	std::string GeneratePlaceName(Geography::Place*, std::vector<Adjective*>);
 private:
 	std::vector<std::string> vector_syllabes;
 

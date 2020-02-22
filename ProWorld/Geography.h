@@ -4,7 +4,7 @@
 #define __GEOGRAPHY_H__
 
 #include "Climate.h"
-#include "Concept.h"
+#include "Location.h"
 #include "Society.h"
 
 #include <array>
@@ -40,18 +40,27 @@ public:
 		Water
 	};
 
+	struct Place
+	{
+		Location* location;
+		std::string name;
+		bool has_name = false;
+		void SetRandomGeoName();
+	};
+
 	struct CellLand
 	{
 		CellLand() {}
 		~CellLand();
 
 		LandType gtype;
-		std::vector<Concept*> locations;
+		std::vector<Place*> places;
 		std::vector<Society*> societies;
 		bool is_coastline;
 		CardinalPoints cardinal;
 
 		void CreateSociety(Location* tLoc);
+		Place* CreatePlace();
 	private:
 		void SetRaces(Society*);
 		bool CheckWater() const;

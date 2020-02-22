@@ -275,7 +275,7 @@ void ModuleWorld::CreateMap()
 	}
 
 
-	// ---- CREATE THE REST OF THE WORLD ----
+	// ---- CREATE REST OF THE WORLD ----
 
 	while (nLocations > 0)
 	{
@@ -290,7 +290,13 @@ void ModuleWorld::CreateMap()
 			if (random_location->CompareClimate(wclimate->GetClimateType()) && random_location->SpawnInSea((*it).gtype)
 				&& random_location->GetIsCoastal() == (*it).is_coastline && nLocations > 0)
 			{
-				(*it).locations.push_back(random_location);
+				//(*it).locations.push_back(random_location);
+
+				Geography::Place* place = (*it).CreatePlace();
+				place->location = random_location;
+
+				place->SetRandomGeoName();
+
 				nLocations--;
 			}
 		}

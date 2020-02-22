@@ -1,5 +1,6 @@
 #include "ModuleNameGenerator.h"
 #include "HelperFunctions.h"
+#include "App.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -256,4 +257,51 @@ std::string ModuleNameGenerator::GenerateClassicName()
 	string ret2(NameSuffix[GetRandomNumber(0, 30)]);
 
 	return (ret + ret2);
+}
+
+std::string ModuleNameGenerator::GeneratePlaceName(Geography::Place* place, std::vector<Adjective*> adjectives)
+{
+	string ret;
+
+	if (adjectives.empty())
+	{
+		LOG("argument vector<Adjective*> was empty at ModuleNameGenerator::GeneratePlaceName(vector<Adjective*>)");
+		return ret;
+	}
+
+
+	ret += "The";
+
+	vector<Adjective*> adj = app->conceptmanager->GetAdjectivesByPriority(adjectives);
+
+	bool is_plural = false;
+	int prev_prio = -1;
+	int adj_count = 0;
+
+	for(int i = 0; i < adj.size(); i++)
+	{
+		Adjective* temp = adj[i];
+		if (temp->GetPriority() != prev_prio && GetBoolByRandom(LOW_CHANCE))
+		{
+			if (temp->GetWord() == "Many") is_plural = true;
+			ret += " " + temp->GetWord();
+
+			prev_prio = temp->GetPriority();
+			adj_count++;
+		}
+	}
+
+	if (adj_count == 0)
+	{
+		ret = toLowercase(place->location->GetWord());
+		place->has_name = false;
+		return ret;
+	}
+
+	if (is_plural == true)
+		ret += " " + place->location->GetPlural();
+	else ret+= " " + place->location->GetWord();
+
+	place->has_name = true;
+	return ret;
 }

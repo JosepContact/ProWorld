@@ -6,6 +6,7 @@
 #include "Climate.h"
 #include "Race.h"
 
+#include <algorithm>
 
 using namespace std;
 
@@ -80,6 +81,7 @@ bool ModuleConceptManager::Start()
 
 			adjective->SetAssignedNouns(adject.child("Nouns").attribute("value").as_int());
 			adjective->SetToPlural(adject.child("toPlural").attribute("value").as_bool());
+			adjective->SetPriority(adject.child("prio").attribute("val").as_int());
 
 			adject = adject.parent();
 		}
@@ -261,6 +263,62 @@ vector<Race*> ModuleConceptManager::GetRacesVectorByClimate()
 	for (vector<Race*>::iterator it = race_vector.begin(); it != race_vector.end(); it++)
 	{
 		if ((*it)->CompareClimate(app->world->GetClimate()->GetClimateType()))
+			ret.push_back((*it));
+	}
+	return ret;
+}
+
+std::vector<Adjective*> ModuleConceptManager::GetAdjectivesByPriority(std::vector<Adjective*> argadj)
+{
+	vector<Adjective*> ret;
+
+	if (argadj.empty())
+	{
+		LOG("argument vector<Adjective*> was empty at ModuleConceptManager::GetAdjectivesByPriority(vector<Adjective*>)");
+		return ret;
+	}
+
+	int prio = 0, adj_size = argadj.size();
+
+	vector<Adjective*>::iterator it = argadj.begin();
+
+	do
+	{
+		while (it != argadj.end())
+		{
+
+			vector<Adjective*> to_emplace = GetAdjectivesToIterateByPriority(argadj, prio);
+			
+			if (to_emplace.empty())
+			{
+				prio++;
+				it++;
+				adj_size--;
+				continue;
+			}
+			else {
+				for (int i = 0; i < to_emplace.size(); i++)
+					ret.push_back(to_emplace[i]);	
+				prio++;
+				adj_size--;
+			}
+			it++;
+		}
+
+		it = argadj.begin();
+
+	} while (adj_size > 0);
+
+	return ret;
+}
+
+std::vector<Adjective*> ModuleConceptManager::GetAdjectivesToIterateByPriority(std::vector<Adjective*> argadj, int key)
+{
+	vector<Adjective*> ret;
+
+	for (vector<Adjective*>::iterator it = argadj.begin(); it != argadj.end(); it++)
+	{
+		if ((*it)->GetPriority() == key)
 			ret.push_back((*it));
 	}
 	return ret;
