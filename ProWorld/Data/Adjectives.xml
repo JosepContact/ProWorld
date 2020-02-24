@@ -138,4 +138,36 @@
 		<prio val ="1"/>
 		</Info>
 	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Red"/>
+		<Nouns value = "11"/>
+		<toPlural value = "0"/>
+		<prio val ="5"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Black"/>
+		<Nouns value = "11"/>
+		<toPlural value = "0"/>
+		<prio val ="5"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Rotten"/>
+		<Nouns value = "12"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Toxic"/>
+		<Nouns value = "12"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		</Info>
+	</Adjective>
 </Adjectives>

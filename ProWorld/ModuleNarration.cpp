@@ -148,6 +148,11 @@ string ModuleNarration::WorldGeography()
 			Geography += "- It's mostly land.\n";
 			break;
 		}
+
+		Geography::Place* place = nullptr;
+		int repeat_place = 0;
+		bool repeat = false;
+
 		for (auto it2 = (*it).places.begin(); it2 != (*it).places.end(); ++it2)
 		{
 			if ((*it2)->has_name == true)
@@ -156,12 +161,26 @@ string ModuleNarration::WorldGeography()
 			}
 			else
 			{
-				Geography += "There's " + GetAorAn((*it2)->name) + " " + (*it2)->name + ".\n";
+				if (place != nullptr && place->location->GetWord() == (*it2)->location->GetWord())
+				{
+					repeat_place++;
+				}
+				else repeat = true;
 			}
+			
+			if (place != nullptr && repeat_place == 0 && repeat == true && place->location->GetWord() != (*it2)->location->GetWord()) {
+				Geography += "There's " + GetAorAn((*it2)->name) + " " + toLowercase((*it2)->location->GetWord()) + ".\n";
+				repeat == false;
+			}
+			else
+				if (place != nullptr && repeat_place > 0 && place->location->GetWord() != (*it2)->location->GetWord())
+				{
+					Geography += "There are " + to_string(repeat_place + 1) + " " + toLowercase(place->location->GetPlural()) + ".\n";
+					repeat_place = 0;
+				}			
 
-			if ((*it2)->location->GetWord() == "City") {
-				//print "It's a city named " << 
-			}
+			if((*it2)->has_name == false) 
+			place = (*it2);
 		}
 		for (auto it3 = (*it).societies.begin(); it3 != (*it).societies.end(); ++it3)
 		{

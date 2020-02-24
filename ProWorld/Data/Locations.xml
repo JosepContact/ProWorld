@@ -86,11 +86,12 @@
 		<Name value = "Temple"/>
 		<Plural value = "Temples"/>
 		<Coastal value = "1"/>
-		<inSea value ="1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="9"/>
+			<Adj val="11"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -106,10 +107,11 @@
 		<Name value = "Sanctuary"/>
 		<Plural value = "Sanctuaries"/>
 		<Coastal value = "1"/>
-		<inSea value ="1"/>
+		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
+			<Adj val="11"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -130,6 +132,7 @@
 			<Adj val="0"/>
 			<Adj val="7"/>
 			<Adj val="9"/>
+			<Adj val="11"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -150,6 +153,8 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="7"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -171,6 +176,7 @@
 			<Adj val="2"/>
 			<Adj val="7"/>
 			<Adj val="8"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -191,6 +197,8 @@
 			<Adj val="0"/>
 			<Adj val="5"/>
 			<Adj val="6"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -214,6 +222,8 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 			<Adj val="9"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -239,6 +249,8 @@
 			<Adj val="6"/>
 			<Adj val="7"/>
 			<Adj val="9"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -262,6 +274,7 @@
 			<Adj val="5"/>
 			<Adj val="6"/>
 			<Adj val="7"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -278,6 +291,8 @@
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -299,6 +314,8 @@
 			<Adj val="2"/>
 			<Adj val="5"/>
 			<Adj val="6"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -319,6 +336,8 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="4"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -339,6 +358,8 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 			<Adj val="4"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -358,6 +379,7 @@
 		<Adjectives>
 			<Adj val="2"/>
 			<Adj val="5"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -378,6 +400,7 @@
 		<Adjectives>
 			<Adj val="2"/>
 			<Adj val="6"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -417,6 +440,7 @@
 			<Adj val="0"/>
 			<Adj val="5"/>
 			<Adj val="6"/>
+			<Adj val="11"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="3"/>
@@ -438,6 +462,7 @@
 			<Adj val="1"/>
 			<Adj val="2"/>
 			<Adj val="3"/>
+			<Adj val="11"/>
 		</Climates>
 		</Info>
 	</Location>
@@ -450,6 +475,8 @@
 		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
@@ -465,6 +492,7 @@
 		<inSea value ="0"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="11"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
@@ -483,6 +511,8 @@
 			<Adj val="4"/>
 			<Adj val="5"/>
 			<Adj val="6"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -504,6 +534,8 @@
 			<Adj val="2"/>
 			<Adj val="4"/>
 			<Adj val="6"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
