@@ -43,3 +43,13 @@ int Adjective::GetPriority() const
 {
 	return priority;
 }
+
+bool Adjective::GetDesc() const
+{
+	return desc;
+}
+
+void Adjective::SetDesc(bool d)
+{
+	desc = d;
+}

@@ -2,6 +2,7 @@
 #include "HelperFunctions.h"
 #include "App.h"
 #include "Geography.h"
+#include "ModuleNameGenerator.h"
 
 #include <vector>
 
@@ -158,6 +159,18 @@ string ModuleNarration::WorldGeography()
 			if ((*it2)->has_name == true)
 			{
 				Geography += "There's a place called " + (*it2)->name + ".\n";
+				
+				if (!(*it2)->desc.empty())
+				{
+					switch ((ModuleNameGenerator::PlaceNameType)(*it2)->nametype)
+					{
+					case ModuleNameGenerator::PlaceNameType::OwnPlaceName:
+						Geography += (*it2)->desc;
+						break;
+					case ModuleNameGenerator::PlaceNameType::ColorName:
+						Geography += (*it2)->desc;
+					}
+				}
 			}
 			else
 			{
@@ -169,7 +182,7 @@ string ModuleNarration::WorldGeography()
 			}
 			
 			if (place != nullptr && repeat_place == 0 && repeat == true && place->location->GetWord() != (*it2)->location->GetWord()) {
-				Geography += "There's " + GetAorAn((*it2)->name) + " " + toLowercase((*it2)->location->GetWord()) + ".\n";
+				Geography += "There's " + GetAorAn((*it2)->location->GetWord()) + " " + toLowercase((*it2)->location->GetWord()) + ".\n";
 				repeat == false;
 			}
 			else
@@ -224,20 +237,23 @@ update_status ModuleNarration::Update()
 
 bool ModuleNarration::StartsWithVowel(string word) {
 
-	switch (word.at(0)) {
-	case 'a':
-	case 'e':
-	case 'i':
-	case 'o':
-	case 'u':
-	case 'A':
-	case 'E':
-	case 'I':
-	case 'O':
-	case 'U':
-		return true;
-	default:
-		return false;
+	if (!word.empty())
+	{
+		switch (word.at(0)) {
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'A':
+		case 'E':
+		case 'I':
+		case 'O':
+		case 'U':
+			return true;
+		default:
+			return false;
+		}
 	}
 }
 

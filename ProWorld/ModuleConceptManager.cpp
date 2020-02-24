@@ -82,6 +82,7 @@ bool ModuleConceptManager::Start()
 			adjective->SetAssignedNouns(adject.child("Nouns").attribute("value").as_int());
 			adjective->SetToPlural(adject.child("toPlural").attribute("value").as_bool());
 			adjective->SetPriority(adject.child("prio").attribute("val").as_int());
+			adjective->SetDesc(adject.child("desc").attribute("val").as_bool());
 
 			adject = adject.parent();
 		}

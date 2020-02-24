@@ -291,6 +291,7 @@
 		<Adjectives>
 			<Adj val="0"/>
 			<Adj val="2"/>
+			<Adj val="5"/>
 			<Adj val="11"/>
 			<Adj val="12"/>
 		</Adjectives>
@@ -460,8 +461,6 @@
 		<Climates>
 			<Adj val="0"/>
 			<Adj val="1"/>
-			<Adj val="2"/>
-			<Adj val="3"/>
 			<Adj val="11"/>
 		</Climates>
 		</Info>

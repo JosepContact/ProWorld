@@ -33,6 +33,7 @@ private:
 	string nClimate;
 
 	bool StartsWithVowel(string word);
+public:
 	string GetAorAn(string word);
 	
 };

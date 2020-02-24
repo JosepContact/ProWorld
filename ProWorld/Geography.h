@@ -47,6 +47,7 @@ public:
 		bool has_name = false;
 		void SetRandomGeoName();
 		std::string desc;
+		int nametype = -1;
 	};
 
 	struct CellLand

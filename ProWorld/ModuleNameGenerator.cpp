@@ -65,7 +65,7 @@ char NameSuffix[][7] =
 	"storm",
 	"haven",
 	"hallow",
-	"bay",
+	"wrath",
 	"shell",
 	"gulf",
 	"wall",
@@ -76,7 +76,7 @@ char NameSuffix[][7] =
 	"horn",
 	"brook",
 	"burn",
-	"forest",
+	"winter",
 	"point",
 	"bell",
 	"drift",
@@ -268,40 +268,121 @@ std::string ModuleNameGenerator::GeneratePlaceName(Geography::Place* place, std:
 		LOG("argument vector<Adjective*> was empty at ModuleNameGenerator::GeneratePlaceName(vector<Adjective*>)");
 		return ret;
 	}
-
-
-	ret += "The";
-
+	
 	vector<Adjective*> adj = app->conceptmanager->GetAdjectivesByPriority(adjectives);
+	vector<Adjective*> desc_adj;
 
-	bool is_plural = false;
-	int prev_prio = -1;
-	int adj_count = 0;
-
-	for(int i = 0; i < adj.size(); i++)
+	int maxtypes = 1;
+	for (int i = 0; i < adj.size(); i++)
 	{
-		Adjective* temp = adj[i];
-		if (temp->GetPriority() != prev_prio && GetBoolByRandom(LOW_CHANCE))
+		if (adj[i]->GetPriority() == 5)
+			maxtypes++;
+	}
+
+	switch(GetRandomNumber(0, maxtypes))
+	{
+	case OwnPlaceName:
+		ret += GenerateClassicName();
+		place->has_name = true;
+		place->nametype = (int)OwnPlaceName;
+
+		break;
+	case ColorName:
+	{
+		vector<Adjective*> color_adj;
+		for (int i = 0; i < adj.size(); i++)
 		{
-			if (temp->GetWord() == "Many") is_plural = true;
-			ret += " " + temp->GetWord();
-
-			prev_prio = temp->GetPriority();
-			adj_count++;
+			if (adj[i]->GetPriority() == 5)
+				color_adj.push_back(adj[i]);
 		}
+
+		ret += color_adj[GetRandomNumber(0, color_adj.size() - 1)]->GetWord() + " " + place->location->GetWord();
+		place->has_name = true;
+		place->nametype = (int)ColorName;
+
+		break;
+	}
+	case TheName:
+		ret += "The";
+
+		bool is_plural = false;
+		int prev_prio = -1;
+		int adj_count = 0;
+
+		for (int i = 0; i < adj.size(); i++)
+		{
+			Adjective* temp = adj[i];
+			if (temp->GetPriority() != prev_prio && GetBoolByRandom(LOW_CHANCE))
+			{
+				if (temp->GetWord() == "Many") is_plural = true;
+				ret += " " + temp->GetWord();
+
+				prev_prio = temp->GetPriority();
+				adj_count++;
+			}
+		}
+
+		if (adj_count == 0)
+		{
+			ret = toLowercase(place->location->GetWord());
+			place->has_name = false;
+			return ret;
+		}
+
+		if (is_plural == true)
+			ret += " " + place->location->GetPlural();
+		else ret += " " + place->location->GetWord();
+
+		place->nametype = (int)TheName;
+		place->has_name = true;
+
+		break;
 	}
 
-	if (adj_count == 0)
+	// WRITE DESCRIPTION
+
+	int n_adj = GetRandomNumber(1, adj.size());
+
+	do
 	{
-		ret = toLowercase(place->location->GetWord());
-		place->has_name = false;
-		return ret;
+		Adjective* temp = adj[GetRandomNumber(0, adj.size() - 1)];
+
+		if (temp->GetWord() == "Many" || temp->GetDesc() == false)
+		{
+			n_adj--;
+			continue;
+		}
+
+		if (find(desc_adj.begin(), desc_adj.end(), temp) != desc_adj.end())
+			continue;
+
+		if (GetBoolByRandom(MEDIUM_CHANCE))
+		{
+			desc_adj.push_back(temp);
+			n_adj--;
+		}
+
+	} while (n_adj > 0);
+	string desc;
+
+	desc += "This place is based on " + app->narration->GetAorAn(place->location->GetWord()) + " " + toLowercase(place->location->GetWord()) + ".\n";
+	
+	if (!desc_adj.empty())
+	{
+		desc += "It's ";
+		for (int i = 0; i < desc_adj.size(); i++)
+		{
+			desc += toLowercase(desc_adj[i]->GetWord());
+
+			if (i < desc_adj.size() - 2 && desc_adj.size() > 1)
+				desc += ", ";
+			else if (i == (desc_adj.size() - 2)) // el bug es que comta primer els que tenen descripcio abans de ficar el and, llavors posa el and y en el if entra y no posa res (crec). Haig de crear un nou vector vaya
+				desc += " and ";
+		}
+		desc += ".\n";
 	}
-
-	if (is_plural == true)
-		ret += " " + place->location->GetPlural();
-	else ret+= " " + place->location->GetWord();
-
-	place->has_name = true;
+	place->desc = desc;
 	return ret;
+
+	
 }

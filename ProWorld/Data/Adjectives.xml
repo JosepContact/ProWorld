@@ -8,6 +8,7 @@
 		<toPlural value = "0"/>
 		<!-- priorities go from 0 to 7 -->
 		<prio val ="2"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -16,6 +17,7 @@
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
 		<prio val ="2"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -24,6 +26,7 @@
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
 		<prio val ="2"/>
+		<desc val ="0"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -31,7 +34,7 @@
 		<Name value = "Small"/>
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
-		<prio val ="2"/>
+		<desc val ="2"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -40,6 +43,7 @@
 		<Nouns value = "1"/>
 		<toPlural value = "0"/>
 		<prio val ="2"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -48,6 +52,7 @@
 		<Nouns value = "2"/>
 		<toPlural value = "1"/>
 		<prio val ="0"/>
+		<desc val ="0"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -56,6 +61,7 @@
 		<Nouns value = "3"/>
 		<toPlural value = "0"/>
 		<prio val ="6"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -64,6 +70,7 @@
 		<Nouns value = "4"/>
 		<toPlural value = "0"/>
 		<prio val ="6"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -72,6 +79,7 @@
 		<Nouns value = "5"/>
 		<toPlural value = "0"/>
 		<prio val ="5"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -79,7 +87,8 @@
 		<Name value = "Colorful"/>
 		<Nouns value = "6"/>
 		<toPlural value = "0"/>
-		<prio val ="5"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -88,6 +97,7 @@
 		<Nouns value = "7"/>
 		<toPlural value = "0"/>
 		<prio val ="2"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -96,6 +106,7 @@
 		<Nouns value = "8"/>
 		<toPlural value = "0"/>
 		<prio val ="7"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -104,6 +115,7 @@
 		<Nouns value = "9"/>
 		<toPlural value = "0"/>
 		<prio val ="6"/>
+		<prio val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -112,6 +124,7 @@
 		<Nouns value = "9"/>
 		<toPlural value = "0"/>
 		<prio val ="6"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -119,7 +132,7 @@
 		<Name value = "Beautiful"/>
 		<Nouns value = "10"/>
 		<toPlural value = "0"/>
-		<prio val ="1"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -128,6 +141,7 @@
 		<Nouns value = "10"/>
 		<toPlural value = "0"/>
 		<prio val ="1"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -136,6 +150,7 @@
 		<Nouns value = "10"/>
 		<toPlural value = "0"/>
 		<prio val ="1"/>
+		<desc val ="0"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -144,6 +159,7 @@
 		<Nouns value = "11"/>
 		<toPlural value = "0"/>
 		<prio val ="5"/>
+		<desc val ="0"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -152,6 +168,7 @@
 		<Nouns value = "11"/>
 		<toPlural value = "0"/>
 		<prio val ="5"/>
+		<desc val ="0"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -160,6 +177,7 @@
 		<Nouns value = "12"/>
 		<toPlural value = "0"/>
 		<prio val ="6"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 	<Adjective>
@@ -168,6 +186,16 @@
 		<Nouns value = "12"/>
 		<toPlural value = "0"/>
 		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Moon"/>
+		<Nouns value = "13"/>
+		<toPlural value = "0"/>
+		<prio val ="5"/>
+		<desc val ="0"/>
 		</Info>
 	</Adjective>
 </Adjectives>

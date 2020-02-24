@@ -11,9 +11,18 @@
 #include <string>
 #include <vector>
 
+#define MAX_ADJECTIVES 5
+
 class ModuleNameGenerator : public Module
 {
 public:
+
+	enum PlaceNameType
+	{
+		OwnPlaceName = 0,
+		TheName,
+		ColorName
+	};
 
 	ModuleNameGenerator(bool start_enabled = true);
 

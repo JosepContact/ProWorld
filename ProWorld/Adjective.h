@@ -17,6 +17,7 @@ private:
 	int assigned_nouns;
 	bool to_plural;
 	int priority;
+	bool desc;
 
 public:
 	int GetNounsKey() const;
@@ -25,7 +26,8 @@ public:
 	void SetToPlural(bool toplural);
 	void SetPriority(int);
 	int GetPriority() const;
-
+	bool GetDesc() const;
+	void SetDesc(bool);
 };
 
 
