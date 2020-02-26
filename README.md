@@ -1,2 +1,2 @@
 # ProWorld
-Procedural worldbible generator
+Procedural text based worldbible/fantasy world generator in C++.
