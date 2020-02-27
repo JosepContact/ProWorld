@@ -229,6 +229,144 @@ string ModuleNarration::WorldGeography()
 	return Geography;
 }
 
+string ModuleNarration::WorldCharacters()
+{
+	string Characters;
+
+	for (vector<Character*>::iterator it = app->world->wcharacters.begin(); it != app->world->wcharacters.end(); ++it)
+	{
+		Characters += "Name: \n";
+		Characters += "Age: " + to_string((*it)->GetAge()) +".\n";
+		Characters += "Gender: ";
+		
+		switch ((*it)->GetGender())
+		{
+		case Character::Male:
+			Characters += "Male.\n";
+			break;
+		case Character::Female:
+			Characters += "Female.\n";
+			break;
+		case Character::Femaletrans:
+			Characters += "Trans Female.\n";
+			break;
+		case Character::Maletrans:
+			Characters += "Trans Male.\n";
+			break;
+		case Character::Non_binary:
+			Characters += "Non-binary.\n";
+			break;
+		default:
+			break;
+		}
+
+		Characters += "Alignment: ";
+		switch ((*it)->GetAttitude())
+		{
+		case Character::AChaotic:
+			Characters += "Chaotic ";
+			break;
+		case Character::ANeutral:
+			Characters += "Neutral ";
+			break;
+		case Character::ALawful:
+			Characters += "Neutral ";
+			break;
+		default:
+			break;
+		}
+		switch ((*it)->GetMorality())
+		{
+		case Character::MGood:
+			Characters += "Good.\n";
+			break;
+		case Character::MNeutral:
+			Characters += "Neutral.\n";
+			break;
+		case Character::MEvil:
+			Characters += "Evil.\n";
+			break;
+		default:
+			break;
+		}
+
+		Characters += "Archetype: ";
+		switch ((*it)->GetArchetype())
+		{
+		case Character::Busisnessman:
+			Characters += "Bussinessman.\n";
+			break;
+		case Character::Protector:
+			Characters += "Protector.\n";
+			break;
+		case Character::Recluse:
+			Characters += "Recluse.\n";
+			break;
+		case Character::Casanova:
+			Characters += "Casanova.\n";
+			break;
+		case Character::Revolutionary:
+			Characters += "Revolutionary.\n";
+			break;
+		case Character::Artist:
+			Characters += "Artist.\n";
+			break;
+		case Character::King:
+			Characters += "King.\n";
+			break;
+		case Character::Seductress:
+			Characters += "Seductress.\n";
+			break;
+		case Character::Amazon:
+			Characters += "Amazon.\n";
+			break;
+		case Character::Daughter:
+			Characters += "Daughter.\n";
+			break;
+		case Character::Matriarch:
+			Characters += "Matriarch.\n";
+			break;
+		case Character::Nurturer:
+			Characters += "Nurturer.\n";
+			break;
+		case Character::Maiden:
+			Characters += "Maiden.\n";
+			break;
+		case Character::Mystic:
+			Characters += "Mystic.\n";
+			break;
+		case Character::Martyr:
+			Characters += "Martyr.\n";
+			break;
+		default:
+			break;
+		}
+		enum Archetype
+		{
+			Busisnessman,
+			Protector,
+			Recluse,
+			Casanova,
+			Revolutionary,
+			Artist,
+			King,
+			Seductress, // n = 7
+			Amazon,
+			Daughter,
+			Matriarch,
+			Nurturer,
+			Maiden,
+			Mystic,
+			Martyr
+		};
+		//+to_string((*it)->GetArchetype()) + ".\n";
+		Characters += "\n";
+	}
+		
+
+	return Characters;
+}
+
 update_status ModuleNarration::Update()
 {
 	

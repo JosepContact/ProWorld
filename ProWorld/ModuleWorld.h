@@ -7,12 +7,16 @@
 #define N_LOCATIONS 25
 #define MAX_LOCATIONS_PER_CELL 7
 
+#define MAX_CHARACTERS 5
+#define MIN_CHARACTERS 3
+
 #include "pugixml-1.10\src\pugixml.hpp"
 #include "Module.h"
 #include "Climate.h"
 #include "Geography.h"
 #include "Sky.h"
 #include "Society.h"
+#include "Character.h"
 #include <array>
 
 class ModuleWorld : public Module
@@ -40,7 +44,7 @@ public:
 
 public:
 	void StartWorld();
-	
+	void DeleteWorld();
 private:
 	WorldType GenerateWorldType();
 	void SetWorldOverview();
@@ -48,7 +52,7 @@ private:
 	void SetSky();
 	void SetGeography();
 	void CreateMap();
-
+	void CreateCharacters();
 public:
 	// WORLD
 	std::string wname;
@@ -63,6 +67,7 @@ public:
 	std::vector<Geography::CellLand> geoVector;
 
 	std::vector<Society*> wsocieties;
+	std::vector<Character*> wcharacters;
 
 public:
 	Climate* GetClimate() const;

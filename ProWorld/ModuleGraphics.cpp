@@ -170,6 +170,8 @@ update_status ModuleGraphics::Update()
 		//Let's create our small intro world.
 
 		else if(show_world == true) {
+
+			ImGui::Begin("WORLD");
 			ImGui::Text(app->narration->WorldName().c_str()); // Print World Name
 			ImGui::Separator();
 			ImGui::Text(app->narration->WorldSky().c_str());
@@ -177,6 +179,14 @@ update_status ModuleGraphics::Update()
 			ImGui::Separator();
 			ImGui::Text("GEOGRAPHY");
 			ImGui::Text(app->narration->WorldGeography().c_str());
+			ImGui::End();
+		}
+
+		if (show_world == true) {
+			ImGui::Begin("CHARACTERS");
+			//ImGui::Separator();
+			ImGui::Text(app->narration->WorldCharacters().c_str());
+			ImGui::End();
 		}
 
 		// Rendering

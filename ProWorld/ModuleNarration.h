@@ -25,6 +25,7 @@ public:
 	string WorldSky();
 	string WorldClimate();
 	string WorldGeography();
+	string WorldCharacters();
 
 	//
 	virtual update_status Update();

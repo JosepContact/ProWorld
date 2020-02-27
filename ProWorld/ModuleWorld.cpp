@@ -24,9 +24,15 @@ ModuleWorld::~ModuleWorld()
 	RELEASE(wgeography);
 	for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
 		RELEASE(*rit);
+	for (vector<Character*>::reverse_iterator rit = wcharacters.rbegin(); rit != wcharacters.rend(); ++rit)
+		RELEASE(*rit);
 
 	geoVector.clear();
 	wsocieties.clear();
+	wcharacters.clear();
+
+	// mem_leaks we need to properly clean memory when looping through the app :)
+	// this does the trick for now
 }
 
 bool ModuleWorld::Start()
@@ -44,6 +50,7 @@ update_status ModuleWorld::Update()
 {
 	if (app->graphics->create_world == true)
 	{
+		DeleteWorld();
 		StartWorld();
 		app->graphics->create_world = false;
 	}
@@ -98,6 +105,25 @@ void ModuleWorld::StartWorld()
 	// ----- CREATE MAP -------
 
 	CreateMap();
+
+	// ------ CREATE CHARACTERS ---------
+
+	CreateCharacters();
+}
+
+void ModuleWorld::DeleteWorld()
+{
+	RELEASE(wsky);
+	//RELEASE(wclimate);
+	RELEASE(wgeography);
+	for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
+		RELEASE(*rit);
+	for (vector<Character*>::reverse_iterator rit = wcharacters.rbegin(); rit != wcharacters.rend(); ++rit)
+		RELEASE(*rit);
+
+	geoVector.clear();
+	wsocieties.clear();
+	wcharacters.clear();
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
@@ -301,6 +327,27 @@ void ModuleWorld::CreateMap()
 			}
 		}
 	}
+}
+
+void ModuleWorld::CreateCharacters()
+{
+	int n_cha = GetRandomNumber(MIN_CHARACTERS, MAX_CHARACTERS);
+
+	for (int i = 0; i < n_cha; i++)
+	{
+		Character* character = new Character();
+		wcharacters.push_back(character);
+	}
+
+	int evil_cha = n_cha / 3;
+
+	for (int i = (n_cha-1); i > evil_cha; i--)
+	{
+		wcharacters[i]->SetAlignment(Character::MEvil, wcharacters[i]->GetAttitude());
+		wcharacters[i]->SetShadow(true);
+	}
+
+	wcharacters[0]->SetAlignment((Character::MoralAlignment)GetRandomNumber(0, 1), wcharacters[0]->GetAttitude());
 }
 
 Climate * ModuleWorld::GetClimate() const

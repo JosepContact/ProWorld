@@ -119,6 +119,9 @@
     <ClCompile Include="ImGui\2main.cpp">
       <Filter>ImGUI\sources</Filter>
     </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>Modules\World</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pugixml-1.10\src\pugiconfig.hpp">
@@ -219,6 +222,9 @@
     </ClInclude>
     <ClInclude Include="ModuleGraphics.h">
       <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>Modules\World</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
