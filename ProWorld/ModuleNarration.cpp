@@ -302,6 +302,9 @@ string ModuleNarration::WorldCharacters(Character * it)
 		case Character::Recluse:
 			Characters += "Recluse.\n";
 			break;
+		case Character::Fool:
+			Characters += "Fool.\n";
+			break;
 		case Character::Casanova:
 			Characters += "Casanova.\n";
 			break;
@@ -341,25 +344,7 @@ string ModuleNarration::WorldCharacters(Character * it)
 		default:
 			break;
 		}
-		enum Archetype
-		{
-			Busisnessman,
-			Protector,
-			Recluse,
-			Casanova,
-			Revolutionary,
-			Artist,
-			King,
-			Seductress, // n = 7
-			Amazon,
-			Daughter,
-			Matriarch,
-			Nurturer,
-			Maiden,
-			Mystic,
-			Martyr
-		};
-		//+to_string((*it)->GetArchetype()) + ".\n";
+
 		Characters += "\n";
 		
 	return Characters;
@@ -374,11 +359,13 @@ string ModuleNarration::WorldCharactersArchetype(Character * cha)
 	case Character::Busisnessman:
 		Characters += ArchetypeDesc[Character::Busisnessman *3];
 		Characters += ArchetypeDesc[Character::Busisnessman * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Busisnessman * 3 + 2];
 		break;
 	case Character::Protector:
 		Characters += ArchetypeDesc[Character::Protector * 3];
 		Characters += ArchetypeDesc[Character::Protector * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Protector * 3 + 2];
 		break;
 	case Character::Recluse:
@@ -389,65 +376,78 @@ string ModuleNarration::WorldCharactersArchetype(Character * cha)
 	case Character::Fool:
 		Characters += ArchetypeDesc[Character::Fool * 3];
 		Characters += ArchetypeDesc[Character::Fool * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Fool * 3 + 2];
 	case Character::Casanova:
 		Characters += ArchetypeDesc[Character::Casanova * 3];
 		Characters += ArchetypeDesc[Character::Casanova * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Casanova * 3 + 2];
 		break;
 	case Character::Revolutionary:
 		Characters += ArchetypeDesc[Character::Revolutionary * 3];
 		Characters += ArchetypeDesc[Character::Revolutionary * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Revolutionary * 3 + 2];
 		break;
 	case Character::Artist:
 		Characters += ArchetypeDesc[Character::Artist * 3];
 		Characters += ArchetypeDesc[Character::Artist * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Artist * 3 + 2];
 		break;
 	case Character::King:
 		Characters += ArchetypeDesc[Character::King * 3];
 		Characters += ArchetypeDesc[Character::King * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::King * 3 + 2];
 		break;
 	case Character::Seductress:
 		Characters += ArchetypeDesc[Character::Seductress *3];
 		Characters += ArchetypeDesc[Character::Seductress *3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Seductress *3 + 2];
 		break;
 	case Character::Amazon:
 		Characters += ArchetypeDesc[Character::Amazon *3];
 		Characters += ArchetypeDesc[Character::Amazon*3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Amazon*3 + 2];
 		break;
 	case Character::Daughter:
 		Characters += ArchetypeDesc[Character::Daughter*3];
 		Characters += ArchetypeDesc[Character::Daughter*3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Daughter*3 + 2];
 		break;
 	case Character::Matriarch:
 		Characters += ArchetypeDesc[Character::Matriarch*3];
 		Characters += ArchetypeDesc[Character::Matriarch*3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Matriarch*3 + 2];
 		break;
 	case Character::Nurturer:
 		Characters += ArchetypeDesc[Character::Nurturer*3];
-		Characters += ArchetypeDesc[Character::Nurturer + 1];
-		Characters += ArchetypeDesc[Character::Nurturer + 2];
+		Characters += ArchetypeDesc[Character::Nurturer*3 + 1];
+		if (cha->GetShadow() == true)
+		Characters += ArchetypeDesc[Character::Nurturer*3 + 2];
 		break;
 	case Character::Maiden:
 		Characters += ArchetypeDesc[Character::Maiden*3];
 		Characters += ArchetypeDesc[Character::Maiden*3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Maiden*3 + 2];
 		break;
 	case Character::Mystic:
 		Characters += ArchetypeDesc[Character::Mystic*3];
 		Characters += ArchetypeDesc[Character::Mystic*3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Mystic*3 + 2];
 		break;
 	case Character::Martyr:
 		Characters += ArchetypeDesc[Character::Martyr*3];
 		Characters += ArchetypeDesc[Character::Martyr*3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Martyr*3 + 2];
 		break;
 	default:
@@ -456,6 +456,15 @@ string ModuleNarration::WorldCharactersArchetype(Character * cha)
 	}
 
 	return Characters;
+}
+
+string ModuleNarration::WorldCharactersGoal(Character *it)
+{
+	string cha;
+
+	cha += "Goal: " + it->GetGoal();
+
+	return cha;
 }
 
 update_status ModuleNarration::Update()

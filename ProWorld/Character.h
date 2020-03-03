@@ -55,7 +55,7 @@ public:
 	};
 
 private:
-	bool shadow = false;
+	bool shadow;
 	MoralAlignment moral;
 	AttitudeAlignment attitude;
 	Archetype archetype;
@@ -63,7 +63,10 @@ private:
 	int age;
 	Race* race;
 	Gender gender;
+	std::string goal;
+
 public:
+
 
 
 public:
@@ -80,6 +83,8 @@ public:
 	void SetRace(Race*);
 	Race* GetRace() const;
 	Gender GetGender() const;
+	std::string GetGoal() const;
+	void SetGoal(std::string);
 };
 
 #endif //CHARACTER_H

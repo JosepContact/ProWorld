@@ -123,8 +123,8 @@ update_status ModuleGraphics::Update()
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
 
-		if (show_demo_window)
-			ImGui::ShowDemoWindow(&show_demo_window);
+		//if (show_demo_window)
+			//ImGui::ShowDemoWindow(&show_demo_window);
 
 		//show settings in the top left corner
 		{
@@ -189,6 +189,7 @@ update_status ModuleGraphics::Update()
 			{
 				ImGui::Text(app->narration->WorldCharacters((*it)).c_str());			
 				ImGui::Text(app->narration->WorldCharactersArchetype((*it)).c_str());
+				ImGui::BulletText(app->narration->WorldCharactersGoal((*it)).c_str());
 				ImGui::Separator();
 			}
 			

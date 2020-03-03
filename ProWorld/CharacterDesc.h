@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef CHARACTER_DESC_H
 #define CHARACTER_DESC_H
 
@@ -39,7 +37,7 @@ char ArchetypeDesc[][300] =
 	// Artist
 	"They're creative, emotional and intensively romantic.\n",
 	"They focus too much on their art and will fall out of love all of a sudden.\n",
-	"When evil, they tend become the Abusers.\n",
+	"When evil, they become the Abusers.\n",
 	// King
 	"They're leaders/rulers by nature. People around them tend to follow them.\n",
 	"They're strategic and wise. They hardly ever apologize or ask for permission.\n",
@@ -58,10 +56,10 @@ char ArchetypeDesc[][300] =
 	"When evil, they become the Back-Stabbers.\n",
 	//Matriarch
 	"They are the protector of the family or crew/team and they're respected for that.\n",
-	"They're strong, physically or emotionally. Can sometimes overcontrol the lifes of their loved ones.\n",
+	"They're strong, physically or emotionally. Can sometimes overcontrol the lives of their loved ones.\n",
 	"When evil, they become the Machiavellians.\n",
 	//Nurturer
-	"Always sacrifices themselves for the rest. Their sole identity is based on what .\n",
+	"Always sacrifices themselves for the rest. Their sole identity is based on what \n",
 	"they can give and do for the people they nurture and protect.\n",
 	"When evil, they become the Slaveholders.\n",
 	//The Maiden
@@ -77,5 +75,6 @@ char ArchetypeDesc[][300] =
 	"They lead through example and actions, and people follow them because of it.\n",
 	"When evil, they become the Destroyers.\n",
 };
+
 
 #endif // !CHARACTER_DESC_H

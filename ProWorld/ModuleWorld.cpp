@@ -3,6 +3,7 @@
 #include "Location.h"
 #include "Adjective.h"
 #include "HelperFunctions.h"
+#include "CharacterGoals.h"
 
 #include <cstdlib>
 #include <ctime>
@@ -333,10 +334,12 @@ void ModuleWorld::CreateCharacters()
 {
 	int n_cha = GetRandomNumber(MIN_CHARACTERS, MAX_CHARACTERS);
 
-	for (int i = 0; i < n_cha; i++)
+	for (int i = 0; i < n_cha; ++i)
 	{
 		Character* character = new Character();
 		wcharacters.push_back(character);
+		wcharacters[i]->SetShadow(false);
+		wcharacters[i]->SetGoal(string(HeroGoals[GetRandomNumber(0, 34)]));
 	}
 
 	int evil_cha = n_cha / 3;
@@ -345,6 +348,7 @@ void ModuleWorld::CreateCharacters()
 	{
 		wcharacters[i]->SetAlignment(Character::MEvil, wcharacters[i]->GetAttitude());
 		wcharacters[i]->SetShadow(true);
+		wcharacters[i]->SetGoal(string(VillainGoals[GetRandomNumber(0, 22)]));
 	}
 
 	wcharacters[0]->SetAlignment((Character::MoralAlignment)GetRandomNumber(0, 1), wcharacters[0]->GetAttitude());

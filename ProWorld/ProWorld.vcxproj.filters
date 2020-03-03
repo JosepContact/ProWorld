@@ -39,6 +39,9 @@
     <Filter Include="ImGUI\GLFW3">
       <UniqueIdentifier>{03cdad6a-a005-41a6-8dca-c3ff22f8e697}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\CharacterInfo">
+      <UniqueIdentifier>{20fdb7b0-cd33-4971-af08-4c183d72a1b2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -227,7 +230,10 @@
       <Filter>Modules\World</Filter>
     </ClInclude>
     <ClInclude Include="CharacterDesc.h">
-      <Filter>Modules\World</Filter>
+      <Filter>Modules\CharacterInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterGoals.h">
+      <Filter>Modules\CharacterInfo</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

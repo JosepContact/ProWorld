@@ -26,12 +26,14 @@ Character::Character()
 	moral = (MoralAlignment)GetRandomNumber(0, 2);
 	attitude = (AttitudeAlignment)GetRandomNumber(0, 2);
 	archetype = (Archetype)GetRandomNumber(0, 14);
+	shadow = false;
 
 	// if the character is evil, shadow will be set to true later.
 }
 
 Character::~Character()
 {
+	goal = "";
 }
 
 void Character::SetShadow(bool s)
@@ -93,4 +95,14 @@ Race * Character::GetRace() const
 Character::Gender Character::GetGender() const
 {
 	return gender;
+}
+
+std::string Character::GetGoal() const
+{
+	return goal;
+}
+
+void Character::SetGoal(std::string str)
+{
+	goal = str;
 }

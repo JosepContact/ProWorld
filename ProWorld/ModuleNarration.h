@@ -27,6 +27,7 @@ public:
 	string WorldGeography();
 	string WorldCharacters(Character*);
 	string WorldCharactersArchetype(Character*);
+	string WorldCharactersGoal(Character*);
 
 	//
 	virtual update_status Update();
