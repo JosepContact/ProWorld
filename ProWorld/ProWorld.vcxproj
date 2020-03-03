@@ -181,6 +181,7 @@
   <ItemGroup>
     <ClInclude Include="Adjective.h" />
     <ClInclude Include="Character.h" />
+    <ClInclude Include="CharacterDesc.h" />
     <ClInclude Include="ImGui\GL\gl3w.h" />
     <ClInclude Include="ImGui\GL\glcorearb.h" />
     <ClInclude Include="ImGui\imconfig.h" />

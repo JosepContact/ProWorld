@@ -226,6 +226,9 @@
     <ClInclude Include="Character.h">
       <Filter>Modules\World</Filter>
     </ClInclude>
+    <ClInclude Include="CharacterDesc.h">
+      <Filter>Modules\World</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ProWorld.rc">

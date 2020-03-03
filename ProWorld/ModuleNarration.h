@@ -4,7 +4,7 @@
 #define MODULENARRATION_H
 
 #include "Module.h"
-
+#include "Character.h"
 using namespace std;
 
 class ModuleNarration : public Module
@@ -25,7 +25,8 @@ public:
 	string WorldSky();
 	string WorldClimate();
 	string WorldGeography();
-	string WorldCharacters();
+	string WorldCharacters(Character*);
+	string WorldCharactersArchetype(Character*);
 
 	//
 	virtual update_status Update();

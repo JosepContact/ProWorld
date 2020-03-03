@@ -30,6 +30,7 @@ public:
 		Busisnessman,
 		Protector,
 		Recluse,
+		Fool,
 		Casanova,
 		Revolutionary,
 		Artist,

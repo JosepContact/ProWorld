@@ -10,15 +10,31 @@
 #include <string.h>
 #include <iostream>
 
+#include <cstdlib>
+#include <ctime>
+#include <conio.h>
+#include <algorithm>
+#include <stdlib.h>
 
-std::string toLowercase(std::string string);
+inline std::string toLowercase(std::string string);
 
-std::string toUppercase(std::string string);
+inline std::string toUppercase(std::string string);
 
 std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective* adjective, Location* name);
 
-bool GetBoolByRandom(uint chance);
+inline bool GetBoolByRandom(uint chance)
+{
+	int a = (rand() % 100 + 1);
 
-int GetRandomNumber(int min, int max);
+	return ((rand() % 100 + 1) < chance);
+}
+
+inline int GetRandomNumber(int min, int max)
+{
+	int ret = 0;
+
+	ret = rand() % (max + 1 - min) + min;
+	return ret;
+}
 
 #endif //HELPER_FUNCTIONS_H

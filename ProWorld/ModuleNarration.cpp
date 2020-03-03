@@ -3,6 +3,7 @@
 #include "App.h"
 #include "Geography.h"
 #include "ModuleNameGenerator.h"
+#include "CharacterDesc.h"
 
 #include <vector>
 
@@ -229,17 +230,16 @@ string ModuleNarration::WorldGeography()
 	return Geography;
 }
 
-string ModuleNarration::WorldCharacters()
+string ModuleNarration::WorldCharacters(Character * it)
 {
 	string Characters;
 
-	for (vector<Character*>::iterator it = app->world->wcharacters.begin(); it != app->world->wcharacters.end(); ++it)
-	{
+
 		Characters += "Name: \n";
-		Characters += "Age: " + to_string((*it)->GetAge()) +".\n";
+		Characters += "Age: " + to_string((it)->GetAge()) +".\n";
 		Characters += "Gender: ";
 		
-		switch ((*it)->GetGender())
+		switch ((it)->GetGender())
 		{
 		case Character::Male:
 			Characters += "Male.\n";
@@ -261,7 +261,7 @@ string ModuleNarration::WorldCharacters()
 		}
 
 		Characters += "Alignment: ";
-		switch ((*it)->GetAttitude())
+		switch ((it)->GetAttitude())
 		{
 		case Character::AChaotic:
 			Characters += "Chaotic ";
@@ -275,7 +275,7 @@ string ModuleNarration::WorldCharacters()
 		default:
 			break;
 		}
-		switch ((*it)->GetMorality())
+		switch ((it)->GetMorality())
 		{
 		case Character::MGood:
 			Characters += "Good.\n";
@@ -291,7 +291,7 @@ string ModuleNarration::WorldCharacters()
 		}
 
 		Characters += "Archetype: ";
-		switch ((*it)->GetArchetype())
+		switch ((it)->GetArchetype())
 		{
 		case Character::Busisnessman:
 			Characters += "Bussinessman.\n";
@@ -361,8 +361,99 @@ string ModuleNarration::WorldCharacters()
 		};
 		//+to_string((*it)->GetArchetype()) + ".\n";
 		Characters += "\n";
-	}
 		
+	return Characters;
+}
+
+string ModuleNarration::WorldCharactersArchetype(Character * cha)
+{
+	string Characters;
+
+	switch ((cha)->GetArchetype())
+	{
+	case Character::Busisnessman:
+		Characters += ArchetypeDesc[Character::Busisnessman *3];
+		Characters += ArchetypeDesc[Character::Busisnessman * 3 + 1];
+		Characters += ArchetypeDesc[Character::Busisnessman * 3 + 2];
+		break;
+	case Character::Protector:
+		Characters += ArchetypeDesc[Character::Protector * 3];
+		Characters += ArchetypeDesc[Character::Protector * 3 + 1];
+		Characters += ArchetypeDesc[Character::Protector * 3 + 2];
+		break;
+	case Character::Recluse:
+		Characters += ArchetypeDesc[Character::Recluse * 3];
+		Characters += ArchetypeDesc[Character::Recluse * 3 + 1];
+		Characters += ArchetypeDesc[Character::Recluse * 3 + 2];
+		break;
+	case Character::Fool:
+		Characters += ArchetypeDesc[Character::Fool * 3];
+		Characters += ArchetypeDesc[Character::Fool * 3 + 1];
+		Characters += ArchetypeDesc[Character::Fool * 3 + 2];
+	case Character::Casanova:
+		Characters += ArchetypeDesc[Character::Casanova * 3];
+		Characters += ArchetypeDesc[Character::Casanova * 3 + 1];
+		Characters += ArchetypeDesc[Character::Casanova * 3 + 2];
+		break;
+	case Character::Revolutionary:
+		Characters += ArchetypeDesc[Character::Revolutionary * 3];
+		Characters += ArchetypeDesc[Character::Revolutionary * 3 + 1];
+		Characters += ArchetypeDesc[Character::Revolutionary * 3 + 2];
+		break;
+	case Character::Artist:
+		Characters += ArchetypeDesc[Character::Artist * 3];
+		Characters += ArchetypeDesc[Character::Artist * 3 + 1];
+		Characters += ArchetypeDesc[Character::Artist * 3 + 2];
+		break;
+	case Character::King:
+		Characters += ArchetypeDesc[Character::King * 3];
+		Characters += ArchetypeDesc[Character::King * 3 + 1];
+		Characters += ArchetypeDesc[Character::King * 3 + 2];
+		break;
+	case Character::Seductress:
+		Characters += ArchetypeDesc[Character::Seductress *3];
+		Characters += ArchetypeDesc[Character::Seductress *3 + 1];
+		Characters += ArchetypeDesc[Character::Seductress *3 + 2];
+		break;
+	case Character::Amazon:
+		Characters += ArchetypeDesc[Character::Amazon *3];
+		Characters += ArchetypeDesc[Character::Amazon*3 + 1];
+		Characters += ArchetypeDesc[Character::Amazon*3 + 2];
+		break;
+	case Character::Daughter:
+		Characters += ArchetypeDesc[Character::Daughter*3];
+		Characters += ArchetypeDesc[Character::Daughter*3 + 1];
+		Characters += ArchetypeDesc[Character::Daughter*3 + 2];
+		break;
+	case Character::Matriarch:
+		Characters += ArchetypeDesc[Character::Matriarch*3];
+		Characters += ArchetypeDesc[Character::Matriarch*3 + 1];
+		Characters += ArchetypeDesc[Character::Matriarch*3 + 2];
+		break;
+	case Character::Nurturer:
+		Characters += ArchetypeDesc[Character::Nurturer*3];
+		Characters += ArchetypeDesc[Character::Nurturer + 1];
+		Characters += ArchetypeDesc[Character::Nurturer + 2];
+		break;
+	case Character::Maiden:
+		Characters += ArchetypeDesc[Character::Maiden*3];
+		Characters += ArchetypeDesc[Character::Maiden*3 + 1];
+		Characters += ArchetypeDesc[Character::Maiden*3 + 2];
+		break;
+	case Character::Mystic:
+		Characters += ArchetypeDesc[Character::Mystic*3];
+		Characters += ArchetypeDesc[Character::Mystic*3 + 1];
+		Characters += ArchetypeDesc[Character::Mystic*3 + 2];
+		break;
+	case Character::Martyr:
+		Characters += ArchetypeDesc[Character::Martyr*3];
+		Characters += ArchetypeDesc[Character::Martyr*3 + 1];
+		Characters += ArchetypeDesc[Character::Martyr*3 + 2];
+		break;
+	default:
+		Characters += "this one is missing pls add";
+		break;
+	}
 
 	return Characters;
 }

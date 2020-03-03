@@ -2,15 +2,11 @@
 #include "Globals.h"
 #include "App.h"
 
-#include <cstdlib>
-#include <ctime>
-#include <conio.h>
-#include <algorithm>
-#include <stdlib.h>
+
 
 using namespace std;
 
-string toLowercase(string str)
+ string toLowercase(string str)
 {
 	string ret = str;
 	
@@ -21,7 +17,7 @@ string toLowercase(string str)
 	return ret;
 }
 
-string toUppercase(string str)
+ string toUppercase(string str)
 {
 	string ret = str;
 
@@ -52,22 +48,5 @@ std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective
 	}
 
 	return ret;
-}
-
-bool GetBoolByRandom(uint chance)
-{
-	
-	int a = (rand() % 100 + 1);
-
-	return ((rand() % 100 + 1) < chance);
-}
-
-int GetRandomNumber(int min, int max)
-{
-	int ret = 0;
-
-	ret = rand() % (max + 1 - min) + min;
-	return ret;
-
 }
 
