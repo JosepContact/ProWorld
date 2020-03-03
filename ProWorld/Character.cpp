@@ -106,3 +106,13 @@ void Character::SetGoal(std::string str)
 {
 	goal = str;
 }
+
+std::string Character::GetFlaw() const
+{
+	return flaw;
+}
+
+void Character::SetFlaw(std::string str)
+{
+	flaw = str;
+}

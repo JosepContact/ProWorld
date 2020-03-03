@@ -69,4 +69,30 @@ char VillainGoals[][300] =
 	"Destruction.\n"
 };
 
+char Flaws[][300] =
+{
+	"Belittles anyone they views as inferior.\n",
+	"Gets angry at the slightest provocation.\n",
+	"Quickly to criticize others and can't take criticism.\n",
+	"Passive-agressive.\n",
+	"Paranoid that everyone is out to get them.\n",
+	"Gullible.\n",
+	"Always takes things too personal.\n",
+	"Jealous.\n",
+	"Enjoys embarrassing others.\n",
+	"Financially irresponsible.\n",
+	"Trust issues.\n",
+	"No moral compass.\n",
+	"Self-centered.\n",
+	"Quickly to lose control.\n",
+	"Needs to be the center of attention.\n",
+	"Perfectionist.\n",
+	"Too lustful.\n",
+	"Hedonistic.\n",
+	"Cold-hearted.\n",
+	"Coward.\n",
+	"Has claustrophobia.\n"
+
+};
+
 #endif // CHARACTER_GOALS_H

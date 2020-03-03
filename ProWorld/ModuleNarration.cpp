@@ -371,6 +371,7 @@ string ModuleNarration::WorldCharactersArchetype(Character * cha)
 	case Character::Recluse:
 		Characters += ArchetypeDesc[Character::Recluse * 3];
 		Characters += ArchetypeDesc[Character::Recluse * 3 + 1];
+		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Recluse * 3 + 2];
 		break;
 	case Character::Fool:
@@ -378,6 +379,7 @@ string ModuleNarration::WorldCharactersArchetype(Character * cha)
 		Characters += ArchetypeDesc[Character::Fool * 3 + 1];
 		if (cha->GetShadow() == true)
 		Characters += ArchetypeDesc[Character::Fool * 3 + 2];
+		break;
 	case Character::Casanova:
 		Characters += ArchetypeDesc[Character::Casanova * 3];
 		Characters += ArchetypeDesc[Character::Casanova * 3 + 1];
@@ -463,6 +465,15 @@ string ModuleNarration::WorldCharactersGoal(Character *it)
 	string cha;
 
 	cha += "Goal: " + it->GetGoal();
+
+	return cha;
+}
+
+string ModuleNarration::WorldCharactersFlaw(Character * it)
+{
+	string cha;
+
+	cha += "Flaw: " + it->GetFlaw();
 
 	return cha;
 }

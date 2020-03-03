@@ -190,6 +190,7 @@ update_status ModuleGraphics::Update()
 				ImGui::Text(app->narration->WorldCharacters((*it)).c_str());			
 				ImGui::Text(app->narration->WorldCharactersArchetype((*it)).c_str());
 				ImGui::BulletText(app->narration->WorldCharactersGoal((*it)).c_str());
+				ImGui::BulletText(app->narration->WorldCharactersFlaw((*it)).c_str());
 				ImGui::Separator();
 			}
 			

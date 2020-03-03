@@ -340,6 +340,7 @@ void ModuleWorld::CreateCharacters()
 		wcharacters.push_back(character);
 		wcharacters[i]->SetShadow(false);
 		wcharacters[i]->SetGoal(string(HeroGoals[GetRandomNumber(0, 34)]));
+		wcharacters[i]->SetFlaw(string(Flaws[GetRandomNumber(0, 20)]));
 	}
 
 	int evil_cha = n_cha / 3;

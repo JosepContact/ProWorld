@@ -64,6 +64,7 @@ private:
 	Race* race;
 	Gender gender;
 	std::string goal;
+	std::string flaw;
 
 public:
 
@@ -85,6 +86,8 @@ public:
 	Gender GetGender() const;
 	std::string GetGoal() const;
 	void SetGoal(std::string);
+	std::string GetFlaw() const;
+	void SetFlaw(std::string);
 };
 
 #endif //CHARACTER_H

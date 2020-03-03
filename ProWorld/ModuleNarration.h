@@ -28,6 +28,7 @@ public:
 	string WorldCharacters(Character*);
 	string WorldCharactersArchetype(Character*);
 	string WorldCharactersGoal(Character*);
+	string WorldCharactersFlaw(Character*);
 
 	//
 	virtual update_status Update();
