@@ -32,15 +32,15 @@ private:
 	std::string name;
 
 	std::vector<Race*> races;
-	//bool inSea;
-	//bool isCoastal;
+
 	Scale scale;
 
 	Location* location;
 
-public:
 	bool is_asian_based; // 50% chance of true when placed at the EAST
 	bool is_tribal; // 50% chance of true when NOT coastal and climate ARID or TROPICAL
+public:
+
 
 public:
 	
@@ -51,17 +51,16 @@ public:
 	void SetScale(Scale);
 	Scale GetScale() const;
 
-	//void SetIsCoastal(bool);
-	//bool GetIsCoastal() const;
-
-	//void SetInSea(bool);
-	//bool GetInSea() const;
-
 	void AddRace(Race*);
 
 
 	Location* GetLocationPtr() const;
 	bool AssignLocationPtr(Location*);
+
+	void SetIsAsianBased(bool);
+	bool IsAsianBased() const;
+	void SetIsTribal(bool);
+	bool IsTribal() const;
 };
 
 

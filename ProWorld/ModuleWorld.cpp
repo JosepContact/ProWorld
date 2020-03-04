@@ -23,8 +23,8 @@ ModuleWorld::~ModuleWorld()
 	RELEASE (wsky);
 	//RELEASE(wclimate);
 	RELEASE(wgeography);
-	for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
-		RELEASE(*rit);
+	//for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
+		//RELEASE(*rit);
 	for (vector<Character*>::reverse_iterator rit = wcharacters.rbegin(); rit != wcharacters.rend(); ++rit)
 		RELEASE(*rit);
 
@@ -117,8 +117,8 @@ void ModuleWorld::DeleteWorld()
 	RELEASE(wsky);
 	//RELEASE(wclimate);
 	RELEASE(wgeography);
-	for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
-		RELEASE(*rit);
+	//for (vector<Society*>::reverse_iterator rit = wsocieties.rbegin(); rit != wsocieties.rend(); ++rit)
+		//RELEASE(*rit);
 	for (vector<Character*>::reverse_iterator rit = wcharacters.rbegin(); rit != wcharacters.rend(); ++rit)
 		RELEASE(*rit);
 
@@ -257,7 +257,8 @@ void ModuleWorld::CreateMap()
 			if (geoVector[randcell].gtype != Geography::LandType::Water && nCities > 0)
 			{
 				Location* tLoc = app->conceptmanager->GetLocationByName("City");
-				geoVector[randcell].CreateSociety(tLoc);
+				Society* soc = geoVector[randcell].CreateSociety(tLoc);
+				SetSociety(soc, geoVector[randcell]);
 				nCities--;
 			}
 	}
@@ -280,20 +281,23 @@ void ModuleWorld::CreateMap()
 				{
 					if (geoVector[randcell].is_coastline) {
 						Location* tLoc = app->conceptmanager->GetLocationByName("Port");
-						geoVector[randcell].CreateSociety(tLoc);
+						Society* soc = geoVector[randcell].CreateSociety(tLoc);
+						SetSociety(soc, geoVector[randcell]);
 					}
 					break;
 				}
 				case 2:
 				{
 					Location* tLoc = app->conceptmanager->GetLocationByName("Town");
-					geoVector[randcell].CreateSociety(tLoc);
+					Society * soc = geoVector[randcell].CreateSociety(tLoc);
+					SetSociety(soc, geoVector[randcell]);
 					break;
 				}
 				case 3:
 				{
 					Location* tLoc = app->conceptmanager->GetLocationByName("Village");
-					geoVector[randcell].CreateSociety(tLoc);
+					Society * soc = geoVector[randcell].CreateSociety(tLoc);
+					SetSociety(soc, geoVector[randcell]);
 					break;
 				}
 				}
@@ -341,6 +345,9 @@ void ModuleWorld::CreateCharacters()
 		wcharacters[i]->SetShadow(false);
 		wcharacters[i]->SetGoal(string(HeroGoals[GetRandomNumber(0, 34)]));
 		wcharacters[i]->SetFlaw(string(Flaws[GetRandomNumber(0, 20)]));
+		wcharacters[i]->SetSocietyOrigin(wsocieties[GetRandomNumber(0, wsocieties.size() - 1)]);
+		character->GenerateName();
+		character->GenerateRace();
 	}
 
 	int evil_cha = n_cha / 3;
@@ -361,12 +368,18 @@ Climate * ModuleWorld::GetClimate() const
 }
 
 
-void ModuleWorld::SetSociety(Society * soc, Geography::CellLand cell)
+void ModuleWorld::SetSociety(Society * soc, Geography::CellLand &cell)
 {
 	if (cell.cardinal == Geography::CardinalPoints::NORTHEAST || cell.cardinal == Geography::CardinalPoints::EAST
-		|| cell.cardinal == Geography::CardinalPoints::SOUTHEAST && GetBoolByRandom(MEDIUM_CHANCE))
-		soc->is_asian_based = true;
-	if (wclimate->GetClimateType() == Climate::Arid || wclimate->GetClimateType() == Climate::Tropical &&
-		cell.is_coastline == false && GetBoolByRandom(MEDIUM_CHANCE))
-		soc->is_tribal = true;
+		|| cell.cardinal == Geography::CardinalPoints::SOUTHEAST)
+	{
+		if (GetBoolByRandom(MEDIUM_CHANCE))
+		soc->SetIsAsianBased(true);
+	}
+	if (wclimate->GetClimateType() == Climate::Arid || wclimate->GetClimateType() == Climate::Tropical)
+	{
+		if(cell.is_coastline == false && GetBoolByRandom(MEDIUM_CHANCE))
+			soc->SetIsTribal(true);
+	}
+	wsocieties.push_back(soc);
 }

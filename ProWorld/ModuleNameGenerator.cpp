@@ -403,3 +403,78 @@ std::string ModuleNameGenerator::GenRegularFemaleCharName()
 
 	return (ret + ret2);
 }
+
+std::string ModuleNameGenerator::GenChineseMName()
+{
+	string ret(XineseSurname[GetRandomNumber(0, 41)]);
+	string ret2(MaleXineseName[GetRandomNumber(0, 29)]);
+
+	return (ret + " " + ret2);
+}
+
+std::string ModuleNameGenerator::GenChineseFName()
+{
+	string ret(XineseSurname[GetRandomNumber(0, 41)]);
+	string ret2(FemaleXineseName[GetRandomNumber(0, 30)]);
+
+	return (ret + " " + ret2);
+}
+
+std::string ModuleNameGenerator::GenJapaneseMName()
+{
+	string ret = GetJapaneseSurname();
+	
+	int nsyl = GetRandomNumber(1, 2);
+	string ret2;
+	for (int i = 0; i <= nsyl; ++i)
+		ret2 += JapaneseNameSyllabes[GetRandomNumber(0, 38)];
+
+	ret2 += JapaneseMaleSuffixes[GetRandomNumber(0, 18)];
+
+	ret2 = toUppercase(ret2);
+	
+	return (ret + " " + ret2);
+}
+
+std::string ModuleNameGenerator::GenJapaneseFName()
+{
+	string ret = GetJapaneseSurname();
+
+	int nsyl = GetRandomNumber(1, 2);
+	string ret2;
+	for (int i = 0; i <= nsyl; ++i)
+		ret2 += JapaneseNameSyllabes[GetRandomNumber(0, 38)];
+
+	ret2 += JapaneseFemaleSuffixes[GetRandomNumber(0, 15)];
+
+	ret2 = toUppercase(ret2);
+
+	return (ret + " " +  ret2);
+}
+
+std::string ModuleNameGenerator::GenMTribalName()
+{
+	string ret(TropicalMaleNames[GetRandomNumber(0, 31)]);
+	string ret2(TropicalSurnames[GetRandomNumber(0, 40)]);
+
+	return (ret + " " + ret2);
+}
+
+std::string ModuleNameGenerator::GenFTribalName()
+{
+	string ret(TropicalMaleNames[GetRandomNumber(0, 27)]);
+	string ret2(TropicalSurnames[GetRandomNumber(0, 40)]);
+
+	return (ret + " " + ret2);
+}
+
+std::string ModuleNameGenerator::GetJapaneseSurname()
+{
+	int nsyl = GetRandomNumber(2, 4);
+	string ret;
+	for (int i = 0; i <= nsyl; ++i)
+		ret += JapaneseSurnameSyllabes[GetRandomNumber(0, 38)];
+	ret = toUppercase(ret);
+
+	return ret;
+}

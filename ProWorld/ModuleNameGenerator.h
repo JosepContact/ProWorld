@@ -42,7 +42,16 @@ public:
 
 	std::string GenRegularMaleCharName();
 	std::string GenRegularFemaleCharName();
+
+	std::string GenChineseMName();
+	std::string GenChineseFName();
+	std::string GenJapaneseMName();
+	std::string GenJapaneseFName();
+	std::string GenMTribalName();
+	std::string GenFTribalName();
+
 private:
+	std::string GetJapaneseSurname();
 	std::vector<std::string> vector_syllabes;
 
 	std::vector<std::string> vector_end_syllabes;

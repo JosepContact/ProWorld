@@ -40,28 +40,6 @@ Society::Scale Society::GetScale() const
 	return scale;
 }
 
-/*
-void Society::SetIsCoastal(bool c)
-{
-	isCoastal = c;
-}
-
-bool Society::GetIsCoastal() const
-{
-	return isCoastal;
-}
-
-void Society::SetInSea(bool s)
-{
-	inSea = s;
-}
-
-bool Society::GetInSea() const
-{
-	return inSea;
-}
-*/
-
 void Society::AddRace(Race * r)
 {
 	races.push_back(r);
@@ -83,4 +61,24 @@ bool Society::AssignLocationPtr(Location * l)
 	ret = true;
 
 	return ret;
+}
+
+void Society::SetIsAsianBased(bool b)
+{
+	is_asian_based = b;
+}
+
+bool Society::IsAsianBased() const
+{
+	return is_asian_based;
+}
+
+void Society::SetIsTribal(bool b)
+{
+	is_tribal = b;
+}
+
+bool Society::IsTribal() const
+{
+	return is_tribal;
 }

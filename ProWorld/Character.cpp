@@ -145,3 +145,102 @@ std::string Character::GetName() const
 {
 	return name;
 }
+
+void Character::SetSocietyOrigin(Society * soc)
+{
+	origin = soc;
+}
+
+Society* Character::GetSocietyOrigin() const
+{
+	return origin;
+}
+
+void Character::GenerateName()
+{
+
+	switch (gender)
+	{
+	case Non_binary:
+		if (origin->IsTribal() == true)
+		{
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+				name = app->namegenerator->GenMTribalName();
+			else name = app->namegenerator->GenFTribalName();
+		}
+		if (origin->IsAsianBased() == true)
+		{
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+			{
+				if (GetBoolByRandom(MEDIUM_CHANCE))
+				{
+					name = app->namegenerator->GenChineseMName();
+				} else name = app->namegenerator->GenChineseFName();
+			}
+			else
+			{
+				if (GetBoolByRandom(MEDIUM_CHANCE))
+				{
+					name = app->namegenerator->GenJapaneseMName();
+				} else name = app->namegenerator->GenJapaneseFName();
+			}
+		}
+		break;
+	case Femaletrans:
+		if (origin->IsTribal() == true)
+			name = app->namegenerator->GenFTribalName();
+
+		if (origin->IsAsianBased() == true)
+		{
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+				name = app->namegenerator->GenChineseFName();
+			else name = app->namegenerator->GenJapaneseFName();
+		}
+
+		break;
+	case Maletrans:
+		if (origin->IsTribal() == true)
+			name = app->namegenerator->GenMTribalName();
+
+		if (origin->IsAsianBased() == true)
+		{
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+				name = app->namegenerator->GenChineseMName();
+			else name = app->namegenerator->GenJapaneseMName();
+		}
+
+		break;
+	case Female:
+		if (origin->IsTribal() == true)
+			name = app->namegenerator->GenFTribalName();
+
+		if (origin->IsAsianBased() == true)
+		{
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+				name = app->namegenerator->GenChineseFName();
+			else name = app->namegenerator->GenJapaneseFName();
+		}
+
+		break;
+	case Male:
+		if (origin->IsTribal() == true)
+			name = app->namegenerator->GenMTribalName();
+
+		if (origin->IsAsianBased() == true)
+		{
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+				name = app->namegenerator->GenChineseMName();
+			else name = app->namegenerator->GenJapaneseMName();
+		}
+
+		break;
+	default:
+		break;
+
+	}
+}
+
+void Character::GenerateRace()
+{
+	race = origin->GetRaces()[GetRandomNumber(0, origin->GetRaces().size() - 1)];
+}

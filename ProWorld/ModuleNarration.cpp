@@ -478,6 +478,22 @@ string ModuleNarration::WorldCharactersFlaw(Character * it)
 	return cha;
 }
 
+string ModuleNarration::WorldCharactersOrigin(Character * cha)
+{
+	string ori;
+
+	ori += "Origin: " + cha->GetSocietyOrigin()->GetName() + ".\n";
+
+	return ori;
+}
+
+string ModuleNarration::WorldCharactersRace(Character *cha)
+{
+	string rac;
+	rac += "Race: " + cha->GetRace()->GetWord() + ".\n";
+	return rac;
+}
+
 update_status ModuleNarration::Update()
 {
 	

@@ -93,6 +93,14 @@ public:
 	void SetFlaw(std::string);
 	void SetName(std::string);
 	std::string GetName() const;
+	void SetSocietyOrigin(Society*);
+	Society* GetSocietyOrigin() const;
+
+	// ------------
+
+	void GenerateName();
+	void GenerateRace();
+
 };
 
 #endif //CHARACTER_H

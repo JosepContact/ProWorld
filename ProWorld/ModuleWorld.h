@@ -53,7 +53,7 @@ private:
 	void SetGeography();
 	void CreateMap();
 	void CreateCharacters();
-	void SetSociety(Society* soc, Geography::CellLand cell);
+	void SetSociety(Society* soc, Geography::CellLand &cell);
 public:
 	// WORLD
 	std::string wname;
