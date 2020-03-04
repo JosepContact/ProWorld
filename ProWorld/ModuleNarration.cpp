@@ -235,7 +235,7 @@ string ModuleNarration::WorldCharacters(Character * it)
 	string Characters;
 
 
-		Characters += "Name: \n";
+		Characters += "Name: " + it->GetName() + ".\n";
 		Characters += "Age: " + to_string((it)->GetAge()) +".\n";
 		Characters += "Gender: ";
 		

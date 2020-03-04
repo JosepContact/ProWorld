@@ -61,7 +61,7 @@ public:
 		bool is_coastline;
 		CardinalPoints cardinal;
 
-		void CreateSociety(Location* tLoc);
+		Society* CreateSociety(Location* tLoc);
 		Place* CreatePlace();
 	private:
 		void SetRaces(Society*);

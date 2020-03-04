@@ -1,6 +1,7 @@
 #include "ModuleNameGenerator.h"
 #include "HelperFunctions.h"
 #include "App.h"
+#include "CharacterName.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -385,4 +386,20 @@ std::string ModuleNameGenerator::GeneratePlaceName(Geography::Place* place, std:
 	return ret;
 
 	
+}
+
+std::string ModuleNameGenerator::GenRegularMaleCharName()
+{
+	string ret(MaleNamePrefix[GetRandomNumber(0, 26)]);
+	string ret2(MaleNameSuffix[GetRandomNumber(0, 17)]);
+
+	return (ret + ret2);
+}
+
+std::string ModuleNameGenerator::GenRegularFemaleCharName()
+{
+	string ret(FemaleNamePrefix[GetRandomNumber(0, 17)]);
+	string ret2(FemaleNameSuffix[GetRandomNumber(0, 19)]);
+
+	return (ret + ret2);
 }

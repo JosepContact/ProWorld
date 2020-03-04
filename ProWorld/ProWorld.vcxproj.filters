@@ -235,6 +235,9 @@
     <ClInclude Include="CharacterGoals.h">
       <Filter>Modules\CharacterInfo</Filter>
     </ClInclude>
+    <ClInclude Include="CharacterName.h">
+      <Filter>Modules\CharacterInfo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ProWorld.rc">

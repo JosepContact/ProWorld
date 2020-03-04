@@ -359,3 +359,14 @@ Climate * ModuleWorld::GetClimate() const
 {
 	return wclimate;
 }
+
+
+void ModuleWorld::SetSociety(Society * soc, Geography::CellLand cell)
+{
+	if (cell.cardinal == Geography::CardinalPoints::NORTHEAST || cell.cardinal == Geography::CardinalPoints::EAST
+		|| cell.cardinal == Geography::CardinalPoints::SOUTHEAST && GetBoolByRandom(MEDIUM_CHANCE))
+		soc->is_asian_based = true;
+	if (wclimate->GetClimateType() == Climate::Arid || wclimate->GetClimateType() == Climate::Tropical &&
+		cell.is_coastline == false && GetBoolByRandom(MEDIUM_CHANCE))
+		soc->is_tribal = true;
+}

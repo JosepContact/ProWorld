@@ -130,7 +130,7 @@ Geography::CellLand::~CellLand()
 		RELEASE(*rit);
 }
 
-void Geography::CellLand::CreateSociety(Location * tLoc)
+Society* Geography::CellLand::CreateSociety(Location * tLoc)
 {
 	Society* society = new Society();
 
@@ -139,7 +139,7 @@ void Geography::CellLand::CreateSociety(Location * tLoc)
 	if (!society->AssignLocationPtr(tLoc))
 	{
 		LOG("Assigned NULL Location at Geography::CellLand::CreateSociety(Location* tLoc)");
-		return;
+		return nullptr;
 	}
 
 	switch (society->GetLocationPtr()->GetLocationType())
@@ -163,6 +163,8 @@ void Geography::CellLand::CreateSociety(Location * tLoc)
 	SetRaces(society);
 
 	societies.push_back(society);
+
+	return society;
 }
 
 Geography::Place* Geography::CellLand::CreatePlace()

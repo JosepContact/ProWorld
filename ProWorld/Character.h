@@ -3,6 +3,7 @@
 #define __CHARACTER_H__
 
 #include "Race.h"
+#include "Society.h"
 
 #define MIN_AGE 13
 #define MAX_AGE 60
@@ -65,6 +66,8 @@ private:
 	Gender gender;
 	std::string goal;
 	std::string flaw;
+	std::string name;
+	Society* origin;
 
 public:
 
@@ -88,6 +91,8 @@ public:
 	void SetGoal(std::string);
 	std::string GetFlaw() const;
 	void SetFlaw(std::string);
+	void SetName(std::string);
+	std::string GetName() const;
 };
 
 #endif //CHARACTER_H

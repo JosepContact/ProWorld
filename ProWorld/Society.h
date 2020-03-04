@@ -39,6 +39,10 @@ private:
 	Location* location;
 
 public:
+	bool is_asian_based; // 50% chance of true when placed at the EAST
+	bool is_tribal; // 50% chance of true when NOT coastal and climate ARID or TROPICAL
+
+public:
 	
 	void SetName(std::string);
 	std::string GetName() const;

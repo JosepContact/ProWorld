@@ -1,6 +1,7 @@
 #include "Character.h"
 #include "App.h"
 #include "HelperFunctions.h"
+#include "ModuleNameGenerator.h"
 
 
 Character::Character()
@@ -14,14 +15,32 @@ Character::Character()
 		if (GetBoolByRandom(MEDIUM_LOW_CHANCE))
 		{
 			gender = Non_binary;
+			if (GetBoolByRandom(MEDIUM_CHANCE))
+				name = app->namegenerator->GenRegularFemaleCharName();
+			else name = app->namegenerator->GenRegularMaleCharName();
 		}
 		else if (GetBoolByRandom(MEDIUM_CHANCE))
+		{
 			gender = Maletrans;
-		else gender = Femaletrans;
+			name = app->namegenerator->GenRegularMaleCharName();
+		}
+		else
+		{
+			gender = Femaletrans;
+			name = app->namegenerator->GenRegularFemaleCharName();
+		}
 	}
 	else if (GetBoolByRandom(MEDIUM_CHANCE))
+	{
 		gender = Male;
-	else gender = Female;
+		name = app->namegenerator->GenRegularMaleCharName();
+	}
+	else 
+		{
+		gender = Female;
+		name = app->namegenerator->GenRegularFemaleCharName();
+	}
+
 
 	moral = (MoralAlignment)GetRandomNumber(0, 2);
 	attitude = (AttitudeAlignment)GetRandomNumber(0, 2);
@@ -115,4 +134,14 @@ std::string Character::GetFlaw() const
 void Character::SetFlaw(std::string str)
 {
 	flaw = str;
+}
+
+void Character::SetName(std::string str)
+{
+	name = str;
+}
+
+std::string Character::GetName() const
+{
+	return name;
 }

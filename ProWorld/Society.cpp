@@ -7,6 +7,8 @@ using namespace std;
 Society::Society()
 {
 	name = app->namegenerator->GenerateClassicName();
+	is_asian_based = false;
+	is_tribal = false;
 }
 
 Society::~Society()

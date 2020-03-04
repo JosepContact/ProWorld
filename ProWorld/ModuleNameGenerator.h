@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef __MODULENAMEGENERATOR_H__
 #define __MODULENAMEGENERATOR_H__
 
@@ -41,6 +39,9 @@ public:
 	std::string GenerateClassicName();
 
 	std::string GeneratePlaceName(Geography::Place*, std::vector<Adjective*>);
+
+	std::string GenRegularMaleCharName();
+	std::string GenRegularFemaleCharName();
 private:
 	std::vector<std::string> vector_syllabes;
 
