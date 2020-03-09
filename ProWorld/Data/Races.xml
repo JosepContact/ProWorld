@@ -195,24 +195,6 @@
 	</Race>
 	<Race>
 		<Info>
-		<Name value = "Goblin"/>
-		<Plural value = "Goblins"/>
-		<Coastal value = "1"/>
-		<inSea value ="0"/>
-		<Size value ="1"/>
-		<Adjectives>
-			<Adj val="0"/>
-		</Adjectives>
-		<Climates>
-			<Adj val="0"/>
-			<Adj val="1"/>
-			<Adj val="2"/>
-			<Adj val="3"/>
-		</Climates>
-		</Info>
-	</Race>
-	<Race>
-		<Info>
 		<Name value = "Fairy"/>
 		<Plural value = "Fairies"/>
 		<Coastal value = "1"/>
@@ -393,6 +375,39 @@
 			<Adj val="0"/>
 			<Adj val="1"/>
 			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Ogre"/>
+		<Plural value = "Ogres"/>
+		<Coastal value = "0"/>
+		<inSea value ="0"/>
+		<Size value ="3"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+		</Climates>
+		</Info>
+	</Race>
+	<Race>
+		<Info>
+		<Name value = "Giant"/>
+		<Plural value = "Giants"/>
+		<Coastal value = "1"/>
+		<inSea value ="0"/>
+		<Size value ="4"/>
+		<Adjectives>
+			<Adj val="0"/>
+		</Adjectives>
+		<Climates>
+			<Adj val="1"/>
 			<Adj val="3"/>
 		</Climates>
 		</Info>

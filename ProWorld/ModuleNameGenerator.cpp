@@ -87,7 +87,7 @@ char NameSuffix[][7] =
 	"chill",
 	"dale",
 	"shear",
-	"hill",
+	"hale",
 	"meadow",
 	"yard",
 	"light",
@@ -313,7 +313,7 @@ std::string ModuleNameGenerator::GeneratePlaceName(Geography::Place* place, std:
 		for (int i = 0; i < adj.size(); i++)
 		{
 			Adjective* temp = adj[i];
-			if (temp->GetPriority() != prev_prio && GetBoolByRandom(LOW_CHANCE))
+			if (temp->GetPriority() != prev_prio && GetBoolByRandom(LOW_CHANCE) && adj_count < 2)
 			{
 				if (temp->GetWord() == "Many") is_plural = true;
 				ret += " " + temp->GetWord();
@@ -366,6 +366,7 @@ std::string ModuleNameGenerator::GeneratePlaceName(Geography::Place* place, std:
 	} while (n_adj > 0);
 	string desc;
 
+	if(place->nametype!= TheName && place->nametype != ColorName)
 	desc += "This place is based on " + app->narration->GetAorAn(place->location->GetWord()) + " " + toLowercase(place->location->GetWord()) + ".\n";
 	
 	if (!desc_adj.empty())

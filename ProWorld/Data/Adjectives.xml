@@ -34,6 +34,7 @@
 		<Name value = "Small"/>
 		<Nouns value = "0"/>
 		<toPlural value = "0"/>
+		<prio val ="2"/>
 		<desc val ="2"/>
 		</Info>
 	</Adjective>
@@ -137,7 +138,7 @@
 	</Adjective>
 	<Adjective>
 		<Info>
-		<Name value = "Ugly"/>
+		<Name value = "Stunning"/>
 		<Nouns value = "10"/>
 		<toPlural value = "0"/>
 		<prio val ="1"/>
@@ -189,13 +190,165 @@
 		<desc val ="1"/>
 		</Info>
 	</Adjective>
-	<Adjective>
+	<!--<Adjective>
 		<Info>
 		<Name value = "Moon"/>
 		<Nouns value = "13"/>
 		<toPlural value = "0"/>
 		<prio val ="5"/>
 		<desc val ="0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Stone"/>
+		<Nouns value = "13"/>
+		<toPlural value = "0"/>
+		<prio val ="5"/>
+		<desc val ="0"/>
+	</Adjective></Info>-->
+	<Adjective>
+		<Info>
+		<Name value = "Magic"/>
+		<Nouns value = "14"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Mystical"/>
+		<Nouns value = "14"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Enchanted"/>
+		<Nouns value = "14"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Bright"/>
+		<Nouns value = "15"/>
+		<toPlural value = "0"/>
+		<prio val ="5"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Dazzling"/>
+		<Nouns value = "15"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Calm"/>
+		<Nouns value = "16"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Quiet"/>
+		<Nouns value = "16"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Silent"/>
+		<Nouns value = "16"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Mysterious"/>
+		<Nouns value = "16"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Ancient"/>
+		<Nouns value = "17"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Old"/>
+		<Nouns value = "17"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Elder"/>
+		<Nouns value = "17"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Humid"/>
+		<Nouns value = "18"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Windy"/>
+		<Nouns value = "19"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="1"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Dry"/>
+		<Nouns value = "20"/>
+		<toPlural value = "0"/>
+		<prio val ="6"/>
+		<desc val ="0"/>
+		</Info>
+	</Adjective>
+	<Adjective>
+		<Info>
+		<Name value = "Vast"/>
+		<Nouns value = "21"/>
+		<toPlural value = "0"/>
+		<prio val ="2"/>
+		<desc val ="1"/>
 		</Info>
 	</Adjective>
 </Adjectives>

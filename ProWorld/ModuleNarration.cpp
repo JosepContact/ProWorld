@@ -456,7 +456,7 @@ string ModuleNarration::WorldCharactersArchetype(Character * cha)
 		Characters += "this one is missing pls add";
 		break;
 	}
-
+	Characters += "\n";
 	return Characters;
 }
 

@@ -82,8 +82,6 @@ void ModuleWorld::StartWorld()
 
 	wname = app->namegenerator->GenerateName();
 
-	SetWorldOverview();
-
 	/*cout << "Your world has "<<AdjectiveandNameOutput(false, true, (Adjective*)woverview[0][1], (Location*)woverview[0][0]);
 	cout << ", " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[1][1], (Location*)woverview[1][0]);
 	cout << " and " << AdjectiveandNameOutput(false, true, (Adjective*)woverview[2][1], (Location*)woverview[2][0]) << ".";*/
@@ -130,26 +128,6 @@ void ModuleWorld::DeleteWorld()
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
 {
 	return WorldType(GetRandomNumber(0, 4));
-}
-
-void ModuleWorld::SetWorldOverview()
-{
-	srand((int)time(0));
-
-	for (int i = 0; i < 3; ++i)
-	{
-		vector<Location*>locations = app->conceptmanager->GetLocationVector();
-
-		int randloc = (rand() % locations.size());
-
-		int randandj = (rand() % locations[randloc]->GetAdjectives().size());
-	
-		vector<Adjective*>adjectives = app->conceptmanager->GetAdjectivesByKey(locations[randloc]->GetAdjectives()[randandj]);
-
-		woverview[i][0] = locations[randloc];
-		
-		woverview[i][1] = adjectives[(rand() % adjectives.size())];
-	}
 }
 
 void ModuleWorld::SetClimate()
@@ -348,6 +326,8 @@ void ModuleWorld::CreateCharacters()
 		wcharacters[i]->SetSocietyOrigin(wsocieties[GetRandomNumber(0, wsocieties.size() - 1)]);
 		character->GenerateName();
 		character->GenerateRace();
+		if (character->GetMorality() == Character::MEvil)
+			character->SetShadow(true);
 	}
 
 	int evil_cha = n_cha / 3;
@@ -360,6 +340,7 @@ void ModuleWorld::CreateCharacters()
 	}
 
 	wcharacters[0]->SetAlignment((Character::MoralAlignment)GetRandomNumber(0, 1), wcharacters[0]->GetAttitude());
+	wcharacters[0]->SetShadow(false);
 }
 
 Climate * ModuleWorld::GetClimate() const
