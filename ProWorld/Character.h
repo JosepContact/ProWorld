@@ -69,6 +69,7 @@ private:
 	std::string name;
 	Society* origin;
 
+	
 public:
 
 
@@ -95,6 +96,7 @@ public:
 	std::string GetName() const;
 	void SetSocietyOrigin(Society*);
 	Society* GetSocietyOrigin() const;
+
 
 	// ------------
 

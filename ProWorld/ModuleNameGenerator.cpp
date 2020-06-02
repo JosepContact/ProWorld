@@ -172,9 +172,9 @@ bool ModuleNameGenerator::Start()
 	syllabe = "nox";
 	vector_syllabes.push_back(syllabe);
 	syllabe = "cy";
-	vector_syllabes.push_back(syllabe);
+	vector_syllabes.push_back(syllabe); //38
 
-	//Ending Syllabes
+	//Ending Syllabes 
 	syllabe = "tika";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "rea";
@@ -210,7 +210,7 @@ bool ModuleNameGenerator::Start()
 	syllabe = "ris";
 	vector_end_syllabes.push_back(syllabe);
 	syllabe = "siris";
-	vector_end_syllabes.push_back(syllabe);
+	vector_end_syllabes.push_back(syllabe); //18
 
 	return true;
 }

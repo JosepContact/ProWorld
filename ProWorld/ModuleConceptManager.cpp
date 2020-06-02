@@ -138,6 +138,13 @@ bool ModuleConceptManager::Start()
 				race->AddClimate((Climate::ClimatesType)rac.attribute("val").as_int());
 			}
 
+			pugi::xml_node arch_n_nodes = node_ra.child("Archetypes");
+			
+			for (auto arch = arch_n_nodes.child("Adj"); arch; arch = arch.next_sibling("Adj"))
+			{
+				race->AddArchetype(arch.attribute("val").as_int());
+			}
+
 			node_ra = node_ra.parent();
 		}
 	}

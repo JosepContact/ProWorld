@@ -32,6 +32,7 @@ private:
 	bool inSea;
 	SizeType size;
 	std::string str_size;
+	std::vector<int> vector_archetypes;
 
 public:
 
@@ -50,6 +51,9 @@ public:
 	void AddClimate(Climate::ClimatesType climate);
 
 	bool CompareClimate(Climate::ClimatesType climate);
+
+	void AddArchetype(int arch);
+	std::vector<int> GetArchetypes() const;
 };
 
 #endif // !RACE_H

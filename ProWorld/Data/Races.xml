@@ -17,6 +17,23 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="4"/> <!--Casanova-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -35,6 +52,16 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -53,6 +80,17 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="4"/> <!--Casanova-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -71,6 +109,21 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="4"/> <!--Casanova-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -87,6 +140,15 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -105,6 +167,16 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="4"/> <!--Casanova-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -121,6 +193,18 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="12"/> <!--Nurturer-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -139,6 +223,20 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="12"/> <!--Nurturer-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -157,6 +255,17 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="12"/> <!--Nurturer-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -173,6 +282,15 @@
 			<Adj val="0"/>
 			<Adj val="1"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -191,6 +309,16 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -209,6 +337,21 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="12"/> <!--Nurturer-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -227,6 +370,15 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="4"/> <!--Casanova-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -245,6 +397,18 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -261,6 +425,19 @@
 			<Adj val="0"/>
 			<Adj val="2"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="12"/> <!--Nurturer-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -278,6 +455,18 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="4"/> <!--Casanova-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="6"/> <!--Artist-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="10"/> <!--Daughter-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -294,6 +483,18 @@
 			<Adj val="1"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="12"/> <!--Nurturer-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -311,6 +512,17 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="8"/> <!--Seductress-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -327,6 +539,19 @@
 			<Adj val="0"/>
 			<Adj val="1"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="2"/> <!--Recluse-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="13"/> <!--Maiden-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -343,40 +568,16 @@
 			<Adj val="0"/>
 			<Adj val="1"/>
 		</Climates>
-		</Info>
-	</Race>
-	<Race>
-		<Info>
-		<Name value = "Insectoid"/>
-		<Plural value = "Insectoids"/>
-		<Coastal value = "0"/>
-		<inSea value ="0"/>
-		<Size value ="2"/>
-		<Adjectives>
-			<Adj val="0"/>
-		</Adjectives>
-		<Climates>
-			<Adj val="0"/>
-			<Adj val="1"/>
-		</Climates>
-		</Info>
-	</Race>
-	<Race>
-		<Info>
-		<Name value = "Horror"/>
-		<Plural value = "Horrors"/>
-		<Coastal value = "0"/>
-		<inSea value ="0"/>
-		<Size value ="2"/>
-		<Adjectives>
-			<Adj val="0"/>
-		</Adjectives>
-		<Climates>
-			<Adj val="0"/>
-			<Adj val="1"/>
-			<Adj val="2"/>
-			<Adj val="3"/>
-		</Climates>
+		<Archetypes>
+			<Adj val="0"/> <!--Businessman-->
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+			<Adj val="15"/> <!--Martyr-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -394,6 +595,15 @@
 			<Adj val="2"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 	<Race>
@@ -410,6 +620,15 @@
 			<Adj val="1"/>
 			<Adj val="3"/>
 		</Climates>
+		<Archetypes>
+			<Adj val="1"/> <!--Protector-->
+			<Adj val="3"/> <!--Fool-->
+			<Adj val="5"/> <!--Revolutionary-->
+			<Adj val="7"/> <!--King-->
+			<Adj val="9"/> <!--Amazon-->
+			<Adj val="11"/> <!--Matriarch-->
+			<Adj val="14"/> <!--Mystic-->
+		</Archetypes>
 		</Info>
 	</Race>
 </Races>

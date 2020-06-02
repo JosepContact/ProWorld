@@ -12,7 +12,7 @@ Character::Character()
 	// Gender is way more common to be male or female than others.
 	if (GetBoolByRandom(VERY_LOW_CHANCE))
 	{
-		if (GetBoolByRandom(MEDIUM_LOW_CHANCE))
+		if (GetBoolByRandom(LOW_CHANCE))
 		{
 			gender = Non_binary;
 			if (GetBoolByRandom(MEDIUM_CHANCE))
@@ -243,4 +243,7 @@ void Character::GenerateName()
 void Character::GenerateRace()
 {
 	race = origin->GetRaces()[GetRandomNumber(0, origin->GetRaces().size() - 1)];
+
+	archetype = static_cast<Character::Archetype>(race->GetArchetypes()[GetRandomNumber(0, race->GetArchetypes().size() - 1)]);
+
 }

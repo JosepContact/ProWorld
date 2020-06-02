@@ -91,3 +91,13 @@ bool Race::CompareClimate(Climate::ClimatesType climate)
 
 	return false;
 }
+
+void Race::AddArchetype(int arch)
+{
+	vector_archetypes.push_back(arch);
+}
+
+std::vector<int> Race::GetArchetypes() const
+{
+	return vector_archetypes;
+}
