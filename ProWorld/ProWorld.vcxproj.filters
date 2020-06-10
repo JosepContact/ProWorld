@@ -42,6 +42,9 @@
     <Filter Include="Modules\CharacterInfo">
       <UniqueIdentifier>{20fdb7b0-cd33-4971-af08-4c183d72a1b2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Modules\Story">
+      <UniqueIdentifier>{8ca9f1be-1bd8-40a9-929c-4610d794c41d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -124,6 +127,15 @@
     </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>Modules\World</Filter>
+    </ClCompile>
+    <ClCompile Include="EventManager.cpp">
+      <Filter>Modules\Story</Filter>
+    </ClCompile>
+    <ClCompile Include="ModuleStory.cpp">
+      <Filter>Modules</Filter>
+    </ClCompile>
+    <ClCompile Include="Event.cpp">
+      <Filter>Modules\Story</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -237,6 +249,15 @@
     </ClInclude>
     <ClInclude Include="CharacterName.h">
       <Filter>Modules\CharacterInfo</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleStory.h">
+      <Filter>Modules</Filter>
+    </ClInclude>
+    <ClInclude Include="EventManager.h">
+      <Filter>Modules\Story</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Modules\Story</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

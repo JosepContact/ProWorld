@@ -18,13 +18,15 @@ public:
 	{
 		MGood,
 		MNeutral,
-		MEvil
+		MEvil,
+		MUnknown
 	};
 	enum AttitudeAlignment
 	{
 		ALawful,
 		ANeutral,
-		AChaotic
+		AChaotic,
+		AUnknown
 	};
 	enum Archetype
 	{
@@ -43,7 +45,8 @@ public:
 		Nurturer,
 		Maiden,
 		Mystic,
-		Martyr
+		Martyr,
+		ARCUnknown
 	};
 
 	enum Gender
@@ -53,6 +56,14 @@ public:
 		Non_binary,
 		Maletrans,
 		Femaletrans
+	};
+	enum CharacterType
+	{
+		Hero,
+		Secondary,
+		Neutral,
+		MainVillain,
+		SecondaryVillain
 	};
 
 private:

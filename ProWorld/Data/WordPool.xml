@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<Words>
+	<Word>
+		<Name value = "_time"/> 
+		<Pool>
+			<n val="not long ago"/>
+			<n val="a while ago"/>
+			<n val="history is that"/>
+			<n val="rumors say that"/>
+			<n val="when finally spring came, after many months"/>
+			<n val="legend says"/>
+			<n val="according to tales from ancient times"/>
+			<n val="in this story"/>
+		</Pool>
+	</Word>
+</Words>

@@ -38,6 +38,8 @@ typedef unsigned int uint;
 #define DATA_ADJECTIVE_XML_PATH "Data/Adjectives.xml"
 #define DATA_CLIMATES_XML_PATH "Data/Climates.xml"
 #define DATA_RACES_XML_PATH "Data/Races.xml"
+#define DATA_EVENTS_XML_PATH "Data/Events.xml"
+#define DATA_WORDS_XML_PATH "Data/WordPool.xml"
 
 #endif //GLOBALS_H
 

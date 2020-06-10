@@ -9,6 +9,7 @@
 #include "ModuleNameGenerator.h"
 #include "ModuleNarration.h"
 #include "ModuleGraphics.h"
+#include "ModuleStory.h"
 
 // ----------
 
@@ -42,6 +43,7 @@ public:
 	ModuleWorld* world;
 	ModuleNarration* narration;
 	ModuleGraphics* graphics;
+	ModuleStory* story;
 
 	bool quit;
 private:

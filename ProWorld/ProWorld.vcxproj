@@ -152,6 +152,8 @@
   <ItemGroup>
     <ClCompile Include="Adjective.cpp" />
     <ClCompile Include="Character.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="ImGui\GL\gl3w.c" />
     <ClCompile Include="ImGui\imgui.cpp" />
     <ClCompile Include="ImGui\imgui_demo.cpp" />
@@ -162,6 +164,7 @@
     <ClCompile Include="ImGui\2main.cpp" />
     <ClCompile Include="ModuleGraphics.cpp" />
     <ClCompile Include="ModuleNarration.cpp" />
+    <ClCompile Include="ModuleStory.cpp" />
     <ClCompile Include="Society.cpp" />
     <ClCompile Include="Climate.cpp" />
     <ClCompile Include="Concept.cpp" />
@@ -184,6 +187,8 @@
     <ClInclude Include="CharacterDesc.h" />
     <ClInclude Include="CharacterGoals.h" />
     <ClInclude Include="CharacterName.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventManager.h" />
     <ClInclude Include="ImGui\GL\gl3w.h" />
     <ClInclude Include="ImGui\GL\glcorearb.h" />
     <ClInclude Include="ImGui\imconfig.h" />
@@ -198,6 +203,7 @@
     <ClInclude Include="ImGui\include\GLFW\glfw3native.h" />
     <ClInclude Include="ModuleGraphics.h" />
     <ClInclude Include="ModuleNarration.h" />
+    <ClInclude Include="ModuleStory.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Society.h" />
     <ClInclude Include="Climate.h" />

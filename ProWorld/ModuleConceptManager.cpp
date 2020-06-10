@@ -115,7 +115,7 @@ bool ModuleConceptManager::Start()
 	//-- Races ----
 	pugi::xml_document	race_file;
 	pugi::xml_node		races;
-	races = app->filesystem->LoadXML(DATA_RACES_XML_PATH, RACE, climate_file);
+	races = app->filesystem->LoadXML(DATA_RACES_XML_PATH, RACE, race_file);
 
 	if (!races.empty())
 	{
@@ -147,6 +147,26 @@ bool ModuleConceptManager::Start()
 
 			node_ra = node_ra.parent();
 		}
+	}
+
+	//-- Word Pools ----
+	pugi::xml_document	words_file;
+	pugi::xml_node		words;
+	words = app->filesystem->LoadXML(DATA_WORDS_XML_PATH, WORDPOOL, words_file);
+
+	if (!words.empty())
+	{
+		int a = 2;
+	}
+
+	//-- Events ----
+	pugi::xml_document	event_file;
+	pugi::xml_node		events;
+	events = app->filesystem->LoadXML(DATA_EVENTS_XML_PATH, EVENT, event_file);
+
+	if (!events.empty())
+	{
+		int a = 2;
 	}
 
 	return true;

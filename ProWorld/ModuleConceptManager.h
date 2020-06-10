@@ -23,6 +23,8 @@
 #define ADJECTIVE "Adjectives"
 #define CLIMATE "Climates"
 #define RACE "Races"
+#define EVENT "Events"
+#define WORDPOOL "Words"
 
 class ModuleConceptManager : public Module
 {
