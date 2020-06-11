@@ -65,6 +65,7 @@ public:
 	void AddCharacter(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type);
 	void FillSentence(uint id, bool mandatory, int goes_after, std::string sentence);
 
+	bool ValidEvent(std::vector<Character*> chars);
 };
 
 #endif

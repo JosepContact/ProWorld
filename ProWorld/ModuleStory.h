@@ -1,10 +1,13 @@
 #ifndef MODULESTORY_H
 #define MODULESTORY_H
 
+#define MAXEVENTSPERACT 3
+
 #include "Module.h"
+#include <vector>
 
 class EventManager;
-
+class Event;
 
 class ModuleStory : public Module {
 
@@ -21,11 +24,14 @@ public:
 
 	virtual update_status Update();
 
+	void CreateStory();
+
 private:
 	EventManager* e_manager = nullptr;
-
+	std::vector<Event*> story_queue;
 public:
 	EventManager* GetManager() const;
+	std::vector<Event*> GetStory();
 };
 
 #endif //MODUESTORY_H

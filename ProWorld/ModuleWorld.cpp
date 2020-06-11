@@ -108,6 +108,9 @@ void ModuleWorld::StartWorld()
 	// ------ CREATE CHARACTERS ---------
 
 	CreateCharacters();
+
+	//------ CREATE STORY -------------
+	app->story->CreateStory();
 }
 
 void ModuleWorld::DeleteWorld()
@@ -328,6 +331,9 @@ void ModuleWorld::CreateCharacters()
 		character->GenerateRace();
 		if (character->GetMorality() == Character::MEvil)
 			character->SetShadow(true);
+
+		character->character_type = Character::CharacterType::Secondary;
+
 	}
 
 	int evil_cha = n_cha / 3;
@@ -337,10 +343,14 @@ void ModuleWorld::CreateCharacters()
 		wcharacters[i]->SetAlignment(Character::MEvil, wcharacters[i]->GetAttitude());
 		wcharacters[i]->SetShadow(true);
 		wcharacters[i]->SetGoal(string(VillainGoals[GetRandomNumber(0, 22)]));
+
+		wcharacters[i]->character_type = Character::CharacterType::SecondaryVillain;
+		if(i == n_cha-1) wcharacters[i]->character_type = Character::CharacterType::MainVillain;
 	}
 
 	wcharacters[0]->SetAlignment((Character::MoralAlignment)GetRandomNumber(0, 1), wcharacters[0]->GetAttitude());
 	wcharacters[0]->SetShadow(false);
+	wcharacters[0]->character_type = Character::CharacterType::Hero;
 }
 
 Climate * ModuleWorld::GetClimate() const

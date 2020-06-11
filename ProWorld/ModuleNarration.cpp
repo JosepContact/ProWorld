@@ -4,6 +4,7 @@
 #include "Geography.h"
 #include "ModuleNameGenerator.h"
 #include "CharacterDesc.h"
+#include "Event.h"
 
 #include <vector>
 
@@ -527,4 +528,46 @@ string ModuleNarration::GetAorAn(string word)
 	if (StartsWithVowel(word))
 		return "an";
 	else return "a";
+}
+
+string ModuleNarration::NarrateEvent(Event * ev)
+{
+
+	vector<Event::Sentence*> sentences = ev->sentences;
+	vector<int> sentences_done;
+	string ret;
+	
+	for (auto it = sentences.begin(); it != sentences.end(); ++it)
+	{
+		Event::Sentence* curr = (*it);
+
+		if (curr->mandatory == true)
+		{
+			sentences_done.push_back(curr->id);
+			//Do
+		}
+		else if (GetBoolByRandom(MEDIUM_CHANCE) && curr->goes_after == -1 ||
+			(std::find(sentences_done.begin(), sentences_done.end(), curr->goes_after) != sentences_done.end())) //CHECK IF THE PREV WAS DONE
+		{
+			sentences_done.push_back(curr->id);
+			//Do
+		}
+
+	}
+
+	return string();
+}
+
+string ModuleNarration::DoSentence(Event::Sentence * s)
+{
+	// 1.AGAFO LINIA
+	// 2.TROBO ON COMENÇA PER '_'
+	// 3.AGAFO LA PARAULA SENCERA
+	// 4.REEMPLAZO UNA PARAULA DE LA POOL PER LA PARAULA
+	// 5.REPETIR HASTA QUE NO HI HAGI '_'
+	// 6.RETURN
+
+	
+
+	return string();
 }

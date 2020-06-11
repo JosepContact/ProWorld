@@ -1,5 +1,6 @@
 #include "ModuleGraphics.h"
 #include "App.h"
+#include "Event.h"
 
 #if defined(IMGUI_IMPL_OPENGL_LOADER_GL3W)
 #include <GL/gl3w.h>    // Initialize with gl3wInit()
@@ -197,6 +198,16 @@ update_status ModuleGraphics::Update()
 			}
 			
 			
+			ImGui::End();
+		}
+
+		if (show_world == true) {
+			ImGui::Begin("STORY");
+			vector<Event*> story = app->story->GetStory();
+			for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
+			{
+				ImGui::Text(app->narration->NarrateEvent(*it).c_str());
+			}
 			ImGui::End();
 		}
 

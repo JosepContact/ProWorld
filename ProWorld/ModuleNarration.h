@@ -7,6 +7,9 @@
 #include "Character.h"
 using namespace std;
 
+class Event;
+struct Event::Sentence;
+
 class ModuleNarration : public Module
 {
 public:
@@ -40,7 +43,8 @@ private:
 	bool StartsWithVowel(string word);
 public:
 	string GetAorAn(string word);
-	
+	string NarrateEvent(Event* ev);
+	string DoSentence(Event::Sentence* s);
 };
 
 #endif // !MODULENARRATION_H

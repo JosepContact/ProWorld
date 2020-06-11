@@ -64,3 +64,13 @@ WordPool * EventManager::CreateWordPool(pugi::xml_node node)
 
 	return word_pool;
 }
+
+std::vector<Event*> EventManager::GetAllEvents()
+{
+	return event_vector;
+}
+
+std::vector<WordPool*> EventManager::GetWordPools()
+{
+	return word_pools;
+}

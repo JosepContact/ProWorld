@@ -27,9 +27,12 @@ public:
 
 
 private:
-	std::vector<Event*> story_queue;
 	std::vector<Event*> event_vector;
 	std::vector<WordPool*> word_pools;
+
+public:
+	std::vector<Event*> GetAllEvents();
+	std::vector<WordPool*> GetWordPools();
 };
 
 struct WordPool {

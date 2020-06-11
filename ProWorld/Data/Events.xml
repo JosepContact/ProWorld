@@ -8,6 +8,9 @@
 		<Type value = "0"/> <!--OrdinaryWorld-->
 		<Characters>
 			<Character>
+				<Moral value = "3"/> <!--Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
 				<CharacterType value = "0"/> <!--Hero-->
 			</Character>
 		</Characters>

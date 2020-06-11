@@ -14,15 +14,17 @@ public:
 
 	enum MoralAlignment
 	{
-		MGood = 1,
+		MGood = 0,
 		MNeutral,
 		MEvil,
+		MUnknown
 	};
 	enum AttitudeAlignment
 	{
-		ALawful = 1,
+		ALawful = 0,
 		ANeutral,
 		AChaotic,
+		AUnknown
 	};
 	enum Archetype
 	{
@@ -42,6 +44,7 @@ public:
 		Maiden,
 		Mystic,
 		Martyr,
+		ArcUnknown
 	};
 
 	enum Gender
@@ -56,9 +59,9 @@ public:
 	{
 		Hero,
 		Secondary,
-		Neutral,
 		MainVillain,
-		SecondaryVillain
+		SecondaryVillain,
+		CTNeutral
 	};
 
 	Character();
