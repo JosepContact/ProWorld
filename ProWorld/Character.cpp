@@ -50,6 +50,14 @@ Character::Character()
 	// if the character is evil, shadow will be set to true later.
 }
 
+Character::Character(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type)
+{
+	this->moral = moral;
+	this->attitude = attitude;
+	this->archetype = archetype;
+	this->character_type = type;
+}
+
 Character::~Character()
 {
 	goal = "";
@@ -244,6 +252,6 @@ void Character::GenerateRace()
 {
 	race = origin->GetRaces()[GetRandomNumber(0, origin->GetRaces().size() - 1)];
 
-	archetype = static_cast<Character::Archetype>(race->GetArchetypes()[GetRandomNumber(0, race->GetArchetypes().size() - 1)]);
+	archetype = static_cast<Character::Archetype>(race->GetArchetypes()[GetRandomNumber(0, race->GetArchetypes().size()-1)]);
 
 }

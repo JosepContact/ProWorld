@@ -5,6 +5,8 @@
 #include "Adjective.h"
 #include "Climate.h"
 #include "Race.h"
+#include "ModuleStory.h"
+#include "EventManager.h"
 
 #include <algorithm>
 
@@ -21,6 +23,10 @@ ModuleConceptManager::~ModuleConceptManager()
 	adjective_vector.clear();
 	climate_vector.clear();
 	race_vector.clear();
+
+	for (vector<RaceAdjective*>::iterator it = adjectiverace_vector.begin(); it != adjectiverace_vector.end(); ++it)
+		RELEASE(*it);
+
 }
 
 bool ModuleConceptManager::Start()
@@ -112,6 +118,24 @@ bool ModuleConceptManager::Start()
 		}
 	}
 
+	//-- Adjectives Races ----
+	pugi::xml_document	adjraces_file;
+	pugi::xml_node		adjraces;
+	adjraces = app->filesystem->LoadXML(DATA_ADJECTIVERACES_XML_PATH, ADJECTIVESRACES, adjraces_file);
+
+	if (!adjraces.empty())
+	{
+		LOG("AdjectivesRace.xml loaded correctly\n");
+
+		for (pugi::xml_node node_adjra = adjraces.child("Name"); node_adjra; node_adjra = node_adjra.next_sibling("Name"))
+		{
+			RaceAdjective* race_adjective = new RaceAdjective();
+			race_adjective->Adjective = node_adjra.attribute("value").as_string();
+			race_adjective->id = node_adjra.attribute("n").as_int();
+			adjectiverace_vector.push_back(race_adjective);
+		}
+	}
+
 	//-- Races ----
 	pugi::xml_document	race_file;
 	pugi::xml_node		races;
@@ -131,6 +155,13 @@ bool ModuleConceptManager::Start()
 			race->SetInSea(node_ra.child("inSea").attribute("value").as_bool());
 			race->SetSize((Race::SizeType)node_ra.child("Size").attribute("value").as_int());
 
+			pugi::xml_node adj_n_nodes = node_ra.child("Adjectives");
+			
+			for (pugi::xml_node adj = adj_n_nodes.child("Adj"); adj; adj = adj.next_sibling("Adj"))
+			{
+				race->AddAdjective(adjectiverace_vector[adj.attribute("val").as_int()]);
+			}
+			
 			pugi::xml_node cli_n_nodes = node_ra.child("Climates");
 
 			for (pugi::xml_node rac = cli_n_nodes.child("Adj"); rac; rac = rac.next_sibling("Adj"))
@@ -156,7 +187,11 @@ bool ModuleConceptManager::Start()
 
 	if (!words.empty())
 	{
-		int a = 2;
+		LOG("WordPool.xml loaded correctly\n");
+
+		for (pugi::xml_node node_wo = words.child("Word"); node_wo; node_wo = node_wo.next_sibling("Word"))
+			WordPool* word_pool = app->story->GetManager()->CreateWordPool(node_wo);
+
 	}
 
 	//-- Events ----
@@ -166,7 +201,14 @@ bool ModuleConceptManager::Start()
 
 	if (!events.empty())
 	{
-		int a = 2;
+		LOG("Events.xml loaded correctly\n");
+
+		for (pugi::xml_node node_ev = events.child("Event"); node_ev; node_ev = node_ev.next_sibling("Event"))
+		{
+			Event* tmp_event = app->story->GetManager()->CreateEvent(node_ev.child("Name").attribute("value").as_string(), 
+				node_ev.child("Id").attribute("value").as_uint(), node_ev);	
+		}
+
 	}
 
 	return true;

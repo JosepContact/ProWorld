@@ -11,26 +11,22 @@
 class Character
 {
 public:
-	Character();
-	virtual ~Character();
 
 	enum MoralAlignment
 	{
-		MGood,
+		MGood = 1,
 		MNeutral,
 		MEvil,
-		MUnknown
 	};
 	enum AttitudeAlignment
 	{
-		ALawful,
+		ALawful = 1,
 		ANeutral,
 		AChaotic,
-		AUnknown
 	};
 	enum Archetype
 	{
-		Busisnessman,
+		Busisnessman = 0,
 		Protector,
 		Recluse,
 		Fool,
@@ -46,7 +42,6 @@ public:
 		Maiden,
 		Mystic,
 		Martyr,
-		ARCUnknown
 	};
 
 	enum Gender
@@ -66,6 +61,10 @@ public:
 		SecondaryVillain
 	};
 
+	Character();
+	Character(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type);
+	virtual ~Character();
+
 private:
 	bool shadow;
 	MoralAlignment moral;
@@ -82,7 +81,7 @@ private:
 
 	
 public:
-
+	CharacterType character_type;
 
 
 public:

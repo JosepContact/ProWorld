@@ -13,6 +13,7 @@ App::App()
 	world = new ModuleWorld;
 	narration = new ModuleNarration;
 	graphics = new ModuleGraphics;
+	story = new ModuleStory;
 
 	// ----- Add Modules to World ---
 	listmodules.push_back(filesystem);

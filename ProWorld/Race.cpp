@@ -83,6 +83,16 @@ void Race::AddClimate(Climate::ClimatesType climate)
 	climates.push_back(climate);
 }
 
+std::vector<RaceAdjective*> Race::GetAdjectives()
+{
+	return adjectives;
+}
+
+void Race::AddAdjective(RaceAdjective* adj)
+{
+	adjectives.push_back(adj);
+}
+
 
 bool Race::CompareClimate(Climate::ClimatesType climate)
 {

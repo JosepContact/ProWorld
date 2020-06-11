@@ -6,6 +6,8 @@
 #include <vector>
 #include "Climate.h"
 
+class RaceAdjective;
+
 class Race  : public Concept
 {
 public:
@@ -27,6 +29,7 @@ public:
 
 private:
 	std::vector<Climate::ClimatesType> climates;
+	std::vector<RaceAdjective*> adjectives;
 
 	bool isCoastal;
 	bool inSea;
@@ -50,10 +53,19 @@ public:
 	std::vector<Climate::ClimatesType> GetClimates();
 	void AddClimate(Climate::ClimatesType climate);
 
+	std::vector<RaceAdjective*> GetAdjectives();
+	void AddAdjective(RaceAdjective* adj);
+
 	bool CompareClimate(Climate::ClimatesType climate);
 
 	void AddArchetype(int arch);
 	std::vector<int> GetArchetypes() const;
+};
+
+class RaceAdjective {
+public:
+	std::string Adjective;
+	int id;
 };
 
 #endif // !RACE_H

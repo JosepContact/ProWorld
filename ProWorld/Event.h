@@ -4,6 +4,7 @@
 #define EVENT_H
 
 #include "Character.h"
+#include "Globals.h"
 
 #include <vector>
 
@@ -34,8 +35,19 @@ public:
 		Return
 	};
 
+	struct Sentence
+	{
+		int id = 0;
+		bool mandatory = true;
+		int goes_after = -1;
+		std::string text;
+	};
+
 	Event();
 	virtual ~Event();
+
+	std::string event_name;
+	uint id;
 
 	std::vector<Character*> characters;
 	int act = -1;
@@ -46,7 +58,12 @@ public:
 	Character* reqs[3];
 	int min_characters = 0;
 
+	std::vector<Sentence*> sentences;
+
 	//When verb(location()) the location(), Hero() verb(sound) ; some; Adjective(sound); place() sound() place(); that verb(feeling()) feeling() in Hero->Pronoun().
+	public:
+	void AddCharacter(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type);
+	void FillSentence(uint id, bool mandatory, int goes_after, std::string sentence);
 
 };
 

@@ -10,6 +10,30 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="17"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -45,6 +69,26 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="23"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -73,6 +117,22 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="23"/>
+			<Adj val="25"/>			
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -102,6 +162,30 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="2"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="17"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -134,7 +218,26 @@
 		<inSea value ="0"/>
 		<Size value ="1"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="3"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>			
 		</Adjectives>
 		<Climates>
 			<Adj val="2"/>
@@ -160,6 +263,25 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="24"/>
+			<Adj val="25"/>			
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -187,7 +309,24 @@
 		<inSea value ="0"/>
 		<Size value ="1"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="3"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="2"/>
@@ -215,7 +354,23 @@
 		<inSea value ="0"/>
 		<Size value ="1"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="17"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -247,7 +402,23 @@
 		<inSea value ="0"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>			
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -277,6 +448,26 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="2"/>
+			<Adj val="4"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -301,7 +492,19 @@
 		<inSea value ="0"/>
 		<Size value ="1"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="3"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -329,7 +532,27 @@
 		<inSea value ="0"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="17"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="23"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -362,7 +585,24 @@
 		<inSea value ="0"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -389,7 +629,24 @@
 		<inSea value ="1"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -419,7 +676,25 @@
 		<inSea value ="0"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="6"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="17"/>
+			<Adj val="18"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="23"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -448,7 +723,27 @@
 		<inSea value ="0"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="8"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="12"/>
+			<Adj val="13"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="17"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="22"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="26"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
@@ -478,6 +773,23 @@
 		<Size value ="3"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="4"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>				
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
@@ -506,6 +818,24 @@
 		<Size value ="2"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="3"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="22"/>
+			<Adj val="24"/>
+			<Adj val="25"/>	
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
@@ -533,7 +863,22 @@
 		<inSea value ="0"/>
 		<Size value ="2"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="4"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="25"/>			
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -563,6 +908,25 @@
 		<Size value ="3"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="3"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="21"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="0"/>
@@ -589,6 +953,24 @@
 		<Size value ="3"/>
 		<Adjectives>
 			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="3"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="11"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>			
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>
@@ -614,7 +996,24 @@
 		<inSea value ="0"/>
 		<Size value ="4"/>
 		<Adjectives>
-			<Adj val="0"/>
+			<Adj val="1"/>
+			<Adj val="3"/>
+			<Adj val="5"/>
+			<Adj val="6"/>
+			<Adj val="7"/>
+			<Adj val="9"/>
+			<Adj val="10"/>
+			<Adj val="12"/>
+			<Adj val="14"/>
+			<Adj val="15"/>
+			<Adj val="16"/>
+			<Adj val="19"/>
+			<Adj val="20"/>
+			<Adj val="22"/>
+			<Adj val="23"/>
+			<Adj val="24"/>
+			<Adj val="25"/>
+			<Adj val="27"/>
 		</Adjectives>
 		<Climates>
 			<Adj val="1"/>

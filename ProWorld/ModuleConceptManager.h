@@ -25,6 +25,7 @@
 #define RACE "Races"
 #define EVENT "Events"
 #define WORDPOOL "Words"
+#define ADJECTIVESRACES "AdjectivesRaces"
 
 class ModuleConceptManager : public Module
 {
@@ -47,7 +48,6 @@ private:
 
 
 private:
-
 	std::list<Concept*> concept_list;
 
 	std::vector<Location*> location_vector;
@@ -56,6 +56,7 @@ private:
 	std::vector<Race*> race_vector;
 	
 	unsigned int curr_id = 0;
+
 public:
 
 	std::vector<Location*> GetLocationVector()const;
@@ -71,6 +72,9 @@ public:
 
 private:
 	std::vector<Adjective*> GetAdjectivesToIterateByPriority(std::vector<Adjective*>, int key);
+
+public:
+	std::vector<RaceAdjective*> adjectiverace_vector;
 };
 
 #endif // __MODULECONCEPTMANAGER_H__

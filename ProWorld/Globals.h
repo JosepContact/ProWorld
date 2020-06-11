@@ -40,6 +40,7 @@ typedef unsigned int uint;
 #define DATA_RACES_XML_PATH "Data/Races.xml"
 #define DATA_EVENTS_XML_PATH "Data/Events.xml"
 #define DATA_WORDS_XML_PATH "Data/WordPool.xml"
+#define DATA_ADJECTIVERACES_XML_PATH "Data/AdjectivesRaces.xml"
 
 #endif //GLOBALS_H
 

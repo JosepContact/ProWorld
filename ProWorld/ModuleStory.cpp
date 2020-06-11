@@ -13,15 +13,20 @@ ModuleStory::~ModuleStory()
 
 bool ModuleStory::Start()
 {
-	return false;
+	return true;
 }
 
 bool ModuleStory::CleanUp()
 {
-	return false;
+	return true;
 }
 
 update_status ModuleStory::Update()
 {
-	return update_status();
+	return UPDATE_CONTINUE;
+}
+
+EventManager * ModuleStory::GetManager() const
+{
+	return e_manager;
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<AdjectivesRaces>
+		<Name n="0" value = "tall"/>
+		<Name n="1" value = "huge"/>
+		<Name n="2" value = "short"/>
+		<Name n="3" value = "fat"/>
+		<Name n="4" value = "slim"/>
+		<Name n="5" value = "fit"/>
+		<Name n="6" value = "smart"/>
+		<Name n="7" value = "stinky"/>
+		<Name n="8" value = "beautiful"/>
+		<Name n="9" value = "ambitious"/>
+		<Name n="10" value = "brave"/>
+		<Name n="11" value = "shy"/>
+		<Name n="12" value = "clever"/>
+		<Name n="13" value = "charming"/>
+		<Name n="14" value = "adventurous"/>
+		<Name n="15" value = "determined"/>
+		<Name n="16" value = "hard-working"/>
+		<Name n="17" value = "loving"/>
+		<Name n="18" value = "organized"/>
+		<Name n="19" value = "passionate"/>
+		<Name n="20" value = "quiet"/>
+		<Name n="21" value = "reserved"/>
+		<Name n="22" value = "strong"/>
+		<Name n="23" value = "thoughtful"/>
+		<Name n="24" value = "grumpy"/>
+		<Name n="25" value = "lonely"/>
+		<Name n="26" value = "pretty"/>
+		<Name n="27" value = "honest"/>
+		<Name n="28" value = "simple"/>
+</AdjectivesRaces>

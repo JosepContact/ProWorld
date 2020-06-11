@@ -14,4 +14,229 @@
 			<n val="in this story"/>
 		</Pool>
 	</Word>
+	<Word>
+		<Name value = "_adjectiveworld"/> 
+		<Pool>
+			<n val="cruel"/>
+			<n val="forgotten"/>
+			<n val="ancient"/>
+			<n val="peaceful"/>
+			<n val="at war"/>
+			<n val="chaotic"/>
+			<n val="mysterious"/>
+			<n val="dark"/>
+			<n val="full of wonder"/>
+			<n val="full of magic"/>
+			<n val="of epic tales"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_worlddesc"/> 
+		<Pool>
+			<n val="where magic was forbidden"/>
+			<n val="where _skycreatureplural roamed the skies"/>
+			<n val="where _seacreatureplural roamed the seas"/>
+			<n val="where magic was believed to be extinct"/>
+			<n val="where people of many races coexisted"/>
+			<n val="a land abandoned by the gods"/>
+			<n val="a land reigned by ambition and corruption"/>
+			<n val="a land reigned by ambition and corruption"/>
+			<n val="a land full of _evilfeeling"/>
+			<n val="where mighty warriors and powerful mages had yet to be seen"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_townvillageadj"/> 
+		<Pool>
+			<n val="small"/>
+			<n val="friendly"/>
+			<n val="peaceful"/>
+			<n val="poor"/>
+			<n val="silent"/>
+			<n val="old"/>
+			<n val="beautiful"/>
+			<n val="calm"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_heroroigindesc"/> 
+		<Pool>
+			<n val="a _heroorigintype full of _badpeople"/>
+			<n val="a _heroorigintype next to the legendary lake of _fantasyname"/>
+			<n val="a _heroorigintype said to hide all sorts of mysteries"/>
+			<n val="a _heroorigintype ruled by a _npcadj _ruler"/>
+			<n val="a _heroorigintype of intriguing nature"/>
+			<n val="a citadel made of _buildmaterial"/>
+			<n val="a _heroorigintype where nothing ever happened"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_lifeadj"/> 
+		<Pool>
+			<n val="peaceful"/>
+			<n val="simple"/>
+			<n val="honest"/>
+			<n val="not luxurious but honest"/>
+			<n val="lonely"/>
+			<n val="happy"/>
+			<n val="not very honest"/>
+			<n val="rough"/>
+			<n val="poor"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_job"/> 
+		<Pool>
+			<n val="blacksmith"/>
+			<n val="librarian"/>
+			<n val="locksmith"/>
+			<n val="soldier"/>
+			<n val="scholar"/>
+			<n val="teacher"/>
+			<n val="farmer"/>
+			<n val="harvester"/>
+			<n val="magic apprentice"/>
+			<n val="butcher"/>
+			<n val="baker"/>
+			<n val="weaver"/>
+			<n val="taxcollector"/>
+			<n val="merchant"/>
+			<n val="carpenter"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_place"/> 
+		<Pool>
+			<n val="near the"/>
+			<n val="behind the"/>
+			<n val="next to the"/>
+			<n val="close to the"/>
+			<n val="in the"/>
+			<n val="right next to the"/>
+			<n val="beneath the"/>
+			<n val="south of the"/>
+			<n val="going west of the"/>
+			<n val="in a rented room next to the"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_joblocation"/> 
+		<Pool>
+			<n val="church"/>
+			<n val="chapel"/>
+			<n val="school"/>
+			<n val="dark alley"/>
+			<n val="avenue"/>
+			<n val="where _heropronoun was born"/>
+			<n val="armery"/>
+			<n val="barracks"/>
+			<n val="wall"/>
+			<n val="_heroorigintype 's well"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_skycreatureplural"/> 
+		<Pool>
+			<n val="dragons"/>
+			<n val="sphinxes"/>
+			<n val="griffins"/>
+			<n val="djinns"/>
+			<n val="harpies"/>
+			<n val="pegasuses"/>
+			<n val="wyverns"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_skycreature"/> 
+		<Pool>
+			<n val="dragon"/>
+			<n val="sphinx"/>
+			<n val="griffin"/>
+			<n val="djinn"/>
+			<n val="harpy"/>
+			<n val="pegasus"/>
+			<n val="wyvern"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_seacreatureplural"/> 
+		<Pool>
+			<n val="krakens"/>
+			<n val="leviathans"/>
+			<n val="mermaids"/>
+			<n val="sea dragons"/>
+			<n val="sea serpents"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_seacreature"/> 
+		<Pool>
+			<n val="kraken"/>
+			<n val="leviathan"/>
+			<n val="mermaid"/>
+			<n val="sea dragon"/>
+			<n val="sea serpent"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_evilfeeling"/> 
+		<Pool>
+			<n val="fear"/>
+			<n val="jealousy"/>
+			<n val="anger"/>
+			<n val="arrogance"/>
+			<n val="deception"/>
+			<n val="cruelty"/>
+			<n val="brutality"/>
+			<n val="corruption"/>
+			<n val="dark intentions"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_badpeople"/> 
+		<Pool>
+			<n val="criminals"/>
+			<n val="murderers"/>
+			<n val="thieves"/>
+			<n val="felon people"/>
+			<n val="convicts"/>
+			<n val="rogues"/>
+			<n val="despicable people"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_buildmaterial"/> 
+		<Pool>
+			<n val="wood"/>
+			<n val="marble"/>
+			<n val="stone"/>
+			<n val="granite"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_ruler"/> 
+		<Pool>
+			<n val="king"/>
+			<n val="queen"/>
+			<n val="duchess"/>
+			<n val="duke"/>
+			<n val="count"/>
+			<n val="countess"/>
+			<n val="ruler"/>
+			<n val="commander"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_npcadj"/> 
+		<Pool>
+			<n val="ambitious"/>
+			<n val="humble"/>
+			<n val="evil"/>
+			<n val="smart"/>
+			<n val="charming"/>
+			<n val="determined"/>
+			<n val="determined"/>
+			<n val="commander"/>
+		</Pool>
+	</Word>
 </Words>

@@ -1,8 +1,9 @@
 #ifndef MODULESTORY_H
-#define MODULEGSTORY_H
+#define MODULESTORY_H
 
 #include "Module.h"
-#include "EventManager.h"
+
+class EventManager;
 
 
 class ModuleStory : public Module {
@@ -23,6 +24,8 @@ public:
 private:
 	EventManager* e_manager = nullptr;
 
+public:
+	EventManager* GetManager() const;
 };
 
 #endif //MODUESTORY_H
