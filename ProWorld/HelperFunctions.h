@@ -16,6 +16,7 @@
 #include <algorithm>
 #include <stdlib.h>
 
+
 inline std::string toLowercase(std::string string);
 
 inline std::string toUppercase(std::string string);

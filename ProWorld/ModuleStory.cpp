@@ -47,14 +47,6 @@ void ModuleStory::CreateStory()
 			story_queue.push_back(*it);
 		}
 	}
-
-
-	//ACT 2
-
-	//ACT3
-
-
-
 }
 
 EventManager * ModuleStory::GetManager() const

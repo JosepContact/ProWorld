@@ -5,6 +5,7 @@
 #include "ModuleNameGenerator.h"
 #include "CharacterDesc.h"
 #include "Event.h"
+#include "EventManager.h"
 
 #include <vector>
 
@@ -536,6 +537,8 @@ string ModuleNarration::NarrateEvent(Event * ev)
 	vector<Event::Sentence*> sentences = ev->sentences;
 	vector<int> sentences_done;
 	string ret;
+
+	int jumpline = 0;
 	
 	for (auto it = sentences.begin(); it != sentences.end(); ++it)
 	{
@@ -545,17 +548,29 @@ string ModuleNarration::NarrateEvent(Event * ev)
 		{
 			sentences_done.push_back(curr->id);
 			//Do
+			ret+= DoSentence(curr);
 		}
-		else if (GetBoolByRandom(MEDIUM_CHANCE) && curr->goes_after == -1 ||
-			(std::find(sentences_done.begin(), sentences_done.end(), curr->goes_after) != sentences_done.end())) //CHECK IF THE PREV WAS DONE
+		else if (GetBoolByRandom(MEDIUM_CHANCE) && curr->goes_after == -1 || (std::find(sentences_done.begin(), sentences_done.end(), curr->goes_after) != sentences_done.end())) //CHECK IF THE PREV WAS DONE
 		{
 			sentences_done.push_back(curr->id);
 			//Do
+			ret+= DoSentence(curr);
 		}
 
 	}
 
-	return string();
+	int jl = 0, pos = 0;
+
+	for (auto it = ret.begin(); it != ret.end(); ++it, ++jl, ++pos)
+	{
+		if (jl > 80 && (*it) == ' ')
+		{
+			ret.insert(pos, "\n");
+			jl = 0;
+		}
+	}
+
+	return ret;
 }
 
 string ModuleNarration::DoSentence(Event::Sentence * s)
@@ -566,8 +581,48 @@ string ModuleNarration::DoSentence(Event::Sentence * s)
 	// 4.REEMPLAZO UNA PARAULA DE LA POOL PER LA PARAULA
 	// 5.REPETIR HASTA QUE NO HI HAGI '_'
 	// 6.RETURN
+	string str = s->text;
+	int count = 0;
 
-	
+	for (; count < str.size(); count++)
+	{
+		if (str[count] == '_')
+		{
+			str = SubstituteWords(str);
+			count = 0;
+		}
+	}
+	return str;
+}
 
-	return string();
+string ModuleNarration::GetLowBarWord(int lowb, string str)
+{
+
+	string ret;
+
+	for (;str[lowb] != ' ' && str[lowb] != ',' && str[lowb] != '.' && lowb < str.size(); lowb++)
+	{
+		ret += str[lowb];
+	}
+
+	return ret;
+}
+
+string ModuleNarration::SubstituteWords(string str)
+{
+	int lowb = 0, cut = 0; //counter to next lowbar & counter until end of lowbar
+
+	for (; lowb < str.size(); ++lowb)
+	{
+		if (str[lowb] == '_')
+		{
+			string ret = GetLowBarWord(lowb, str);
+			cut = ret.size();
+			std::vector<std::string> outcomes = app->story->GetManager()->GetOutcomesFromWord(ret);
+			string new_word = outcomes[GetRandomNumber(0, outcomes.size() - 1)];
+			str.replace(lowb, cut , new_word);
+			return str;
+		}
+	}
+	return str;
 }

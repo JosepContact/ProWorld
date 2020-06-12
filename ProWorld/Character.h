@@ -82,6 +82,8 @@ private:
 	std::string name;
 	Society* origin;
 
+	std::string pronoun;
+	std::string reflective_pronoun;
 	
 public:
 	CharacterType character_type;
@@ -109,6 +111,8 @@ public:
 	std::string GetName() const;
 	void SetSocietyOrigin(Society*);
 	Society* GetSocietyOrigin() const;
+	std::string GetPronoun() const;
+	std::string GetReflectivePronoun() const;
 
 
 	// ------------

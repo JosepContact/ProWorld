@@ -18,6 +18,8 @@
 #include "Society.h"
 #include "Character.h"
 #include <array>
+#include <string>
+#include <vector>
 
 class ModuleWorld : public Module
 {
@@ -47,7 +49,6 @@ public:
 	void DeleteWorld();
 private:
 	WorldType GenerateWorldType();
-	void SetWorldOverview();
 	void SetClimate();
 	void SetSky();
 	void SetGeography();
@@ -75,6 +76,17 @@ public:
 
 private:
 	Climate* wclimate = nullptr; // this pointer points at climate, it's not created and must not be destroyed
+
+public:
+	Character* GetHero() const;
+	std::vector<std::string> GetCharacterAdjectives(Character*);
+	std::string GetCharacterRace(Character*) const;
+	std::string GetCharacterName(Character*) const;
+	std::string GetCharacterOriginType(Character*) const;
+	std::string GetCharacterOriginName(Character*) const;
+	std::string GetCharacterPronoun(Character*) const;
+	std::string GetCharacterReflectivePronoun(Character*) const;
+
 };
 
 #endif // __MODULEWORLD_H__

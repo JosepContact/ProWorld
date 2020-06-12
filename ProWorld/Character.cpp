@@ -15,6 +15,8 @@ Character::Character()
 		if (GetBoolByRandom(LOW_CHANCE))
 		{
 			gender = Non_binary;
+			pronoun = "they";
+			reflective_pronoun = "them";
 			if (GetBoolByRandom(MEDIUM_CHANCE))
 				name = app->namegenerator->GenRegularFemaleCharName();
 			else name = app->namegenerator->GenRegularMaleCharName();
@@ -22,22 +24,30 @@ Character::Character()
 		else if (GetBoolByRandom(MEDIUM_CHANCE))
 		{
 			gender = Maletrans;
+			pronoun = "he";
+			reflective_pronoun = "him";
 			name = app->namegenerator->GenRegularMaleCharName();
 		}
 		else
 		{
 			gender = Femaletrans;
+			pronoun = "she";
+			reflective_pronoun = "her";
 			name = app->namegenerator->GenRegularFemaleCharName();
 		}
 	}
 	else if (GetBoolByRandom(MEDIUM_CHANCE))
 	{
 		gender = Male;
+		pronoun = "he";
+		reflective_pronoun = "him";
 		name = app->namegenerator->GenRegularMaleCharName();
 	}
 	else 
 		{
 		gender = Female;
+		pronoun = "she";
+		reflective_pronoun = "her";
 		name = app->namegenerator->GenRegularFemaleCharName();
 	}
 
@@ -162,6 +172,16 @@ void Character::SetSocietyOrigin(Society * soc)
 Society* Character::GetSocietyOrigin() const
 {
 	return origin;
+}
+
+std::string Character::GetPronoun() const
+{
+	return pronoun;
+}
+
+std::string Character::GetReflectivePronoun() const
+{
+	return reflective_pronoun;
 }
 
 void Character::GenerateName()

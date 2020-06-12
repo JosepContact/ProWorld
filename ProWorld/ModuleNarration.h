@@ -5,10 +5,11 @@
 
 #include "Module.h"
 #include "Character.h"
+#include "Event.h"
 using namespace std;
 
-class Event;
-struct Event::Sentence;
+//class Event;
+//struct Event::Sentence;
 
 class ModuleNarration : public Module
 {
@@ -45,6 +46,8 @@ public:
 	string GetAorAn(string word);
 	string NarrateEvent(Event* ev);
 	string DoSentence(Event::Sentence* s);
+	string GetLowBarWord(int lowbarpos, string str);
+	string SubstituteWords(string str);
 };
 
 #endif // !MODULENARRATION_H

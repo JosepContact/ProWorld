@@ -21,7 +21,7 @@
 			<n val="forgotten"/>
 			<n val="ancient"/>
 			<n val="peaceful"/>
-			<n val="at war"/>
+			<n val="belligerent"/>
 			<n val="chaotic"/>
 			<n val="mysterious"/>
 			<n val="dark"/>
@@ -38,10 +38,10 @@
 			<n val="where _seacreatureplural roamed the seas"/>
 			<n val="where magic was believed to be extinct"/>
 			<n val="where people of many races coexisted"/>
-			<n val="a land abandoned by the gods"/>
-			<n val="a land reigned by ambition and corruption"/>
-			<n val="a land reigned by ambition and corruption"/>
-			<n val="a land full of _evilfeeling"/>
+			<n val="in a land abandoned by the gods"/>
+			<n val="in a land reigned by ambition and corruption"/>
+			<n val="in a land reigned by ambition and corruption"/>
+			<n val="in a land full of _evilfeeling"/>
 			<n val="where mighty warriors and powerful mages had yet to be seen"/>
 		</Pool>
 	</Word>
@@ -59,7 +59,7 @@
 		</Pool>
 	</Word>
 	<Word>
-		<Name value = "_heroroigindesc"/> 
+		<Name value = "_heroorigindesc"/> 
 		<Pool>
 			<n val="a _heroorigintype full of _badpeople"/>
 			<n val="a _heroorigintype next to the legendary lake of _fantasyname"/>

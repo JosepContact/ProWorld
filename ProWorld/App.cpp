@@ -21,8 +21,9 @@ App::App()
 	listmodules.push_back(namegenerator);
 	listmodules.push_back(world);
 	listmodules.push_back(narration);
-	listmodules.push_back(graphics);
 	listmodules.push_back(story);
+	listmodules.push_back(graphics);
+	
 }
 
 

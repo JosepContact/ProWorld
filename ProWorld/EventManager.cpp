@@ -1,4 +1,7 @@
 #include "EventManager.h"
+#include "App.h"
+#include "ModuleWorld.h"
+#include "HelperFunctions.h"
 
 using namespace std;
 
@@ -73,4 +76,54 @@ std::vector<Event*> EventManager::GetAllEvents()
 std::vector<WordPool*> EventManager::GetWordPools()
 {
 	return word_pools;
+}
+
+std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
+{
+	for (auto it = word_pools.begin(); it != word_pools.end(); ++it)
+	{
+		if (word.compare((*it)->name) == 0)
+			return (*it)->outcomes;
+	}
+
+	vector<string> ret;
+	int EventId = -1;
+
+	auto it = WorldEventsTable.find(word);
+	if (it != WorldEventsTable.end()) {
+		EventId = it->second;
+	}
+
+	switch (EventId)
+	{
+	case EventManager::WETs::_heroraceadj:
+		return app->world->GetCharacterAdjectives(app->world->GetHero());
+		break;
+	case EventManager::WETs::_herorace:
+		ret.push_back(app->world->GetCharacterRace(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_heroname:
+		ret.push_back(app->world->GetCharacterName(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_heroorigintype:
+		ret.push_back(app->world->GetCharacterOriginType(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_herooriginname:
+		ret.push_back(app->world->GetCharacterOriginName(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_heropronoun:
+		ret.push_back(app->world->GetCharacterPronoun(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_heroadj:
+		break;
+	case EventManager::WETs::_fantasyname:
+		ret.push_back(app->namegenerator->GenerateClassicName());
+		break;
+	case EventManager::WETs::_heroreflectivepronoun:
+		ret.push_back(app->world->GetCharacterReflectivePronoun(app->world->GetHero()));
+		break;
+	}
+
+	
+	return ret;
 }

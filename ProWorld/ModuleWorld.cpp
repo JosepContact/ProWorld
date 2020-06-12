@@ -358,6 +358,51 @@ Climate * ModuleWorld::GetClimate() const
 	return wclimate;
 }
 
+Character * ModuleWorld::GetHero() const
+{
+	return wcharacters[0];
+}
+
+std::vector<string> ModuleWorld::GetCharacterAdjectives(Character* cha)
+{
+	std::vector<string> ret;
+	vector<RaceAdjective*> adjs = cha->GetRace()->GetAdjectives();
+	for (vector<RaceAdjective*>::iterator it = adjs.begin(); it != adjs.end(); ++it)
+		ret.push_back((*it)->Adjective);
+
+	return ret;
+}
+
+std::string ModuleWorld::GetCharacterRace(Character* cha) const
+{
+	return cha->GetRace()->GetWord();
+}
+
+std::string ModuleWorld::GetCharacterName(Character*cha) const
+{
+	return cha->GetName();
+}
+
+std::string ModuleWorld::GetCharacterOriginType(Character* cha) const
+{
+	return cha->GetSocietyOrigin()->GetLocationPtr()->GetWord();
+}
+
+std::string ModuleWorld::GetCharacterOriginName(Character* cha) const
+{
+	return cha->GetSocietyOrigin()->GetName();
+}
+
+std::string ModuleWorld::GetCharacterPronoun(Character* cha) const
+{
+	return cha->GetPronoun();
+}
+
+std::string ModuleWorld::GetCharacterReflectivePronoun(Character* cha) const
+{
+	return cha->GetReflectivePronoun();
+}
+
 
 void ModuleWorld::SetSociety(Society * soc, Geography::CellLand &cell)
 {

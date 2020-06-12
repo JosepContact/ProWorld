@@ -37,6 +37,9 @@ public:
 
 	bool show_world = false;
 	bool create_world = false;
+
+private:
+	std::string story_string;
 };
 
 #endif // !MODULEGRAPHICS

@@ -15,16 +15,16 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="_time, in _anora _adjectiveworld world" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="_time, in a _adjectiveworld world" />
 			<Sentence N="1" Mandatory="0" Follows="0"  val=", _worlddesc"/>
-			<Sentence N="2" Mandatory="1" Follows="-1" val=". _anora _heroraceadj _herorace by the name of _heroname lived in"/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=", a _heroraceadj _herorace by the name of _heroname lived in"/>
 			<Sentence N="3" Mandatory="0" Follows="2"  val=" the _townvillageadj"/>
 			<Sentence N="4" Mandatory="1" Follows="-1" val="  _heroorigintype of _herooriginname"/>
-			<Sentence N="5" Mandatory="0" Follows="4"  val="  , _heroorigindesc"/>
-			<Sentence N="6" Mandatory="0" Follows="-1" val=". People around _heroname called _heropronoun _heroadj"/>
-			<Sentence N="7" Mandatory="0" Follows="6"  val=" and heroadj"/>
+			<Sentence N="5" Mandatory="0" Follows="4"  val=", _heroorigindesc"/>
+			<Sentence N="6" Mandatory="0" Follows="-1" val=". People around _heroname called _heroreflectivepronoun _heroraceadj"/>
+			<Sentence N="7" Mandatory="0" Follows="6"  val=" and _heroraceadj"/>
 			<Sentence N="8" Mandatory="1" Follows="-1" val=". He lived a _lifeadj life as a _job"/>
-			<Sentence N="9" Mandatory="0" Follows="8"  val=" _place _joblocation"/>
+			<Sentence N="9" Mandatory="0" Follows="8"  val=" _place _joblocation."/>
 		</Text>
 	</Event>
 </Events>

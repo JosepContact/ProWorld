@@ -99,6 +99,13 @@ bool ModuleGraphics::Start()
 	if(glsl_version!= nullptr)
 	ImGui_ImplOpenGL3_Init(glsl_version);
 
+
+	vector<Event*> story = app->story->GetStory();
+	for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
+	{
+		story_string = app->narration->NarrateEvent(*it);
+	}
+
 	return true;
 }
 
@@ -203,11 +210,7 @@ update_status ModuleGraphics::Update()
 
 		if (show_world == true) {
 			ImGui::Begin("STORY");
-			vector<Event*> story = app->story->GetStory();
-			for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
-			{
-				ImGui::Text(app->narration->NarrateEvent(*it).c_str());
-			}
+			ImGui::Text(story_string.c_str());
 			ImGui::End();
 		}
 

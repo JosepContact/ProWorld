@@ -49,4 +49,3 @@ std::string AdjectiveandNameOutput(bool isCapitalized, bool allplural, Adjective
 
 	return ret;
 }
-
