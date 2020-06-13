@@ -48,6 +48,9 @@ public:
 	string DoSentence(Event::Sentence* s);
 	string GetLowBarWord(int lowbarpos, string str);
 	string SubstituteWords(string str);
+	string ReplaceAorAn(string str);
+	string Capitalize(string str);
+	string AddJumplines(string str);
 };
 
 #endif // !MODULENARRATION_H

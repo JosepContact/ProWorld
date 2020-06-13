@@ -101,9 +101,22 @@ bool ModuleGraphics::Start()
 
 
 	vector<Event*> story = app->story->GetStory();
+
 	for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
 	{
-		story_string = app->narration->NarrateEvent(*it);
+		story_string += app->narration->NarrateEvent(*it);
+	}
+
+	int jl = 0;
+
+	for (int count = 0; count < story_string.size(); ++count, ++jl)
+	{
+		if (jl > 80 && story_string[count] == ' ')
+		{
+			story_string.insert(count, "\n");
+			count += 2;
+			jl = 0;
+		}
 	}
 
 	return true;

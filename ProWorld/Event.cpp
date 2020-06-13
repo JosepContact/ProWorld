@@ -15,9 +15,10 @@ Event::~Event()
 		RELEASE(*it);
 }
 
-void Event::AddCharacter(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type)
+void Event::AddCharacter(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type, 
+	 int str, int intel, int dex, int charisma)
 {
-	Character* cha = new Character(moral, attitude, archetype, type);
+	Character* cha = new Character(moral, attitude, archetype, type, str, intel, dex, charisma);
 
 	characters.push_back(cha);
 }

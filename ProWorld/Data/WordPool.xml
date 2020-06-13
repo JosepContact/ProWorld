@@ -1,6 +1,49 @@
 <?xml version="1.0"?>
 
 <Words>
+<Word>
+		<Name value = "_weapon"/> 
+		<Pool>
+			<n val="axe"/>
+			<n val="sword"/>
+			<n val="rapier"/>
+			<n val="spear"/>
+			<n val="mace"/>
+			<n val="warhammer"/>
+			<n val="sword and shield"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_secondaryinteracthobby"/> 
+		<Pool>
+			<n val="would _timecasuality _makefun ^_heroname for that"/>
+			<n val="would join ^_heroname"/>
+			<n val="would praise ^_heroname for that"/>
+			<n val="would observe ^_heroname closely"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_relationship"/> 
+		<Pool>
+			<n val="best friend"/>
+			<n val="boss"/>
+			<n val="sibling"/>
+			<n val="drinking partner"/>
+			<n val="workmate"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_setfightsyle"/> 
+		<Pool>
+			<n val="enhancing _heroposessivepronoun _weapon skills"/>
+			<n val="fighting with _heroposessivepronoun _weapon"/>
+			<n val="learning to use the _weapon"/>
+			<n val="learning how to fight with_heroposessivepronoun fists"/>
+			<n val="practicing with the _weapon"/>
+			<n val="practicing one on one fighting with the _weapon"/>
+			<n val="practicing fighting with _heroposessivepronoun bare hands"/>
+		</Pool>
+	</Word>
 	<Word>
 		<Name value = "_time"/> 
 		<Pool>
@@ -12,6 +55,68 @@
 			<n val="legend says"/>
 			<n val="according to tales from ancient times"/>
 			<n val="in this story"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_strengthpasstime"/> 
+		<Pool>
+			<n val="doing sport"/>
+			<n val="lifting weights"/>
+			<n val="training"/>
+			<n val="running"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_liked"/> 
+		<Pool>
+			<n val="liked"/>
+			<n val="enjoyed"/>
+			<n val="loved"/>
+			<n val="really liked"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_timecasuality"/> 
+		<Pool>
+			<n val="usually"/>
+			<n val="sometimes"/>
+			<n val="often"/>
+			<n val="now and then"/>
+			<n val="always"/>
+			<n val="regularly"/>
+			<n val="at times"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_makefun"/> 
+		<Pool>
+			<n val="make fun of"/>
+			<n val="laugh at"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_timecasualityhero"/> 
+		<Pool>
+			<n val="usually"/>
+			<n val="sometimes"/>
+			<n val="often"/>
+			<n val="now and then"/>
+			<n val="whenever _heropronoun had some free _freetime"/>
+			<n val="every morning"/>
+			<n val="every night"/>
+			<n val="at times"/>
+			<n val="whenever _heropronoun would feel bored"/>
+			<n val="whenever _heropronoun would have nothing to do"/>
+			<n val="whenever _heropronoun would have some free _freetime"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_freetime"/> 
+		<Pool>
+			<n val="free time"/>
+			<n val="time to kill"/>
+			<n val="spare time"/>
+			<n val="leisure time"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -27,7 +132,7 @@
 			<n val="dark"/>
 			<n val="full of wonder"/>
 			<n val="full of magic"/>
-			<n val="of epic tales"/>
+			<n val="full of epic tales"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -62,9 +167,9 @@
 		<Name value = "_heroorigindesc"/> 
 		<Pool>
 			<n val="a _heroorigintype full of _badpeople"/>
-			<n val="a _heroorigintype next to the legendary lake of _fantasyname"/>
+			<n val="a _heroorigintype next to the legendary lake of ^_fantasyname"/>
 			<n val="a _heroorigintype said to hide all sorts of mysteries"/>
-			<n val="a _heroorigintype ruled by a _npcadj _ruler"/>
+			<n val="a _heroorigintype ruled by *a _npcadj _ruler"/>
 			<n val="a _heroorigintype of intriguing nature"/>
 			<n val="a citadel made of _buildmaterial"/>
 			<n val="a _heroorigintype where nothing ever happened"/>
@@ -77,7 +182,7 @@
 			<n val="simple"/>
 			<n val="honest"/>
 			<n val="not luxurious but honest"/>
-			<n val="lonely"/>
+			<n val="unhappy"/>
 			<n val="happy"/>
 			<n val="not very honest"/>
 			<n val="rough"/>
@@ -107,30 +212,30 @@
 	<Word>
 		<Name value = "_place"/> 
 		<Pool>
-			<n val="near the"/>
-			<n val="behind the"/>
-			<n val="next to the"/>
-			<n val="close to the"/>
+			<n val="near"/>
+			<n val="behind"/>
+			<n val="next"/>
+			<n val="close"/>
 			<n val="in the"/>
-			<n val="right next to the"/>
-			<n val="beneath the"/>
-			<n val="south of the"/>
-			<n val="going west of the"/>
-			<n val="in a rented room next to the"/>
+			<n val="right next"/>
+			<n val="beneath"/>
+			<n val="south of"/>
+			<n val="going west of"/>
+			<n val="in a rented room next"/>
 		</Pool>
 	</Word>
 	<Word>
 		<Name value = "_joblocation"/> 
 		<Pool>
-			<n val="church"/>
-			<n val="chapel"/>
-			<n val="school"/>
-			<n val="dark alley"/>
-			<n val="avenue"/>
-			<n val="where _heropronoun was born"/>
-			<n val="armery"/>
-			<n val="barracks"/>
-			<n val="wall"/>
+			<n val="the church"/>
+			<n val="the chapel"/>
+			<n val="the school"/>
+			<n val="the dark alley"/>
+			<n val="the avenue"/>
+			<n val="the where _heropronoun was born"/>
+			<n val="the armery"/>
+			<n val="the barracks"/>
+			<n val="the wall"/>
 			<n val="_heroorigintype 's well"/>
 		</Pool>
 	</Word>
@@ -237,6 +342,18 @@
 			<n val="determined"/>
 			<n val="determined"/>
 			<n val="commander"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_familymember"/> 
+		<Pool>
+			<n val="_heroposessivepronoun brother"/>
+			<n val="_heroposessivepronoun family"/>
+			<n val="_heroposessivepronoun husband"/>
+			<n val="_heroposessivepronoun workmates"/>
+			<n val="_heroposessivepronoun roommate"/>
+			<n val="_heroposessivepronoun husband"/>
+			<n val="_heroposessivepronoun wife"/>
 		</Pool>
 	</Word>
 </Words>

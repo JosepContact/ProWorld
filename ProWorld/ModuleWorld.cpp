@@ -330,9 +330,11 @@ void ModuleWorld::CreateCharacters()
 		character->GenerateName();
 		character->GenerateRace();
 		if (character->GetMorality() == Character::MEvil)
+		{
 			character->SetShadow(true);
-
-		character->character_type = Character::CharacterType::Secondary;
+			character->character_type = Character::CharacterType::SecondaryVillain;
+		} else
+			character->character_type = Character::CharacterType::Secondary;
 
 	}
 
@@ -361,6 +363,17 @@ Climate * ModuleWorld::GetClimate() const
 Character * ModuleWorld::GetHero() const
 {
 	return wcharacters[0];
+}
+
+std::vector<Character*> ModuleWorld::GetSecondaries() const
+{
+	std::vector<Character*> secondaries;
+
+	for (auto it = wcharacters.begin(); it != wcharacters.end(); ++it)
+		if ((*it)->character_type == Character::CharacterType::Secondary)
+			secondaries.push_back((*it));
+
+	return secondaries;
 }
 
 std::vector<string> ModuleWorld::GetCharacterAdjectives(Character* cha)
@@ -401,6 +414,11 @@ std::string ModuleWorld::GetCharacterPronoun(Character* cha) const
 std::string ModuleWorld::GetCharacterReflectivePronoun(Character* cha) const
 {
 	return cha->GetReflectivePronoun();
+}
+
+std::string ModuleWorld::GetCharacterPosessivePronoun(Character *c) const
+{
+	return c->GetPosessivePronoun();
 }
 
 

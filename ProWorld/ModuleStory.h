@@ -25,6 +25,8 @@ public:
 	virtual update_status Update();
 
 	void CreateStory();
+	Event* SeekEvent(Event* ev);
+	Event* ChooseEvent(std::vector<Event*> vect_ev);
 
 private:
 	EventManager* e_manager = nullptr;

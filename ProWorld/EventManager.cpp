@@ -21,6 +21,10 @@ Event * EventManager::CreateEvent(std::string name, uint id, pugi::xml_node node
 	nevent->id = id;
 	event_vector.push_back(nevent);
 
+	nevent->priority = node.child("Priority").attribute("value").as_int();
+	nevent->seek = node.child("Seek").attribute("value").as_int();
+	nevent->curr_type = static_cast<Event::JourneyAct>(node.child("Type").attribute("value").as_int());
+
 	// Load Characters ~~~~~~~~~~
 	
 	pugi::xml_node character_nodes = node.child("Characters");
@@ -30,7 +34,9 @@ Event * EventManager::CreateEvent(std::string name, uint id, pugi::xml_node node
 		nevent->AddCharacter((Character::MoralAlignment)cha.child("Moral").attribute("value").as_int(), 
 			(Character::AttitudeAlignment)cha.child("Attitude").attribute("value").as_int(), 
 			(Character::Archetype)cha.child("Archetype").attribute("value").as_int(), 
-			(Character::CharacterType)cha.child("CharacterType").attribute("value").as_int());
+			(Character::CharacterType)cha.child("CharacterType").attribute("value").as_int(), cha.child("Strength").attribute("value").as_int(), 
+			cha.child("Intelligence").attribute("value").as_int(), cha.child("Dexterity").attribute("value").as_int(), 
+			cha.child("Charisma").attribute("value").as_int());
 	}
 
 	// Load Sentences ~~~~~~~~~~~~~~~
@@ -100,27 +106,42 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 		return app->world->GetCharacterAdjectives(app->world->GetHero());
 		break;
 	case EventManager::WETs::_herorace:
-		ret.push_back(app->world->GetCharacterRace(app->world->GetHero()));
+		ret.push_back(toLowercase(app->world->GetCharacterRace(app->world->GetHero())));
 		break;
 	case EventManager::WETs::_heroname:
-		ret.push_back(app->world->GetCharacterName(app->world->GetHero()));
+		ret.push_back(toLowercase(app->world->GetCharacterName(app->world->GetHero())));
 		break;
 	case EventManager::WETs::_heroorigintype:
-		ret.push_back(app->world->GetCharacterOriginType(app->world->GetHero()));
+		ret.push_back(toLowercase(app->world->GetCharacterOriginType(app->world->GetHero())));
 		break;
 	case EventManager::WETs::_herooriginname:
-		ret.push_back(app->world->GetCharacterOriginName(app->world->GetHero()));
+		ret.push_back(toLowercase(app->world->GetCharacterOriginName(app->world->GetHero())));
 		break;
 	case EventManager::WETs::_heropronoun:
-		ret.push_back(app->world->GetCharacterPronoun(app->world->GetHero()));
+		ret.push_back(toLowercase(app->world->GetCharacterPronoun(app->world->GetHero())));
 		break;
 	case EventManager::WETs::_heroadj:
 		break;
 	case EventManager::WETs::_fantasyname:
-		ret.push_back(app->namegenerator->GenerateClassicName());
+		ret.push_back(toLowercase(app->namegenerator->GenerateClassicName()));
 		break;
 	case EventManager::WETs::_heroreflectivepronoun:
-		ret.push_back(app->world->GetCharacterReflectivePronoun(app->world->GetHero()));
+		ret.push_back(toLowercase(app->world->GetCharacterReflectivePronoun(app->world->GetHero())));
+		break;
+	case EventManager::WETs::_secondaryreflectivepronoun:
+		ret.push_back(toLowercase(app->world->GetCharacterReflectivePronoun(app->world->GetSecondaries()[0])));
+		break;
+	case EventManager::WETs::_secondaryname:
+		ret.push_back(toLowercase(app->world->GetCharacterName(app->world->GetSecondaries()[0])));
+		break;
+	case EventManager::WETs::_secondaryraceadj:
+		return app->world->GetCharacterAdjectives(app->world->GetSecondaries()[0]);
+		break;
+	case EventManager::WETs::_heroposessivepronoun:
+		ret.push_back(app->world->GetCharacterPosessivePronoun(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_secondarypronoun:
+		ret.push_back(app->world->GetCharacterPronoun(app->world->GetSecondaries()[0]));
 		break;
 	}
 

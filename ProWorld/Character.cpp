@@ -17,6 +17,7 @@ Character::Character()
 			gender = Non_binary;
 			pronoun = "they";
 			reflective_pronoun = "them";
+			posessive_pronoun = "their";
 			if (GetBoolByRandom(MEDIUM_CHANCE))
 				name = app->namegenerator->GenRegularFemaleCharName();
 			else name = app->namegenerator->GenRegularMaleCharName();
@@ -26,6 +27,7 @@ Character::Character()
 			gender = Maletrans;
 			pronoun = "he";
 			reflective_pronoun = "him";
+			posessive_pronoun = "his";
 			name = app->namegenerator->GenRegularMaleCharName();
 		}
 		else
@@ -33,6 +35,7 @@ Character::Character()
 			gender = Femaletrans;
 			pronoun = "she";
 			reflective_pronoun = "her";
+			posessive_pronoun = "her";
 			name = app->namegenerator->GenRegularFemaleCharName();
 		}
 	}
@@ -41,6 +44,7 @@ Character::Character()
 		gender = Male;
 		pronoun = "he";
 		reflective_pronoun = "him";
+		posessive_pronoun = "his";
 		name = app->namegenerator->GenRegularMaleCharName();
 	}
 	else 
@@ -48,6 +52,7 @@ Character::Character()
 		gender = Female;
 		pronoun = "she";
 		reflective_pronoun = "her";
+		posessive_pronoun = "her";
 		name = app->namegenerator->GenRegularFemaleCharName();
 	}
 
@@ -57,15 +62,25 @@ Character::Character()
 	archetype = (Archetype)GetRandomNumber(0, 14);
 	shadow = false;
 
-	// if the character is evil, shadow will be set to true later.
+	strength = GetRandomNumber(0, 1);
+	dexterity = GetRandomNumber(0, 1);
+	intelligence = GetRandomNumber(0, 1);
+	charisma = GetRandomNumber(0, 1);
+
+	SetStatsFromArchetype();
 }
 
-Character::Character(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type)
+Character::Character(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type, 
+	int str, int intel, int dex, int cha)
 {
 	this->moral = moral;
 	this->attitude = attitude;
 	this->archetype = archetype;
 	this->character_type = type;
+	strength = str;
+	intelligence = intel;
+	dexterity = dex;
+	charisma = cha;
 }
 
 Character::~Character()
@@ -184,6 +199,11 @@ std::string Character::GetReflectivePronoun() const
 	return reflective_pronoun;
 }
 
+std::string Character::GetPosessivePronoun() const
+{
+	return posessive_pronoun;
+}
+
 void Character::GenerateName()
 {
 
@@ -274,4 +294,91 @@ void Character::GenerateRace()
 
 	archetype = static_cast<Character::Archetype>(race->GetArchetypes()[GetRandomNumber(0, race->GetArchetypes().size()-1)]);
 
+}
+
+void Character::SetStatsFromArchetype()
+{
+	switch (archetype)
+	{
+	case Character::Busisnessman:
+		intelligence += 3;
+		break;
+	case Character::Protector:
+		strength += 1;
+		dexterity += 1;
+		break;
+	case Character::Recluse:
+		intelligence += 3;
+		charisma -= 1;
+		dexterity -= 1;
+		break;
+	case Character::Fool:
+		intelligence -= 1;
+		charisma += 3;
+		break;
+	case Character::Casanova:
+		charisma += 3;
+		break;
+	case Character::Revolutionary:
+		intelligence += 2;
+		strength += 1;
+		break;
+	case Character::Artist:
+		intelligence += 1;
+		charisma += 2;
+		break;
+	case Character::King:
+		strength += 1;
+		intelligence += 1;
+		dexterity += 1;
+		break;
+	case Character::Seductress:
+		charisma += 1;
+		dexterity += 1;
+		intelligence += 1;
+		break;
+	case Character::Amazon:
+		strength += 1;
+		dexterity += 2;
+		break;
+	case Character::Daughter:
+		charisma += 2;
+		dexterity += 1;
+		break;
+	case Character::Matriarch:
+		charisma += 1;
+		strength += 1;
+		intelligence += 1;
+		break;
+	case Character::Nurturer:
+		dexterity += 1;
+		charisma += 1;
+		break;
+	case Character::Maiden:
+		dexterity += 3;
+		intelligence -= 1;
+		break;
+	case Character::Mystic:
+		intelligence += 2;
+		dexterity += 1;
+		strength -= 1;
+		break;
+	case Character::Martyr:
+		strength += 1;
+		charisma += 2;
+		break;
+	default:
+		break;
+	}
+
+	if (intelligence > 3) intelligence = 3;
+	if (intelligence < 0) intelligence = 0;
+	if (strength > 3) strength = 3;
+	if (strength < 0) strength = 0;
+	if (dexterity > 3) dexterity = 3;
+	if (dexterity < 0) dexterity = 0;
+	if (charisma > 3) charisma = 3;
+	if (charisma < 0) charisma = 0;
+
+	int a = 2;
 }

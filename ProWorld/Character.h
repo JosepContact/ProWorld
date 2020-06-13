@@ -4,9 +4,10 @@
 
 #include "Race.h"
 #include "Society.h"
+#include "Globals.h"
 
-#define MIN_AGE 13
-#define MAX_AGE 60
+#define MIN_AGE 18
+#define MAX_AGE 50
 
 class Character
 {
@@ -65,7 +66,8 @@ public:
 	};
 
 	Character();
-	Character(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type);
+	Character(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type, 
+		int str, int intel, int dex, int cha);
 	virtual ~Character();
 
 private:
@@ -84,6 +86,7 @@ private:
 
 	std::string pronoun;
 	std::string reflective_pronoun;
+	std::string posessive_pronoun;
 	
 public:
 	CharacterType character_type;
@@ -113,12 +116,23 @@ public:
 	Society* GetSocietyOrigin() const;
 	std::string GetPronoun() const;
 	std::string GetReflectivePronoun() const;
+	std::string GetPosessivePronoun() const;
 
 
 	// ------------
 
 	void GenerateName();
 	void GenerateRace();
+
+	// ----------- STATS ----------
+	uint strength = 0;
+	uint dexterity = 0;
+	uint intelligence = 0;
+	uint charisma = 0;
+
+	private:
+
+	void SetStatsFromArchetype();
 
 };
 

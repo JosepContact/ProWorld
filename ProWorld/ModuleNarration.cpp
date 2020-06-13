@@ -559,28 +559,16 @@ string ModuleNarration::NarrateEvent(Event * ev)
 
 	}
 
-	int jl = 0, pos = 0;
-
-	for (auto it = ret.begin(); it != ret.end(); ++it, ++jl, ++pos)
-	{
-		if (jl > 80 && (*it) == ' ')
-		{
-			ret.insert(pos, "\n");
-			jl = 0;
-		}
-	}
+	ret = ReplaceAorAn(ret);
+	ret = Capitalize(ret);
+	//ret = AddJumplines(ret);
 
 	return ret;
 }
 
 string ModuleNarration::DoSentence(Event::Sentence * s)
 {
-	// 1.AGAFO LINIA
-	// 2.TROBO ON COMENÇA PER '_'
-	// 3.AGAFO LA PARAULA SENCERA
-	// 4.REEMPLAZO UNA PARAULA DE LA POOL PER LA PARAULA
-	// 5.REPETIR HASTA QUE NO HI HAGI '_'
-	// 6.RETURN
+
 	string str = s->text;
 	int count = 0;
 
@@ -625,4 +613,58 @@ string ModuleNarration::SubstituteWords(string str)
 		}
 	}
 	return str;
+}
+
+string ModuleNarration::ReplaceAorAn(string str)
+{
+	string ret = str;
+
+	for (int count = 0; count < ret.size(); count++)
+	{
+		if (ret[count] == '*')
+		{
+			count += 3;
+			string nextword;
+
+			for (int subcount = 0; ret[count + subcount] != ' ' && ret[count +  subcount] != ',' && ret[count + subcount] != '.' && count + subcount < ret.size(); subcount++)
+			{
+				nextword += ret[count + subcount];
+			}
+
+			string aoran = (GetAorAn(nextword));
+
+			count -= 3;
+
+			ret.replace(count, 2, aoran);
+
+			ret = ReplaceAorAn(ret);
+
+			count = 0;
+		}
+	}
+
+	return ret;
+}
+
+string ModuleNarration::Capitalize(string str)
+{
+	string ret = str;
+
+	for (int count = 0; count < ret.size(); count++)
+	{
+		if (ret[count] == '^')
+		{
+			count++;
+			string nextletter;
+			nextletter += ret[count];
+			nextletter = toUppercase(nextletter);
+			count--;
+			ret.replace(count, 2, nextletter);
+
+			ret = Capitalize(ret);
+
+			count = 0;
+		}
+	}
+	return ret;
 }

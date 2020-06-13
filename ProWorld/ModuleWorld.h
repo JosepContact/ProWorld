@@ -79,6 +79,7 @@ private:
 
 public:
 	Character* GetHero() const;
+	std::vector<Character*> GetSecondaries() const;
 	std::vector<std::string> GetCharacterAdjectives(Character*);
 	std::string GetCharacterRace(Character*) const;
 	std::string GetCharacterName(Character*) const;
@@ -86,6 +87,7 @@ public:
 	std::string GetCharacterOriginName(Character*) const;
 	std::string GetCharacterPronoun(Character*) const;
 	std::string GetCharacterReflectivePronoun(Character*) const;
+	std::string GetCharacterPosessivePronoun(Character*) const;
 
 };
 

@@ -38,6 +38,12 @@ public:
 		_heroadj,
 		_fantasyname,
 		_heroreflectivepronoun,
+		_secondaryreflectivepronoun,
+		_secondaryname,
+		_secondaryraceadj,
+		_heroposessivepronoun,
+		_secondaryposessivepronoun,
+		_secondarypronoun,
 	};
 
 private:
@@ -66,7 +72,12 @@ static std::unordered_map<std::string, EventManager::WETs> const WorldEventsTabl
 { "_heroadj",EventManager::WETs::_heroadj },
 { "_fantasyname",EventManager::WETs::_fantasyname },
 { "_heroreflectivepronoun",EventManager::WETs::_heroreflectivepronoun},
-
+{ "_heroreflectivepronoun",EventManager::WETs::_heroreflectivepronoun},
+{ "_secondaryreflectivepronoun",EventManager::WETs::_secondaryreflectivepronoun},
+{ "_secondaryname",EventManager::WETs::_secondaryname},
+{ "_secondaryraceadj",EventManager::WETs::_secondaryraceadj},
+{ "_heroposessivepronoun",EventManager::WETs::_heroposessivepronoun},
+{ "_secondarypronoun",EventManager::WETs::_secondarypronoun},
 };
 
 #endif //EVENTMANAGER_H

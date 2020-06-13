@@ -53,6 +53,8 @@ public:
 	int act = -1;
 	int priority = -1;
 	Event* prev = nullptr;
+	int seek = -1;
+	JourneyAct curr_type = OrdinaryWorld;
 
 	//Requirements
 	Character* reqs[3];
@@ -62,7 +64,8 @@ public:
 
 	//When verb(location()) the location(), Hero() verb(sound) ; some; Adjective(sound); place() sound() place(); that verb(feeling()) feeling() in Hero->Pronoun().
 	public:
-	void AddCharacter(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, Character::CharacterType type);
+	void AddCharacter(Character::MoralAlignment moral, Character::AttitudeAlignment attitude, Character::Archetype archetype, 
+		Character::CharacterType type, int str, int intel, int dex, int cha);
 	void FillSentence(uint id, bool mandatory, int goes_after, std::string sentence);
 
 	bool ValidEvent(std::vector<Character*> chars);
