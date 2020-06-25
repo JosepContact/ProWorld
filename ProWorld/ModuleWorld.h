@@ -88,6 +88,7 @@ public:
 	std::string GetCharacterPronoun(Character*) const;
 	std::string GetCharacterReflectivePronoun(Character*) const;
 	std::string GetCharacterPosessivePronoun(Character*) const;
+	std::string GetRandomLocation(Character*) const; //Char's origin is excluded
 
 };
 

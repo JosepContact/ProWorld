@@ -38,7 +38,7 @@ public:
 	struct Sentence
 	{
 		int id = 0;
-		bool mandatory = true;
+		bool mandatory = false;
 		int goes_after = -1;
 		std::string text;
 	};
@@ -55,11 +55,11 @@ public:
 	Event* prev = nullptr;
 	int seek = -1;
 	JourneyAct curr_type = OrdinaryWorld;
-
+	int arc = -1;
+	int storytype = -1;
 	//Requirements
 	Character* reqs[3];
 	int min_characters = 0;
-
 	std::vector<Sentence*> sentences;
 
 	//When verb(location()) the location(), Hero() verb(sound) ; some; Adjective(sound); place() sound() place(); that verb(feeling()) feeling() in Hero->Pronoun().

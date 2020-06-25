@@ -111,6 +111,13 @@ bool ModuleGraphics::Start()
 
 	for (int count = 0; count < story_string.size(); ++count, ++jl)
 	{
+		if (story_string[count] == ';')
+		{
+			story_string.replace(count, 1, "\n");
+			count += 2;
+			jl = 0;
+		}
+
 		if (jl > 80 && story_string[count] == ' ')
 		{
 			story_string.insert(count, "\n");
@@ -118,6 +125,7 @@ bool ModuleGraphics::Start()
 			jl = 0;
 		}
 	}
+
 
 	return true;
 }

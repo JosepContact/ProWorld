@@ -24,6 +24,8 @@ Event * EventManager::CreateEvent(std::string name, uint id, pugi::xml_node node
 	nevent->priority = node.child("Priority").attribute("value").as_int();
 	nevent->seek = node.child("Seek").attribute("value").as_int();
 	nevent->curr_type = static_cast<Event::JourneyAct>(node.child("Type").attribute("value").as_int());
+	nevent->arc = node.child("Arc").attribute("value").as_int();
+	nevent->storytype = node.child("StoryType").attribute("value").as_int();
 
 	// Load Characters ~~~~~~~~~~
 	
@@ -86,18 +88,22 @@ std::vector<WordPool*> EventManager::GetWordPools()
 
 std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 {
-	for (auto it = word_pools.begin(); it != word_pools.end(); ++it)
-	{
-		if (word.compare((*it)->name) == 0)
-			return (*it)->outcomes;
-	}
 
-	vector<string> ret;
+	//Check if it exists
 	int EventId = -1;
 
 	auto it = WorldEventsTable.find(word);
 	if (it != WorldEventsTable.end()) {
 		EventId = it->second;
+	}
+
+
+	vector<string> ret;
+
+	for (auto it = word_pools.begin(); it != word_pools.end(); ++it)
+	{
+		if (word.compare((*it)->name) == 0)
+			ret = (*it)->outcomes;
 	}
 
 	switch (EventId)
@@ -142,6 +148,70 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 		break;
 	case EventManager::WETs::_secondarypronoun:
 		ret.push_back(app->world->GetCharacterPronoun(app->world->GetSecondaries()[0]));
+		break;
+	case EventManager::WETs::_randomsociety:
+		ret.push_back(app->world->GetRandomLocation(app->world->GetHero()));
+		break;
+	case EventManager::WETs::_weapon:
+		if (app->story->weapon.empty())
+		{
+			std::string weapon = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->weapon = weapon;
+			ret.clear();
+			ret.push_back(weapon);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->weapon);
+			return ret;
+		}
+
+		break;
+	case EventManager::WETs::_magicalcreature:
+		if (app->story->magicalcreature.empty())
+		{
+			std::string magicalcreature = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->magicalcreature = magicalcreature;
+			ret.clear();
+			ret.push_back(magicalcreature);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->magicalcreature);
+			return ret;
+		}
+
+		break;
+	case EventManager::WETs::_magicalitem:
+		if (app->story->magicalitem.empty())
+		{
+			std::string magicalitem = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->magicalitem = magicalitem;
+			ret.clear();
+			ret.push_back(magicalitem);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->magicalitem);
+			return ret;
+		}
+
+		break;
+	case EventManager::WETs::_herooriginrace:
+		vector<string> races;
+		vector<Race*> origin_races = app->world->GetHero()->GetSocietyOrigin()->GetRaces();
+
+		for (auto it = origin_races.begin(); it != origin_races.end(); ++it)
+			races.push_back(toLowercase((*it)->GetWord()));
+
+		return races;
+
 		break;
 	}
 

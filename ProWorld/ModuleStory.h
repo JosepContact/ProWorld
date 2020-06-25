@@ -16,6 +16,15 @@ public:
 
 	virtual ~ModuleStory();
 
+	enum StoryType
+	{
+		Regain_Kingdom = 1, 
+		Meet_Magical_Master, 
+		Vengeance, 
+		Magic_Item, 
+		Break_From_Curse,
+	};
+
 	// Starts The FileSystem Module
 	bool Start();
 
@@ -31,9 +40,29 @@ public:
 private:
 	EventManager* e_manager = nullptr;
 	std::vector<Event*> story_queue;
+
 public:
 	EventManager* GetManager() const;
 	std::vector<Event*> GetStory();
+
+	//Hero
+	std::string weapon;
+
+	StoryType type;
+	//-- Regain Kingdom
+	//-- MagicalMaster
+	std::string magicalcreature;
+	std::string magicalmasterrace;
+	std::string mentorname;
+
+	//-- Vengeance
+	std::string act;
+	//-- Magical Item
+	std::string magicalitem;
+	std::string magicalitemorigin;
+
 };
 
 #endif //MODUESTORY_H
+
+

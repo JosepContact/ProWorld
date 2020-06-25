@@ -44,6 +44,11 @@ public:
 		_heroposessivepronoun,
 		_secondaryposessivepronoun,
 		_secondarypronoun,
+		_weapon,
+		_herooriginrace,
+		_magicalcreature,
+		_magicalitem,
+		_randomsociety
 	};
 
 private:
@@ -78,6 +83,11 @@ static std::unordered_map<std::string, EventManager::WETs> const WorldEventsTabl
 { "_secondaryraceadj",EventManager::WETs::_secondaryraceadj},
 { "_heroposessivepronoun",EventManager::WETs::_heroposessivepronoun},
 { "_secondarypronoun",EventManager::WETs::_secondarypronoun},
+{ "_weapon",EventManager::WETs::_weapon},
+{ "_herooriginrace",EventManager::WETs::_herooriginrace},
+{ "_magicalcreature",EventManager::WETs::_magicalcreature},
+{ "_magicalitem",EventManager::WETs::_magicalitem},
+{ "_randomsociety",EventManager::WETs::_randomsociety},
 };
 
 #endif //EVENTMANAGER_H

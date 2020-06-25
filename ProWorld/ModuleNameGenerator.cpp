@@ -410,7 +410,7 @@ std::string ModuleNameGenerator::GenChineseMName()
 	string ret(XineseSurname[GetRandomNumber(0, 41)]);
 	string ret2(MaleXineseName[GetRandomNumber(0, 29)]);
 
-	return (ret + " " + ret2);
+	return (ret2);
 }
 
 std::string ModuleNameGenerator::GenChineseFName()
@@ -418,7 +418,7 @@ std::string ModuleNameGenerator::GenChineseFName()
 	string ret(XineseSurname[GetRandomNumber(0, 41)]);
 	string ret2(FemaleXineseName[GetRandomNumber(0, 30)]);
 
-	return (ret + " " + ret2);
+	return (ret2);
 }
 
 std::string ModuleNameGenerator::GenJapaneseMName()
@@ -434,7 +434,7 @@ std::string ModuleNameGenerator::GenJapaneseMName()
 
 	ret2 = toUppercase(ret2);
 	
-	return (ret + " " + ret2);
+	return (ret2);
 }
 
 std::string ModuleNameGenerator::GenJapaneseFName()
@@ -450,23 +450,23 @@ std::string ModuleNameGenerator::GenJapaneseFName()
 
 	ret2 = toUppercase(ret2);
 
-	return (ret + " " +  ret2);
+	return (ret2);
 }
 
 std::string ModuleNameGenerator::GenMTribalName()
 {
 	string ret(TropicalMaleNames[GetRandomNumber(0, 31)]);
-	string ret2(TropicalSurnames[GetRandomNumber(0, 40)]);
+	//string ret2(TropicalSurnames[GetRandomNumber(0, 40)]);
 
-	return (ret + " " + ret2);
+	return (ret);
 }
 
 std::string ModuleNameGenerator::GenFTribalName()
 {
 	string ret(TropicalMaleNames[GetRandomNumber(0, 27)]);
-	string ret2(TropicalSurnames[GetRandomNumber(0, 40)]);
+	//string ret2(TropicalSurnames[GetRandomNumber(0, 40)]);
 
-	return (ret + " " + ret2);
+	return (ret );
 }
 
 std::string ModuleNameGenerator::GetJapaneseSurname()

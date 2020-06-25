@@ -545,18 +545,21 @@ string ModuleNarration::NarrateEvent(Event * ev)
 		Event::Sentence* curr = (*it);
 
 		if (curr->mandatory == true)
-		{
-			sentences_done.push_back(curr->id);
+		{		
 			//Do
 			ret+= DoSentence(curr);
-		}
-		else if (GetBoolByRandom(MEDIUM_CHANCE) && curr->goes_after == -1 || (std::find(sentences_done.begin(), sentences_done.end(), curr->goes_after) != sentences_done.end())) //CHECK IF THE PREV WAS DONE
-		{
 			sentences_done.push_back(curr->id);
-			//Do
-			ret+= DoSentence(curr);
 		}
-
+		else if (GetBoolByRandom(MEDIUM_CHANCE) == true)
+		{
+			if (std::find(sentences_done.begin(), sentences_done.end(), curr->goes_after) != sentences_done.end()) //CHECK IF THE PREV WAS DONE
+			{
+			//Do
+			ret += DoSentence(curr);
+			sentences_done.push_back(curr->id);
+			}
+		}
+		
 	}
 
 	ret = ReplaceAorAn(ret);

@@ -421,6 +421,19 @@ std::string ModuleWorld::GetCharacterPosessivePronoun(Character *c) const
 	return c->GetPosessivePronoun();
 }
 
+std::string ModuleWorld::GetRandomLocation(Character * c) const
+{
+	Society* s = c->GetSocietyOrigin();
+
+	string ret;
+	do
+	{
+		ret = wsocieties[GetRandomNumber(0, wsocieties.size() - 1)]->GetName();
+	} while (ret == s->GetName());
+
+	return ret;
+}
+
 
 void ModuleWorld::SetSociety(Society * soc, Geography::CellLand &cell)
 {

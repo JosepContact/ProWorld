@@ -3,6 +3,7 @@
 #include "Globals.h"
 #include "App.h"
 #include "Event.h"
+#include "HelperFunctions.h"
 
 using namespace std;
 
@@ -48,7 +49,7 @@ void ModuleStory::CreateStory()
 
 	for (std::vector<Event*>::iterator it = all_events.begin(); it != all_events.end(); ++it)
 	{		
-		if ((*it)->id == seek_event && (*it)->ValidEvent(app->world->wcharacters) == true)
+		if ((*it)->id == seek_event && (*it)->ValidEvent(app->world->wcharacters) == true && (*it)->curr_type == Event::JourneyAct::OrdinaryWorld)
 		{
 			events_seeked.push_back((*it));
 		}
@@ -73,7 +74,7 @@ Event * ModuleStory::SeekEvent(Event * ev)
 
 	for (auto it = all_events.begin(); it != all_events.end(); ++it)
 	{
-		if (ev->seek == (*it)->id && (*it)->ValidEvent(app->world->wcharacters) == true)
+		if (ev->seek == (*it)->id && (*it)->ValidEvent(app->world->wcharacters) == true && (*it)->curr_type == ev->curr_type)
 			events_seeked.push_back((*it));
 	}
 
@@ -86,7 +87,7 @@ Event * ModuleStory::SeekEvent(Event * ev)
 
 	for (auto it = all_events.begin(); it != all_events.end(); ++it)
 	{
-		if (ev->priority == (*it)->id && (*it)->ValidEvent(app->world->wcharacters) == true)
+		if (ev->priority == (*it)->id && (*it)->ValidEvent(app->world->wcharacters) == true && (*it)->curr_type == ev->curr_type)
 			events_prio.push_back((*it));
 	}
 
@@ -102,8 +103,10 @@ Event * ModuleStory::SeekEvent(Event * ev)
 
 	for (auto it = all_events.begin(); it != all_events.end(); ++it)
 	{
-		if (curr_layer == (*it)->curr_type && (*it)->ValidEvent(app->world->wcharacters) == true)
+		if (curr_layer == (*it)->curr_type && (*it)->ValidEvent(app->world->wcharacters) == true && (*it)->id == 0)
+		{
 			events_nextlayer.push_back((*it));
+		}
 	}
 
 	if (!events_nextlayer.empty())
@@ -118,8 +121,13 @@ Event * ModuleStory::SeekEvent(Event * ev)
 
 Event* ModuleStory::ChooseEvent(std::vector<Event*> vect_ev)
 {
-	story_queue.push_back(vect_ev[0]);
-	return vect_ev[0];
+	Event* ret = vect_ev[GetRandomNumber(0, vect_ev.size() - 1)];
+	story_queue.push_back(ret);
+
+	if (ret->arc != 0 && type == 0)
+		type = static_cast<ModuleStory::StoryType>(ret->arc);
+
+	return ret;
 }
 
 EventManager * ModuleStory::GetManager() const

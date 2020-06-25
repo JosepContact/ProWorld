@@ -1,4 +1,5 @@
 #include "Event.h"
+#include "App.h"
 
 using namespace std;
 
@@ -38,6 +39,10 @@ void Event::FillSentence(uint id, bool mandatory, int goes_after, std::string se
 
 bool Event::ValidEvent(std::vector<Character*> chars)
 {
+
+	if (app->story->type > 0 && storytype > 0 && app->story->type != storytype)
+		return false;
+
 	int n_req = characters.size();
 
 	for (vector<Character*>::iterator it = chars.begin(); it != chars.end(); ++it)
