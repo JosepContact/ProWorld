@@ -62,6 +62,7 @@ public:
 		Secondary,
 		MainVillain,
 		SecondaryVillain,
+		ThirdVillain,
 		CTNeutral
 	};
 

@@ -48,7 +48,14 @@ public:
 		_herooriginrace,
 		_magicalcreature,
 		_magicalitem,
-		_randomsociety
+		_randomsociety,
+		_strweapon,
+		_dexweapon,
+		_chaweapon,
+		_intweapon,
+		_secondaryvillainrace,
+		_goal,
+		_secondaryvillainname
 	};
 
 private:
@@ -88,6 +95,12 @@ static std::unordered_map<std::string, EventManager::WETs> const WorldEventsTabl
 { "_magicalcreature",EventManager::WETs::_magicalcreature},
 { "_magicalitem",EventManager::WETs::_magicalitem},
 { "_randomsociety",EventManager::WETs::_randomsociety},
+{ "_strweapon",EventManager::WETs::_strweapon},
+{ "_dexweapon",EventManager::WETs::_intweapon},
+{ "_dexweapon",EventManager::WETs::_chaweapon},
+{ "_secondaryvillainrace",EventManager::WETs::_secondaryvillainrace},
+{ "_goal",EventManager::WETs::_goal},
+{ "_secondaryvillainname",EventManager::WETs::_secondaryvillainname},
 };
 
 #endif //EVENTMANAGER_H

@@ -140,6 +140,9 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 	case EventManager::WETs::_secondaryname:
 		ret.push_back(toLowercase(app->world->GetCharacterName(app->world->GetSecondaries()[0])));
 		break;
+	case EventManager::WETs::_secondaryvillainname:
+		ret.push_back(toLowercase(app->world->GetSecondaryVillains()[0]->GetName()));
+		break;
 	case EventManager::WETs::_secondaryraceadj:
 		return app->world->GetCharacterAdjectives(app->world->GetSecondaries()[0]);
 		break;
@@ -150,10 +153,87 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 		ret.push_back(app->world->GetCharacterPronoun(app->world->GetSecondaries()[0]));
 		break;
 	case EventManager::WETs::_randomsociety:
-		ret.push_back(app->world->GetRandomLocation(app->world->GetHero()));
+		if (app->story->destination.empty())
+		{
+			std::string destination = app->world->GetRandomLocation(app->world->GetHero());
+			app->story->destination = destination;
+			ret.clear();
+			ret.push_back(destination);
+			return ret;
+		}
+		else {
+			ret.clear();
+			ret.push_back(app->story->destination);
+			return ret;
+		}
+		
+		break;
+	case EventManager::WETs::_strweapon:
+		if (app->story->weapon == "")
+		{
+			std::string weapon = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->weapon = weapon;
+			ret.clear();
+			ret.push_back(weapon);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->weapon);
+			return ret;
+		}
+		break;
+	case EventManager::WETs::_dexweapon:
+		if (app->story->weapon == "")
+		{
+			std::string weapon = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->weapon = weapon;
+			ret.clear();
+			ret.push_back(weapon);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->weapon);
+			return ret;
+		}
+		break;
+	case EventManager::WETs::_chaweapon:
+		if (app->story->weapon == "")
+		{
+			std::string weapon = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->weapon = weapon;
+			ret.clear();
+			ret.push_back(weapon);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->weapon);
+			return ret;
+		}
+		break;
+	case EventManager::WETs::_intweapon:
+		if (app->story->weapon == "")
+		{
+			std::string weapon = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->weapon = weapon;
+			ret.clear();
+			ret.push_back(weapon);
+			return ret;
+		}
+		else
+		{
+			ret.clear();
+			ret.push_back(app->story->weapon);
+			return ret;
+		}
 		break;
 	case EventManager::WETs::_weapon:
-		if (app->story->weapon.empty())
+		if (app->story->weapon == "")
 		{
 			std::string weapon = ret[(GetRandomNumber(0, ret.size() - 1))];
 			app->story->weapon = weapon;
@@ -170,7 +250,7 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 
 		break;
 	case EventManager::WETs::_magicalcreature:
-		if (app->story->magicalcreature.empty())
+		if (app->story->magicalcreature == "")
 		{
 			std::string magicalcreature = ret[(GetRandomNumber(0, ret.size() - 1))];
 			app->story->magicalcreature = magicalcreature;
@@ -187,10 +267,11 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 
 		break;
 	case EventManager::WETs::_magicalitem:
-		if (app->story->magicalitem.empty())
+		if (app->story->magicalitem == "")
 		{
 			std::string magicalitem = ret[(GetRandomNumber(0, ret.size() - 1))];
 			app->story->magicalitem = magicalitem;
+			app->story->weapon = magicalitem;
 			ret.clear();
 			ret.push_back(magicalitem);
 			return ret;
@@ -204,6 +285,7 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 
 		break;
 	case EventManager::WETs::_herooriginrace:
+	{
 		vector<string> races;
 		vector<Race*> origin_races = app->world->GetHero()->GetSocietyOrigin()->GetRaces();
 
@@ -212,6 +294,23 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 
 		return races;
 
+		break;
+	}
+	case EventManager::WETs::_secondaryvillainrace:
+		ret.push_back(toLowercase(app->world->GetSecondaryVillains()[0]->GetRace()->GetWord()));
+		break;
+	case EventManager::WETs::_goal:
+		if (app->story->goal == "")
+		{
+			std::string goal = ret[(GetRandomNumber(0, ret.size() - 1))];
+			app->story->goal = goal;
+			ret.clear();
+			ret.push_back(goal);
+		}
+		else {
+			ret.clear();
+			ret.push_back(app->story->goal);
+		}
 		break;
 	}
 

@@ -9,6 +9,63 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_stradv"/> 
+		<Pool>
+			<n val="ferociously"/>
+			<n val="brutally"/>
+			<n val="viciously"/>
+			<n val="wildly"/>
+		</Pool>
+	</Word>
+		<Word>
+		<Name value = "_confess"/> 
+		<Pool>
+			<n val="confess"/>
+			<n val="admit"/>
+			<n val="say"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_villainaction"/> 
+		<Pool>
+			<n val="torturing people"/>
+			<n val="planning something on a table"/>
+			<n val="writing something on a map"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_expectedhero"/> 
+		<Pool>
+			<n val="was expecting someone of your kind"/>
+			<n val="was anticipating that some _herorace loser would come to mess things up"/>
+			<n val="knew this was going too smoothly"/>
+			<n val="used to entertain myself killing rats like you"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_must"/> 
+		<Pool>
+			<n val="must"/>
+			<n val="have to"/>
+			<n val="ought to"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_fully"/> 
+		<Pool>
+			<n val="fully"/>
+			<n val="entirely"/>
+			<n val=""/>
+		</Pool>
+	</Word>
+		<Word>
+		<Name value = "_stay"/> 
+		<Pool>
+			<n val="stay"/>
+			<n val="stick around"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_goal"/> 
 		<Pool>
 			<n val="destroy my creator"/>
@@ -16,6 +73,32 @@
 			<n val="destroy that who will put every living on Earth on an eternal slumber"/>
 			<n val="put an end to that who corrupts this world's magic"/>
 			<n val="slay that who wants to absorb the precious life of every living being"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_heroreason"/> 
+		<Pool>
+			<n val="the stars have told me you will save us all"/>
+			<n val="I know you from a past life"/>
+			<n val="_actually I have been watching you"/>
+			<n val="someone in a dream told me I'd find you here"/>
+			<n val="my god has spoken to me"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_thanks"/> 
+		<Pool>
+			<n val="thank you"/>
+			<n val="thanks"/>
+			<n val=""/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_rightnow"/> 
+		<Pool>
+			<n val="right now"/>
+			<n val="at this very moment"/>
+			<n val=""/>
 		</Pool>
 	</Word>
 	<Word>
@@ -31,6 +114,14 @@
 			<n val="wanting"/>
 			<n val="needing"/>
 			<n val="demanding"/>
+		</Pool>
+	</Word>
+		<Word>
+		<Name value = "_wanted"/> 
+		<Pool>
+			<n val="wanted"/>
+			<n val="needed"/>
+			<n val="demanded"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -84,7 +175,7 @@
 		<Name value = "_seeing"/> 
 		<Pool>
 			<n val="seeing"/>
-			<n val="having"/>
+			<n val="watching"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -342,6 +433,14 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_found"/> 
+		<Pool>
+			<n val="found"/>
+			<n val="discovered"/>
+			<n val="encountered"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_heroapproached"/> 
 		<Pool>
 			<n val="_heropronoun found *a _npc"/>
@@ -426,9 +525,16 @@
 		<Pool>
 			<n val="slightly"/>
 			<n val="*a _little bit"/>
-			<n val=""/>
 			<n val="quite a bit"/>
 			<n val="just *a _little bit"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_some"/> 
+		<Pool>
+			<n val="some"/>
+			<n val="a lot of"/>
+			<n val="quite a bit of"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -475,12 +581,17 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_weapon"/> 
+		<Pool>
+			<n val="_chaweapon"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_sometimes"/> 
 		<Pool>
 			<n val="sometimes"/>
 			<n val="often"/>
 			<n val="now and then"/>
-			<n val=""/>
 		</Pool>
 	</Word>
 	<Word>
@@ -500,7 +611,6 @@
 			<n val="enourmous"/>
 			<n val="great"/>
 			<n val="_very important"/>
-			<n val=""/>
 		</Pool>
 	</Word>
 	<Word>
@@ -734,7 +844,7 @@
 		<Name value = "_weird"/> 
 		<Pool>
 			<n val="weird"/>
-			<n val="extrange"/>
+			<n val="strange"/>
 			<n val="odd"/>
 		</Pool>
 	</Word>
@@ -749,9 +859,7 @@
 	<Word>
 		<Name value = "_magicalitem"/> 
 		<Pool>
-			<n val="trinket"/>
-			<n val="talisman"/>
-			<n val="emblem"/>
+			<n val="_intweapon"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -816,9 +924,7 @@
 		<Name value = "_dexweapon"/> 
 		<Pool>
 			<n val="dagger"/>
-			<n val="twin daggers"/>
-			<n val="bow"/>
-			<n val="crossbow"/>
+			<n val="rapier"/>
 			<n val="shortsword"/>
 		</Pool>
 	</Word>
@@ -826,9 +932,6 @@
 		<Name value = "_chaweapon"/> 
 		<Pool>
 			<n val="dagger"/>
-			<n val="twin daggers"/>
-			<n val="bow"/>
-			<n val="crossbow"/>
 			<n val="shortsword"/>
 			<n val="axe"/>
 			<n val="sword"/>
@@ -845,10 +948,14 @@
 			<n val="tome"/>
 			<n val="amulet"/>
 			<n val="emblem"/>
-			<n val="trincket"/>
+			<n val="trinket"/>
 			<n val="book"/>
 			<n val="wand"/>
 			<n val="staff"/>
+			<n val="trinket"/>
+			<n val="talisman"/>
+			<n val="emblem"/>
+			<n val="ring"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -876,7 +983,7 @@
 			<n val="enhancing _heroposessivepronoun _strweapon skills"/>
 			<n val="fighting with _heroposessivepronoun _strweapon"/>
 			<n val="learning to use the _strweapon"/>
-			<n val="learning how to fight with_heroposessivepronoun fists"/>
+			<n val="learning how to fight with _heroposessivepronoun fists"/>
 			<n val="practicing with the _strweapon"/>
 			<n val="practicing one on one fighting with the _strweapon"/>
 			<n val="practicing fighting with _heroposessivepronoun bare hands"/>
@@ -1010,6 +1117,15 @@
 			<n val="whenever _heropronoun would feel bored"/>
 			<n val="whenever _heropronoun would have nothing to do"/>
 			<n val="whenever _heropronoun would have some free _freetime"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_but"/> 
+		<Pool>
+			<n val="but"/>
+			<n val="however"/>
+			<n val="yet"/>
+			<n val="except"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -1154,6 +1270,49 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_originating"/> 
+		<Pool>
+			<n val="originating"/>
+			<n val="coming"/>
+		</Pool>
+	</Word>
+		<Word>
+		<Name value = "_energy"/> 
+		<Pool>
+			<n val="energy"/>
+			<n val="force"/>
+			<n val="power"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_evil"/> 
+		<Pool>
+			<n val="evil"/>
+			<n val="dark"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_badcreature"/> 
+		<Pool>
+			<n val="zombie"/>
+			<n val="undead"/>
+			<n val="skeleton"/>
+			<n val="kobold"/>
+			<n val="troll"/>
+			<n val="orc"/>
+			<n val="ogre"/>
+			<n val="imp"/>
+			<n val="ghoul"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_campsite"/> 
+		<Pool>
+			<n val="campsite"/>
+			<n val="encampents"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_inside"/> 
 		<Pool>
 			<n val="in"/>
@@ -1205,18 +1364,57 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_agreed"/> 
+		<Pool>
+			<n val="agreed to"/>
+			<n val="allow"/>
+			<n val="consented"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_shakenup"/> 
+		<Pool>
+			<n val="shaken up"/>
+			<n val="shocked"/>
+			<n val="astonished"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_vanished"/> 
+		<Pool>
+			<n val="disappeared"/>
+			<n val="vanished"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_could"/> 
+		<Pool>
+			<n val="would"/>
+			<n val="could"/>
+			<n val="was going to"/>
+		</Pool>
+	</Word>
+		<Word>
+		<Name value = "_train"/> 
+		<Pool>
+			<n val="train"/>
+			<n val="teach"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_joblocation"/> 
 		<Pool>
-			<n val="the church"/>
-			<n val="the chapel"/>
-			<n val="the school"/>
+			<n val="the _locationadj church"/>
+			<n val="the _locationadj chapel"/>
+			<n val="the _locationadj school"/>
 			<n val="the dark alley"/>
-			<n val="the avenue"/>
+			<n val="the main avenue"/>
 			<n val="where _heropronoun was born"/>
-			<n val="the armery"/>
-			<n val="the barracks"/>
-			<n val="the wall"/>
-			<n val="_heroorigintype 's well"/>
+			<n val="the _locationadj armery"/>
+			<n val="the _locationadj barracks"/>
+			<n val="the _locationadj wall"/>
+			<n val="the _heroorigintype 's well"/>
+			<n val="the _locationadj monument"/>
 		</Pool>
 	</Word>
 		<Word>

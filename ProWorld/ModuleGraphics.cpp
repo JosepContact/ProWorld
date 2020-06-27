@@ -104,28 +104,36 @@ bool ModuleGraphics::Start()
 
 	for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
 	{
-		story_string += app->narration->NarrateEvent(*it);
+		final_story.push_back(app->narration->NarrateEvent(*it));
 	}
 
-	int jl = 0;
+	
 
-	for (int count = 0; count < story_string.size(); ++count, ++jl)
+	for (auto it = final_story.begin(); it != final_story.end(); ++it)
 	{
-		if (story_string[count] == ';')
+		int jl = 0;
+		for (int count = 0; count < (*it).size(); ++count, ++jl)
 		{
-			story_string.replace(count, 1, "\n");
-			count += 2;
-			jl = 0;
-		}
+			if ((*it)[count] == ';')
+			{
+				(*it).replace(count, 1, "\n");
+				count += 2;
+				jl = 0;
+			}
 
-		if (jl > 80 && story_string[count] == ' ')
-		{
-			story_string.insert(count, "\n");
-			count += 2;
-			jl = 0;
+			if (jl > 80 && (*it)[count] == ' ')
+			{
+				(*it).insert(count, "\n");
+				count += 2;
+				jl = 0;
+			}
 		}
 	}
+	//count on comença
+	//jl on acaba la sentence
 
+
+	LOG(story_string.c_str());
 
 	return true;
 }
@@ -231,7 +239,9 @@ update_status ModuleGraphics::Update()
 
 		if (show_world == true) {
 			ImGui::Begin("STORY");
-			ImGui::Text(story_string.c_str());
+			for (auto it = final_story.begin(); it != final_story.end(); ++it)
+				ImGui::Text((*it).c_str());
+		
 			ImGui::End();
 		}
 

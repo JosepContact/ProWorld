@@ -10,7 +10,7 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <stdio.h>
-
+#include <vector>
 
 class ModuleGraphics : public Module {
 public:
@@ -39,7 +39,9 @@ public:
 	bool create_world = false;
 
 private:
+	//std::vector<std::string> story_string;
 	std::string story_string;
+	std::vector<std::string> final_story;
 };
 
 #endif // !MODULEGRAPHICS

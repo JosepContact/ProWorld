@@ -349,10 +349,22 @@ void ModuleWorld::CreateCharacters()
 		wcharacters[i]->character_type = Character::CharacterType::SecondaryVillain;
 		if(i == n_cha-1) wcharacters[i]->character_type = Character::CharacterType::MainVillain;
 	}
+	int sec_cha = 0;
 
 	wcharacters[0]->SetAlignment((Character::MoralAlignment)GetRandomNumber(0, 1), wcharacters[0]->GetAttitude());
 	wcharacters[0]->SetShadow(false);
 	wcharacters[0]->character_type = Character::CharacterType::Hero;
+
+	for (auto it = wcharacters.begin(); it != wcharacters.end(); ++it)
+	{
+		if ((*it)->character_type == Character::CharacterType::SecondaryVillain)
+			++sec_cha;
+
+		if (sec_cha > 1)
+			(*it)->character_type = Character::CharacterType::ThirdVillain;
+	}
+	int a = 3;
+
 }
 
 Climate * ModuleWorld::GetClimate() const
@@ -374,6 +386,32 @@ std::vector<Character*> ModuleWorld::GetSecondaries() const
 			secondaries.push_back((*it));
 
 	return secondaries;
+}
+
+std::vector<Character*> ModuleWorld::GetSecondaryVillains() const
+{
+	std::vector<Character*> secondaryvillains;
+
+	for (auto it = wcharacters.begin(); it != wcharacters.end(); ++it)
+	{
+		if ((*it)->character_type == Character::CharacterType::SecondaryVillain)
+			secondaryvillains.push_back((*it));
+	}
+
+	return secondaryvillains;
+}
+
+std::vector<Character*> ModuleWorld::GetThirdVillains() const
+{
+	std::vector<Character*> thirdvillains;
+
+	for (auto it = wcharacters.begin(); it != wcharacters.end(); ++it)
+	{
+		if ((*it)->character_type == Character::CharacterType::ThirdVillain)
+			thirdvillains.push_back((*it));
+	}
+
+	return thirdvillains;
 }
 
 std::vector<string> ModuleWorld::GetCharacterAdjectives(Character* cha)

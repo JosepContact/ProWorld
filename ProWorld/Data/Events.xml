@@ -26,7 +26,7 @@
 			<Sentence N="6" Mandatory="0" Follows="-1" val=". People around ^_heroname called _heroreflectivepronoun _heroraceadj"/>
 			<Sentence N="7" Mandatory="0" Follows="6"  val=" and _heroraceadj"/>
 			<Sentence N="8" Mandatory="1" Follows="-1" val=". ^_heropronoun lived *a _lifeadj life as *a _job"/>
-			<Sentence N="9" Mandatory="0" Follows="8"  val=" _place _locationadj _joblocation"/>
+			<Sentence N="9" Mandatory="0" Follows="8"  val=" _place _joblocation"/>
 			<Sentence N="10" Mandatory="0" Follows="9"  val=" with _familymember"/>
 			<Sentence N="11" Mandatory="1" Follows="-1"  val="."/>
 		</Text>
@@ -134,7 +134,7 @@
 			<Sentence N="1" Mandatory="1" Follows="0" val="  _secondarypronoun was ^_heroname 's _relationship" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val="." />
 			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_heroname would _timecasuality describe ^_secondaryname as _secondaryraceadj" />
-			<Sentence N="4" Mandatory="0" Follows="3" val=", although _heropronoun would _never admit it" />
+			<Sentence N="4" Mandatory="0" Follows="3" val=", although _heropronoun would _never _confess it" />
 			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
 		</Text>
 	</Event>
@@ -156,14 +156,14 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=";" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="" />
 			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_oneday" />
 			<Sentence N="2" Mandatory="0" Follows="0" val=", while ^_heroname was sleeping" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val=", _heropronoun had a _vision" />
 			<Sentence N="4" Mandatory="1" Follows="-1" val=". In it, _heropronoun saw _remember" />
 			<Sentence N="5" Mandatory="0" Follows="4" val=", *a _revelation" />
-			<Sentence N="6" Mandatory="1" Follows="-1" val=". ^_heropronoun also saw *a _magicalcreature" />
-			<Sentence N="7" Mandatory="1" Follows="-1" val=" it was speaking to _heroreflectivepronoun but _heropronoun couldn't understand it" />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=". ^_heropronoun saw *a _magicalcreature" />
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" and it was speaking to _heroreflectivepronoun _but _heropronoun couldn't understand it" />
 			<Sentence N="8" Mandatory="1" Follows="-1" val="."/>
 			<Sentence N="9" Mandatory="0" Follows="8" val=" It was a _scary _vision for sure."/>
 			<Sentence N="10" Mandatory="1" Follows="-1" val=" ^_heropronoun saw something even worse, "/>
@@ -186,11 +186,11 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=";" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="" />
 			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_oneday" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=", while ^_heroname was _busy" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val=", _heropronoun _realized the house of _heroposessivepronoun _relationship was _inflames" />
-			<Sentence N="4" Mandatory="1" Follows="-1" val=". ^_alarm " />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=". ^_alarm" />
 		</Text>
 	</Event>
 	<Event>
@@ -209,7 +209,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun saw _heroposessivepronoun loved one _die" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" _heropronoun saw _heroposessivepronoun loved one _die" />
 			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
 		</Text>
 	</Event>
@@ -229,7 +229,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname 's good friend, ^_secondaryname _company to make _heroreflectivepronoun feel better." />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname 's good friend ^_secondaryname _company to make _heroreflectivepronoun feel better." />
 		</Text>
 	</Event>
 	<Event>
@@ -271,7 +271,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_heroname _posessed *a _magicalitem" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname _posessed *a _magicalitem" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=" that was _magicalitemadj" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=", _keepsecret" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=". ^_fornoreason, ^_heroname had always felt _attractedto it" />
@@ -282,7 +282,8 @@
 			<Sentence N="8" Mandatory="1" Follows="-1" val="." />
 			<Sentence N="9" Mandatory="1" Follows="-1" val=" ^_suddenly *a _spell bursted out from the _magicalitem _hitting *a _victim" />
 			<Sentence N="10" Mandatory="1" Follows="-1" val="." />		
-			<Sentence N="11" Mandatory="0" Follows="10" val=" Thankfully, the damages weren't _grave _atall." />
+			<Sentence N="11" Mandatory="0" Follows="10" val=" Thankfully, the damages weren't _grave _atall fortunately." />
+
 		</Text>
 	</Event>
 	<Event>
@@ -302,7 +303,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_heroname had *a _huge secret" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname had *a _huge secret" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=" that _notreveal" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=", _heropronoun suffered a blood curse" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=" that _curseeffect" />		
@@ -315,7 +316,7 @@
 			<Sentence N="10" Mandatory="1" Follows="-1" val=" ^_many people had died from a curse like that." />
 			<Sentence N="11" Mandatory="1" Follows="-1" val=" ^_surprisingly that was _never a _problem" />
 			<Sentence N="12" Mandatory="0" Follows="11" val=", _actually _heropronoun had lived a _normal life _sofar" />
-			<Sentence N="12" Mandatory="1" Follows="-1" val=", but _oneday _heropronoun started _seeing _confusing visions while awake and" />
+			<Sentence N="12" Mandatory="1" Follows="-1" val=", _but _oneday _heropronoun started _seeing _confusing visions while awake" />
 			<Sentence N="13" Mandatory="0" Follows="12" val=" and _hearing _confusing _voices" />
 			<Sentence N="14" Mandatory="1" Follows="-1" val="." />
 		</Text>
@@ -337,7 +338,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_oneday ^_heroname was _walking _place the _magicplace" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_oneday ^_heroname was _walking _place the _magicplace" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=" because _reason" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=". When _heroapproached" />	
 			<Sentence N="3" Mandatory="1" Follows="-1" val="" />
@@ -366,14 +367,14 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_oneday ^_heroname was _walking _place _randplace" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_oneday ^_heroname was _walking _place _randplace" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=" because _reason" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=". ^_suddenly *a _magicalcreature _appeared to _heroreflectivepronoun" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=". ^_creaturedesc" />		
 			<Sentence N="4" Mandatory="1" Follows="-1" val="." />
 			<Sentence N="5" Mandatory="1" Follows="-1" val=" That creature _action and by doing that ^_heroname felt a strong connection" />
 			<Sentence N="6" Mandatory="1" Follows="-1" val=". ^_surprisingly" />
-			<Sentence N="7" Mandatory="1" Follows="-1" val=" ^_heroname managed to survive the encounter, but _heropronoun _knew _heropronoun wasn't the same" />
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" ^_heroname managed to survive the encounter, _but _heropronoun _knew _heropronoun wasn't the same" />
 			<Sentence N="8" Mandatory="1" Follows="-1" val="." />
 			<Sentence N="9" Mandatory="0" Follows="8" val=" ^_heropronoun _knew _heropronoun wanted something badly, and _heropronoun had *a _feeling _heropronoun just got it." />
 		</Text>
@@ -399,7 +400,7 @@
 			<Sentence N="1" Mandatory="0" Follows="0" val=". ^_actually , _heropronoun _realized that this situation had _never happened before" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" in the _long history of _herorace -kind or any race whatsoever" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
-			<Sentence N="4" Mandatory="1" Follows="-1" val=" It was _hard to believe, but even _harder to accept." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" It was _hard to believe, _but even _harder to accept." />
 		</Text>
 	</Event>
 		<Event>
@@ -422,7 +423,7 @@
 			<Sentence N="1" Mandatory="1" Follows="-1" val=". ^_actually , _heropronoun kept repeating that it was all _heroposessivepronoun imagination" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" , or maybe a dream" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
-			<Sentence N="4" Mandatory="1" Follows="-1" val=" But deep inside _heropronoun _knew it happened." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" ^_but deep inside _heropronoun _knew it happened." />
 		</Text>
 	</Event>
 	<Event>
@@ -463,14 +464,14 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_oneday ^_heroname found *a _weird _note" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_oneday ^_heroname _found *a _weird _note" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=" in _heroposessivepronoun _backpack" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" which was _weird" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=", _heropronoun wondered how it ended there" />
 			<Sentence N="4" Mandatory="1" Follows="-1" val="." />
 			<Sentence N="5" Mandatory="1" Follows="-1" val=" The paper said" />
 			<Sentence N="6" Mandatory="0" Follows="5" val=" in a _very peculiar caligraphy" />
-			<Sentence N="7" Mandatory="0" Follows="6" val=" which gave it a _good royalty look, " />
+			<Sentence N="7" Mandatory="0" Follows="6" val=" which gave it *a _good royalty look, " />
 			<Sentence N="8" Mandatory="1" Follows="-1" val=" that someone wanted to meet ^_heroname" />
 			<Sentence N="9" Mandatory="1" Follows="-1" val="." />
 		</Text>
@@ -525,7 +526,7 @@
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
-		<Seek value = "1"/>
+		<Seek value = "4"/>
 		<StoryType value = "4"/> <!--4: Magical Item-->
 		<Characters>
 			<Character>
@@ -536,7 +537,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_heroname started developing an obsession for _heroposessivepronoun _magicalitem" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname started developing an obsession for _heroposessivepronoun _magicalitem" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=", _heropronoun hesitated of sharing _heroposessivepronoun newfound power" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=", and _although it could _beuseful to do _whathewants" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=", _heropronoun wasn't _sure if it was a _good idea." />
@@ -547,8 +548,8 @@
 		<Id value = "0"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
-		<Priority value = "-1"/>
-		<Seek value = "1"/>
+		<Priority value = "1"/>
+		<Seek value = "5"/>
 		<Characters>
 			<Character>
 				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
@@ -558,21 +559,22 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_hesitant" />
-			<Sentence N="1" Mandatory="0" Follows="0" val=", about what to do" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_hesitant" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" about what to do" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" and _wanting answers" />
-			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_heroname left ^_herooriginname" />
-			<Sentence N="4" Mandatory="0" Follows="3" val=", _heroorigindesc" />
-			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="3" Mandatory="1" Follows="-1" val="," />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" ^_heroname left ^_herooriginname" />
+			<Sentence N="5" Mandatory="0" Follows="4" val=", _heroorigindesc" />
+			<Sentence N="6" Mandatory="1" Follows="-1" val="." />
 		</Text>
 	</Event>
 	<Event>
 		<Name value = "MTM: Magical Master"/> 
-		<Id value = "0"/> 
+		<Id value = "5"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
-		<Seek value = "1"/>
+		<Seek value = "4"/>
 		<StoryType value = "2"/> <!--2: Magical Master 4: Magical Item-->
 		<Characters>
 			<Character>
@@ -583,7 +585,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val="; <<This _feeling" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<This _feeling" />
 			<Sentence N="1" Mandatory="0" Follows="0" val="" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=".>>" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=" <<Is it *a _vision" />
@@ -593,11 +595,11 @@
 	</Event>
 	<Event>
 		<Name value = "MTM: Meet The Master - Magical Item"/> 
-		<Id value = "1"/> 
+		<Id value = "5"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
-		<Seek value = "2"/>
+		<Seek value = "4"/>
 		<StoryType value = "4"/> <!--4: Magical Item-->
 		<Characters>
 			<Character>
@@ -615,12 +617,12 @@
 	</Event>
 	<Event>
 		<Name value = "MTM: Meet The Master - Magical Master"/> 
-		<Id value = "1"/> 
+		<Id value = "5"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
-		<Seek value = "2"/>
-		<StoryType value = "2"/> <!--2: Magical Master 4: Magical Item-->
+		<Seek value = "4"/>
+		<StoryType value = "5"/> <!--2: Magical Master 4: Magical Item-->
 		<Characters>
 			<Character>
 				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
@@ -653,12 +655,13 @@
 			<Sentence N="1" Mandatory="0" Follows="0" val=", _suddenly" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" out of nowhere" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val=" a _figure _appeared" />
-			<Sentence N="4" Mandatory="0" Follows="3" val=" that _interrupted _heroposessivepronoun way." />
+			<Sentence N="4" Mandatory="0" Follows="3" val=" that _interrupted _heroposessivepronoun way" />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
 		</Text>
 	</Event>
 	<Event>
 		<Name value = "MTM: Master Presents - Magical Item"/> 
-		<Id value = "2"/> 
+		<Id value = "4"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
@@ -673,18 +676,18 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" ; <<I am he who _lives this _magicalitem" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I am he who _lives this _magicalitem" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=", _please do not be _scared" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" at least more than you already are" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
-			<Sentence N="4" Mandatory="0" Follows="3" val=" I _salute you" />
-			<Sentence N="5" Mandatory="0" Follows="4" val=" carrier of the _magicalitem" />
-			<Sentence N="6" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="4" Mandatory="0" Follows="3" val=" I _salute you." />
+			<Sentence N="5" Mandatory="0" Follows="4" val=" You _must be thecarrier of the _magicalitem." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=">>" />
 		</Text>
 	</Event>
 	<Event>
 		<Name value = "MTM: Master Presents - Magical Master"/> 
-		<Id value = "2"/> 
+		<Id value = "4"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
@@ -699,7 +702,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" ; <<I am he who gives you power" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I am he who gives you power" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=", the ^_magicalcreature" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=", _please do not be _scared" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=" at least more than you already are" />
@@ -707,11 +710,12 @@
 			<Sentence N="5" Mandatory="0" Follows="4" val=" I _salute you" />
 			<Sentence N="6" Mandatory="0" Follows="5" val=" carrier of my blood" />
 			<Sentence N="7" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="8" Mandatory="1" Follows="-1" val=">>" />
 		</Text>
 	</Event>
 	<Event>
 		<Name value = "MTM: Master Presents - Break Curse"/> 
-		<Id value = "2"/> 
+		<Id value = "4"/> 
 		<NCharacters value = "1"/>
 		<Type value = "3"/> <!--Meeting The Mentor-->
 		<Priority value = "-1"/>
@@ -726,7 +730,7 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" ; <<I am he who lives _inside you" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I am he who lives _inside you" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=", the ^_magicalcreature" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=", _please do not be _scared" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=" at least more than you already are" />
@@ -735,6 +739,7 @@
 			<Sentence N="6" Mandatory="0" Follows="5" val=" carrier of my blood" />
 			<Sentence N="7" Mandatory="1" Follows="-1" val="." />
 			<Sentence N="8" Mandatory="1" Follows="-1" val=" If you want your curse vanished, do as I say." />
+			<Sentence N="9" Mandatory="1" Follows="-1" val=">>" />
 		</Text>
 	</Event>
 	<Event>
@@ -754,14 +759,109 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" ; <<Well, you don't see *a _herorace around here _alot" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<Well, you don't see *a _herorace around here _alot" />
 			<Sentence N="1" Mandatory="0" Follows="0" val=", thankfully" />
 			<Sentence N="2" Mandatory="1" Follows="-1" val=".>>" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=" ^*a _weird looking _herooriginrace _looked at _heroreflectivepronoun." />
+			<Sentence N="4" Mandatory="0" Follows="3" val=" The man _face." />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="<<" />
+			<Sentence N="6" Mandatory="0" Follows="5" val="My gut tells me you can _actually talk." />
+			<Sentence N="7" Mandatory="1" Follows="-1" val="I am _sensing magic" />
+			<Sentence N="8" Mandatory="0" Follows="7" val=" _inside you" />
+			<Sentence N="9" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="10" Mandatory="0" Follows="9" val=" You're _exactly what I needed." />
+			<Sentence N="11" Mandatory="1" Follows="-1" val=" Take this _intweapon" />
+			<Sentence N="12" Mandatory="0" Follows="11" val=" with you" />
+			<Sentence N="13" Mandatory="0" Follows="12" val=", you'll be stronger with it" />
+			<Sentence N="14" Mandatory="1" Follows="-1" val=".>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "MTM: Master Presents - (Strength) Default"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "3"/> <!--Meeting The Mentor-->
+		<Priority value = "-1"/>
+		<Seek value = "3"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+				<Strength value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I'm not used to seeing *a _herorace around here" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", for the most part" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=".>>" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=" ^*a _weird looking _herooriginrace _looked at _heroreflectivepronoun." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The man _face." />
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<My gut tells me you can _actually fight." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val="I am _sensing that you can use that _strweapon of yours. You're _exactly what I needed.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "MTM: Master Presents - (Dexterity) Default"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "3"/> <!--Meeting The Mentor-->
+		<Priority value = "-1"/>
+		<Seek value = "3"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+				<Dexterity value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<What do my eyes see? ^*a _herorace around here?" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" That's uncommon" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=".>>" />
 			<Sentence N="3" Mandatory="0" Follows="2" val=" ^*a _weird looking _herooriginrace _looked at _heroreflectivepronoun ." />
-			<Sentence N="4" Mandatory="1" Follows="-1" val=" <<The man _face" />
-			<Sentence N="5" Mandatory="0" Follows="4" val=", my gut tells me you can _actually talk" />
-			<Sentence N="6" Mandatory="1" Follows="-1" val="." />
-			<Sentence N="7" Mandatory="1" Follows="-1" val="I am _sensing magic _inside you. You're _exactly what I needed.>>" />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The man _face." />
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<My gut tells me you can _actually _handle *a _rather _good fight." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val="So can you can use that _dexweapon of yours, right? You're _exactly what I needed.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "MTM: Master Presents - (Charisma) Default"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "3"/> <!--Meeting The Mentor-->
+		<Priority value = "-1"/>
+		<Seek value = "3"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+				<Charisma value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I'm not used to seeing *a _herorace around here" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", or not one as good looking" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" I may add" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=".>>" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=" ^*a _weird looking _herooriginrace _looked at _heroreflectivepronoun ." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" <<I'm not interested _atall _rightnow" />
+			<Sentence N="5" Mandatory="0" Follows="4" val=", _thanks" />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=".>>" />
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" The man _face" />
+			<Sentence N="8" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="9" Mandatory="1" Follows="-1" val="<<My gut tells me you can _actually fight" />
+			<Sentence N="10" Mandatory="0" Follows="9" val=" I see it in your _color eyes" />
+			<Sentence N="11" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="12" Mandatory="1" Follows="-1" val=" Take this _chaweapon" />
+			<Sentence N="13" Mandatory="0" Follows="12" val=" and show me what you can do" />
+			<Sentence N="14" Mandatory="0" Follows="13" val=" You're _exactly what I needed" />
+			<Sentence N="15" Mandatory="1" Follows="-1" val=".>>" />
 		</Text>
 	</Event>
 	<Event>
@@ -780,11 +880,864 @@
 			</Character>
 		</Characters>
 		<Text>
-			<Sentence N="0" Mandatory="1" Follows="-1" val=" I have chosen you to _handle a _task" />
-			<Sentence N="1" Mandatory="1" Follows="-1" val=", _please would you _goal" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I have chosen you to _handle a _task" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=", _please I would like you to _goal" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=". ^_why" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val=". You will find more about it at ^_randomsociety" />
 			<Sentence N="4" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" ^_heroreason and that's why you are the one.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Linker"/> 
+		<Id value = "0"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "1"/>
+		<Seek value = "2"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Mentor Is Inside - Break Curse"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "5"/>
+		<Seek value = "4"/>
+		<StoryType value = "5"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname was _shakenup after that interaction" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_heropronoun had a being inside of _heroreflectivepronoun" />
+			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+		<Event>
+		<Name value = "CFT: Mentor Is Inside - Magical Master"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "2"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "5"/>
+		<Seek value = "4"/>
+		<StoryType value = "2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname was _shakenup after that interaction" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_heropronoun also was _worried about that _magicalcreature" />
+			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Mentor Is Inside - Magical Item"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "2"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "5"/>
+		<Seek value = "4"/>
+		<StoryType value = "4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname was _shakenup after that interaction" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="0" Follows="1" val=" ^_heropronoun _looked the _magicalitem." />
+			<Sentence N="3" Mandatory="0" Follows="2" val=" how was that possible?" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Master Leaves"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" Before ^_heroname could reply, that _weird man had" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" already" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" _vanished" />
+			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Master Stays"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "5"/>
+		<Seek value = "3"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The _weird man decided to travel with ^_heroname." />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="He could _train _heroreflectivepronoun." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Master Stays + Secondary"/> 
+		<Id value = "3"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "5"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryname" />
+			<Sentence N="1" Mandatory="0" Follows="-1" val=" relcutantly" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" _agreed it." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Arc + Secondary"/> 
+		<Id value = "4"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "5"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryname thought it was _hard to believe, _but ^_heroname had always been a good friend." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Linker Master Teaches"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "8"/>
+		<Seek value = "7"/>
+	</Event>
+	<Event>
+		<Name value = "CFT: Master Teaches"/> 
+		<Id value = "8"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = ""/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The old man spent time with ^_heroname" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" _sometimes teaching how to properly use the _weapon" />
+			<Sentence N="2" Mandatory="0" Follows="0" val=", _sometimes training" />
+			<Sentence N="3" Mandatory="0" Follows="0" val=", _sometimes learning how to proper fight" />
+			<Sentence N="4" Mandatory="0" Follows="0" val=", and investigating how to defeat the evil" />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After _some practicing ^_heroname started becoming better and better, until at some point the old man was too old to suppose a worthy opponent." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Master Teaches Inside"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value = "2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = ""/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" although _hesitant" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" spent some time talking to the being" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" inside of _heroreflectivepronoun" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The _magicalcreature _wanted to help _heroreflectivepronoun" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", _sometimes teaching how to properly use the _weapon" />
+			<Sentence N="2" Mandatory="0" Follows="0" val=", _sometimes training" />
+			<Sentence N="3" Mandatory="0" Follows="0" val=", _sometimes learning how to proper fight" />
+			<Sentence N="4" Mandatory="0" Follows="0" val=", and investigating how to defeat the evil" />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After _some practicing ^_heroname started becoming better and better, until at some point the being decided ^_heroname was ready." />
+		</Text>
+	</Event>
+		<Event>
+		<Name value = "CFT: Master Teaches Inside"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value = "4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = ""/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" although _hesitant" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" spent some time talking to the being" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" inside of _heroreflectivepronoun" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The _magicalcreature _wanted to help _heroreflectivepronoun" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", _sometimes teaching how to properly use the _weapon" />
+			<Sentence N="2" Mandatory="0" Follows="0" val=", _sometimes training" />
+			<Sentence N="3" Mandatory="0" Follows="0" val=", _sometimes learning how to proper fight" />
+			<Sentence N="4" Mandatory="0" Follows="0" val=", and investigating how to defeat the evil" />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After _some practicing ^_heroname started becoming better and better, until at some point the being decided ^_heroname was ready." />
+		</Text>
+	</Event>
+		<Event>
+		<Name value = "CFT: Master Teaches Inside"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value = "5"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" although _hesitant" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" spent some time talking to the being" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" inside of _heroreflectivepronoun" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The _magicalcreature _wanted to help _heroreflectivepronoun" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", _sometimes teaching how to properly use the _weapon" />
+			<Sentence N="2" Mandatory="0" Follows="0" val=", _sometimes training" />
+			<Sentence N="3" Mandatory="0" Follows="0" val=", _sometimes learning how to proper fight" />
+			<Sentence N="4" Mandatory="0" Follows="0" val=", and investigating how to defeat the evil" />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After _some practicing ^_heroname started becoming better and better, until at some point the being decided ^_heroname was ready." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "CFT: Master Reveals form"/> 
+		<Id value = "6"/> 
+		<NCharacters value = "1"/>
+		<Type value = "4"/> <!--Crossing First Threshold-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Arc value ="2"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="  A _very confused ^_heroname roamed the area for days until _heropronoun decided to go to ^_randomsociety" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" While traveling, _heropronoun would _sometimes stop to train with _heroposessivepronoun _weapon" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=" or just asking for directions" />
+			<Sentence N="4" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" However, _oneday _heropronoun could have sweared _heropronoun saw the _weird man following _heroreflectivepronoun" />
+			<Sentence N="6" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" This kept occurring _sometimes when _heropronoun least expected it." />
+			<Sentence N="8" Mandatory="1" Follows="-1" val=" Sometimes followed by _weird _voices in _heroreflectivepronoun" />
+			<Sentence N="9" Mandatory="1" Follows="-1" val=". ^_heropronoun knew _heropronoun wasn't going mad, it was that man. Slowly, the vision of that man started shaping into a _magicalcreature" />
+			<Sentence N="10" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Linker"/> 
+		<Id value = "0"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "3"/>
+		<Seek value = "1"/>
+	</Event>
+	<Event>
+		<Name value = "TEA: Linker (MM)"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "2"/>
+		<StoryType value = "2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+	</Event>
+	<Event>
+		<Name value = "TEA: Linker (BC)"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "2"/>
+		<StoryType value = "5"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+	</Event>
+	<Event>
+		<Name value = "TEA: Defeating the Secondary Villain (BC & MM)"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "4"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << ^_heroname listen.>> A voice woke _heroreflectivepronoun up. It was the _magicalcreature talking from _inside _heroreflectivepronoun" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" <<I am _sensing a dark force _place here" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=", watch out" />
+			<Sentence N="4" Mandatory="0" Follows="3" val=", it could be dangerous" />
+			<Sentence N="5" Mandatory="0" Follows="4" val=" and if I were you I wouldn't _stay for long." />
+			<Sentence N="6" Mandatory="1" Follows="0" val=" They could be coming after you.>>" />
+			<Sentence N="7" Mandatory="1" Follows="0" val=" ^_heroname knew _exactly what to do." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Defeating the Secondary Villain (MI)"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "4"/>
+		<StoryType value = "4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << ^_heroname listen.>> A voice woke _heroreflectivepronoun up. It was coming from _inside the _magicalitem" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" <<I am _sensing a dark force _place here" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=", watch out" />
+			<Sentence N="4" Mandatory="0" Follows="3" val=", it could be dangerous" />
+			<Sentence N="5" Mandatory="0" Follows="4" val=" and if I were you I wouldn't _stay for long." />
+			<Sentence N="6" Mandatory="1" Follows="0" val=" They could be coming after you.>>" />
+			<Sentence N="7" Mandatory="1" Follows="0" val=" ^_heroname knew _exactly what to do." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Defeating the Secondary Villain (Default)"/> 
+		<Id value = "3"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "4"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << ^_heroname listen.>> A voice woke _heroreflectivepronoun up. It was the man, by now ^_heroname considered him _heroposessivepronoun master" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" <<I am _sensing a dark force _place here" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=", watch out" />
+			<Sentence N="4" Mandatory="0" Follows="3" val=", it could be dangerous" />
+			<Sentence N="5" Mandatory="0" Follows="4" val=" and if I were you I wouldn't _stay for long." />
+			<Sentence N="6" Mandatory="1" Follows="0" val=" They could be coming after you.>>" />
+			<Sentence N="7" Mandatory="1" Follows="0" val=" ^_but ^_heroname knew _exactly what to do." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "4"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "5"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" After roaming the area, ^_heroname _found the _campsite from where the _evil _energy was _originating from." />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_heropronoun approached it and saw two _badcreature guardians watching." />
+			<Sentence N="2" Mandatory="0" Follows="1" val=" ^_heropronoun stopped for a second to think what to do." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "2"/>
+				<Dexterity value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun hid behind a brush and cast a sleeping spell with _heroposessivepronoun _weapon to put the guardians to sleep." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "1"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "2"/>
+				<Dexterity value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun hid behind a brush and cast a mind control spell with _heroposessivepronoun _weapon to put the guardians to sleep." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral -3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "2"/>
+				<Charisma value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun hid behind a brush and cast a shapeshifting spell with _heroposessivepronoun _weapon to pass through the guardians without being noticed." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "2"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun cast a _spell using _heroposessivepronoun _weapon" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "1"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Dexterity value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun sneaked in climbing the wall without being noticed" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "2"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Dexterity value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun sneaked behind the guardians and killed them with _heroposessivepronoun _weapon without being noticed" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Charisma value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun pretended to be someone else and tricked the dumb guardians" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Strength value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun charged towards the guardians and slayed them with _heroposessivepronoun _weapon" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Approaching Campsite (Default)"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "6"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Strength value = "2"/>
+				<Intelligence value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun charged towards the guardians and slayed them with *a _element effect on _heroposessivepronoun _weapon" />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Enters Camp with Villain"/> 
+		<Id value = "6"/> 
+		<NCharacters value = "2"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "7"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "3"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" After dealing with the _campsite defenses, ^_heroname enters successfully to find a _secondaryvillainrace _villainaction" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" <<I _expectedhero" />
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" although I _must _confess I do not _fully know who you are" />
+			<Sentence N="4" Mandatory="0" Follows="3" val=", though" />
+			<Sentence N="5" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" So, who are you?>>" />
+			<Sentence N="7" Mandatory="1" Follows="-1" val="  <<I am ^_heroname and I will _goal" />
+			<Sentence N="8" Mandatory="1" Follows="-1" val=".>>" />
+			<Sentence N="9" Mandatory="1" Follows="-1" val=" The _secondaryvillainrace _face" />
+			<Sentence N="10" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="11" Mandatory="1" Follows="-1" val=" <<Well, I am ^_secondaryvillainname and I doubt it.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Villain Attacks (STR)"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "8"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "3"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Strength value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryvillainname grabbed the _strweapon and charged forward" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" _stradv" />
+			<Sentence N="2" Mandatory="0" Follows="0" val=", swinging from side to side" />
+			<Sentence N="3" Mandatory="0" Follows="2" val=" _stradv" />
+			<Sentence N="4" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Villain Attacks (Intelligence)"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "8"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "3"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryvillainname grabbed *a _intweapon and started preparing some sort of spell" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=", it seemed like a _spell" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Villain Attacks (Dex)"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "8"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "3"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryvillainname grabbed *a _dexweapon _rather rapidly and dashed forward" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", before ^_heroname had time to react" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: hero Attacks (Str)"/> 
+		<Id value = "8"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "9"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Strength value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_but ^_heroname blocked the attack with _heroposessivepronoun _weapon and killed ^_secondaryvillainname" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=" _stradv" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: hero Attacks (Str)"/> 
+		<Id value = "8"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "9"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Dexterity value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_but ^_heroname dodged the attack and killed ^_secondaryvillainname" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", swiftly" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: hero Attacks (Str)"/> 
+		<Id value = "8"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "9"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Dexterity value = "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_but ^_heroname was faster, _heropronoun casted *a _spell from _heroposessivepronoun _weapon killing ^_secondaryvillainname" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Hero returns"/> 
+		<Id value = "9"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "10"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname returned victorious to _heroposessivepronoun _campsite" />
+			<Sentence N="1" Mandatory="0" Follows="-1" val=", _but as a completely different person" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Hero returns"/> 
+		<Id value = "10"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryname told ^_heroname that _heropronoun did what _heropronoun had to do to cheer _heroreflectivepronoun up" />
+			<Sentence N="1" Mandatory="0" Follows="-1" val=", also that it was pretty awesome" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
 		</Text>
 	</Event>
 </Events>

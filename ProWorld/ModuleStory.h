@@ -61,6 +61,11 @@ public:
 	std::string magicalitem;
 	std::string magicalitemorigin;
 
+	//-- Destination
+
+	std::string destination;
+	std::string goal;
+
 };
 
 #endif //MODUESTORY_H
