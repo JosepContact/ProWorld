@@ -117,6 +117,12 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 	case EventManager::WETs::_heroname:
 		ret.push_back(toLowercase(app->world->GetCharacterName(app->world->GetHero())));
 		break;
+	case EventManager::WETs::_villainname:
+		ret.push_back(toLowercase(app->world->GetCharacterName(app->world->GetVillain())));
+		break;
+	case EventManager::WETs::_villainrace:
+		ret.push_back(toLowercase(app->world->GetCharacterRace(app->world->GetVillain())));
+		break;
 	case EventManager::WETs::_heroorigintype:
 		ret.push_back(toLowercase(app->world->GetCharacterOriginType(app->world->GetHero())));
 		break;
@@ -142,6 +148,21 @@ std::vector<std::string> EventManager::GetOutcomesFromWord(std::string word)
 		break;
 	case EventManager::WETs::_secondaryvillainname:
 		ret.push_back(toLowercase(app->world->GetSecondaryVillains()[0]->GetName()));
+		break;
+	case EventManager::WETs::_thirdvillainonename:
+		ret.push_back(toLowercase(app->world->GetThirdVillains()[0]->GetName()));
+		break;
+	case EventManager::WETs::_thirdvillainonerace:
+		ret.push_back(toLowercase(app->world->GetThirdVillains()[0]->GetRace()->GetWord()));
+		break;
+	case EventManager::WETs::_thirdvillaintwoname:
+		ret.push_back(toLowercase(app->world->GetThirdVillains()[1]->GetName()));
+		break;
+	case EventManager::WETs::_thirdvillaintworace:
+		ret.push_back(toLowercase(app->world->GetThirdVillains()[1]->GetRace()->GetWord()));
+		break;
+	case EventManager::WETs::_thirdvillaintwopronoun:
+		ret.push_back(toLowercase(app->world->GetCharacterPronoun(app->world->GetThirdVillains()[1])));
 		break;
 	case EventManager::WETs::_secondaryraceadj:
 		return app->world->GetCharacterAdjectives(app->world->GetSecondaries()[0]);

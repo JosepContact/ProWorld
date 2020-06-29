@@ -43,23 +43,38 @@ bool Event::ValidEvent(std::vector<Character*> chars)
 	if (app->story->type > 0 && storytype > 0 && app->story->type != storytype)
 		return false;
 
+	if (characters.size() > 1)
+		int a = 2;
+
+	std::vector<int> counted;
 	int n_req = characters.size();
 
-	for (vector<Character*>::iterator it = chars.begin(); it != chars.end(); ++it)
+	int count = 0;
+
+	for (vector<Character*>::iterator it2 = characters.begin(); it2 != characters.end(); ++it2)
 	{
-		for (vector<Character*>::iterator it2 = characters.begin(); it2 != characters.end(); ++it2)
+		for (vector<Character*>::iterator it = chars.begin(); it != chars.end(); ++it)
 		{
 			if ((*it2)->GetMorality() == (Character::MoralAlignment::MUnknown) || (*it)->GetMorality() == (*it2)->GetMorality())
 			{
 				if ((*it2)->GetAttitude() == (Character::AttitudeAlignment::AUnknown) || (*it)->GetAttitude() == (*it2)->GetAttitude())
 				{
 					if ((*it)->character_type == (*it2)->character_type || (*it2)->character_type == Character::CharacterType::CTNeutral)
-						n_req--;
+					{
+						if (std::find(counted.begin(), counted.end(), count) != counted.end() == false)
+						{
+							n_req--;
+							counted.push_back(count);
+						}
+					}
 				}
 			}
+			count++;
 		}
-
+		count=0;
 	}
+
+
 
 	return (n_req <= 0);
 }

@@ -55,7 +55,14 @@ public:
 		_intweapon,
 		_secondaryvillainrace,
 		_goal,
-		_secondaryvillainname
+		_secondaryvillainname,
+		_thirdvillainonename,
+		_thirdvillainonerace,
+		_thirdvillaintworace,
+		_thirdvillaintwoname,
+		_thirdvillaintwopronoun,
+		_villainrace,
+		_villainname
 	};
 
 private:
@@ -101,6 +108,13 @@ static std::unordered_map<std::string, EventManager::WETs> const WorldEventsTabl
 { "_secondaryvillainrace",EventManager::WETs::_secondaryvillainrace},
 { "_goal",EventManager::WETs::_goal},
 { "_secondaryvillainname",EventManager::WETs::_secondaryvillainname},
+{ "_thirdvillainonename",EventManager::WETs::_thirdvillainonename},
+{ "_thirdvillainonerace",EventManager::WETs::_thirdvillainonerace},
+{ "_thirdvillaintwoname",EventManager::WETs::_thirdvillaintwoname},
+{ "_thirdvillaintworace",EventManager::WETs::_thirdvillaintworace},
+{ "_thirdvillaintwopronoun",EventManager::WETs::_thirdvillaintwopronoun},
+{ "_villainrace",EventManager::WETs::_villainrace},
+{ "_villainname",EventManager::WETs::_villainname},
 };
 
 #endif //EVENTMANAGER_H

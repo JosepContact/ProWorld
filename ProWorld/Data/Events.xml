@@ -166,7 +166,7 @@
 			<Sentence N="7" Mandatory="1" Follows="-1" val=" and it was speaking to _heroreflectivepronoun _but _heropronoun couldn't understand it" />
 			<Sentence N="8" Mandatory="1" Follows="-1" val="."/>
 			<Sentence N="9" Mandatory="0" Follows="8" val=" It was a _scary _vision for sure."/>
-			<Sentence N="10" Mandatory="1" Follows="-1" val=" ^_heropronoun saw something even worse, "/>
+			<Sentence N="10" Mandatory="1" Follows="-1" val=" ^_heropronoun saw something _even worse, "/>
 		</Text>
 	</Event>
 	<Event>
@@ -266,7 +266,7 @@
 				<Moral value = "3"/> <!--Doesn't Matter-->
 				<Attitude value = "3"/> <!--Doesn't Matter-->
 				<Archetype value = "16"/> <!--Doesn't Matter-->
-				<Intelligence value = "2"/> <!--Quiet Skilled-->
+				<Intelligence value = "3"/> <!--Quiet Skilled-->
 				<CharacterType value = "0"/> <!--Hero-->
 			</Character>
 		</Characters>
@@ -400,7 +400,7 @@
 			<Sentence N="1" Mandatory="0" Follows="0" val=". ^_actually , _heropronoun _realized that this situation had _never happened before" />
 			<Sentence N="2" Mandatory="0" Follows="1" val=" in the _long history of _herorace -kind or any race whatsoever" />
 			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
-			<Sentence N="4" Mandatory="1" Follows="-1" val=" It was _hard to believe, _but even _harder to accept." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" It was _hard to believe, _but _even _harder to accept." />
 		</Text>
 	</Event>
 		<Event>
@@ -1738,6 +1738,1477 @@
 			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryname told ^_heroname that _heropronoun did what _heropronoun had to do to cheer _heroreflectivepronoun up" />
 			<Sentence N="1" Mandatory="0" Follows="-1" val=", also that it was pretty awesome" />
 			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Hero Fights Campsite No Secondary Villain"/> 
+		<Id value = "6"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "11"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname entered the _campsite without anyone inside noticing _but when _heropronoun got in, there was no one." />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heropronoun destroy all weapons or items that seemed somewhat dangerous." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Hero Fights Campsite No Secondary Villain"/> 
+		<Id value = "11"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "12"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<What is that?>> ^_heropronoun thought. When investigating the ground he noticed that there was a magic trace. However was there had just _vanished with a spell." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "TEA: Hero returns"/> 
+		<Id value = "12"/> 
+		<NCharacters value = "1"/>
+		<Type value = "5"/> <!--TestsAlliesEnemies-->
+		<Priority value = "-1"/>
+		<Seek value = "10"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=";^_heroname returned to _heroposessivepronoun _campsite" />
+			<Sentence N="1" Mandatory="0" Follows="0" val=", _but _heropronoun knew that something evil was about to happen" />
+			<Sentence N="2" Mandatory="0" Follows="1" val=", what _heropronoun had been told was true" />
+			<Sentence N="3" Mandatory="1" Follows="-1" val="." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero arrives to Society (Linker)"/> 
+		<Id value = "0"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "1"/>
+		<Seek value = "2"/>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="; ^_heroname finally arrived to ^_randomsociety _but it was not what _heropronoun expected." />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_randomsociety was _societydestroyed and it was _scary to _even look at." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Arriving Society (Master)"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "1"/>
+		<Seek value = "3"/>
+		<StoryType value = "2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<Argh.>> Said the _magicalcreature" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="<<Something isn't right, I _feel my power _fading as we get closer.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Arriving Society (Curse)"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "1"/>
+		<Seek value = "3"/>
+		<StoryType value = "5"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<Argh.>> Said the _magicalcreature" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val="." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="<<Something isn't right, I _feel my power _fading as we get closer.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Arriving Society (Magical Item)"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "1"/>
+		<Seek value = "3"/>
+		<StoryType value = "4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<My power is _fading" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=".>> ^_voices from _inside the _magicalitem said." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val="<<Something isn't right.>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero Alone"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "5"/>
+		<Seek value = "9"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname entered whatever there was left of ^_randomsociety." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Secondary Reacts to Society (Linker)"/> 
+		<Id value = "3"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "4"/>
+		<Seek value = "8"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="Upon arriving to the staircase of the _locationadj _monument while looking for any _clue of the _evil magic source," />
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_secondaryname yelled: <<It is an ambush!>>" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Main + Secondary"/> 
+		<Id value = "4"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "10"/>
+		<Seek value = "7"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname prepared _heroposessivepronoun _weapon to fight, as ^_secondaryname already had the _strweapon unsheathed." />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" There were five _badcreature minions behind them that pounded to the staircase _stradv" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_secondaryname slayed one of them in a single swing, while _heroposessivepronoun mentor destroyed two of them with a scorching ray of _element." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Main + Secondary (Arc)"/> 
+		<Id value = "8"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "10"/>
+		<Seek value = "7"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname prepared _heroposessivepronoun _weapon to fight, as ^_secondaryname already had the sword unsheathed." />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" There were three _badcreature minions behind them that pounded to the staircase _stradv" />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_secondaryname slayed one of them in a single swing." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero Fights Alone"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "10"/>
+		<Seek value = "7"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="Upon arriving to the staircase of the _locationadj _monument while looking for any _clue of the _evil magic source," />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_heroname and _heroposessivepronoun mentor were attacked from behind." />
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" Thankfully, the mentor was quick and pushed ^_heroname aside, _but he got severely injured." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" With a bit of a struggle, he still managed to cast a protection spell while ^_heroname prepared to battle the three _badcreature minions at the bottom of the staircase." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero Fights Alone + Arc"/> 
+		<Id value = "9"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "10"/>
+		<Seek value = "7"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<My power is also _fading" />
+			<Sentence N="1" Mandatory="1" Follows="-1" val=">> Thought ^_heroname." />
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_heroname arrived to the staircase of the _locationadj _monument while looking for any _clue of the _evil magic source." />
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_heropronoun _suddenly heard a noise behind _heroreflectivepronoun _but it was already too late. ^_heropronoun tried to dodge it but _heropronoun still got wounded." />
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" There were three _badcreature minions at the bottom of the staircase. ^_heropronoun prepared _heroposessivepronoun _weapon to fight." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: No Villain Hero Attacks (INT)"/> 
+		<Id value = "10"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Intelligence value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname cast a _spell and kill the other three. ;" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: No Villain Hero Attacks (STR)"/> 
+		<Id value = "10"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Strength value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname destroyed the three minions with a _spell. ;" />
+		</Text>
+	</Event>
+		<Event>
+		<Name value = "AIC: No Villain Hero Attacks (DEX)"/> 
+		<Id value = "10"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain-->
+				<Dexterity value = "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heroname slayed all three swiftly dodging their attacks with _heroposessivepronoun _weapon. ;" />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero Villain Appears (?)"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "12"/>
+		<Seek value = "11"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="Suddenly a ball of dusk fell from the sky right at the top of the staircase, blocking the way." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero 2 Villain Appear (?)"/> 
+		<Id value = "11"/> 
+		<NCharacters value = "2"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="The ball faded in a thick foam that covered the area, revealing two figures inside. The first figure _looked at ^_heroname." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero 1 Villain Appear (?)"/> 
+		<Id value = "12"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="The ball faded in a thick foam that covered the area, revealing a figure inside." />
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero 1st Villain Presents"/> 
+		<Id value = "13"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "22"/>
+		<Seek value = "15"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<Oh, you are quite U S E L E S S!>> A threatening _thirdvillainonerace yelled. And with a simple clap all three minions vanished in dust."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val="<<Why would you *a _herorace come to die in a place like this?>> Said the _thirdvillainonerace."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val="<<I could say the same to you.>> Answered ^_heroname."/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val="<<At least you have a sense of humor, I'll make sure to write that on your grave when me, ^_thirdvillainonename buries your futile body!>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero 2nd Villain Presents"/> 
+		<Id value = "15"/> 
+		<NCharacters value = "2"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "14"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<Shut your lousy mouth, ^_thirdvillainonename. You're disgusting.>> Said the second figure, it was *a _thirdvillaintworace."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val="; <<No one asked your rodent ass, ^_thirdvillaintwoname. You always want to take all the credit.>>"/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" <<Whatever, you bore me.>> Answered ^_thirdvillaintwoname. <<... And so do you.>> Added pointing to ^_heroname."/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly ^_thirdvillaintwoname cast a _spell. It traveled fast to meet ^_heroname 's _weapon, which _heropronoun used to bounce the spell."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" When it hit back, a sphere of darkness surrounded ^_thirdvillaintwoname as _thirdvillaintwopronoun vanished. "/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero 1st Villain Surrenders maybe"/> 
+		<Id value = "22"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "14"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly ^_thirdvillainonename cast a _spell. It traveled fast to meet ^_heroname 's _weapon, which _heropronoun used to bounce the spell."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero 2nd Villain Presents"/> 
+		<Id value = "14"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "16"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<Th-that's impossible...>> ^_thirdvillainonename mumbled."/>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<And you're next.>> ^_heroname replied."/>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="; <<...>> ; <<P-please don't. I will leave I promise. Let me leave, I beg you.>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero Forgives 2nd Villain"/> 
+		<Id value = "16"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Characters>
+			<Character>
+				<Moral value = "1"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<Alright, but if I ever see you again... You know the rest.>> ^_heropronoun said. And so ^_thirdvillainonename ran away, comically."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AIC: Hero Kills 2nd Villain"/> 
+		<Id value = "16"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "4"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="<<I can't, sorry.>> ^_heropronoun grabbed _heroposessivepronoun and killed ^_thirdvillainonename before overthinking it."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending AIC Hero"/> 
+		<Id value = "17"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "21"/>
+		<Seek value = "19"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="And ^_heroname went through the doors."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending AIC with Secondary"/> 
+		<Id value = "19"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "20"/>
+		<Seek value = "18"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" Followed by ^_secondaryname."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending Linker"/> 
+		<Id value = "21"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "20"/>
+		<Seek value = "18"/>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending Mentor"/> 
+		<Id value = "20"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" And lastly, _heroposessivepronoun mentor."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending AIC Hero"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value ="2"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" With the _magicalcreature in _heroposessivepronoun heart."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending AIC Hero"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value ="5"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" With the presence of the _magicalcreature. The one who cursed _heroreflectivepronoun so long ago. ^_heropronoun could feel the curse vanishing, but _heropronoun wasn't sure _heropronoun wanted that to happen anymore."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "AID: Ending AIC Hero"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "6"/> <!--Approach Innermost Cave-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value ="4"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" With the presence living inside the _magicalitem."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero No Arc"/> 
+		<Id value = "0"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "33"/>
+		<Seek value = "3"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="; At last, ^_heroname arrived to the grand hall. There were grandious pillars and huge stained glass windows with epic images from past wars."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero NO Arc NO Secondary."/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "2"/>
+		<Seek value = "14"/>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname 's mentor seemed more silent than usual."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero + Mentor - GOOD."/> 
+		<Id value = "14"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << I  C A N  F I N A L L Y  B E C O M E  F L E S H.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic struck _heroposessivepronoun mentor's chest. "/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for offering me a body. This room is special, you see. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" The voice was coming from inside _heroposessivepronoun mentor. He was possessed? A cloud of darkness surrounded the old man."/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form much different than what _heroposessivepronoun mentor looked like, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val="<<Thank you for this sacrifice. Since you have been this useful, I will kill you quickly so you don't feel as much pain.>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero + Mentor - EVIL."/> 
+		<Id value = "14"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "17"/>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from, until he _realized that something _heropronoun would have _never expected was happening."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << A H,   Y O U   A R E  S O  F O O L I S H, I  C A N ' T  B E L I E V E  I T  W A S  T H I S  E A S Y.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic came out of _heroposessivepronoun mentor's chest. Like a _huge bridge from one side of the hall to the other, the _evil energy started materializing there."/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for bringing me here. This room is special. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I told you you had to _goal and _even a few moments ago you couldn't tell what was happening. Hilarious, isn't it?>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form much different than what _heroposessivepronoun mentor looked like, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val="<<Since you have been this useful, I will kill you quickly so you don't feel as much pain. Sadly enough, you must be sacrificed. Your blood is exactly what I needed.>> The _villainrace grinned."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero NO Secondary LINKER"/> 
+		<Id value = "33"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "2"/>
+		<Seek value = "31"/>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Secondary"/> 
+		<Id value = "3"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "18"/>
+		<Seek value = "31"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_secondaryname was staring at _heroreflectivepronoun"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=". ^_secondarypronoun seemed concerned."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (MI)"/> 
+		<Id value = "31"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "5"/>
+		<StoryType value ="4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The _magicalitem was very active and its light was more shiny than ^_heroname had ever seen."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (BC)"/> 
+		<Id value = "31"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "11"/>
+		<StoryType value ="5"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The power inside ^_heroreflectivepronoun was almost gone by now."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (MM)"/> 
+		<Id value = "31"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "7"/>
+		<StoryType value ="2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" The power inside ^_heroreflectivepronoun was almost gone by now."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (MM) - EVIL"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<StoryType value ="2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from, until he _realized that something _heropronoun would have _never expected was happening."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << A H,   Y O U   A R E  S O  F O O L I S H, I  C A N ' T  B E L I E V E  I T  W A S  T H I S  E A S Y.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic came out of _heroposessivepronoun chest. Like a _huge bridge from one side of the hall to the other, the _evil energy started materializing there."/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for bringing me here. This room is special. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I told you you had to _goal and _even a few moments ago you couldn't tell what was happening. Hilarious, isn't it?>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form much different than what the _magicalcreature was like, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val="<<Since you have been this useful, I will kill you quickly so you don't feel as much pain.>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (MM) - GOOD"/> 
+		<Id value = "7"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<StoryType value ="2"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<The darkness is absorbing me, I'm fainting, ^_heroname. It's time for me to say good bye...>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" The words resonate in _heroposessivepronoun chest. They sounded weaker that ever before."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_suddenly, a giant sphere of dark magic appeared at the other side of the hall. Some sort of _evil energy started materializing there, forming a shape."/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" <<Ah, you have come to mend what you started.>> Said the _evil humanoid, it seemed to be *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon"/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" <<I don't know what you are talking about.>> Replied ^_heroname."/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I'm not talking to you.>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" The last remains of the _magicalcreature 's bless seemed to try and cling to ^_heroname in vain. <<I'm sorry I never told you, ^_heroname. But you would have _never trusted me otherwise. The darkness is devouring me, but I will leave my magic essence in you for you to use. Goodbye.>>"/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" The blessing induced by that _magicalcreature left _heroposessivepronoun body. ^_heroname could still feel the magic inside of _heroreflectivepronoun."/>
+			<Sentence N="8" Mandatory="1" Follows="-1" val=" <<So I have to kill you now right?>> Said the _villainrace."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (MI) - EVIL"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<StoryType value ="4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from, until he _realized that something _heropronoun would have _never expected was happening."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << A H,   Y O U   A R E  S O  F O O L I S H, I  C A N ' T  B E L I E V E  I T  W A S  T H I S  E A S Y.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic came out of the _magicalitem. Like a _huge bridge from one side of the hall to the other, the _evil energy started materializing there."/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for bringing me here. This room is special. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I told you you had to _goal and _even a few moments ago you couldn't tell what was happening. Hilarious, isn't it?>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val="<<Since you have been this useful, I will kill you quickly so you don't feel as much pain.>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (MI) - GOOD"/> 
+		<Id value = "5"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<StoryType value ="4"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<The darkness is absorbing me, I'm fainting, ^_heroname. It's time for me to say good bye...>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" The words came from the _magicalitem. They sounded weaker that ever before."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_suddenly, a giant sphere of dark magic appeared at the other side of the hall. Some sort of _evil energy started materializing there, forming a shape."/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" <<Ah, you have come to mend what you started.>> Said the _evil humanoid, it seemed to be *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon"/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" <<I don't know what you are talking about.>> Replied ^_heroname."/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I'm not talking to you.>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" The _magicalitem trembled. <<I'm sorry I never told you, ^_heroname. But you would have _never trusted me otherwise. The darkness is devouring me, but I will leave my magic essence in the _magicalitem for you to use. Goodbye.>>"/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" The light of the _magicalitem stopped shining, but ^_heroname could still feel the magic inside."/>
+			<Sentence N="8" Mandatory="1" Follows="-1" val=" <<So I have to kill you now right?>> Said the _villainrace."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc (BC) - UNIQUE"/> 
+		<Id value = "11"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "13"/>
+		<StoryType value ="5"/> <!--2: Magical Master 4: Magical Item 5: Break Curse-->
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<The darkness is absorbing me, I'm fainting, ^_heroname. It's time for me to say good bye...>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" The words resonate in _heroposessivepronoun head. They sounded weaker that ever before."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_suddenly, a giant sphere of dark magic appeared at the other side of the hall. Some sort of _evil energy started materializing there, forming a shape."/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" <<Ah, you have come to mend what you started.>> Said the _evil humanoid, it seemed to be *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon"/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" <<I don't know what you are talking about.>> Replied ^_heroname."/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I'm not talking to you.>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" The last remains of the curse seemed to try and cling to ^_heroname in vain. <<I'm sorry I never told you, ^_heroname. But you would have _never trusted me otherwise. The darkness is devouring me, but I will leave my magic essence in you for you to use. Goodbye.>>"/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" The curse left _heroposessivepronoun body. He felt a lot healthier and powerful _suddenly and ^_heroname could still feel the magic inside."/>
+			<Sentence N="8" Mandatory="1" Follows="-1" val=" <<So I have to kill you now right?>> Said the _villainrace."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Arc - Search Secondary (LINKER)"/> 
+		<Id value = "13"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "17"/>
+		<Seek value = "26"/>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero No Arc +  Secondary"/> 
+		<Id value = "4"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "18"/>
+		<Seek value = "3"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_secondaryname had followed _heroreflectivepronoun to the hall, with the sword ready, _even _secondarypronoun could feel the _evil energy in the air."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero No Arc +  Secondary - FRIEND DIES"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "23"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << I  C A N  F I N A L L Y  B E C O M E  F L E S H.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic struck _heroreflectivepronoun best friend. In a split second, _heropronoun saw the sould of ^_secondaryname leave the body."/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for offering me a body. This room is special, you see. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" The voice was coming from inside ^_secondaryname. Or better sai, the corpse of ^_secondaryname. A cloud of darkness surrounded it."/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form much different than what ^_secondaryname looked like, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" ^_heroreflectivepronoun looked frightened, for the first time ever."/>
+			<Sentence N="8" Mandatory="1" Follows="-1" val="<<Thank you for this sacrifice. Since you have been this useful, I will kill you quickly so you don't feel as much pain.>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero No Arc +  Secondary - MASTER DIES"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "27"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << I  C A N  F I N A L L Y  B E C O M E  F L E S H.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic struck _heroposessivepronoun mentor's chest."/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for offering me a body. This room is special, you see. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" The voice was coming from inside _heroposessivepronoun mentor. He was possessed? A cloud of darkness surrounded the old man."/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form much different than what _heroposessivepronoun mentor looked like, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" ^_secondaryname looked frightened, more than _heropronoun had ever seen before."/>
+			<Sentence N="8" Mandatory="1" Follows="-1" val="<<Thank you for this sacrifice. Since you have been this useful, I will kill you quickly so you don't feel as much pain.>>"/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero No Arc +  Secondary - MASTER IS EVIL"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "27"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from, until he _realized that something _heropronoun would have _never expected was happening."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" << A H,   Y O U   A R E  S O  F O O L I S H, I  C A N ' T  B E L I E V E  I T  W A S  T H I S  E A S Y.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic came out of _heroposessivepronoun mentor's chest. Like a _huge bridge from one side of the hall to the other, the _evil energy started materializing there."/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" The voice was a lot more humanized now, unlike before. <<Thank you, for bringing me here. This room is special. In this room a war happened thousands of years ago. But now I can unleash the power that was stored beneath this very ground.>>"/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<I told you you had to _goal and _even a few moments ago you couldn't tell what was happening. Hilarious, isn't it?>>"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" After all the darkness built in a _weird humanoid form much different than what _heroposessivepronoun mentor looked like, it started dissipating to reveal *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon."/>
+			<Sentence N="7" Mandatory="1" Follows="-1" val=" ^_secondaryname looked frightened, more than _heropronoun had ever seen before."/>
+			<Sentence N="8" Mandatory="1" Follows="-1" val="<<Since you have been this useful, I will kill you quickly so you don't feel as much pain. Sadly enough, you must be sacrificed. Your blood is exactly what I needed.>> The _villainrace grinned."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero No Arc +  Secondary - FRIEND SAVES HERO"/> 
+		<Id value = "18"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "23"/>
+		<Seek value = "27"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" << A H, Y E S.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" << F I N A L L Y.>> ^_heroname couldn't tell were that demonic voice was coming from."/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_suddenly, a ray of dark magic struck ^_heroname. ^_secondaryname pushed _heroreflectivepronoun saving _heroreflectivepronoun. <<Th-Thank you. You saved me.>>"/>
+			<Sentence N="3" Mandatory="1" Follows="-1" val=" ^_secondaryname faked a smile. <<You would have done the same for me.>>"/>
+			<Sentence N="4" Mandatory="1" Follows="-1" val=" ^_suddenly, a giant sphere of dark magic appeared at the other side of the hall. Some sort of _evil energy started materializing there, forming a shape."/>
+			<Sentence N="5" Mandatory="1" Follows="-1" val=" <<Ah, so it is true what I have heard. ^_heropronoun who will ^_goal.>> Chuckled the _evil humanoid, it seemed to be *a _villainrace. ^_but it had a skin dark as coal and its eyes were as black as the night during new moon"/>
+			<Sentence N="6" Mandatory="1" Follows="-1" val=" <<So I have to kill you now right?>> Said the _villainrace."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks Alone"/> 
+		<Id value = "17"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "30"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<So you have chosen death. Well, another victim to ^_villainname 's list.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_heroname prepared _heroposessivepronoun _weapon. Time to party."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks W/ Friend"/> 
+		<Id value = "27"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "30"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<So you have chosen death. Well, more victims to ^_villainname 's list.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_heroname prepared _heroposessivepronoun _weapon and ^_secondaryname drew the sword. Both charged forward."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks W/ Master"/> 
+		<Id value = "23"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "30"/>
+		<Arc value = "9"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" <<So you have chosen death. Well, more victims to ^_villainname 's list.>>"/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_heroname prepared _heroposessivepronoun _weapon and _heroposessivepronoun master prepared the staff. He seemed to cast some sort of protection spell in _heroreflectivepronoun. Time to party."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks"/> 
+		<Id value = "30"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "35"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Strength value= "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heropronoun ran to ^_villainname _weapon in hand. Trying to block every dark projectile shot at _heroreflectivepronoun."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks"/> 
+		<Id value = "30"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "35"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Dexterity value= "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heropronoun ran to ^_villainname _weapon in hand. Trying to dodge every dark projectile shot at _heroreflectivepronoun."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks"/> 
+		<Id value = "30"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "35"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Intelligence value= "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_heropronoun ran to ^_villainname _weapon in hand. Trying to counterspell each projectile shot at _heroreflectivepronoun."/>
+		</Text>
+	</Event>
+	<Event>
+		<Name value = "ORDEAL: Hero Attacks 2"/> 
+		<Id value = "35"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "36"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Strength value= "2"/>
+				<Intelligence value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_villainname _evilspell, but ^_heroname sliced it in two infusing _heroposessivepronoun _weapon in _element."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "ORDEAL: Hero Attacks 2"/> 
+		<Id value = "35"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "36"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Charisma value= "2"/>
+				<Intelligence value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_villainname _evilspell that almost caught ^_heroname but _heropronoun escaped from it by shapeshifting into an eagle."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "ORDEAL: Hero Attacks 2"/> 
+		<Id value = "35"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "36"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Dexterity value= "2"/>
+				<Intelligence value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_villainname _evilspell that almost caught ^_heroname but _heropronoun teleported a few meters away at the right moment."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "ORDEAL: Hero Attacks 2"/> 
+		<Id value = "35"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "36"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Dexterity value= "3"/>
+				<Intelligence value= "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_villainname _evilspell that almost caught ^_heroname but _heropronoun quickly enchanted _heroposessivepronoun boots to jump higher and faster."/>
+		</Text>
+	</Event>
+		<Event>	
+		<Name value = "ORDEAL: Hero Attacks 2"/> 
+		<Id value = "35"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "36"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Dexterity value= "2"/>
+				<Strength value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_villainname _evilspell _but ^_heroname jumped _stradv with _heroposessivepronoun _weapon in hand and went right through it."/>
+		</Text>
+	</Event>
+		<Event>	
+		<Name value = "ORDEAL: Hero Attacks 2"/> 
+		<Id value = "35"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "36"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Dexterity value= "3"/>
+				<Charisma value= "2"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val="^_villainname _evilspell _but ^_heroname jumped above it effortlessly, almost showing off."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "VILLAIN DIES + DEX"/> 
+		<Id value = "36"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Dexterity value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname was running so fast that _heropronoun could barely see what he was dodging. But _heropronoun saw _heropronoun was close enough to ^_villainname."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_villainname _evilspell but _heropronoun rolled right under it, quickly drew _heroposessivepronoun _weapon and cut ^_villainname 's throat."/>
+		</Text>
+	</Event>
+		<Event>	
+		<Name value = "VILLAIN DIES + INT"/> 
+		<Id value = "36"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Intelligence value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname was running towards ^_villainname now using an invisibility spell. That evil being invoked some smoke to try to scry where _heropronoun was. But _heropronoun had trained, and _heropronoun was really fast."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_villainname _evilspell but it didn't _even come close to hit _heroreflectivepronoun. So when ^_heroname was close enough, _heropronoun cast a deadly spell."/>
+		</Text>
+	</Event>
+			<Event>	
+		<Name value = "VILLAIN DIES + STR"/> 
+		<Id value = "36"/> 
+		<NCharacters value = "1"/>
+		<Type value = "7"/> <!--Ordeal-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+				<Strength value= "3"/>
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname was running towards ^_villainname blocking everything like _heropronoun had practiced. Whatever _heropronoun couldn't block, _heropronoun blocked with _heroposessivepronoun armor."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" ^_villainname _evilspell but it split in two as ^_heroname swung _heropronoun _weapon and hit _stradv in the head."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "VILLAIN DIES"/> 
+		<Id value = "0"/> 
+		<NCharacters value = "1"/>
+		<Type value = "8"/> <!--Reward-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" And just like that, ^_villainname fell to the ground."/>
+			<Sentence N="1" Mandatory="0" Follows="0" val=" Not unconscious, but dead."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "FINAL Linker"/> 
+		<Id value = "0"/> 
+		<NCharacters value = "1"/>
+		<Type value = "9"/> <!--End-->
+		<Priority value = "4"/>
+		<Seek value = "1"/>
+	</Event>
+	<Event>	
+		<Name value = "FINAL + Friend"/> 
+		<Id value = "1"/> 
+		<NCharacters value = "1"/>
+		<Type value = "9"/> <!--End-->
+		<Priority value = "-1"/>
+		<Seek value = "2"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname stood still for a few moments, when he realized what was missing."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" It was ^_secondaryname. ^_heropronoun ran to where _heropronoun had seen _heroposessivepronoun friend for the last time. As tears filled _heroposessivepronoun eyes, _heropronoun thought how _heropronoun could have never done it without _heroposessivepronoun friend."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "FINAL + Friend"/> 
+		<Id value = "2"/> 
+		<NCharacters value = "1"/>
+		<Type value = "9"/> <!--End-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "1"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname put _heroposessivepronoun ear on ^_secondaryname 's chest. ^_secondarypronoun was still breathing!"/>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heropronoun held ^_secondaryname with both arms to look for help and get out of there."/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "FINAL Linker"/> 
+		<Id value = "4"/> 
+		<NCharacters value = "1"/>
+		<Type value = "9"/> <!--End-->
+		<Priority value = "5"/>
+		<Seek value = "6"/>
+	</Event>
+	<Event>	
+		<Name value = "FINAL + Master"/> 
+		<Id value = "6"/> 
+		<NCharacters value = "1"/>
+		<Type value = "9"/> <!--End-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<StoryType value = "9"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+				<CharacterType value = "0"/> <!--0: Hero--> <!--1: Secondary--><!--3: SecondaryVillain--><!--4: ThirdVillain-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname stood still for a few moments, when he felt a hand on _heroposessivepronoun shoulder."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" It was _heroposessivepronoun master. <<I couldn't have done it better.>>"/>
+			<Sentence N="2" Mandatory="1" Follows="-1" val=" ^_heroname put on a fake smile and answered: ; <<Well, I'm not staying to clean this mess. Let's get out of here.>>"/>
+		</Text>
+	</Event>
+	<Event>	
+		<Name value = "FINAL + Alone"/> 
+		<Id value = "4"/> 
+		<NCharacters value = "1"/>
+		<Type value = "9"/> <!--End-->
+		<Priority value = "-1"/>
+		<Seek value = "-1"/>
+		<Characters>
+			<Character>
+				<Moral value = "3"/> <!--0: Good -1: Neutral - 2: Chaotic - 3:Doesn't Matter-->
+				<Attitude value = "3"/> <!--Doesn't Matter-->
+				<Archetype value = "16"/> <!--Doesn't Matter-->
+			</Character>
+		</Characters>
+		<Text>
+			<Sentence N="0" Mandatory="1" Follows="-1" val=" ^_heroname stood still for a few moments. <<It had to be done.>> ^_heropronoun whispered."/>
+			<Sentence N="1" Mandatory="1" Follows="-1" val=" And slowly, _heropronoun left the hall. In the same body, but not as the same person."/>
 		</Text>
 	</Event>
 </Events>

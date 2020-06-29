@@ -66,6 +66,18 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_evilspell"/> 
+		<Pool>
+			<n val="threw a gooey web"/>
+			<n val="threw a _huge hurricane of black matter"/>
+			<n val="threw a _huge ball of black matter"/>
+			<n val="summoned a dark cloak"/>
+			<n val="summoned a bunch of black crystals"/>
+			<n val="spat a pool of acid"/>
+			<n val="puked a storm of dark fire"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_goal"/> 
 		<Pool>
 			<n val="destroy my creator"/>
@@ -448,12 +460,33 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_fading"/> 
+		<Pool>
+			<n val="fading"/>
+			<n val="growing weaker"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_feel"/> 
+		<Pool>
+			<n val="feel"/>
+			<n val="sense"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_even"/> 
+		<Pool>
+			<n val="even"/>
+			<n val=""/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_creaturedesc"/> 
 		<Pool>
 			<n val="it was _scary and had _huge fangs"/>
 			<n val="it was beautiful, a ture wonder"/>
 			<n val="it was incredible to look at"/>
-			<n val="it was astonishing to even stand by its side"/>
+			<n val="it was astonishing to _even stand by its side"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -776,6 +809,15 @@
 			<n val="spent some time with _heroreflectivepronoun"/>
 			<n val="made _heroreflectivepronoun some company"/>
 			<n val="drank with _heroreflectivepronoun"/>
+		</Pool>
+	</Word>
+	<Word>
+		<Name value = "_monument"/> 
+		<Pool>
+			<n val="monument"/>
+			<n val="church"/>
+			<n val="palace"/>
+			<n val="castle"/>
 		</Pool>
 	</Word>
 	<Word>
@@ -1306,10 +1348,19 @@
 		</Pool>
 	</Word>
 	<Word>
+		<Name value = "_societydestroyed"/> 
+		<Pool>
+			<n val="almost in ruins and the place was full of corpses"/>
+			<n val="immersed in darkness, a huge black dense mist covered it entirely"/>
+			<n val="covered in giant roots of some sort of thorny plant"/>
+			<n val="on fire, although most of the flames had been extinguished"/>
+		</Pool>
+	</Word>
+	<Word>
 		<Name value = "_campsite"/> 
 		<Pool>
 			<n val="campsite"/>
-			<n val="encampents"/>
+			<n val="encampent"/>
 		</Pool>
 	</Word>
 	<Word>

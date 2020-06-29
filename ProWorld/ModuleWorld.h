@@ -79,6 +79,7 @@ private:
 
 public:
 	Character* GetHero() const;
+	Character* GetVillain() const;
 	std::vector<Character*> GetSecondaries() const;
 	std::vector<Character*> GetSecondaryVillains() const;
 	std::vector<Character*> GetThirdVillains() const;

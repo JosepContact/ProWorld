@@ -347,7 +347,6 @@ void ModuleWorld::CreateCharacters()
 		wcharacters[i]->SetGoal(string(VillainGoals[GetRandomNumber(0, 22)]));
 
 		wcharacters[i]->character_type = Character::CharacterType::SecondaryVillain;
-		if(i == n_cha-1) wcharacters[i]->character_type = Character::CharacterType::MainVillain;
 	}
 	int sec_cha = 0;
 
@@ -363,8 +362,8 @@ void ModuleWorld::CreateCharacters()
 		if (sec_cha > 1)
 			(*it)->character_type = Character::CharacterType::ThirdVillain;
 	}
+	wcharacters[wcharacters.size() - 1]->character_type = Character::CharacterType::MainVillain;
 	int a = 3;
-
 }
 
 Climate * ModuleWorld::GetClimate() const
@@ -375,6 +374,12 @@ Climate * ModuleWorld::GetClimate() const
 Character * ModuleWorld::GetHero() const
 {
 	return wcharacters[0];
+}
+
+Character * ModuleWorld::GetVillain() const
+{
+	Character* ret = wcharacters[wcharacters.size() - 1];
+	return ret;
 }
 
 std::vector<Character*> ModuleWorld::GetSecondaries() const

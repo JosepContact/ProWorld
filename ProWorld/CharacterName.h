@@ -145,20 +145,20 @@ char JapaneseFemaleSuffixes[][10] =
 
 char TropicalMaleNames[][30] =
 {
-	"Anu", "Ndonge", "Nendi", "Ndamunkong", "Enah", "Wilfried", "Isaac", "Brandon", "Abélard", "Thaddée", "Kenjo", "Jong", "Osendé", "Aliende", "Souaïbou",
-	"Dylan", "Francis", "Ernest", "William", "Connor", "Jotaju'Uh", "Abdullahi", "Anomah", "Adamou", "Ndonge", "Éliseé", "Thomas", "Ernest", "Gérôme", "Léo",
+	"Anu", "Ndonge", "Nendi", "Ndamunkong", "Enah", "Wilfried", "Isaac", "Brandon", "Abelard", "Thaddee", "Kenjo", "Jong", "Osende", "Aliende", "Souaibou",
+	"Dylan", "Francis", "Ernest", "William", "Connor", "Jotaju'Uh", "Abdullahi", "Anomah", "Adamou", "Ndonge", "Éliseé", "Thomas", "Ernest", "Gerome", "Léo",
 	"Solia", "Gana"
 };
 
 char TropicalFemaleNames[][30] =
 {
 	"Mambo", "Oshun", "Yemoja", "Hapsatou", "Wirnago", "Asong", "Azah", "Gaëlle", "Nadine", "Rose", "Anita", "Julia", "Anyi", "Halmata", "Malun", "Kien",
-	"Asong", "Sauvanne", "Ella", "Leah", "Kayleigh", "Émeline", "Ngu", "Anu", "Beza", "Scarlett", "Maria", "Lara"
+	"Asong", "Sauvanne", "Ella", "Leah", "Kayleigh", "Emeline", "Ngu", "Anu", "Beza", "Scarlett", "Maria", "Lara"
 };
 
 char TropicalSurnames[][30] =
 {
-	"Ndosi", "Nsimba", "Ngolomingi", "Sidiki", "Lèndi", "Nzoumba", "Yonga", "Mukadi", "Saïdou", "Lemnyuy", "Ambang", "Itèngè", "Eyenge", "Mbala", "Luba", 
+	"Ndosi", "Nsimba", "Ngolomingi", "Sidiki", "Lendi", "Nzoumba", "Yonga", "Mukadi", "Saidou", "Lemnyuy", "Ambang", "Itenge", "Eyenge", "Mbala", "Luba", 
 	"Mpeya", "Bikoko", "Anyeni", "Anyeni", "Nde", "Antagana", "Mushiya", "Kabeya", "Kimya", "Kalunga", "Belka", "Anyeni", "Afande", "Kukabango", "Koulsoumi",
 	"Kumba", "Ekangaki", "Molingo", "Kiatoko", "Tambulaya", "Epotè", "Kum", "Olembe", "Dashaco", "Yang", "Asamu"
 };
