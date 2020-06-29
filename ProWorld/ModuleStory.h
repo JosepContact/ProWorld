@@ -37,6 +37,8 @@ public:
 	Event* SeekEvent(Event* ev);
 	Event* ChooseEvent(std::vector<Event*> vect_ev);
 
+	void EmptyStory();
+
 private:
 	EventManager* e_manager = nullptr;
 	std::vector<Event*> story_queue;

@@ -99,42 +99,6 @@ bool ModuleGraphics::Start()
 	if(glsl_version!= nullptr)
 	ImGui_ImplOpenGL3_Init(glsl_version);
 
-
-	vector<Event*> story = app->story->GetStory();
-
-	for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
-	{
-		final_story.push_back(app->narration->NarrateEvent(*it));
-	}
-
-	
-
-	for (auto it = final_story.begin(); it != final_story.end(); ++it)
-	{
-		int jl = 0;
-		for (int count = 0; count < (*it).size(); ++count, ++jl)
-		{
-			if ((*it)[count] == ';')
-			{
-				(*it).replace(count, 1, "\n");
-				count += 2;
-				jl = 0;
-			}
-
-			if (jl > 80 && (*it)[count] == ' ')
-			{
-				(*it).insert(count, "\n");
-				count += 2;
-				jl = 0;
-			}
-		}
-	}
-	//count on comença
-	//jl on acaba la sentence
-
-
-	LOG(story_string.c_str());
-
 	return true;
 }
 
@@ -167,18 +131,12 @@ update_status ModuleGraphics::Update()
 		{
 			if(ImGui::BeginMainMenuBar())
 			{
-				if (ImGui::BeginMenu("File"))
+				if (ImGui::BeginMenu("Reload"))
 				{
-					if(ImGui::MenuItem("New")) 
+					if(ImGui::MenuItem("Reload World")) 
 					{
 						create_world = true;
 						show_world = false;
-					}
-					if (ImGui::MenuItem("Load")) {
-					}
-					if (ImGui::MenuItem("Save")) {
-					}
-					if (ImGui::MenuItem("Quit")) {
 					}
 					ImGui::EndMenu();
 				}
@@ -188,17 +146,18 @@ update_status ModuleGraphics::Update()
 
 		// Start App Window
 		if (show_world == false){
-			ImGui::SetNextWindowPos(ImVec2(500, 150));
-			ImGui::SetNextWindowSize(ImVec2(520, 220));
+			ImGui::SetNextWindowPos(ImVec2(750, 350));
+			ImGui::SetNextWindowSize(ImVec2(530, 190));
 
 		ImGui::Begin("ProWorld 0.1");
 
-		ImGui::Text("Welcome to ProWorld version 0.1.");
-		ImGui::Text("This application was created to simulate proceduarlly generated worlds\n in a narrated fashion.");
-		ImGui::Text("Fantasy worlds created with this program are converted into - so called\n - world bibles."); 
-		ImGui::Text("These, hold information about pretty much every important aspect that the\n creator thinks important for a story - from the main characters ideals,\n to each race living in most cities involving the action.");
+		ImGui::Text("Welcome to ProWorld version 0.1.0.");
 		ImGui::Separator();
-		if (ImGui::Button("Create me a world!"))
+		ImGui::Text("This application is in alpha. Meaning that all basic elements are working,\n but it has room for expansion.");
+		ImGui::Text("proWorld was created to simulate proceduarlly generated worlds\n as well a short story in a narrated fashion.");
+		ImGui::Text("Everything created in this app is done procedurally, to know more visit\n the Github repository"); 
+		ImGui::Separator();
+		if (ImGui::Button("Create!"))
 		{
 			show_world = true;
 		}
@@ -261,4 +220,46 @@ update_status ModuleGraphics::Update()
 			app->quit = true;
 
 		return UPDATE_CONTINUE;
+}
+
+void ModuleGraphics::EmptyWorld()
+{
+	final_story.clear();
+	story_string = "";
+}
+
+void ModuleGraphics::StartWorld()
+{
+	vector<Event*> story = app->story->GetStory();
+
+	for (vector<Event*>::iterator it = story.begin(); it != story.end(); ++it)
+	{
+		final_story.push_back(app->narration->NarrateEvent(*it));
+	}
+
+
+
+	for (auto it = final_story.begin(); it != final_story.end(); ++it)
+	{
+		int jl = 0;
+		for (int count = 0; count < (*it).size(); ++count, ++jl)
+		{
+			if ((*it)[count] == ';')
+			{
+				(*it).replace(count, 1, "\n");
+				count += 2;
+				jl = 0;
+			}
+
+			if (jl > 80 && (*it)[count] == ' ')
+			{
+				(*it).insert(count, "\n");
+				count += 2;
+				jl = 0;
+			}
+		}
+	}
+	//count on comença
+	//jl on acaba la sentence
+
 }

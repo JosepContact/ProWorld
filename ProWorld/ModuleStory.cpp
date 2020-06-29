@@ -130,6 +130,29 @@ Event* ModuleStory::ChooseEvent(std::vector<Event*> vect_ev)
 	return ret;
 }
 
+void ModuleStory::EmptyStory()
+{
+	story_queue.clear();
+	weapon = "";
+	type = static_cast<StoryType>(0);
+
+	magicalcreature = "";
+	magicalmasterrace = "";
+	mentorname = "";
+
+	//-- Vengeance
+	act = "";
+	//-- Magical Item
+	magicalitem = "";
+	magicalitemorigin = "";
+
+	//-- Destination
+
+	destination = "";
+	goal = "";
+
+}
+
 EventManager * ModuleStory::GetManager() const
 {
 	return e_manager;

@@ -38,6 +38,8 @@ public:
 	bool show_world = false;
 	bool create_world = false;
 
+	void EmptyWorld();
+	void StartWorld();
 private:
 	//std::vector<std::string> story_string;
 	std::string story_string;

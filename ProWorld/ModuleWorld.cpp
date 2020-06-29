@@ -111,6 +111,7 @@ void ModuleWorld::StartWorld()
 
 	//------ CREATE STORY -------------
 	app->story->CreateStory();
+	app->graphics->StartWorld();
 }
 
 void ModuleWorld::DeleteWorld()
@@ -126,6 +127,8 @@ void ModuleWorld::DeleteWorld()
 	geoVector.clear();
 	wsocieties.clear();
 	wcharacters.clear();
+	app->story->EmptyStory();
+	app->graphics->EmptyWorld();
 }
 
 ModuleWorld::WorldType ModuleWorld::GenerateWorldType()
